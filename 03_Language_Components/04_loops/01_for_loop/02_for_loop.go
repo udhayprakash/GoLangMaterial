@@ -3,7 +3,24 @@ package main
 import "fmt"
 
 func main() {
-	for i:= 1; i <= 10; i++{
-		fmt.Println(i)
+	var m = 0
+	// `for` without a condition will loop repeatedly
+	// until you `break` out of the loop or `return` from
+	// the enclosing function.
+	for {
+		fmt.Println("loop")
+		if m == 5 {
+			break
+		}
+		m++
+	}
+
+	// You can also `continue` to the next iteration of
+	// the loop.
+	for n := 0; n <= 5; n++ {
+		if n%2 == 0 {
+			continue
+		}
+		fmt.Println(n)
 	}
 }
