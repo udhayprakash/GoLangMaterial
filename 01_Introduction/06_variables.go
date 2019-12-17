@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	// Changing value after declaration
 
-	var x string 
+	var x string
 	x = "first"
 	fmt.Println("x = ", x)
 
@@ -19,4 +19,3 @@ func main() {
 	// var x bool = true         // x redeclared in this block
 	// fmt.Println("x = ", x)
 }
-

@@ -1,1 +1,22 @@
 https://www.golang-book.com/
+https://www.gopl.io/
+https://www.goinggo.net/
+
+hello.go ==> compiler ==> Executable file ==> Executes on system
+
+
+go build    compiles source code files into binray files
+go run      compiles and runs a program, without saving an executable file 
+go fmt      reformats source files using Go standard formatting
+go version  Displays the current Go version 
+go clean    To delete all the created executables in the current directory
+go install  To install the executable
+
+
+Ref: For editor/IDE settings to auto-format on save 
+    https://blog.golang.org/go-fmt-your-code.
+
+For the editor/IDE to automatically manage the addition or deletion of imports
+based on usge, 
+    go get golang.org/x/tools/cmd/goimports
+

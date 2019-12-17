@@ -4,6 +4,7 @@ Go Language Material
     Go
         - General Purpose Compiled Programing language
         - No pre-requisites need. Can be learned as first programming language.
+        - C language is the most direct influence on Go.
         - Platform-independent. 
             - Create executable build based on the platform. 
             - Means, source code is translated into language that the system understands.
@@ -72,7 +73,10 @@ Go Language Material
         - first character - A-Z, a-z
         - remaining chars - A-Z, a-z, 0-9, _
         - pascalCase or CamelCase is recommended. 
-important Links 
-    - golangprograms.com
-    - for jobs, golang.cafe
+
+Important Links:
+----------------
+        - golangprograms.com
+        - for jobs, golang.cafe
     
+This source code is tested in go 1.13.5

@@ -9,12 +9,17 @@ func main() {
 	// double Quote Strings - - single line strings
 	fmt.Println("Hello go world")
 	fmt.Println("Hello\tgo\nworld")
+	fmt.Println("Quotes: \"\"")
+	fmt.Println("Backslash: \\")
+	
 	// fmt.Println("Hello
 	// 			 go world")    
 
 	// back-tick strings - Both Single & Multi-line Strings
 	fmt.Println(`Hello go world`)
 	fmt.Println(`Hello\tgo\nworld`)  // Escape sequeces were nott recognized
+	fmt.Println(`Quotes: ""`)
+	fmt.Println(`Backslash: \\`)
 	fmt.Println(`Hello 
-						world`)
+                      world`)
 }

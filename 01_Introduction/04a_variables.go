@@ -31,4 +31,12 @@ func main() {
 	// `var f string = "apple"` in this case.
 	f := "apple"
 	fmt.Println(f)
+
+	var (
+		g float32
+		h float64
+	)
+	fmt.Println(g)
+	fmt.Println(h)
+
 }

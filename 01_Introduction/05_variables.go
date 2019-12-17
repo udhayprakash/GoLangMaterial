@@ -27,4 +27,12 @@ func main() {
 
 	fmt.Println("reflect.TypeOf(x) =", reflect.TypeOf(x))
 	fmt.Println("reflect.TypeOf(y) =", reflect.TypeOf(y))
+
+	fmt.Println("reflect.TypeOf(42) =", reflect.TypeOf(42))
+	fmt.Println("reflect.TypeOf(42.0) =", reflect.TypeOf(42.0))
+	fmt.Println("reflect.TypeOf(4223434234343242342) =", reflect.TypeOf(4223434234343242342))
+	fmt.Println("reflect.TypeOf('a') =", reflect.TypeOf('a'))   // int32
+	fmt.Println("reflect.TypeOf(\"a\") =", reflect.TypeOf("a")) // string
+	fmt.Println("reflect.TypeOf(true) =", reflect.TypeOf(true)) // bool
+
 }
