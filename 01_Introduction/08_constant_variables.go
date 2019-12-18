@@ -13,6 +13,8 @@ func main() {
 	fmt.Println("x=", x)
 
 	// `const` declares a constant value.
+	// Constants can be character, string, boolean, or numeric values.
+	// Constants cannot be declared using the := syntax.
 	const y int = 10
 	fmt.Println("y=", y)
 
@@ -28,4 +30,5 @@ func main() {
 
 	// Explicit type conversion.
 	fmt.Println(int64(d), reflect.TypeOf(int64(d)))
+
 }

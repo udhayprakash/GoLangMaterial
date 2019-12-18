@@ -6,7 +6,7 @@ func main() {
 	var m = 0
 	// `for` without a condition will loop repeatedly
 	// until you `break` out of the loop or `return` from
-	// the enclosing function.
+	// the enclosing function. - also, called for-ever loop
 	for {
 		fmt.Println("loop")
 		if m == 5 {

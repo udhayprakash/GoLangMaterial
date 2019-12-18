@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	// The most basic type, with a single condition.
 	i := 1
-	for i <= 10 {
+	for i <= 10 {  // - like while loop in C
 		fmt.Println(i)
 		i++ //i += 1  // i = i + 1
 	}
