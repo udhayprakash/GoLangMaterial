@@ -1,8 +1,19 @@
-https://www.golang-book.com/
-https://www.gopl.io/
-https://www.goinggo.net/
+Fields of Usage
+----------------
+    - Web Apps
+    - Network Servers
+    - Mobile Applications
+    - Machine Learning
+    - Image Processing
+    - Load Balancers
+    - System Admin
+    - Hardware
+    - Scripts
+    - Crypto
 
-hello.go ==> compiler ==> Executable file ==> Executes on system
+Execution flow:
+---------------
+    hello.go ==> compiler ==> Executable file ==> Executes on system
 
 
 go build    compiles source code files into binray files
@@ -19,4 +30,32 @@ Ref: For editor/IDE settings to auto-format on save
 For the editor/IDE to automatically manage the addition or deletion of imports
 based on usge, 
     go get golang.org/x/tools/cmd/goimports
+
+https://www.golang-book.com/
+https://www.gopl.io/
+https://www.goinggo.net/
+
+https://github.com/GoesToEleven/svcc-19
+
+Bill Kennedy
+https://www.ardanlabs.com/blog/
+
+https://www.twitter.com/joncalhoun?lang=en
+https://www.gophercises.com/
+
+https://www.udemy.com/user/toddmcleod/
+https://www.greatercommons.com/
+
+https://www.changelog.com/gotime
+
+
+https://golang.org/
+golang spec
+effective golang
+
+forum.golangbridge.org
+
+
+godoc.org
+    standard library and 3rd party packages
 

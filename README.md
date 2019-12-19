@@ -3,6 +3,8 @@ Go Language Material
 
     Go
         - General Purpose Compiled Programing language
+        - created by Ken Thompson (B, C, Unix, UTF-8), Rob Pike(Unix, UTF-8), 
+          Robert Griesemer(Hotspot, JVM) and few google engineers.
         - No pre-requisites need. Can be learned as first programming language.
         - C language is the most direct influence on Go.
         - Platform-independent. 
@@ -21,6 +23,7 @@ Go Language Material
             - multi-line comment /* */
         - Functions are building blocks of a Go Program
         - statically typed programming language
+        - All versions are backward compatible (promised).
 
     Go Tools
         - To check the go version, 

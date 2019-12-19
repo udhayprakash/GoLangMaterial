@@ -218,4 +218,15 @@ func main() {
 
 	// Signbit reports whether x is negative or negative zero.
 	math.Signbit(10)
+
+	/*
+	Sqrt returns the square root of x.
+	func Sqrt(x float64) float64
+		Sqrt(+Inf) = +Inf
+		Sqrt(±0) = ±0
+		Sqrt(x < 0) = NaN
+		Sqrt(NaN) = NaN
+	*/
+	fmt.Println("math.Sqrt(4) =", math.Sqrt(4))
+	fmt.Println("math.Sqrt(5) =", math.Sqrt(5))
 }
