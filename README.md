@@ -81,5 +81,31 @@ Important Links:
 ----------------
         - golangprograms.com
         - for jobs, golang.cafe
-    
+        - https://www.golang-book.com/
+        - https://www.gopl.io/
+        - https://www.goinggo.net/
+        
+        - https://github.com/GoesToEleven/svcc-19
+        
+        - Bill Kennedy
+            - https://www.ardanlabs.com/blog/
+        
+        - https://www.twitter.com/joncalhoun?lang=en
+        - https://www.gophercises.com/
+        
+        https://www.udemy.com/user/toddmcleod/
+        https://www.greatercommons.com/
+        
+        https://www.changelog.com/gotime
+        
+        
+        https://golang.org/
+        golang spec
+        effective golang
+        
+        forum.golangbridge.org
+        
+        
+        godoc.org
+            standard library and 3rd party packages
 This source code is tested in go 1.13.5
