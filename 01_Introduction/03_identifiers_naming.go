@@ -14,10 +14,14 @@ func main() {
 	studentName := "Udhay"
 	fmt.Println("Student's name is ", studentName)
 
-	studentName_2 := "Udhay"
-	fmt.Println("Student's name is ", studentName_2)
+	studentName2 := "Udhay"
+	fmt.Println("Student's name is ", studentName2)
 
 	// 2ndName = "prakash" // can't start with number
+
+	// To get the address location where an object is stored
+	fmt.Println(studentName, &studentName)
+	fmt.Println(studentName2, &studentName2)
 }
 
 // NOTE:

@@ -7,7 +7,8 @@ Purpose: Functions Demo
             - Better maintenance of the code
 			- treated as first class objects
 			- function definitions need not be before calls
-
+Go requires explicit returns, i.e. it won’t automatically
+return the value of the last expression.
 */
 import (
 	"fmt"

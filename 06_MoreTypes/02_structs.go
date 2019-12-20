@@ -1,8 +1,12 @@
 package main
-
+/*
+Purpose: Structs
+	- Go’s structs are typed collections of fields.
+	- They’re useful for grouping data together to form
+      records.
+*/
 import "fmt"
 
-// A struct is a collection of fields.
 type Vertex struct {
 	X int
 	Y int
