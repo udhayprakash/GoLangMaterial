@@ -114,4 +114,4 @@ Ans) Go programming provides another data type called interfaces which represent
      definitions for the method signature of the interfaces.
      
      
-    
+https://programming.guide/go/go-gotcha.html

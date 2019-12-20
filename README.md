@@ -24,6 +24,12 @@ Go Language Material
         - Functions are building blocks of a Go Program
         - statically typed programming language
         - All versions are backward compatible (promised).
+        - Go has replaced the traditional features of class inheritance with the help of
+        its two features, i.e., type embedding and interfaces. 
+        - Other features
+            - Fast compilation process
+            - Default concurrency support
+            - Simple and easy to use
 
     Go Tools
         - To check the go version, 
@@ -105,7 +111,7 @@ Important Links:
         
         forum.golangbridge.org
         
-        
+        https://programming.guide/go/
         godoc.org
             standard library and 3rd party packages
 This source code is tested in go 1.13.5

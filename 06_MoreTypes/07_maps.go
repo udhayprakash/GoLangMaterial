@@ -37,4 +37,9 @@ func main() {
 	// Declaring and initializing new map in the same line
 	n := map[string]int{"foo": 1, "bar": 2}
 	fmt.Println("map         :", n)
+
+	if x, ok := m["k1"]; ok {
+		fmt.Println("m['k1'] = ", x) // "3.1416"
+	}
+
 }
