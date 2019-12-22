@@ -22,4 +22,18 @@ func main()  {
 		Saturday
 	)
 	fmt.Println(Wednesday, reflect.TypeOf(Wednesday)) // 3 main.Weekday
+
+	type Even bool
+	const (
+		// 0 % 2 == 0 ==> Even(true)
+		a = Even(iota % 2 == 0)
+		// 1 % 2 == 0 ==> Even(false)
+		b
+		// 2 % 2 == 0 ==> Even(true)
+		c
+		// 3 % 2 == 0 ==> Even(false)
+		d
+	)
+	fmt.Print("a, b, c, d : ")
+	fmt.Println(a, b, c, d)
 }

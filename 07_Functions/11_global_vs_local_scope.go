@@ -7,9 +7,11 @@ Purpose: Scope - Global and local
 
 	call by value
 		- changes within the function will NOT reflect at the global level
+		- arrays
 
 	call by reference
 		- changes within the function will reflect at the global level
+		- slice
 */
 var pi float32 = 3.141
 
