@@ -1,3 +1,15 @@
+Defer
+=====
+    - Defer statement pushes a function call into a list.
+    - The list of saved calls are executed after the surrounding function returns. 
+    - Executed in LIFO order
+    - Generally, used for cleanup actions
+    - Rules
+        - A deferred function's arguments are evaluated when the defer statement is evaludated
+        - Deferred function calls are executed in Last In First Out order after the surrounding function returns.
+        - Deferred functions may read and assign to the returning function's named return values.
+        
+
 Panic
 =====
     - built-in function that stops the ordinary flow of control and begins panicking.

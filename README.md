@@ -30,6 +30,9 @@ Go Language Material
             - Fast compilation process
             - Default concurrency support
             - Simple and easy to use
+        - Designed to achieve concurrency using the multi-core CPUs available these days
+        - compiles, combining all dependency libraries and module into a single binary file based
+          on OS type and architecture
 
     Go Tools
         - To check the go version, 
@@ -85,6 +88,10 @@ Go Language Material
 
 Important Links:
 ----------------
+        - tour.golang.org
+        - lean.go.dev
+        - gophercises.com
+        - gobyexample.com
         - golangprograms.com
         - for jobs, golang.cafe
         - https://www.golang-book.com/
@@ -115,3 +122,9 @@ Important Links:
         godoc.org
             standard library and 3rd party packages
 This source code is tested in go 1.13.5
+
+
+TODO:
+-----
+- https://www.sohamkamani.com/blog/golang/2018-06-20-golang-factory-patterns/
+- https://go101.org/article/channel.html

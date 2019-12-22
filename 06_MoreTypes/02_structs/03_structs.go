@@ -8,7 +8,7 @@ type person struct {
 }
 
 func NewPerson(name string) *person {
-
+	// Function returning `person` struct type
 	p := person{name: name}
 	p.age = 42
 	return &p

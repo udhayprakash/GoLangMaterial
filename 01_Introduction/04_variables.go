@@ -21,8 +21,8 @@ func main() {
 	fmt.Println("z = ", z)
 
 	i := 42           // int
-	f := 3.142        // float64
-	g := 0.867 + 0.5i // complex128
+	f := 3.142        // float64 - an IEEE-754 64-bit floating point number.
+	g := 0.867 + 0.5i // complex128 - represented internally with two float64's.
 	fmt.Println(i, f, g)
 
 }
