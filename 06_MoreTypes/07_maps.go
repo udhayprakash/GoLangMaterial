@@ -5,6 +5,10 @@ package main
 Maps are Go’s built-in associative data type
 (sometimes called hashes or dicts in other languages).
 
+map keys may be of any type that is comparable.
+comparable types: boolean, numeric, string, pointer, channel, and interface types,
+	   and structs or arrays that contain only those types.
+
 */
 import "fmt"
 func main() {
@@ -42,4 +46,12 @@ func main() {
 		fmt.Println("m['k1'] = ", x) // "3.1416"
 	}
 
+	// To initialize a map with some data, use a map literal:
+	commits := map[string]int{
+		"rsc": 3711,
+		"r":   2138,
+		"gri": 1908,
+		"adg": 912,
+	}
+	fmt.Println(commits)
 }

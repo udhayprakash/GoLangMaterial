@@ -42,5 +42,4 @@ func main() {
 
 	fmt.Printf(`year = %v month = %v day = %v`,
 		year, month, day)
-
 }
