@@ -17,8 +17,8 @@ func main() {
 	var num1 int
 	var p Person
 
-	fmt.Println(num1, reflect.TypeOf(num1))  // 0 int
-	fmt.Println(p, reflect.TypeOf(p)) // {  0} main.Person
+	fmt.Println(num1, reflect.TypeOf(num1), reflect.TypeOf(num1).Kind())  // 0 int int
+	fmt.Println(p, reflect.TypeOf(p), reflect.TypeOf(p).Kind()) // {  0} main.Person struct
 
 	fmt.Printf(`Zero-values
 	 p.FirstName = %s     p.LastName = %s      p.Age = %d`,

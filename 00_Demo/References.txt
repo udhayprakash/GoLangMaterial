@@ -1,6 +1,9 @@
 Fields of Usage
 ----------------
-    - Web Apps
+    - API/RPC services (returning non-HTML)
+    - CLI Tools
+    - Web services (returning HTML)
+    - Data processing (pipeline, aggregation, ..)
     - Network Servers
     - Mobile Applications
     - Machine Learning
@@ -29,13 +32,18 @@ go fmt      reformats source files using Go standard formatting
 go version  Displays the current Go version 
 go clean    To delete all the created executables in the current directory
 go install  To install the executable
-
+go test     For unit testing and micro-benchmarks
+go get      For retrieving and installing remote packages
+go vet      Static Analyzer looking for potential errors in code
+go generate Standard way to invoke code generators
+gorename    For renaming variables, functions and so on in a type-safe way
+godoc       For displaying documentation or serving it via HTTP
 
 Ref: For editor/IDE settings to auto-format on save 
     https://blog.golang.org/go-fmt-your-code.
 
 For the editor/IDE to automatically manage the addition or deletion of imports
-based on usge, 
+based on usage,
     go get golang.org/x/tools/cmd/goimports
 
 

@@ -11,6 +11,10 @@ Go Language Material
             - Create executable build based on the platform. 
             - Means, source code is translated into language that the system understands.
         - comes with its own compiler
+        - statically typed programming language
+        - Concurrency 
+            - allows multiple processes running simultaneously and effectively.
+        - garbage collector - automatic memory management
         - Execution flow - top to botton and left to right order
         - Official website: https://www.golang.org
         - Go programs are two types
@@ -22,7 +26,6 @@ Go Language Material
             - line comment //
             - multi-line comment /* */
         - Functions are building blocks of a Go Program
-        - statically typed programming language
         - All versions are backward compatible (promised).
         - Go has replaced the traditional features of class inheritance with the help of
         its two features, i.e., type embedding and interfaces. 
@@ -115,7 +118,7 @@ Important Links:
         https://golang.org/
         golang spec
         effective golang
-        
+        https://go.libhunt.com/
         forum.golangbridge.org
         
         https://programming.guide/go/

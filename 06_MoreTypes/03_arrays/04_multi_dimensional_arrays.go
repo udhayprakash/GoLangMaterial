@@ -22,7 +22,7 @@ func main() {
 	// Iterating multi-dimensional arrays
 	for _, childArray := range a2 {
 		for _, element := range childArray {
-			fmt.Printf(element)
+			fmt.Printf("element: %d", element)
 		}
 	}
 }
