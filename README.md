@@ -129,5 +129,14 @@ This source code is tested in go 1.13.5
 
 TODO:
 -----
-- https://www.sohamkamani.com/blog/golang/2018-06-20-golang-factory-patterns/
-- https://go101.org/article/channel.html
+    - https://www.sohamkamani.com/blog/golang/2018-06-20-golang-factory-patterns/
+    - https://go101.org/article/channel.html
+    - https://exercism.io/tracks/go/learning
+
+Articles
+--------
+    https://medium.com/@kevalpatel2106/why-should-you-learn-go-f607681fad65
+    [Farewell Node.js](https://medium.com/code-adventures/farewell-node-js-4ba9e7f3e52b?)
+Quotes
+------
+    “Go will be the server language of the future.” — Tobias Lütke, Shopify 
