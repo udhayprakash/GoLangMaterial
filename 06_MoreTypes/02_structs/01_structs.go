@@ -5,6 +5,7 @@ import (
 	"reflect"
 )
 
+// struct with two fields
 type Person struct {
 	//FirstName string
 	//LastName  string

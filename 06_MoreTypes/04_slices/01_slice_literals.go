@@ -23,8 +23,13 @@ func main() {
 
 	mySlice2 := make([]string, 3)
 	fmt.Println(reflect.TypeOf(mySlice2).Kind(), mySlice2) // [  ]
+	fmt.Printf("myslice2 - capacity:%d 	length:%d\n", cap(mySlice2), len(mySlice2))
 
-	mySlice3 := []struct {
+	mySlice3 := make([]string, 3, 10)
+	fmt.Println(reflect.TypeOf(mySlice3).Kind(), mySlice3) // [  ]
+	fmt.Printf("mySlice3 - capacity:%d 	length:%d\n", cap(mySlice3), len(mySlice3))
+
+	mySlice4 := []struct {
 		i int
 		b bool
 	}{
@@ -32,5 +37,5 @@ func main() {
 		{3, false},
 		{5, true}, // comma is essential, here
 	}
-	fmt.Println(reflect.TypeOf(mySlice3).Kind(), mySlice3)
+	fmt.Println(reflect.TypeOf(mySlice4).Kind(), mySlice4)
 }

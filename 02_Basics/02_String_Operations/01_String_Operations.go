@@ -17,7 +17,7 @@ func main() {
 
 	// back-tick strings - Both Single & Multi-line Strings
 	fmt.Println(`Hello go world`)
-	fmt.Println(`Hello\tgo\nworld`)  // Escape sequeces were nott recognized
+	fmt.Println(`Hello\tgo\nworld`)  // Escape sequences were not recognized
 	fmt.Println(`Quotes: ""`)
 	fmt.Println(`Backslash: \\`)
 	fmt.Println(`Hello 

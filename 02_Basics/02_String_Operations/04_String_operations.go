@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// UTF-8 is the encoding scheme in Go
 func main() {
 	// Strings are represented with double quotes or back-tick
 	// runes are represented with single quotes

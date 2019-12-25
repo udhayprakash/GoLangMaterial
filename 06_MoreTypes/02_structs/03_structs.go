@@ -5,6 +5,7 @@ import "fmt"
 type person struct {
 	name string
 	age  int
+	eligibleToVote bool
 }
 
 func NewPerson(name string) *person {
@@ -16,9 +17,9 @@ func NewPerson(name string) *person {
 
 func main() {
 
-	fmt.Println(person{"Bob", 20})
+	fmt.Println(person{"Bob", 20, true})
 
-	fmt.Println(person{name: "Alice", age: 30})
+	fmt.Println(person{name: "Alice", age: 30, eligibleToVote:true})
 
 	fmt.Println(person{name: "Fred"})
 
