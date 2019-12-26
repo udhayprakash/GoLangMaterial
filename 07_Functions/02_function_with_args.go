@@ -7,6 +7,9 @@ Purpose: Function with one input argument and no return value
 
 	function calls
 		- by positional arguments
+			- variables must be passed explicitly
+			- Functions don't have access to anything in calling function,
+              unless it's passed in explicitly
 		- by keyword arguments NOT possible in golang
 */
 

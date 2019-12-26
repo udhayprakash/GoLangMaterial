@@ -6,6 +6,7 @@ the surrounding function returns.
 The deferred call's arguments are evaluated immediately,
 but the function call is not executed until the surrounding
 function returns.
+Deferred functions are run even if a runtime panic occurs.
 */
 import "fmt"
 

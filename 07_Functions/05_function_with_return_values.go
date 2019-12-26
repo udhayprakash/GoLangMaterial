@@ -19,7 +19,9 @@ func add(x int, y int) int {
 
 func add1(x int, y int) (output int) {
 	output = x + y
-	return output
+	//return output
+	return
+	// return keyword is mandatory when defined above
 }
 
 func divMod(x, y int) (q int, r int) {

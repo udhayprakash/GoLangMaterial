@@ -2,8 +2,6 @@ package main
 /*
 Purpose: Go-Routines
 	A goroutine is a lightweight thread of execution.
-
-
 */
 import (
 	"fmt"
