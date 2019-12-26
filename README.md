@@ -36,6 +36,17 @@ Go Language Material
         - Designed to achieve concurrency using the multi-core CPUs available these days
         - compiles, combining all dependency libraries and module into a single binary file based
           on OS type and architecture
+         - Popular features of other languages, which are not present in Golang are
+             - no implicit numeric conversions
+             - no constructors or destructors
+             - no operator overloading
+             - no default parameter values
+             - no inheritance
+             - no generics
+             - no exceptions
+             - no macros
+             - no function annotations
+             - no thread-local storage
 
     Go Tools
         - To check the go version, 
@@ -140,3 +151,7 @@ Articles
 Quotes
 ------
     “Go will be the server language of the future.” — Tobias Lütke, Shopify 
+    “With constant pressure to add features and options and configurations, and to 
+     ship code quickly, it’s easy to neglect simplicity, even though in the long 
+     run simplicity is the key to good software” — Rob Pike, One of Golang creators 
+    

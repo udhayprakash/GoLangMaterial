@@ -1,6 +1,7 @@
 Structs
 =======
     - User-defined type that contains a collection of named fields/properties.
+    - so, struct type variables are also called "named-types".
     - used to group related data together to form a single unit.
     - structs are as a lightweight class that supports composition but not inheritance.
     - Any struct type that starts with a capital letter is exported and accessible 

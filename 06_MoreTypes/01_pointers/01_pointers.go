@@ -1,16 +1,14 @@
 package main
 
 /*
-Go has pointers.
-A pointer holds the memory address of a value.
-
-The type *T is a pointer to a T value. Its zero value is nil.
-The & operator generates a pointer to its operand.
-The * operator denotes the pointer's underlying value.
-
-This is known as "dereferencing" or "indirecting".
-
-Unlike C, Go has no pointer arithmetic.
+Purpose: Pointers
+	- A pointer holds the memory address of a value.
+	- Pointers are explicitly visible
+	- The type *T is a pointer to a T value. Its zero value is nil.
+		- The & operator generates a pointer to its operand.
+		- The * operator denotes the pointer's underlying value.
+		- This is known as "dereferencing" or "indirecting".
+	- Unlike C, Go has no pointer arithmetic.
 */
 import "fmt"
 

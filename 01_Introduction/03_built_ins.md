@@ -1,16 +1,23 @@
-Keywords (24)
+Keywords (25)
 --------
-break       case        chan            const   continue    default
-defer       else        fallthrough     for     func        go
-if          import      interface       iota    map         nil
-range       return      struct          switch  type        var
+break       default     func    interface   select
+case        defer       go      map         struct
+chan        else        goto    package     switch
+const       fallthrough if      range       type
+continue    for         import  return      var
 
-
-Built-in Functions (11)
-------------------
-append      cap     copy    delete  len
-make        new     panic   print   println
-recover
+In addition, three dozen predeclared names.
+Constants   :   true    false   iota        nil
+Types       :   int     int8    int32       int64
+                unit    unit8   unit16      uint32      uint64      uintptr
+                float32 float64 complex128  complex64
+                bool    byte    rune        string      error
+                
+Built-in Functions (15)
+----------------------
+append      cap     close   complex     copy    delete
+imag        len     make    new         panic   real
+recover     print   println
 
 Operators
 ---------

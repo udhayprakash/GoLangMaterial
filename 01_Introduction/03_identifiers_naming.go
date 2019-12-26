@@ -22,6 +22,15 @@ func main() {
 	// To get the address location where an object is stored
 	fmt.Println(studentName, &studentName)
 	fmt.Println(studentName2, &studentName2)
+
+	fmt.Println()
+	emptyString1  := ""
+	var emptyString2 string
+	var emptyString3 = ""
+	var emptyString4 string = ""
+	fmt.Println("emptyString1 == emptyString2 :", emptyString1 == emptyString2)
+	fmt.Println("emptyString1 == emptyString3 :", emptyString1 == emptyString3)
+	fmt.Println("emptyString1 == emptyString4 :", emptyString1 == emptyString4)
 }
 
 // NOTE:
