@@ -1,5 +1,10 @@
 package main
 
+import (
+	"errors"
+	"fmt"
+)
 func main() {
-	$END$
+	err := errors.New("error message")
+	fmt.Println(err)
 }

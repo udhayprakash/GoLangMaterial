@@ -1,5 +1,13 @@
 package main
-
+import (
+	"os"
+)
 func main() {
-	$END$
+	file, err := os.Create("test.txt")
+	if err != nil {
+		// handle the error here
+		return
+	}
+	defer file.Close()
+	file.WriteString("test")
 }
