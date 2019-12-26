@@ -16,7 +16,7 @@ func main() {
 	// fmt.Println("Hello
 	// 			 go world")    
 
-	// back-tick strings - Both Single & Multi-line Strings
+	// back-tick (raw) strings - Both Single & Multi-line Strings
 	fmt.Println(`Hello go world`)
 	fmt.Println(`Hello\tgo\nworld`) // Escape sequences were not recognized
 	fmt.Println(`Quotes: ""`)

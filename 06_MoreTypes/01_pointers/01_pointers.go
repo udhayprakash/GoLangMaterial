@@ -23,4 +23,8 @@ func main() {
 	p = &j                  // point to j
 	*p = *p / 37            // divide j through the pointer
 	fmt.Println("j  = ", j) // see the new value of j
+
+	// zero value for a pointer of any type is nil.
+	var x, y int
+	fmt.Println(&x == &x, &x == &y, &x == nil) // "true false false"
 }
