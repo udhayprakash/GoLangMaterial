@@ -39,4 +39,15 @@ func main() {
 	nums := []int{1, 2, 3, 4}
 	//sum(nums) // cannot use nums (type []int) as type int in argument to sum
 	sum(nums...)
+
+	fmt.Printf("%T\n", f1) // "func(...int)"
+	fmt.Printf("%T\n", f2) // "func([]int)"
 }
+
+func f1(...int) {}
+func f2([]int)  {}
+
+
+// Assignments
+// 1. variadic functions max & min, which accepts minimum 1 argument
+// 2. variadic function version of strings.Join

@@ -11,6 +11,11 @@ import (
       for handling of many errors, in Go it is idiomatic to
       use error-indicating return values wherever possible.
 
+	- Go’s type system catches many mistakes at compile time,
+	but others, like an out-of-bounds array access or nil pointer
+    dereference, require checks at run time. When the Go runtime
+	detects these mistakes, it pani cs.
+
 
 */
 func main() {

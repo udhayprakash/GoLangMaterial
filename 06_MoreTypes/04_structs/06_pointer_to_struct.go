@@ -1,28 +1,24 @@
 package main
+/*
+Pointers to struct
+==================
+Struct fields can be accessed through a struct pointer.
 
+To access the field X of a struct when we have the struct
+pointer p we could write (*p).X. However, that notation is
+cumbersome, so the language permits us instead to write
+just p.X, without the explicit dereference.
+*/
 import "fmt"
 
-/*
-Purpose: Creating a struct and obtaining a pointer to it
-         using the built-in new() function
-*/
-type Car struct {
-	chaseNumber int64
-	model 	string
-	launchYear int16
+type Vertex struct {
+	X int
+	Y int
 }
 
 func main() {
-	// You can also get a pointer to a struct using the built-in new() function
-	// It allocates enough memory to fit a value of the given struct type, and returns a pointer to it
-	nano := new(Car)
-
-	nano.chaseNumber = 132323213132312131
-	nano.model = "Tata Nano xyz"
-	nano.launchYear = 2019
-	fmt.Println(nano)
-
-
-
-
+	v := Vertex{1, 2}
+	p := &v
+	p.X = 1e9
+	fmt.Println(v)
 }
