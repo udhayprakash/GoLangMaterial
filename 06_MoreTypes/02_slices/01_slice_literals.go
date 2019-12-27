@@ -38,4 +38,13 @@ func main() {
 		{5, true}, // comma is essential, here
 	}
 	fmt.Println(reflect.TypeOf(mySlice4).Kind(), mySlice4)
+
+	var s5 []int
+	fmt.Println(len(s5), len(s5) == 0, s5 == nil)
+	s5 = nil
+	fmt.Println(len(s5), len(s5) == 0, s5 == nil)
+	s5 = []int(nil)
+	fmt.Println(len(s5), len(s5) == 0, s5 == nil)
+	s5 = []int{}
+	fmt.Println(len(s5), len(s5) == 0, s5 != nil)
 }
