@@ -35,12 +35,17 @@ Go Data Types
         b) Structs
             - Heterogeneous - elements may be of different type
     3. Reference Types
+        - changes to them will be visible outside of the function
         a) Pointers
         b) Slices
         c) Maps
         d) Functions
         e) Channels
     4. Interface Types
+
+nil
+    - zero value for pointers, interfaces, maps, slices, channels and function types,
+       representing an uninitialized value.
 
 Comparable Types: booleans, numbers, Strings
 

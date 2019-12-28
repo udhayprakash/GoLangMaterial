@@ -44,4 +44,8 @@ func main() {
 
 	// In Y-m-d
 	fmt.Println("Just The Date\t\t:", myDate.Format("2006-01-02")) // 2018-01-20
+
+	// ISO 8601 Time
+	fmt.Println("ISO 8601 Time\t\t:", myDate.Format(time.RFC3339)) // 20 Jan 18 04:35 UTC
+
 }
