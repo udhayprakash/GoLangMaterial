@@ -10,11 +10,17 @@ Purpose: Channels
 import "fmt"
 
 func main() {
-
 	messages := make(chan string)
 
-	go func() { messages <- "ping" }()
-
+	go func() { messages <- "google.com" }()
 	msg := <-messages
-	fmt.Println(msg)
+	fmt.Println("Message in Channel:", msg)
+
+	go work(messages)
+	msg = <-messages
+	fmt.Println("Message in Channel:", msg)
+}
+
+func work(messages chan<- string) {
+	messages <- "facebook.com"
 }

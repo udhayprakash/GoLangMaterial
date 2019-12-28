@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+
 /*
 Purpose: Interpolation Search
  - an improvement over Binary Search for instances,
@@ -9,49 +10,50 @@ Purpose: Interpolation Search
  - interpolation search may go to different locations according
    the value of searchVal being searched.
 */
-func interpolationSearch(dataList []int, searchVal int) int {
-	lowerPos, higherPos := 0, len(dataList) -1
-	min, max := dataList[0], dataList[higherPos]
+// Interpolation Search in Golang
+func interpolationSearch(array []int, key int) int {
+	low, high := 0, len(array)-1
+	min, max := array[0], array[high]
 
 	for {
-		if searchVal < min {
-			return lowerPos
+		if key < min {
+			return low
 		}
-		if searchVal > max {
-			return higherPos + 1
-		}
-	}
-	// make a guess of the location
-	var guess int
-	if higherPos == lowerPos {
-		guess = higherPos
-	} else {
-		size := higherPos - lowerPos
-		offset := int(float64(size-1) * (float64(searchVal-min) / float64(max-min)))
-		guess = lowerPos + offset
-	}
 
-	// maybe we found it?
-	if dataList[guess] == searchVal {
-		// scan backwards for start of value range
-		for guess > 0 && dataList[guess-1] == searchVal {
-			guess--
+		if key > max {
+			return high + 1
 		}
-		return guess
-	}
 
-	// if we guessed to high, guess lower or vice versa
-	if dataList[guess] > searchVal {
-		lowerPos = guess - 1
-		max = dataList[higherPos]
-	} else {
-		lowerPos = guess + 1
-		min = dataList[lowerPos]
+		// make a guess of the location
+		var guess int
+		if high == low {
+			guess = high
+		} else {
+			size := high - low
+			offset := int(float64(size-1) * (float64(key-min) / float64(max-min)))
+			guess = low + offset
+		}
+
+		// maybe we found it?
+		if array[guess] == key {
+			// scan backwards for start of value range
+			for guess > 0 && array[guess-1] == key {
+				guess--
+			}
+			return guess
+		}
+		// if we guessed to high, guess lower or vice versa
+		if array[guess] > key {
+			high = guess - 1
+			max = array[high]
+		} else {
+			low = guess + 1
+			min = array[low]
+		}
 	}
 }
 
 func main() {
-	// Expects the elements to be in sorted order
-	items := []int{-1, 0, 1,2, 9, 20, 31, 45, 63, 70, 100}
-	fmt.Println(interpolationSearch(items,1))
+	items := []int{1, 2, 9, 20, 31, 45, 63, 70, 100}
+	fmt.Println(interpolationSearch(items, 63))
 }

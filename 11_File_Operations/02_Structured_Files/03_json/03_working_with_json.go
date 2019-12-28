@@ -8,7 +8,7 @@ import (
 func main() {
 	birdJson := `{
 		  "species": "pigeon",
-		  "decription": "likes to perch on rocks"
+		  "description": "likes to perch on rocks"
 		}`
 	type Bird struct {
 		Species     string

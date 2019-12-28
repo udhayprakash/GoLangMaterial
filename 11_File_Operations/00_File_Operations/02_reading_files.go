@@ -4,11 +4,12 @@ import (
 	"io/ioutil"
 )
 func main() {
-	bs, err := ioutil.ReadFile("test.txt")
+	fileContent, err := ioutil.ReadFile("test.txt")
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
-	str := string(bs)
-	fmt.Println(str)
+	// Convert []byte to string and print to screen
+	text := string(fileContent)
+	fmt.Println(text)
 }

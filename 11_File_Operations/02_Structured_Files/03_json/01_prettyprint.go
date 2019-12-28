@@ -13,6 +13,7 @@ func PrettyPrint(v interface{}) (err error) {
 	fmt.Println(string(b))
 	return
 }
+
 type Person struct {
 	Name    string
 	Age     int
