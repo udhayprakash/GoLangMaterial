@@ -1,8 +1,11 @@
 package main
 
 /*
+Purpose:
+Go’s select lets you wait on multiple channel operations.
+select allows multiplexing so we can receive from multiple channels without blocking
+Combining goroutines and channels with select is a powerful feature of Go.
 
-Go’s select lets you wait on multiple channel operations. Combining goroutines and channels with select is a powerful feature of Go.
 */
 import (
 	"fmt"
