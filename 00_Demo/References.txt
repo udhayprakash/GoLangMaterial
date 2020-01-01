@@ -32,17 +32,19 @@ Execution flow:
 
 
 go build    compiles source code files into binray files
-go run      compiles and runs a program, without saving an executable file
-go fmt      reformats source files using Go standard formatting
-go version  Displays the current Go version
 go clean    To delete all the created executables in the current directory
-go install  To install the executable
-go test     For unit testing and micro-benchmarks
+go doc      For displaying documentation about the libraries
+go env      print Go environment information
+go fmt      reformats source files using Go standard formatting
 go get      For retrieving and installing remote packages
+go install  To install the executable
+go list     list packages
+go run      compiles and runs a program, without saving an executable file
+go test     For unit testing and micro-benchmarks
+go version  Displays the current Go version
 go vet      Static Analyzer looking for potential errors in code
 go generate Standard way to invoke code generators
 gorename    For renaming variables, functions and so on in a type-safe way
-godoc       For displaying documentation or serving it via HTTP
 
 Ref: For editor/IDE settings to auto-format on save
     https://blog.golang.org/go-fmt-your-code.

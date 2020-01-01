@@ -18,7 +18,7 @@ func main() {
 
 	go work(messages)
 	msg = <-messages
-	fmt.Println("Message in Channel:", msg)
+	fmt.Println( "Message in Channel:", msg)
 }
 
 func work(messages chan<- string) {

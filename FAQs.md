@@ -113,5 +113,20 @@ Ans) Go programming provides another data type called interfaces which represent
      of method signatures. struct data type implements these interfaces to have method
      definitions for the method signature of the interfaces.
      
+Q22) In GO language how you can check variable type at runtime?
+Ans) A special type of switch is dedicated in GO to check variable type at runtime, 
+     this switch is referred as type switch.  Also, you can switch on the type of 
+     an interface value with Type Switch.
+
+Q23) Explain workspace in GO?
+Ans) Inside a workspace GO code must be kept.  A workspace is a directory hierarchy 
+     with three directories at its root.
+         src contains GO source files organized into packages
+         pkg contains package objects and
+         bin contains executable commands
+         
+Q24) How you can format a string without printing?
+Ans) To format a string without printing you have to use command
+        fmt.Sprintf( “at %v, %s”, e.When, e.What)
      
 https://programming.guide/go/go-gotcha.html
