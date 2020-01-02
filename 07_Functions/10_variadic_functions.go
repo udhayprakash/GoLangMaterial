@@ -2,6 +2,7 @@ package main
 
 /*
 Purpose: Variadic Functions
+	- http://en.wikipedia.org/wiki/Variadic_function
 	- Function with variable arguments
 	- can be called with any number of trailing arguments.
 	ex: fmt.Println(), append()

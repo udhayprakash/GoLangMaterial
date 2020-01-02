@@ -6,15 +6,19 @@ import (
 )
 
 func main() {
-	now := time.Now()      // current local time
-	sec := now.Unix()      // number of seconds since January 1, 1970 UTC
-	nsec := now.UnixNano() // number of nanoseconds since January 1, 1970 UTC
+	now := time.Now()       // current local time
+	secs := now.Unix()      // number of seconds since January 1, 1970 UTC
+	nsecs := now.UnixNano() // number of nanoseconds since January 1, 1970 UTC
 
-	fmt.Println(now)
-	fmt.Println(sec)
-	fmt.Println(nsec)
+	// No milliseconds API. So, we can compute manually
+	msecs := nsecs / 1000000
+
+	fmt.Println("now  :", now)
+	fmt.Println("secs :", secs)
+	fmt.Println("nsecs:", nsecs)
+	fmt.Println("msecs:", msecs)
 
 	var timestamp int64 = 0
-	fmt.Println(time.Unix(timestamp, 0))  // 1970-01-01 05:30:00 +0530 IST
+	fmt.Println(time.Unix(timestamp, 0)) // 1970-01-01 05:30:00 +0530 IST
 
 }

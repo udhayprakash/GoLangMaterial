@@ -7,9 +7,6 @@ Purpose: os.Exit
       return value from main to indicate exit status.
     - If you’d like to exit with a non-zero status you
       should use os.Exit.
-
-
-
 */
 import (
 	"fmt"

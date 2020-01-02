@@ -3,7 +3,7 @@ package main // package declaration
 import "fmt"
 
 func main() {
-	fmt.Println("Hello, world") // To print a line
+	fmt.Println("Hello, world Golang内存分配") // To print a line
 }
 
 //Q) How to run a go lang program ?

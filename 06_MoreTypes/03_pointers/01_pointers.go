@@ -2,6 +2,7 @@ package main
 
 /*
 Purpose: Pointers
+	- http://en.wikipedia.org/wiki/Pointer_(computer_programming)
 	- A pointer holds the memory address of a value.
 	- Pointers are explicitly visible
 	- The type *T is a pointer to a T value. Its zero value is nil.
@@ -26,5 +27,7 @@ func main() {
 
 	// zero value for a pointer of any type is nil.
 	var x, y int
-	fmt.Println(&x == &x, &x == &y, &x == nil) // "true false false"
+	fmt.Println("&x == &x :", &x == &x)  // true
+	fmt.Println("&x == &y :", &x == &y)  // false
+	fmt.Println("&x == nil:", &x == nil) // false
 }

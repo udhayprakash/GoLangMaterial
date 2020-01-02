@@ -2,7 +2,7 @@ package main
 
 // Command-line flags are a common way to specify options for command-line programs. For example, in wc -l the -l is a command-line flag.
 import (
-	"flag"   // for flag parsing
+	"flag" // for flag parsing
 	"fmt"
 )
 
@@ -40,5 +40,3 @@ func main() {
 
 // Note that the flag package requires all flags to appear before positional arguments (otherwise the flags will be interpreted as positional arguments).
 // go run 03b_command_line_flags.go -word=opt a1 a2 a3 -numb=7
-
-

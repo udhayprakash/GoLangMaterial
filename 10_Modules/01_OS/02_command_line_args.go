@@ -16,3 +16,6 @@ func main() {
 	fmt.Println("\targuments   = ", arguments)
 
 }
+
+// [_Command-line arguments_](http://en.wikipedia.org/wiki/Command-line_interface#Arguments)
+// are a common way to parameterize execution of programs.

@@ -14,4 +14,5 @@ func main() {
 	time.Sleep(*period)
 	fmt.Println()
 }
+
 // go run 03a_command_line_flags.go -period 50ms
