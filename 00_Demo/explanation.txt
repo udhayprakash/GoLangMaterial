@@ -1,0 +1,21 @@
+1990    C, C++
+                platform -windows
+                                -Linux
+                                - MaC
+                                - unix
+2000    java
+                JVM - java
+
+2015    python
+                .py 
+                small lines
+                        interpreted langauge
+                                .py --> c code --> machine code
+
+                slow
+
+2020    GoLang
+                platforms all
+                .exe file 
+                small code
+                package 

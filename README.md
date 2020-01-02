@@ -155,3 +155,8 @@ Quotes
      ship code quickly, it’s easy to neglect simplicity, even though in the long 
      run simplicity is the key to good software” — Rob Pike, One of Golang creators 
     
+    
+Packages
+--------
+1. GoReleaser,  http://github.com/goreleaser
+2. Cobra( for creating CLIs), https://github.com/spf13/cobra 

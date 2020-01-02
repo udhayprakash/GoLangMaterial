@@ -1,3 +1,22 @@
+Go's Solution for Concurrency
+------------------------------
+1) GoRoutines (execution)
+    A GoRoutine in the Go programming language is a lightweight 
+    thread that is managed by Go runtime. If you just put 'go' 
+    before a function, it means that it will execute concurrently 
+    with the rest of the code.
+2) Channels (communication)
+    Channels are pipes that connect concurrent GoRoutines. You 
+    are able to send values and signals over Channels from GoRoutine
+    to GoRoutine. This allows for synchronizing execution.
+3) Select (coordination)
+    The Select statement in Go lets you wait and watch multiple 
+    operations on a channel. Combining GoRoutines and channels will 
+    show off the true power of concurrency in Go.
+
+
+
+
 Concurrency
 -----------
 “Concurrency is about dealing with lots of things at once. Parallelism
