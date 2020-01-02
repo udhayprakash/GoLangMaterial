@@ -1,11 +1,14 @@
 Switch Statement 
 ================
-A switch statement is a multiway branch statement. It provides an efficient way to transfer the execution of different parts of a code based on the value (also clled case) of the expression. 
+    - switch statement is a multiway branch statement. 
+    - It provides an efficient way to transfer the execution 
+      of different parts of a code based on the value (also 
+      called case) of the expression. 
 
-Go language supports two types of switch statements:
-
-    1. Expression Switch 
-    2. Type Switch
+    - Go language supports two types of switch statements:
+      
+          1. Expression Switch 
+          2. Type Switch
 
     Expression Switch: 
         - similar to switch statement in c, c++, Java languages. 
