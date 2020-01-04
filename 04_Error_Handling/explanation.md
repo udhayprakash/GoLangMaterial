@@ -1,3 +1,5 @@
+Go decided that the best place to handle an error is right there when you get it.
+
 Defer
 =====
     - Defer statement pushes a function call into a list.

@@ -13,3 +13,6 @@ Logging packages in Golang
     https://github.com/uber-go/zap 
         - "blazing fast"
         - Fast, structured, leveled logging in Go
+        
+        
+    https://github.com/avelino/awesome-go#logging

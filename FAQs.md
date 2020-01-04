@@ -128,5 +128,15 @@ Ans) Inside a workspace GO code must be kept.  A workspace is a directory hierar
 Q24) How you can format a string without printing?
 Ans) To format a string without printing you have to use command
         fmt.Sprintf( “at %v, %s”, e.When, e.What)
-     
+  
+Q25) If a program is running across multiple threads, does failure in one goroutine halt the program?
+Ans) Yes, Eve though running in multiple threads and cores, they are all part of same loop (coroutine).
+
+Q26) Will running CPU intensive tasks in goroutines block them?
+Ans) May be. Because we are not sure whether all are running on same core or not.
+
+Q27) When to prefer concurrency, over Parallelism?
+Ans)    I/O Bound   = Concurrency 
+        CPU Bound   = Parallelism
+        
 https://programming.guide/go/go-gotcha.html

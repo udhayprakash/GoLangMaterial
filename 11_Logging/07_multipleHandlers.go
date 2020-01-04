@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-	file, e := os.OpenFile("06_multipleHandler.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	file, e := os.OpenFile("07_multipleHandler.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	if e != nil {
 		log.Fatalln("Failed to open log file")
 	}

@@ -38,3 +38,6 @@ func main() {
 // 2. Only variables, functions or types whose names begin with a capital
 //    letter are considered as exported: accessible from packages outside
 //    the current package.
+// 3. Names starting with a capital letter are public, names with a
+//    lowercase letter are private.
+
