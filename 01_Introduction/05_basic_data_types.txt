@@ -4,7 +4,7 @@ Go Data Types
         a) Numbers
             i) int
                 1. signed  : int8, int16, int32, int64
-                    - rune is synonym for int32
+                    - rune(represents a Unicode code point) is synonym for int32
                 2. unsigned: uint8, uint16, uint32, uint64
                     - byte is synonym for uint8
                     - uintptr
@@ -22,11 +22,16 @@ Go Data Types
                     - math.MaxFloat64 = 1.8e308
                     - math.MinFloat64 = 4.9e-324
             iii) complex numbers
+                    - complex64 complex128
+
         b) Strings
             - Strings
             - rune
         c) Booleans
             - true, false
+        d) nil
+            - zero value for pointers, interfaces, maps, slices, channels
+              and function types, representing an uninitialized value.
     2. Aggregate Types
         - Values are concatenation of other values in memory
         - Fixed Size
@@ -43,27 +48,7 @@ Go Data Types
         e) Channels
     4. Interface Types
 
-nil
-    - zero value for pointers, interfaces, maps, slices, channels and function types,
-       representing an uninitialized value.
-
 Comparable Types: booleans, numbers, Strings
-
-bool
-
-string
-
-int  int8  int16  int32  int64
-uint uint8 uint16 uint32 uint64 uintptr
-
-byte // alias for uint8
-
-rune // alias for int32
-     // represents a Unicode code point
-
-float32 float64
-
-complex64 complex128
 
 NOTE:
 =====
