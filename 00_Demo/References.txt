@@ -33,7 +33,7 @@ Execution flow:
 Stackoverflow Survey results
     https://insights.stackoverflow.com/survey/2019#technology
 
-go build    compiles source code files into binray files
+go build    compiles source code files into binaray files
 go clean    To delete all the created executables in the current directory
 go doc      For displaying documentation about the libraries
 go env      print Go environment information
