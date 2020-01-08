@@ -21,6 +21,12 @@ Concurrency
 -----------
 “Concurrency is about dealing with lots of things at once. Parallelism
 is about doing lots of things at once” – Rob Pike
+- With no shared data, concurrence gets a lot simpler:
+      No semaphores.
+      No monitors.
+      No locks.
+      No race-conditions.
+      No dead-locks.
 - Two types in Go
     1) Communicating Sequential Processes (CSP)
         - Using communication as synchronization primitive

@@ -82,12 +82,16 @@ Go Language Material
         -Philosophy
             - Do not communicate by sharing memory; instead, share memory by communicating
               The number 1 feature of GoLang is the exact opposite definition of what OOP stands for.
+            - Keep It Simple Stupid (KISS)
+                - Only one way of doing things
+                    No more spaces vs tabs, functions vs objects, for vs while … 
+                    Developers write the same code, compiler can optimize it better.
         - OOP
             - There are no classes in Go, but some features of Object Oriented programming are supported:
                 - Encapsulation (possible on package level in Go)
                 - Composition (possible through embedding in Go)
                 - Polymorphism (possible through Interface satisfaction in Go)
-                - Inheritance (Not possble)
+                - Inheritance (Not possble - overloading makes code harder to debug)
                 
     Go Tools
         - To check the go version, 

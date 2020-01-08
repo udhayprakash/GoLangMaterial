@@ -3,6 +3,11 @@ package main
 /*
 Purpose: Recursive Functions
 http://en.wikipedia.org/wiki/Recursion_(computer_science)
+
+Tail call Optimization (TCO)
+	- Avoids creating a new stack when the last call in a recursion
+      is the function itself.
+	- TCO is not implemented in Golang
 */
 
 import "fmt"
