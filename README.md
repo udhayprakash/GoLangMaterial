@@ -5,6 +5,7 @@ Go Language Material
         - General Purpose Compiled Programing language
         - created by Ken Thompson (B, C, Unix, UTF-8), Rob Pike(Unix, UTF-8), 
           Robert Griesemer(Hotspot, JVM) and few google engineers.
+        - first release was on March 2012.
         - No pre-requisites need. Can be learned as first programming language.
         - C language is the most direct influence on Go.
         - Platform-independent. 
@@ -36,7 +37,7 @@ Go Language Material
         - Designed to achieve concurrency using the multi-core CPUs available these days
         - compiles, combining all dependency libraries and module into a single binary file based
           on OS type and architecture
-         - Popular features of other languages, which are not present in Golang are
+        - Popular features of other languages, which are not present in Golang are
              - no implicit numeric conversions
              - no constructors or destructors
              - no operator overloading
@@ -47,7 +48,47 @@ Go Language Material
              - no macros
              - no function annotations
              - no thread-local storage
-
+        -  It is meant to replace C++ and Java in terms of Google's needs. 
+           Go was meant to alleviate some of the slowness and clumsiness of development 
+           of very large software systems. 
+        - To be a little more specific, Go helps solve …
+             - slow compilation and slow execution
+             - programmers that collaborate using different subsets of languages
+             - readability and documentation
+             - language consistency
+             - versioning issues
+             - multi-language builds
+             - dependencies being hard to maintain
+        - Compilers
+            - There are two Go compiler implementations, gc, and gccgo. 
+                Gc uses a different calling convention and linker and because of this, 
+                can only be linked with C programs following the same convention. 
+                Gccgo is a GCC frontend that can be linked with GCC-compiled C or C++ programs. 
+                Gccgo is slower to compile than the default gc, but supports more powerful 
+                optimizations so many programs compiled with it will run faster. 
+                This takes great care and even more patience.
+            
+            - The cgo program provides the mechanism for a foreign function interface to
+                allow safe calling of C libraries from Go code. SWIG extends this capability 
+                to C++ libraries.
+        - Limitations of Go
+            - No Generics, no .map, .reduce, .filter
+            - No exceptions or assertions, as mentioned earlier (but I feel that this could go either way)
+            - No Ternary operations. Use the good ole 'if else' statements.
+            - Absolutely no tolerance for unused variables or imports (but is that really a bad thing?)
+            - Your virus protection might think your compiled binaries are infected because it doesn't understand the structure of a Go Binary 😅
+            - No pointer arithmetic (but thats for safety, and simplifies implementation of the garbage collector)
+            - And honestly, dealing with GOPATH is kinda messy and annoying. You are forced to do all of your go projects within your GOPATH, but IDE's like VSCode and GoLand allow you to set the GoPath for your project without affecting your system's actual GOPATH.
+        -Philosophy
+            - Do not communicate by sharing memory; instead, share memory by communicating
+              The number 1 feature of GoLang is the exact opposite definition of what OOP stands for.
+        - OOP
+            - There are no classes in Go, but some features of Object Oriented programming are supported:
+                - Encapsulation (possible on package level in Go)
+                - Composition (possible through embedding in Go)
+                - Polymorphism (possible through Interface satisfaction in Go)
+                - Inheritance (Not possble)
+                
     Go Tools
         - To check the go version, 
                 go version
