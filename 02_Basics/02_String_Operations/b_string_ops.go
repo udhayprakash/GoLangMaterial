@@ -10,6 +10,6 @@ func main() {
 
 	// string repetition
 	// fmt.Println("Hello " * 3)  //(mismatched types string and int)
-	
+
 }
 

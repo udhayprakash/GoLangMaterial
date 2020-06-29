@@ -1,4 +1,4 @@
-fmt.Printf, like printf in C, produces formatted output 
+fmt.Printf, like printf in C, produces formatted output
 ------------------------------------------------------------------------
 verb        Description
 ------------------------------------------------------------------------

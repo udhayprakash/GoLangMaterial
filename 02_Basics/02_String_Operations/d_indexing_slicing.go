@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(`len("Hello world") =`, len("Hello world"))
+	fmt.Println(`len("Hello world")	=`, len("Hello world"))
 
 	name := "Hello world"
 	fmt.Println("name				=", name)

@@ -1,9 +1,11 @@
+/*
+Go natively handles Unicode, so
+it can process text in all the world’s languages.
+*/
 package main
 
 import "fmt"
 
-// Go natively handles Unicode, so
-// it can process text in all the world’s languages.
 func main() {
 	// fmt.Println('Hello world')  // single quotes can't be used
 
@@ -14,7 +16,7 @@ func main() {
 	fmt.Println("Backslash: \\")
 
 	// fmt.Println("Hello
-	// 			 go world")    
+	// 			 go world")
 
 	// back-tick (raw) strings - Both Single & Multi-line Strings
 	fmt.Println(`Hello go world`)
