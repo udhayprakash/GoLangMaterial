@@ -30,5 +30,5 @@ Examples
 	m == n+1 && <-ch > 0 is the same as (m == (n+1)) && ((<-ch) > 0)
 */
 func main() {
-	
+
 }

@@ -23,7 +23,7 @@ func main() {
 	fmt.Println()
 
 	// Get the meters value in run time
-	fmt.Println("Enter no. of meters =")
+	fmt.Print("Enter no. of meters =")
 	fmt.Scanf("%f", &meters)
 	feet = 0.3048 * meters
 
