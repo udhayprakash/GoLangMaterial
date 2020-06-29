@@ -20,7 +20,7 @@ func main() {
 	// Truncation
 	b := int8(a) // -2        bit pattern:           1111 1110
 
-	// Sign extention
+	// Sign extension
 	c := uint16(b) // 0xfffe  bit pattern: 1111 1111 1111 1110
 	fmt.Println(c)
 
@@ -48,32 +48,29 @@ func main() {
 	// Converting a slice of bytes to a string type yields a string whose successive bytes are the elements of the slice.
 	fmt.Println("string([]byte{97, 230, 151, 165})", string([]byte{97, 230, 151, 165})) // "a日"
 	// Converting a value of a string type to a slice of bytes type yields a slice whose successive elements are the bytes of the string.
-	fmt.Println(`[]byte("a日")`, []byte("a日"))                     // []byte{97, 230, 151, 165}
+	fmt.Println(`[]byte("a日")`, []byte("a日")) // []byte{97, 230, 151, 165}
 
 	// Strings and rune slices ===============================================
 	// Converting a slice of runes to a string type yields a string that is the concatenation of the individual rune values converted to strings.
 	fmt.Println("string([]rune{97, 26085}):", string([]rune{97, 26085})) // "a日"
 	// Converting a value of a string type to a slice of runes type yields a slice containing the individual Unicode code points of the string.
-	fmt.Println(`[]rune("a日")            :`, []rune("a日"))             // []rune{97, 26085}
-
+	fmt.Println(`[]rune("a日")            :`, []rune("a日")) // []rune{97, 26085}
 
 	// Underlying type =======================================================
 	// A non-constant value can be converted to type T if it has the same underlying type as T.
 	type (
 		T1 int64
 		T2 T1
-	)  // the underlying type of int64, T1, and T2 is int64.
+	) // the underlying type of int64, T1, and T2 is int64.
 
 	var n1 int64 = 12345
 	fmt.Println(n1)                // 12345
 	fmt.Println(time.Duration(n1)) // 12.345µs
 
-
-
 	// Implicit conversions ==================================================
 	// The only implicit conversion in Go is when an untyped constant is used in a situation where a type is required.
 	var f2 float64
-	f2 = 1 // Same as: f2 = float64(1)
+	f2 = 1                // Same as: f2 = float64(1)
 	t2 := 2 * time.Second // Same as: t2 := time.Duration(2) * time.Second
 
 	fmt.Println(f2, t2)
@@ -86,11 +83,10 @@ func main() {
 	// Illegal implicit conversions are caught by the compiler:
 	//var b3 byte = 256 // Same as: var b3 byte = byte(256) // constant 256 overflows byte
 
-	fmt.Println(n3, f3, s3, c3, b3)
+	fmt.Println(n3, f3, s3, c3)
 
 	// Pointers ==============================================================
 	// The Go compiler does not allow conversions between pointers and integers.
 	// The package unsafe implements this functionality under restricted circumstances.
 	// But, used only in LOW-LEVEL programming
-
 }

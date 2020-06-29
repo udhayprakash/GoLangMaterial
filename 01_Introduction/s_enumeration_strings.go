@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// data type aliases
 type Direction int
 
 func main() {
@@ -13,7 +14,7 @@ func main() {
 		West
 	)
 
-	fmt.Println("South =", South)
+	fmt.Println("South     =", South)
 	fmt.Println("NorthEast =", North, East)
 
 }

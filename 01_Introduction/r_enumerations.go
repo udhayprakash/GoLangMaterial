@@ -1,7 +1,3 @@
-package main
-
-import "fmt"
-
 /*
 Purpose: Enum
 	- Grouping and expecting only some related values
@@ -10,11 +6,14 @@ Purpose: Enum
 	- To increase the code readability and the maintainability
 
 */
-func main() {
-	// Go does not hve enumerate types
-	//Instead, you can use the special name iota in a single const declaration to get a series of increasing values.
-	// When an initialization expression is omitted for a const, it reuses the preceding expression.
+package main
 
+import "fmt"
+
+func main() {
+	// Go does not have enumerate types
+	// Instead, you can use the special name iota in a single const declaration to get a series of increasing values.
+	// When an initialization expression is omitted for a const, it reuses the preceding expression.
 	const (
 		C0 = iota
 		C1 = iota
@@ -32,6 +31,7 @@ func main() {
 	fmt.Println("red   =", red)
 	fmt.Println("blue  =", blue)
 	fmt.Println("green =", green)
+	fmt.Println()
 
 	// ---------COUNTING BACKWARD----------------
 	const (
@@ -42,6 +42,8 @@ func main() {
 		b                // 9
 		c                // 8
 	)
+	fmt.Println(a, b, c) // "1 2 4"
+
 	// ---------------------------------------
 	const (
 		p1 = iota + 1
@@ -50,6 +52,7 @@ func main() {
 		p4
 	)
 	fmt.Println(p1, p3, p4) // "1 2 4"
+	fmt.Println()
 
 	// ---------------------------------------
 	const (
@@ -65,7 +68,7 @@ func main() {
 	fmt.Println("April    :", April)
 	fmt.Println("May      :", May)
 
-	// Multiple iotas in a single line
+	// ---------- Multiple iotas in a single line
 	const (
 		// Active = 0, Moving = 0, Running = 0
 		Active, Moving, Running = iota, iota, iota

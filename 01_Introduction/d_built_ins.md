@@ -1,29 +1,31 @@
-Keywords (25)
---------
-break       default     func    interface   select
-case        defer       go      map         struct
-chan        else        goto    package     switch
-const       fallthrough if      range       type
-continue    for         import  return      var
+## Keywords (25)
+
+break default func interface select
+case defer go map struct
+chan else goto package switch
+const fallthrough if range type
+continue for import return var
 
 In addition, three dozen predeclared names.
-Constants   :   true    false   iota        nil
-Types       :   int     int8    int32       int64
-                unit    unit8   unit16      uint32      uint64      uintptr
-                float32 float64 complex128  complex64
-                bool    byte    rune        string      error
-                
+Constants : true false iota nil
+Types : int int8 int32 int64
+unit unit8 unit16 uint32 uint64 uintptr
+float32 float64 complex128 complex64
+bool byte rune string error
+  
 Built-in Functions (15)
-----------------------
-append      cap     close   complex     copy    delete
-imag        len     make    new         panic   real
-recover     print   println
 
-Operators
----------
+---
+
+append cap close complex copy delete
+imag len make new panic real
+recover print println
+
+## Operators
+
     Arithmetic
     ----------
-    
+
         -------------------------------------------------
         Operator	Name	            Types
         -------------------------------------------------
@@ -60,16 +62,16 @@ Operators
         - A value x of non-interface type X and a value t of interface type T are equal if t's dynamic type is identical to X and t's concrete value is equal to x.
         - Two struct values are equal if their corresponding non-blank fields are equal.
         - Two array values are equal if their corresponding elements are equal.
-      
-    Logical 
+
+    Logical
     -------
-    
+
         --------------------------------------------------------------------------
         Operator	Name	            Description
         --------------------------------------------------------------------------
         &&	        conditional AND	    p && q denotes "if p then q else false"
         ||	        conditional OR	    p || q denotes "if p then true else q"
-        !	        NOT	!p denotes      "not p"  
+        !	        NOT	!p denotes      "not p"
         --------------------------------------------------------------------------
 
     Others
@@ -84,9 +86,9 @@ Operators
         ...         Spread operator     To unpack the values in a string/array, ...
         --------------------------------------------------------------------------
 
-Packages
---------
-bufio   
+## Packages
+
+bufio  
 bytes
 compress/gzip
 container/list
@@ -112,6 +114,5 @@ rand
 strings
 time
 unicode
-
 
 // Ref: https://golang.org/pkg/builtin/

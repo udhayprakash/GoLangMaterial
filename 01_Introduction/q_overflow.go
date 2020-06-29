@@ -1,8 +1,7 @@
 package main
 
 import "fmt"
-// Ensure that the type of the variable can handle all the values
-// of business logic
+
 func main() {
 	var blue int = 255
 	fmt.Printf("blue: %3d BinaryForm: %b\n", blue, blue)
@@ -23,4 +22,5 @@ func main() {
 
 	var i int8 = 127
 	fmt.Println(i, i+1, i*i) // "127 -128 1"
+
 }
