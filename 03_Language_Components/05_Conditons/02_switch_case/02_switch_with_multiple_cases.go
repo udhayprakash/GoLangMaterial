@@ -30,3 +30,5 @@ func main() {
 		fmt.Println("It's a weekday")
 	}
 }
+// It is recommended to place default case 
+// at start, or at end of switch
