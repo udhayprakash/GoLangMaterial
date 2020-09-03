@@ -90,31 +90,31 @@ Constants :
 
 ## Packages
 
-bufio  
-bytes
-compress/gzip
-container/list
-encoding/base64
-encoding/csv
-encoding/json
-flag
-fmt
-html/template
-io/ioutil
-index/suffixarray
-math
-math/bits
-net/http
-os
-os/exec
-path
-path/filepath
-regexp
-sort
-strconv
-rand
-strings
-time
-unicode
+    bufio
+    bytes
+    compress/gzip
+    container/list
+    encoding/base64
+    encoding/csv
+    encoding/json
+    flag
+    fmt
+    html/template
+    io/ioutil
+    index/suffixarray
+    math
+    math/bits
+    net/http
+    os
+    os/exec
+    path
+    path/filepath
+    regexp
+    sort
+    strconv
+    rand
+    strings
+    time
+    unicode
 
 // Ref: https://golang.org/pkg/builtin/
