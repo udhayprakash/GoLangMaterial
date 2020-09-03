@@ -33,6 +33,9 @@ Execution flow:
 Stackoverflow Survey results
     https://insights.stackoverflow.com/survey/2019#technology
 
+
+go commands
+------------
 go build    compiles source code files into binaray files
 go clean    To delete all the created executables in the current directory
 go doc      For displaying documentation about the libraries
@@ -46,7 +49,7 @@ go test     For unit testing and micro-benchmarks
 go version  Displays the current Go version
 go vet      Static Analyzer looking for potential errors in code
 go generate Standard way to invoke code generators
-gorename    For renaming variables, functions and so on in a type-safe way
+go rename    For renaming variables, functions and so on in a type-safe way
 
 Ref: For editor/IDE settings to auto-format on save
     https://blog.golang.org/go-fmt-your-code.
@@ -54,6 +57,3 @@ Ref: For editor/IDE settings to auto-format on save
 For the editor/IDE to automatically manage the addition or deletion of imports
 based on usage,
     go get golang.org/x/tools/cmd/goimports
-
-
-
