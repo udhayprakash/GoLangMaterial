@@ -2,10 +2,18 @@ package main
 
 import "fmt"
 
+/*
+variable, Identifier, user-defined variable
+
+RULES
+1. first letter should be alphabet or _
+2. second letter onwards a-z, A-Z, _, 0-9
+*/
+
 func main() {
 	// Identifiers - user-defined variables
 	x := "Udhay"
-	fmt.Println("Student's name is ", x)
+	fmt.Println("Student name is ", x)
 
 	// NOTE: code will be better readable if meaningful names are given for variables
 	name := "Udhay"
@@ -30,6 +38,7 @@ func main() {
 	fmt.Println("Student's name is ", __name__)
 
 }
+
 // NOTE:
 // 1. camelCasing is preferred for the identifiers
 // 2. Only variables, functions or types whose names begin with a capital
