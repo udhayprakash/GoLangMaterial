@@ -47,6 +47,6 @@ func main() {
 	fmt.Println("i 		=", i, reflect.TypeOf(i))
 
 	// Compile time error: "constant 10000000000 overflows int"
-	var j int16 = big
-	fmt.Println("j =", j, reflect.TypeOf(j))
+	//var j int16 = big
+	//fmt.Println("j =", j, reflect.TypeOf(j))
 }

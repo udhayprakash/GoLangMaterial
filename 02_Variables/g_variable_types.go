@@ -40,4 +40,10 @@ func main() {
 	fmt.Println("reflect.TypeOf('a') 	=", reflect.TypeOf('a'))  // int32
 	fmt.Println("reflect.TypeOf(\"a\")	=", reflect.TypeOf("a")) // string
 	fmt.Println("reflect.TypeOf(true)	=", reflect.TypeOf(true)) // bool
+	fmt.Println()
+
+	fmt.Printf("%T\n", 0)      // "int"
+	fmt.Printf("%T\n", 0.0)    // "float64"
+	fmt.Printf("%T\n", 0i)     // "complex128"
+	fmt.Printf("%T\n", '\000') // "int32" (rune)
 }
