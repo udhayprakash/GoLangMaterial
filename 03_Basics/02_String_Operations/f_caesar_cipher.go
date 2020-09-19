@@ -22,10 +22,10 @@ func main() {
 		// Caesar Cipher : character + 3
 		fmt.Printf("\t rune       : %c \t", s[i]+3)
 		fmt.Printf("\t UTF8 code  : %v \n\n", s[i]+3)
+
 		res += fmt.Sprintf("%c", s[i]+3)
 	}
 	fmt.Println("res:", res)
-
 }
 
 // Assignment

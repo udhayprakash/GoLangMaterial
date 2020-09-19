@@ -6,9 +6,17 @@ import (
 	"unicode/utf8"
 )
 
-func main() {
+func main(){
 	x := "my new text is this long"
-	y := strings.Repeat("#", utf8.RuneCountInString(x))
-	fmt.Println(x) // my new text is this long
-	fmt.Println(y) // ########################
+	fmt.Println("x=", x)
+
+	y := strings.Repeat("#", 10)
+	fmt.Println("y=", y)
+
+	z := strings.Repeat("#", len(x))
+	fmt.Println("z=", z)
+
+	p := strings.Repeat("#", utf8.RuneCountInString(x))
+	fmt.Println("p=", p)
+
 }

@@ -4,11 +4,15 @@ import (
 	"fmt"
 	"strconv"
 )
+func main(){
+	fmt.Println(strconv.ParseFloat("1.234", 64))
+	fmt.Println(strconv.ParseFloat("1.234 23", 64))
 
-func main() {
+	value, err := strconv.ParseFloat("1.234", 64)
+	fmt.Println("Value = ", value, "\terror=", err)
 
-	f, _ := strconv.ParseFloat("1.234", 64)
-	fmt.Println(f)
+	value, err = strconv.ParseFloat("1.2 34", 64)
+	fmt.Println("Value = ", value, "\terror=", err)
 
 	i, _ := strconv.ParseInt("123", 0, 64)
 	fmt.Println(i)
