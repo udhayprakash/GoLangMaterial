@@ -19,3 +19,9 @@
                 .exe file 
                 small code
                 package 
+				
+	
+New Language
+	Python -> 
+Simplicity 
+Reducing compile Time
