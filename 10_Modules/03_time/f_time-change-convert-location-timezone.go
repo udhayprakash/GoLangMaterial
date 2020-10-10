@@ -23,13 +23,15 @@ func main() {
 		"Local",
 		"Asia/Shanghai",
 		"America/Metropolis",
+		"Asia/Kolkata",
+		"Africa/Lagos",
+		"Asia/karachi",
 	} {
 		t, err := TimeIn(time.Now(), name)
 		if err == nil {
-			fmt.Println(t.Location(), t.Format("15:04"))
+			fmt.Println(t.Format("2006-01-02 15:04"), t.Location())
 		} else {
 			fmt.Println(name, "<time unknown>")
 		}
 	}
-
 }
