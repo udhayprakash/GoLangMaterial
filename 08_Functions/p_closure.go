@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 /*
 Purpose: Closures
 	-  functions which enclose other functions, often with
@@ -9,19 +11,20 @@ Purpose: Closures
 NOTE: Inner functions are most often anonymous functions (or function literals).
 */
 
-import "fmt"
-
-func callingHello() func() string {
+func callingHello() func() string{
 	fmt.Println("starting callingHello ...")
-	return func() string { //anonymous function
+	return func() string { // anonymous function
 		fmt.Println("starting inner function ...")
 		return "Hello world"
 	}
 }
 
+
 func main() {
 	fmt.Println("starting main ...")
 	fmt.Println("callingHello =", callingHello)
+	callingHello()
+
 	result := callingHello()
 
 	fmt.Println("\ncalling result ...")

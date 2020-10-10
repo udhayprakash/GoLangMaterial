@@ -13,6 +13,7 @@ func main() {
 	var p = f()
 	fmt.Println("f():", p, *p)
 
+
 	p = f()
 	fmt.Println("f():", p, *p)
 

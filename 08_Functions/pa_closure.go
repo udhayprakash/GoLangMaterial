@@ -1,8 +1,6 @@
 package main
 
-import (
-"fmt"
-)
+import "fmt"
 
 func counter() func() int {
 	i := 0
@@ -16,20 +14,16 @@ func doubleUp(current int) int {
 	currentCount := current
 	return currentCount * 2
 }
-
-func main() {
+func main(){
 	someCounter := counter()
+	fmt.Println("someCounter  :", someCounter)
+	fmt.Println("someCounter():", someCounter()) // 1
 
-	// prints "1"
-	fmt.Println(someCounter())
+	fmt.Println("doubleUp:", doubleUp)
+	fmt.Println("doubleUp(someCounter()):",doubleUp(someCounter()) ) // 4
 
-	// prints "4"
-	// because someCounter() increases i to 2
-	// then doubleUp() doubles what was returned
-	fmt.Println(doubleUp(someCounter()))
-
-	// prints "3"
+	fmt.Println("someCounter():", someCounter()) // 3
 	// because the previous doubleUp() didn't affect i
 	// only the value returned from someCounter
-	fmt.Println(someCounter())
+
 }

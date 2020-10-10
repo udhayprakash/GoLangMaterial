@@ -13,21 +13,17 @@ Purpose: Function with one input argument and no return value
 		- by keyword arguments NOT possible in golang
 */
 
-
-// Function Definition
+// Function Definitions
 func hello(name string){
-	fmt.Println("Hello" , name)
+	fmt.Println("Hello", name)
 }
 
-func main()  {
-	// Function call
+func main(){
+	// Function calls
 	//hello() // not enough arguments in call to hello
-	hello("Python") //Hello Python
-
-	//hello("python", "program") // too many arguments in call to hello
+	hello("Udhay")  //Hello Python
+	//hello("Udhay", "Prakash")  // too many arguments in call to hello
 
 	// keyword arguments not possible
 	//hello(name="python")  // syntax error
-
-
 }

@@ -8,18 +8,21 @@ func NewCounter() (Count func()) {
 	n := 0
 	return func() {
 		n++
-		fmt.Println(n)
+		fmt.Println("n:", n)
 	}
 }
 
-func main() {
+
+func main(){
 	counter := NewCounter()
 	otherCounter := NewCounter()
 
-	counter()      // 1
-	counter()      // 2
-	counter()      // 3
-	otherCounter() // 1 (different n)
-	otherCounter() // 2
-	counter()      // 4
+	counter()      // n:1
+	counter()      // n:2
+	counter()      // n:3
+
+	otherCounter() // n: 1
+	otherCounter() // n: 2
+
+	counter()      // n:4
 }

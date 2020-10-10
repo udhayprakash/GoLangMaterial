@@ -1,21 +1,27 @@
 package main
 
 import (
-	"sort"
 	"fmt"
+	"sort"
 )
 
-func main() {
+func main(){
+	// Method 1
+	people := []string{"sudeep", "ram", "udhay", "prakash"}
 
-	people := []string{"Alice", "Bob", "Dave"}
+	fmt.Println("Initially    , people:", people)
+	sort.Strings(people)
+	fmt.Println("After sorting, people:", people)
+
 	sort.Slice(people, func(i, j int) bool {
 		return len(people[i]) < len(people[j])
 	})
-	fmt.Println(people) // Output: [Bob Dave Alice]
+	fmt.Println("After slicing, people:", people)
 
 
+	// Method 2
 	// It could also have been stored in an intermediate variable:
-	people1 := []string{"Alice", "Bob", "Dave"}
+	people1 := []string{"sudeep", "ram", "udhay", "prakash"}
 	less := func(i, j int) bool {
 		return len(people1[i]) < len(people1[j])
 	}
@@ -28,3 +34,5 @@ func main() {
 
 
 }
+
+

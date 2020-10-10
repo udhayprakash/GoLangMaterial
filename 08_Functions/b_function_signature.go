@@ -9,6 +9,7 @@ func sub(x, y int) (z int)   { z = x - y; return }
 func first(x int, _ int) int { return x }
 func zero(int, int) int      { return 0 }
 
+
 func main() {
 	// type of a function is sometimes called its signature.
 	fmt.Printf("%T\n", add)   // "func(int, int) int"
@@ -20,4 +21,5 @@ func main() {
 	var f func(int) int
 	//f(3) // panic: call of nil function
 	fmt.Println("f == nil :", f == nil)
+
 }

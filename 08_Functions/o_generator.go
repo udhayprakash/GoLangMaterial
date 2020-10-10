@@ -2,6 +2,14 @@ package main
 
 import "fmt"
 
+//func makeEvenGenerator() func() uint {
+//	i := uint(0)
+//	return func() uint {
+//		i += 2
+//		return i
+//	}
+//}
+
 func makeEvenGenerator() func() uint {
 	i := uint(0)
 	return func() (ret uint) {
@@ -10,6 +18,7 @@ func makeEvenGenerator() func() uint {
 		return
 	}
 }
+
 func main() {
 	nextEven := makeEvenGenerator()
 	fmt.Println("nextEven() =", nextEven())
