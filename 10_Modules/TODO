@@ -1,0 +1,13 @@
+game engine: godotengine.org/
+govalidator
+testify
+goORM
+
+https://github.com/go-kit/kit/tree/master/log
+
+godotenv to load .env files,
+gorilla mux for the routing,
+go-pg for PostgreSQL,
+go-kit/log for logging,
+govalidator to validate JSON requests,
+NewRelic's and Sentry's Go agents.
