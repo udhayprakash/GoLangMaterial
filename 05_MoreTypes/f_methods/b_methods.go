@@ -6,7 +6,7 @@ import (
 )
 
 // Struct type - `Point`
-type Point struct {
+type Point struct{
 	X, Y float64
 }
 
@@ -18,6 +18,7 @@ func IsAboveFunc(p Point, y float64) bool {
 func (p Point) IsAbove(y float64) bool {
 	return p.Y > y
 }
+
 
 func main() {
 	p := Point{2.0, 4.0}
@@ -50,4 +51,4 @@ The expression p.Distance is calle d a selector, because it selects the appropri
 method for the receiver p of type Point. Selectors are also used to select fields of struct types,
 as in p.X. Since methods and fields in habit the same namespace, declaring a method X on the
 struct type Point would be ambiguous and the compiler will reject it.
-*/
+*/}

@@ -6,7 +6,22 @@ import (
 	"time"
 )
 
-func main() {
+func main(){
+	var dozen int
+	dozen = 12
+	fmt.Println("dozen:", dozen)
+
+	//dozen = 12.13  //  constant 12.13 truncated to integer
+
+	var PI float64
+	PI = 3
+	fmt.Println("PI:", PI)
+
+	PI = 3.1416
+	fmt.Println("PI:", PI)
+
+	//PI = "3.1416" // cannot use "3.1416" (type untyped string) as type float64 in assignment
+
 	var any interface{}
 	fmt.Printf("any:%10v , dataType:%T\n", any, any)
 
@@ -30,5 +45,4 @@ func main() {
 
 	var x2 interface{} = time.Now()
 	fmt.Printf("x2 :%10v , dataType:%T\n", x2, x2)
-
 }

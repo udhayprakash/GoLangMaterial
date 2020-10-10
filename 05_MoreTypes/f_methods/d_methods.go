@@ -10,9 +10,12 @@ type Point struct{ X, Y float64 }
 // A Path is a journey connecting the points with straight lines.
 type Path []Point
 
+
+
 func (p Point) Distance(q Point) float64 {
 	return math.Hypot(q.X-p.X, q.Y-p.Y)
 }
+
 
 // Distance returns the distance traveled along the path.
 func (path Path) Distance() float64 {
