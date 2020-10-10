@@ -2,9 +2,9 @@ package main
 
 import "fmt"
 
-func main() {
-	usd := 70
-	cand := 49
+func main(){
+	usd := 74
+	cand := 48
 
 	fmt.Println("usd < cand  =", usd < cand)
 	fmt.Println("usd <= cand =", usd <= cand)
@@ -12,5 +12,7 @@ func main() {
 	fmt.Println("usd >= cand =", usd >= cand)
 	fmt.Println("usd == cand =", usd == cand)
 	fmt.Println("usd != cand =", usd != cand)
-	// fmt.Println("usd <> cand =", usd <> cand)
+	//fmt.Println("usd <> cand =", usd <> cand) syntax error: unexpected >, expecting expression
+
+
 }
