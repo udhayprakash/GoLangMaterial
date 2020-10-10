@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 var language string
@@ -11,6 +12,7 @@ func main() {
 		language = "Golang"
 	}()
 
+	time.Sleep(time.Second * 2)
 	fmt.Println("language:", language)
 }
 

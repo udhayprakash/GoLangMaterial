@@ -9,12 +9,11 @@ func main() {
 	squares := make(chan int)
 	// Counter
 	go func() {
-		for x := 0; x < 100; x++ {
+		for x := 0; x < 10; x++ {
 			naturals <- x
 		}
 		close(naturals)
 	}()
-
 	// Squarer
 	go func() {
 		for x := range naturals {

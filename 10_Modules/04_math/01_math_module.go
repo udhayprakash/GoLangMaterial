@@ -40,6 +40,9 @@ func main() {
 	fmt.Println("math.MaxUint8 = ", math.MaxUint8)
 	fmt.Println("math.MaxUint16= ", math.MaxUint16)
 	fmt.Println("math.MaxUint32= ", math.MaxUint32)
-	fmt.Println("math.MaxUint64= ", math.MaxUint64)
+	//fmt.Println("math.MaxUint64= ", math.MaxUint64) //PANIC: constant 18446744073709551615 overflows int
+
+	var value uint64 = math.MaxUint64
+	fmt.Println("math.MaxUint64= ", value)
 
 }

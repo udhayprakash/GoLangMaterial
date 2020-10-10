@@ -26,5 +26,9 @@ func main() {
 	// More Info: https://stackoverflow.com/q/29733575/402585
 	fmt.Println("Real User: " + os.Getenv("SUDO_USER"))
 
-
+	cwd, err := os.Getwd()
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("current working directory:", cwd)
 }

@@ -10,6 +10,7 @@ func main() {
 	fmt.Println("The command line args given are:")
 
 	//fmt.Println("os.Args:", os.Args)
+	// os.Args - It is a slice of strings
 	programName := os.Args[0]
 	arguments := os.Args[1:]
 

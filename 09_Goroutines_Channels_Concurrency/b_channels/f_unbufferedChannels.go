@@ -9,12 +9,15 @@ var language string
 
 func main() {
 	go func() {
-		language = "GOlang"
+		language = "Golang"
 		// sending value to channel
 		myChannel <- 0
+
 	}()
 
 	// receiving value from channel & discard value
 	<-myChannel
 	fmt.Println("language:", language)
 }
+
+// <-myChannel -- This is blocking code. waiting till some values comes from channel

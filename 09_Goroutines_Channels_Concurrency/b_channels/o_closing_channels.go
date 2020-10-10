@@ -1,14 +1,16 @@
 package main
+
 /*
 Purpose:
-Closing a channel indicates that no more values will be sent on it. This can be useful to communicate completion to the channel’s receivers.
+	- Closing a channel indicates that no more values will be sent on it.
+	- This can be useful to communicate completion to the channel’s receivers.
 
 */
 import "fmt"
 
 func main() {
-	jobs := make(chan int, 5)
-	done := make(chan bool)
+	jobs := make(chan int, 5) // buffered channel
+	done := make(chan bool)   // unbuffered channel
 
 	go func() {
 		for {
@@ -28,6 +30,8 @@ func main() {
 		fmt.Println("sent job", j)
 	}
 	close(jobs)
+	//jobs <- 765765765 // panic: send on closed channel
+
 	fmt.Println("sent all jobs")
 
 	<-done

@@ -1,21 +1,21 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 /*Purpose: Unidirectional Channels
 send-only 		: chan<- int
 receive-only	: <-chan int
 
 */
-func counter(out chan<- int) {
+
+func counter(out chan<- int){
 	// out - send-only channel
-	for x := 0; x < 100; x++ {
+	for x := 0; x < 10; x++ {
 		out <- x
 	}
 	close(out)
 }
+
 
 func squarer(out chan<- int, in <-chan int) {
 	// out - send-only channel
@@ -32,6 +32,8 @@ func printer(in <-chan int) {
 		fmt.Println(v)
 	}
 }
+
+
 func main() {
 	naturals := make(chan int)
 	squares := make(chan int)
@@ -40,4 +42,5 @@ func main() {
 	go squarer(squares, naturals)
 
 	printer(squares)
+
 }

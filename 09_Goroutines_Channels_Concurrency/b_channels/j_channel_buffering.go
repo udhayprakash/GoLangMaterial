@@ -17,6 +17,15 @@ func main() {
 	messages <- "buffered"
 	messages <- "channel"
 
-	fmt.Println(<-messages)
-	fmt.Println(<-messages)
+	fmt.Println("\n<-messages :", <-messages)
+	fmt.Println("<-messages :", <-messages)
+
+	messages <- "udhay"
+	messages <- "prakash"
+	fmt.Println("\n<-messages :", <-messages)
+	fmt.Println("<-messages :", <-messages)
+
+	messages <- "udhay"
+	fmt.Println("\n<-messages :", <-messages)
+
 }
