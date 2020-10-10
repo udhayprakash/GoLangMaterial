@@ -20,4 +20,5 @@ func main() {
 	fmt.Println("p1 = ", p1)
 	fmt.Println("p2 = ", p2)
 
+	// NOTE: Changes in one instance will not affect the other
 }

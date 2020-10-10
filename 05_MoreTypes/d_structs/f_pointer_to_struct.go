@@ -1,4 +1,7 @@
 package main
+
+import "fmt"
+
 /*
 Pointers to struct
 ==================
@@ -9,16 +12,21 @@ pointer p we could write (*p).X. However, that notation is
 cumbersome, so the language permits us instead to write
 just p.X, without the explicit dereference.
 */
-import "fmt"
 
-type Vertex struct {
+type myVertex struct {
 	X int
 	Y int
 }
 
-func main() {
-	v := Vertex{1, 2}
-	p := &v
-	p.X = 1e9
-	fmt.Println(v)
+func main(){
+	value := myVertex{1, 2}
+	valuePtr := &value
+
+	value.X = 222
+	value.Y = 333
+
+	valuePtr.X = 444
+	valuePtr.Y = 555
+
+	fmt.Println("value.X == valuePtr.X :", value.X == valuePtr.X)
 }

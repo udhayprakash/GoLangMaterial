@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 /*
 Struct Literals
 A struct literal denotes a newly allocated struct value by
@@ -10,11 +12,8 @@ Name: syntax. (And the order of named fields is irrelevant.)
 
 The special prefix & returns a pointer to the struct value.
 */
-import "fmt"
 
-type Vertex struct {
-	X, Y int
-}
+type Vertex struct{ X, Y int }
 
 var (
 	v1 = Vertex{1, 2}  // has type Vertex
@@ -26,3 +25,4 @@ var (
 func main() {
 	fmt.Println(v1, p, v2, v3)
 }
+

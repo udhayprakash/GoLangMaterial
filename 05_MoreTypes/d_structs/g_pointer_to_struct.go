@@ -7,17 +7,17 @@ import (
 
 type Student struct {
 	RollNumber int
-	Name       string
+	Name string
 }
 
-func main() {
+func main(){
 	// instance of student struct type
 	s1 := Student{14, "Rahul Dravid"}
-	fmt.Println("\n", reflect.TypeOf(s1), s1)
+	fmt.Println("\n", reflect.TypeOf(s1), s1) //  main.Student {14 Rahul Dravid}
 
 	// Pointer to the student struct
 	p_s1 := &s1
-	fmt.Println("\n", reflect.TypeOf(p_s1), p_s1)
+	fmt.Println("\n", reflect.TypeOf(p_s1), p_s1) //  *main.Student &{14 Rahul Dravid}
 
 	// Accessing struct fields via pointer
 	fmt.Println("\n", (*p_s1).Name, s1.Name)
@@ -31,5 +31,6 @@ func main() {
 	// updating value via pointer reference
 	p_s1.Name = "KL Rahul"
 	fmt.Println("\n", (*p_s1).Name, s1.Name)
+
 
 }
