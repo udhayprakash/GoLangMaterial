@@ -3,14 +3,6 @@ package main
 import "fmt"
 
 func main() {
-	i := 34
-
-	if i%2 == 0 {
-		fmt.Println(i, "is even")
-	} else {
-		fmt.Println(i, "is odd")
-	}
-
 	// A statement can precede conditionals; any variables
 	// declared in this statement are available in all
 	// branches.
