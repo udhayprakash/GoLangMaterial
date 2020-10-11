@@ -6,11 +6,14 @@ import (
 )
 
 func main() {
-	if fileExists("example.txt") {
-		fmt.Println("Example file exists")
-	} else {
-		fmt.Println("Example file does not exist (or is a directory)")
+	for _, eachFile := range [2]string{"example.txt", "C:\\Go\\README.md"} {
+		if fileExists(eachFile) {
+			fmt.Printf("file - %s exists\n", eachFile)
+		} else {
+			fmt.Printf("file - %s does not exist (or is a directory)\n", eachFile)
+		}
 	}
+
 }
 
 // fileExists checks if a file exists and is not a directory before we
