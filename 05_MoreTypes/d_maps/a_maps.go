@@ -13,6 +13,10 @@ map keys may be of any type that is comparable.
 comparable types: boolean, numeric, string, pointer, channel, and interface types,
 	   and structs or arrays that contain only those types.
 
+- unordered collection of key-value pairs
+	- keys are any type that supports == and != operators
+	- values are any type
+
 */
 func main(){
 	m := make(map[string]int)

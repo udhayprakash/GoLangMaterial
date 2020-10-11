@@ -6,7 +6,7 @@ import (
 )
 
 type Person struct {
-	FirstName string
+	FirstName string   // each value is called field
 	LastName  string
 	Age       int
 	Salary    float64

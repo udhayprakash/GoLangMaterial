@@ -14,6 +14,11 @@ Purpose: Functions
 			- function definitions need not be before calls
 Go requires explicit returns, i.e. it won’t automatically
 return the value of the last expression.
+
+SYNTAX:
+	func name(parameter-list) (result-list) {
+		body
+	}
 */
 
 func myFunc() {
