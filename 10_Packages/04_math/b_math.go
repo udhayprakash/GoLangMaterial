@@ -5,9 +5,9 @@ import (
 	"math"
 )
 
-func main() {
+func main(){
 
-	/*
+	/* Absolute results in positive value
 		Abs(±Inf) = +Inf
 		Abs(NaN) = NaN
 	*/
@@ -17,6 +17,8 @@ func main() {
 	y := math.Abs(2)
 	fmt.Printf("%.1f\n", y)
 
+
+	// Trigonometric functions
 	// Acos(x) = NaN if x < -1 or x > 1
 	fmt.Printf("%.2f", math.Acos(1))
 
@@ -25,25 +27,26 @@ func main() {
 		Acosh(x) = NaN if x < 1
 		Acosh(NaN) = NaN
 	*/
-	fmt.Printf("%.2f", math.Acosh(1))
+	fmt.Printf("%.2f\n", math.Acosh(1))
 
 	/*
 		Asin(±0) = ±0
 		Asin(x) = NaN if x < -1 or x > 1
 	*/
-	fmt.Printf("%.2f", math.Asin(0))
+	fmt.Printf("%.2f\n", math.Asin(0))
 
 	/*
 		Asinh(±0) = ±0
 		Asinh(±Inf) = ±Inf
 		Asinh(NaN) = NaN
 	*/
-	fmt.Printf("%.2f", math.Asinh(0))
+	fmt.Printf("%.2f\n", math.Asinh(0))
 
 	/*
 		Atan(±0) = ±0
 		Atan(±Inf) = ±Pi/2
 	*/
-	fmt.Printf("%.2f", math.Atan(0))
+	fmt.Printf("%.2f\n", math.Atan(0))
 
-	}
+
+}
