@@ -1,10 +1,8 @@
 package main
 
-import (
-	"log"
-)
+import "log"
 
-func main() {
+func main(){
 	flags := log.Flags()
 	log.Println("Flags:", flags)
 }

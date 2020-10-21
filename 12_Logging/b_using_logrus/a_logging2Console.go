@@ -3,10 +3,9 @@ package main
 // go get "github.com/Sirupsen/logrus"
 
 import (
-	log "github.com/sirupsen/logrus"
+	log "github.com/Sirupsen/logrus"
 )
-
-func main() {
+func main(){
 	log.Debug("Useful debugging information.")
 	log.Info("Something noteworthy happened!")
 	log.Warn("You should probably take a look at this.")
@@ -15,4 +14,5 @@ func main() {
 	log.Fatal("Bye.")
 	// Calls panic() after logging
 	log.Panic("I'm bailing.")
+
 }

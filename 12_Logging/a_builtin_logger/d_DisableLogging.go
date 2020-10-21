@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func main() {
+func main(){
 	log.Println("message 1")
 	log.Println("message 2")
 
@@ -24,3 +24,4 @@ func main() {
 	log.Println("message 6")
 
 }
+

@@ -1,22 +1,32 @@
 package main
 
 import (
-	"os"
-
 	log "github.com/sirupsen/logrus"
+	"os"
 )
 
 func main() {
-	file, err := os.OpenFile("info.log", os.O_CREATE|os.O_APPEND, 0644)
+	file, err := os.OpenFile("d_setLogFormat_as_json.log", os.O_CREATE|os.O_APPEND, 0644)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	defer file.Close()
 
+	// redirecting the logs the file
 	log.SetOutput(file)
-	log.SetFormatter(&log.JSONFormatter{})
+
+	// default log level is INFO. To set the level
 	log.SetLevel(log.WarnLevel)
+
+	// formatting the log
+	log.SetFormatter(&log.JSONFormatter{})
+
+	log.Debug("This is an debug log")
+	log.Info("This is an info log")
+	log.Warning("This is a warning log")
+	log.Error("This is an error log")
+
 
 	log.WithFields(log.Fields{
 		"animal": "walrus",
@@ -32,4 +42,5 @@ func main() {
 		"omg":    true,
 		"number": 100,
 	}).Fatal("The ice breaks!")
+
 }
