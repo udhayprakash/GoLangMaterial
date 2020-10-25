@@ -13,25 +13,27 @@ type Plant struct {
 }
 
 func (p Plant) String() string {
-	return fmt.Sprintf("Plant id=%v, name=%v, origin=%v",
-		p.Id, p.Name, p.Origin)
+	return fmt.Sprintf("Plant id=%v, name=%v, origin=%v", p.Id, p.Name, p.Origin)
 }
 
 func main() {
 	coffee := &Plant{Id: 27, Name: "Coffee"}
 	coffee.Origin = []string{"Ethiopia", "Brazil"}
 
+	// Serialization: Golang object to xml
 	out, _ := xml.MarshalIndent(coffee, " ", "  ")
 	fmt.Println(string(out))
 
-	fmt.Println(xml.Header + string(out))
+	fmt.Println("\n", xml.Header + string(out))
 
+	// Deserialization: xml to Golang object
 	var p Plant
 	if err := xml.Unmarshal(out, &p); err != nil {
 		panic(err)
 	}
 	fmt.Println(p)
 
+	//
 	tomato := &Plant{Id: 81, Name: "Tomato"}
 	tomato.Origin = []string{"Mexico", "California"}
 
@@ -44,5 +46,7 @@ func main() {
 	nesting.Plants = []*Plant{coffee, tomato}
 
 	out, _ = xml.MarshalIndent(nesting, " ", "  ")
-	fmt.Println(string(out))
+	fmt.Println("\n\n", string(out))
+
+
 }
