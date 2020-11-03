@@ -1,10 +1,12 @@
 package main
+
 import (
 	"fmt"
 	"io/ioutil"
 )
-func main() {
-	fileContent, err := ioutil.ReadFile("test.txt")
+
+func main(){
+	fileContent, err := ioutil.ReadFile("myFile.txt")
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -12,4 +14,5 @@ func main() {
 	// Convert []byte to string and print to screen
 	text := string(fileContent)
 	fmt.Println(text)
+
 }
