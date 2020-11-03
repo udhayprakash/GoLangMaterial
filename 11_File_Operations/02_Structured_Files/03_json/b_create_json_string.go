@@ -6,16 +6,6 @@ import (
 	"os"
 )
 
-type response1 struct {
-	Page   int
-	Fruits []string
-}
-
-type response2 struct {
-	Page   int      `json:"page"`
-	Fruits []string `json:"fruits"`
-}
-
 func main() {
 
 	bolB, _ := json.Marshal(true)
@@ -30,13 +20,25 @@ func main() {
 	strB, _ := json.Marshal("gopher")
 	fmt.Println(string(strB))
 
+	runB, _ := json.Marshal('g')
+	fmt.Println(string(runB))
+
+	//
 	slcD := []string{"apple", "peach", "pear"}
 	slcB, _ := json.Marshal(slcD)
 	fmt.Println(string(slcB))
 
 	mapD := map[string]int{"apple": 5, "lettuce": 7}
 	mapB, _ := json.Marshal(mapD)
-	fmt.Println(string(mapB))
+	fmt.Println(string(mapB)) // {"apple":5,"lettuce":7}
+
+	fmt.Println()
+	// struct
+
+	type response1 struct {
+		Page   int
+		Fruits []string
+	}
 
 	res1D := &response1{
 		Page:   1,
@@ -44,12 +46,17 @@ func main() {
 	res1B, _ := json.Marshal(res1D)
 	fmt.Println(string(res1B))
 
+	type response2 struct {
+		Page   int      `json:"pageNumber"`
+		Fruits []string `json:"fruitsPresent"`
+	}
 	res2D := &response2{
 		Page:   1,
 		Fruits: []string{"apple", "peach", "pear"}}
 	res2B, _ := json.Marshal(res2D)
 	fmt.Println(string(res2B))
 
+	// bytes
 	byt := []byte(`{"num":6.13,"strs":["a","b"]}`)
 
 	var dat map[string]interface{}
@@ -75,4 +82,5 @@ func main() {
 	enc := json.NewEncoder(os.Stdout)
 	d := map[string]int{"apple": 5, "lettuce": 7}
 	enc.Encode(d)
+
 }

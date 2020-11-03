@@ -5,19 +5,13 @@ import (
 	"fmt"
 )
 
-func PrettyPrint(v interface{}) (err error) {
+func PrettyPrint(v interface{}) (err error){
 	b, err := json.MarshalIndent(v, "", "  ")
 	if err != nil {
 		fmt.Println("error:", err)
 	}
 	fmt.Println(string(b))
 	return
-}
-
-type Person struct {
-	Name    string
-	Age     int
-	Hobbies []string
 }
 
 func main() {
@@ -37,8 +31,15 @@ func main() {
 	PrettyPrint(slcD)
 	fmt.Println()
 
-	// struct
+	// Struct
+	type Person struct {
+		Name    string
+		Age     int
+		Hobbies []string
+	}
 	p1 := &Person{"Sam", 20, []string{"cricket", "football"}}
 	fmt.Println(p1)
 	PrettyPrint(p1)
+
 }
+
