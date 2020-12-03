@@ -1,9 +1,19 @@
 package main
 
-import "encoding/json"
+import (
+	"encoding/json"
+	"fmt"
+)
+
+type Bird struct {
+	Species string
+	Description string
+}
 
 func main()  {
-	myJsonString := `{"some":"json"}`
-	json.Unmarshal([]byte(myJsonString), &myStoredVariable)
-
+	birdJson := `{"species": "pigeon","description": "likes to perch on rocks"}`
+	var bird Bird
+	json.Unmarshal([]byte(birdJson), &bird)
+	fmt.Printf("Species: %s, Description: %s", bird.Species, bird.Description)
+	//Species: pigeon, Description: likes to perch on rocks
 }

@@ -5,6 +5,8 @@ import (
 	"testing"
 )
 
+// go run will not work for this program, as main() function is not defined
+// go test -v
 func IntMin(a, b int) int {
 	if a < b {
 		return a
