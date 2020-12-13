@@ -22,8 +22,9 @@ bool 	byte 	rune 		string 		error
 
 func main() {
 	// NOTE 1: keywords should not be used as identifiers
-	//break := "one" //syntax error: unexpected := at end of statement
-
+	// break := "one" //syntax error: unexpected := at end of statement
+	// true := "one" //: true declared but not used
+	
 	break_one := "one"
 	fmt.Println("break_one =", break_one)
 

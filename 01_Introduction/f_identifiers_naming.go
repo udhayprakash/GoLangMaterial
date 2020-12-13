@@ -5,13 +5,14 @@ import "fmt"
 /*
 variable, Identifier, user-defined variable
 
-RULES
-1. first letter should be alphabet or _
-2. second letter onwards a-z, A-Z, _, 0-9
+RULES:
+-----
+	1. first letter should be alphabet or _
+	2. second letter onwards a-z, A-Z, _, 0-9
 */
 
 func main() {
-	// Identifiers - user-defined variables
+	// Identifiers :- user-defined variables
 	x := "Udhay"
 	fmt.Println("Student name is ", x)
 
