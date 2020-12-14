@@ -1,0 +1,99 @@
+                        ---------------------------
+                        GO Language Course Content
+                        ---------------------------
+                            Duration: 30+ days
+Chapter 01: Introduction
+            Necessity & importance of Golang
+            Installation setup 
+            comment operators 
+            Keywords & Identifiers
+            Data Types in Golang
+Chapter 02: Variables 
+            Variables & Declarations
+            Constants
+            Overflow 
+            Enumerations 
+            Zero values 
+            Type conversions
+            Custom Type Creation
+            Run-Time Input
+Chapter 03: Basics
+            Arithmetic Operations
+                Arithmetic operators
+                type casting
+                complex numbers
+                operator precedence 
+            String Operations
+                importance of quotes 
+                string operations 
+                Escape sequences
+                print type 
+                string formatting
+                String immutability
+                string attributes 
+                utf strings 
+                number parsing 
+                bytes and runes 
+
+Chapter 04: Language Components
+                Relational Operations 
+                Logical Operations
+                Boolean Operations 
+                Bitwise Operations 
+                Conditions 
+                Loops 
+                Range 
+                Init
+Chapter 05: MoreTypes
+                Arrays 
+                Slices
+                Pointers
+                Maps
+                Structs
+                Methods
+                Interfaces
+Chapter 06: Error Handling
+                Defer 
+                panic 
+                recover
+                create erros
+Chapter 07: Debugging
+Chapter 08: Functions
+                Functions signature
+                Functions with args 
+                swapping 
+                naked returns 
+                pointers as returns
+                variadic functions 
+                Global vs Local Scope 
+                Function Literals, 
+                Closure, Generator, 
+                Recursions 
+                Higher-Order Functions 
+Chapter 09: Goroutines, Channels, Concurrency
+Chapter 10: Modules
+                OS 
+                base64-encoding
+                time 
+                math 
+                rand 
+                Crypto 
+                bufio 
+                container
+                sort
+                hash & Cryptography 
+                StrConv
+                runtime
+Chapter 11: File Operations
+                UnStructured,Structured, 
+                ZipFiles
+                 
+Chapter 12: Logging
+                Built-in logger 
+                Logrus
+Chapter 13: Code Quality
+                unit testing
+Chapter 14: Regular Expressions 
+Chapter 15: Web Services
+                Consuming REST API 
+                Creating REST API

@@ -17,4 +17,5 @@ func main() {
 	fmt.Println("isLatest:", isLatest)
 }
 
-// unused global variables will be ignored. No compilation Error.
+// NOTE: unused global variables will be ignored. 
+//       No compilation Error.

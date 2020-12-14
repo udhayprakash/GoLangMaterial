@@ -1,0 +1,19 @@
+{
+  "page": 1,
+  "per_page": 10,
+  "total": 1,
+  "total_pages": 1,
+  "data": [
+    {
+      "title": null,
+      "url": null,
+      "author": "patricktomas",
+      "num_comments": 376,
+      "story_id": null,
+      "story_title": "Steve Jobs has passed away.",
+      "story_url": "http://www.apple.com/stevejobs/",
+      "parent_id": null,
+      "created_at": 1317858143
+    }
+  ]
+}

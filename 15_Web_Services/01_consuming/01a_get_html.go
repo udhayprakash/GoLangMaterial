@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bytes"
 	"fmt"
 	"net/http"
 )
@@ -13,14 +12,12 @@ func main() {
 	}
 	defer resp.Body.Close()
 
-	// The line below would fail because Body = io.ReadCloser
-	// fmt.Printf(response.Body)
-
-	// ...so we convert it to a string by passing it through
-	// a buffer first. A 'costly' but useful process.
-	buf := new(bytes.Buffer)
-	buf.ReadFrom(resp.Body)
-	newStr := buf.String()
-
-	fmt.Printf(newStr)
+	// Print the HTTP Status Code and Status Name
+	fmt.Println("HTTP Response Status:", resp.StatusCode, http.StatusText(resp.StatusCode))
+	
+	if resp.StatusCode >= 200 && resp.StatusCode <= 299 {
+        fmt.Println("HTTP Status is in the 2xx range")
+    } else {
+        fmt.Println("Argh! Broken")
+    }
 }

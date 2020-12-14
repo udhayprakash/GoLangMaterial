@@ -6,14 +6,17 @@ var x string = "Global Scope"
 
 func main() {
 	var x string = "Block Scope"
-	fmt.Println("In main()           ", x) // Local will be preferred
-	myFunction()
-	anotherFunction(x)
+
+	// Local will be preferred
+	fmt.Println("In main()       :", x) 
+	
+	myFunc()
+	anotherFunc(x)
 }
 
-func myFunction() {
-	fmt.Println("In myFunction()     ", x)
+func myFunc() {
+	fmt.Println("In myFunc()     :", x)
 }
-func anotherFunction(x string) {
-	fmt.Println("In anotherFunction()", x)
+func anotherFunc(x string) {
+	fmt.Println("In anotherFunc():", x)
 }

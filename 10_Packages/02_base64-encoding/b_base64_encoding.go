@@ -10,9 +10,14 @@ func main() {
 	originalMessage := "abc123!?$*&()'-=@~"
 	fmt.Println("originalMessage=", originalMessage)
 
+	// Encode
 	encodedMessage := base64.StdEncoding.EncodeToString([]byte(originalMessage))
 	fmt.Println("encodedMessage =", encodedMessage)
 
-	decodedMessage, _ := base64.StdEncoding.DecodeString(encodedMessage)
+	// Decode
+	decodedMessage, err := base64.StdEncoding.DecodeString(encodedMessage)
+	if err != nil {
+		panic(err)
+	}
 	fmt.Println("decodedMessage =", string(decodedMessage))
 }

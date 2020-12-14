@@ -25,11 +25,13 @@ func main() {
 	fmt.Println("y =", y)
 	fmt.Println()
 
-	fmt.Println("x                   	 =", x)
-	fmt.Println("reflect.ValueOf(x)  	 =", reflect.ValueOf(x))
-	fmt.Println("reflect.TypeOf(x)   	 =", reflect.TypeOf(x))
-	fmt.Println("reflect.TypeOf(x).Kind()=", reflect.TypeOf(x).Kind())
+	fmt.Println("x                   	   =", x)
+	fmt.Println("reflect.ValueOf(x)  	   =", reflect.ValueOf(x))
+	fmt.Println("reflect.TypeOf(x)   	   =", reflect.TypeOf(x))
+	fmt.Println("reflect.TypeOf(x).String()=", reflect.TypeOf(x).String())
+	fmt.Println("reflect.TypeOf(x).Kind()  =", reflect.TypeOf(x).Kind())
 	// NOTE: TypeOf and Kind will be same for basic data types. Will differ for structs, ...
+
 	fmt.Println()
 
 	fmt.Println("reflect.TypeOf(y)   	=", reflect.TypeOf(y))

@@ -56,4 +56,4 @@ Ref: For editor/IDE settings to auto-format on save
 
 For the editor/IDE to automatically manage the addition or deletion of imports
 based on usage,
-    go get golang.org/x/tools/cmd/goimports
+    go get -u golang.org/x/tools/cmd/goimports

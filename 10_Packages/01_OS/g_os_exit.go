@@ -6,7 +6,19 @@ Purpose: os.Exit
 	- Note that unlike e.g. C, Go does not use an integer
       return value from main to indicate exit status.
     - If you’d like to exit with a non-zero status you
-      should use os.Exit.
+	  should use os.Exit.
+	- This is a well established method in POSIX systems, 
+	  whereby a program can return a 0-255 integer to indicate 
+	  if the program ran successfully, and if not, why not.
+	- Common codes 
+	  --------------------------------------------------
+		code 			message
+	  --------------------------------------------------
+		 1				General error
+		 2				misuse of shell builtins
+		 127			Command not found
+		 128 			Fatal error signal
+		 130 			Ctrl+C termination
 */
 import (
 	"fmt"
