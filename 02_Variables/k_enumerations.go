@@ -17,11 +17,12 @@ func main() {
 	//	a3 = 2
 	//	a4 = 3
 	//)
+	/*
+		Go does not have enumerate types
 
-	// Go does not have enumerate types
-	// Instead, you can use the special name iota in a single const declaration to get a series of increasing values.
-	// When an initialization expression is omitted for a const, it reuses the preceding expression.
-
+		Instead, you can use the special name iota in a single
+		const declaration to get a series of increasing values.
+	*/
 	const (
 		C0 = iota
 		C1 = iota
@@ -31,6 +32,8 @@ func main() {
 	fmt.Println()
 
 	// ---------------------------------------
+	// When an initialization expression is omitted for a const,
+	// 	it reuses the preceding expression.
 	const (
 		red   = iota // red == 0
 		blue         // blue == 1

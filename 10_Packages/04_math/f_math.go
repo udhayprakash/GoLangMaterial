@@ -5,11 +5,11 @@ import (
 	"math"
 )
 
-func main(){
-
+func main() {
 
 	// Signbit reports whether x is negative or negative zero.
-	math.Signbit(10)
+	fmt.Println("math.Signbit(10)  :", math.Signbit(10))
+	fmt.Println("math.Signbit(-10) :", math.Signbit(-10))
 
 	// Copysign returns a value with the magnitude of x and the sign of y.
 	// func Copysign(x, y float64) float64
