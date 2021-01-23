@@ -30,7 +30,8 @@ func main() {
 	fmt.Println("reflect.TypeOf(x)   	   =", reflect.TypeOf(x))
 	fmt.Println("reflect.TypeOf(x).String()=", reflect.TypeOf(x).String())
 	fmt.Println("reflect.TypeOf(x).Kind()  =", reflect.TypeOf(x).Kind())
-	// NOTE: TypeOf and Kind will be same for basic data types. Will differ for structs, ...
+	// NOTE: TypeOf and Kind will be same for basic data types.
+	//       Will differ for structs, ...
 
 	fmt.Println()
 
@@ -38,7 +39,8 @@ func main() {
 
 	fmt.Println("reflect.TypeOf(42)  	=", reflect.TypeOf(42))
 	fmt.Println("reflect.TypeOf(42.0)	=", reflect.TypeOf(42.0))
-	fmt.Println("reflect.TypeOf(4223434234343242342) =", reflect.TypeOf(4223434234343242342))
+	fmt.Println("reflect.TypeOf(4223434234343242342) =",
+		reflect.TypeOf(4223434234343242342))
 	fmt.Println("reflect.TypeOf('a') 	=", reflect.TypeOf('a'))  // int32
 	fmt.Println("reflect.TypeOf(\"a\")	=", reflect.TypeOf("a")) // string
 	fmt.Println("reflect.TypeOf(true)	=", reflect.TypeOf(true)) // bool

@@ -7,10 +7,10 @@ var name = "package-level"
 
 func main() {
 	// Function-level declaration
-	fmt.Println("In main(): name   =", name)
+	fmt.Println("In main()  : name   =", name)
 
 	var name = "function-level"
-	fmt.Println("In main(): name   =", name)
+	fmt.Println("In main()  : name   =", name)
 	myFunc()
 }
 

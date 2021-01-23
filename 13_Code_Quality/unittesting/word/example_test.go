@@ -54,4 +54,9 @@ Usage:
 	To run all the test cases, whose names match the regular expression
 		go test -v -run="French|Canal"
 
+	To run specific test case(s),
+		go test -run ^TestCanalPalindrome$
+
+	To add timeout restriction for the tests
+		go test -timeout 30s
 */

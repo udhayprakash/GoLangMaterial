@@ -15,7 +15,7 @@ func main() {
 	fmt.Println("y =", y)
 
 	// Method 3- type is not necessary because the Go compiler is able to
-	//    infer the type based on the literal value you assign the variable.
+	//    infer the type based on the literal value assigned to the variable.
 	z := "Hello World"
 	// Type inference - variable's type is inferred from value on right hand side.
 	fmt.Println("z =", z)
