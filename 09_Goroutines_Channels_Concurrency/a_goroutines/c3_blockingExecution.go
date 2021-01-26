@@ -6,14 +6,14 @@ import (
 )
 
 func sleep_250(){
-	fmt.Println("\nsleep_250 - start")
+	fmt.Println("sleep_250 - start")
 	time.Sleep(250 * time.Millisecond)
 	fmt.Println("sleep_250 - end")
 }
 
 
 func sleep_500(){
-	fmt.Println("\nsleep_500 - start")
+	fmt.Println("sleep_500 - start")
 	time.Sleep(500 * time.Millisecond)
 	fmt.Println("sleep_500 - end")
 }

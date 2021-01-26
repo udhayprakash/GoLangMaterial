@@ -15,18 +15,24 @@ func main() {
 			value: %v
 			type: %T`, messages, messages)
 
+	go func() {
+		// sending message to channel, within function
+		messages <- "google.com"
+	}()
 
-	go func() { messages <- "google.com" }()
+	// receiving message from channel
 	msg := <-messages
 	fmt.Println("\nMessage in Channel:", msg)
 
-
 	go work(messages)
+
+	// receiving message from channel
 	msg = <-messages
-	fmt.Println( "Message in Channel:", msg)
+	fmt.Println("Message in Channel:", msg)
 
 }
 
 func work(messages chan<- string) {
+	// sending message to channel, within function
 	messages <- "facebook.com"
 }

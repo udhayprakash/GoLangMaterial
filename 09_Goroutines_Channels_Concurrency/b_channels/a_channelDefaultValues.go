@@ -23,13 +23,11 @@ func main() {
 	fmt.Printf("myBoolChannel - type : %T \n", myBoolChannel)
 
 	//const myIntConstChannel chan
-	//fmt.Printf("\nmyIntConstChannel- value: %v \n", myIntConstChannel)
-	//fmt.Printf("myIntConstChannel - type : %T \n", myIntConstChannel)
+	// ERROR: const declaration cannot have type without expression
 
 	var myStringChannel1 chan string
 	fmt.Printf("\nmyStringChannel1 - value: %v \n", myStringChannel1)
 	fmt.Printf("myStringChannel1 - type : %T \n", myStringChannel1)
-
 
 	myStringChannel := make(chan string)
 	fmt.Printf("\nmyStringChannel - value: %v \n", myStringChannel)
@@ -38,6 +36,5 @@ func main() {
 	myInterfaceChannel := make(chan interface{})
 	fmt.Printf("\nmyInterfaceChannel - value: %v \n", myInterfaceChannel)
 	fmt.Printf("myInterfaceChannel - type : %T \n", myInterfaceChannel)
-
 
 }
