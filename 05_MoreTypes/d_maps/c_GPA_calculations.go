@@ -15,10 +15,9 @@ var POINTS = map[string]float32{
 	"D+": 1.33,
 	"D":  1.0,
 	"F":  0.0,
-
 }
 
-func main(){
+func main() {
 	fmt.Println("Enter all your letter grades, one per line")
 	fmt.Println("Enter a blank line to designate the end")
 	fmt.Println(POINTS)

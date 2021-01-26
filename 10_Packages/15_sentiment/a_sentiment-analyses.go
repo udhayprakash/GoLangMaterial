@@ -1,8 +1,8 @@
 package main
 
 import (
-	"log"
 	"github.com/cdipaolo/sentiment"
+	"log"
 )
 
 func main() {

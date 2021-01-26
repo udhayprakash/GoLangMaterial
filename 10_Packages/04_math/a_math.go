@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func main(){
+func main() {
 	// Constants
 	fmt.Println("Constants ...")
 	fmt.Println("math.E       = ", math.E)
@@ -36,7 +36,6 @@ func main(){
 	fmt.Println("math.MinInt32 = ", math.MinInt32)
 	fmt.Println("math.MaxInt64 = ", math.MaxInt64)
 	fmt.Println("math.MinInt64 = ", math.MinInt64)
-
 
 	fmt.Println("\nmath.MaxUint8 = ", math.MaxUint8)
 	fmt.Println("math.MaxUint16= ", math.MaxUint16)

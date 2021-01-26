@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func main(){
+func main() {
 
 	/*
 		Pow returns x**y, the base-x exponential of y.
@@ -41,15 +41,14 @@ func main(){
 	c4 := math.Pow10(2)
 	fmt.Printf("%.1f\n", c4)
 
-
 	/*
-	Division
-		2)17(8  <--- Quotient
-	      16
-		------
-	       1  <- Remainder
+		Division
+			2)17(8  <--- Quotient
+		      16
+			------
+		       1  <- Remainder
 	*/
-	fmt.Println("17/2   = ", 17/2) // 8  ==> Quotient
+	fmt.Println("17/2   = ", 17/2)   // 8  ==> Quotient
 	fmt.Println("17/2.0 = ", 17/2.0) // 8.5  ===> true result
 
 	/*
@@ -63,7 +62,6 @@ func main(){
 	fmt.Println("math.Remainder(10, 2)=", math.Remainder(10, 2))
 	fmt.Println("math.Remainder(10, 3)=", math.Remainder(10, 3))
 	fmt.Println("math.Remainder(3, 10)=", math.Remainder(3, 10))
-
 
 	/*
 		Mod returns the floating-point remainder of x/y.
@@ -79,6 +77,6 @@ func main(){
 	fmt.Println("math.Mod(10, 3)=", math.Mod(10, 3))
 	fmt.Println("math.Mod(3, 10)=", math.Mod(3, 10))
 
-
 }
+
 // Assignment: math.Remainder vs math.Mod

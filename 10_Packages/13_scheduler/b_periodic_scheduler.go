@@ -1,9 +1,9 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 
-    "github.com/prprprus/scheduler"
+	"github.com/prprprus/scheduler"
 )
 
 func main() {

@@ -6,7 +6,7 @@ import (
 )
 
 type Person struct {
-	FirstName string   // each value is called field
+	FirstName string // each value is called field
 	LastName  string
 	Age       int
 	Salary    float64
@@ -43,10 +43,9 @@ func main() {
 	 p1.FirstName = %s     p1.LastName = %s      p1.Age = %d   p1.Salary = %d`,
 		p1.FirstName, p1.LastName, p1.Age, p1.Salary)
 
-
 	// Method 3: Naming fields while initializing struct
 	var p2 = Person{FirstName: "Alien"} // LastName: "", Age: 0
-	p2 = Person{} // FirstName: "", LastName: "", Age: 0
+	p2 = Person{}                       // FirstName: "", LastName: "", Age: 0
 
 	p2 = Person{
 		FirstName: "Sachin",

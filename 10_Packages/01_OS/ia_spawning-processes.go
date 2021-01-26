@@ -6,7 +6,7 @@ import (
 	"os/exec"
 )
 
-func main()  {
+func main() {
 	grepCmd := exec.Command("grep", "hello")
 
 	grepIn, _ := grepCmd.StdinPipe()
@@ -19,7 +19,6 @@ func main()  {
 
 	fmt.Println("> grep hello")
 	fmt.Println(string(grepBytes))
-
 
 	lsCmd := exec.Command("bash", "-c", "ls -a -l -h")
 	lsOut, err := lsCmd.Output()

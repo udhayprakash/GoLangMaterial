@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+
 /*
 Array - data structure  to store a collection of data of the same type
 Declaration
@@ -43,7 +44,7 @@ func main() {
 		"Good Morning",
 		"Good Afternoon",
 		"Good Evening",
-		"Good Night",  // last comma is needed
+		"Good Night", // last comma is needed
 	}
 	fmt.Println("greetings2    = ", greetings2)
 	// [Good Morning Good Afternoon Good Evening Good Night]
@@ -56,7 +57,7 @@ func main() {
 		"Good Morning",
 		"Good Afternoon",
 		"Good Evening",
-		"Good Night",  // last comma is needed
+		"Good Night", // last comma is needed
 	}
 	fmt.Println("greetings3    =", greetings3)
 

@@ -7,10 +7,10 @@ Purpose: os.Exit
       return value from main to indicate exit status.
     - If you’d like to exit with a non-zero status you
 	  should use os.Exit.
-	- This is a well established method in POSIX systems, 
-	  whereby a program can return a 0-255 integer to indicate 
+	- This is a well established method in POSIX systems,
+	  whereby a program can return a 0-255 integer to indicate
 	  if the program ran successfully, and if not, why not.
-	- Common codes 
+	- Common codes
 	  --------------------------------------------------
 		code 			message
 	  --------------------------------------------------

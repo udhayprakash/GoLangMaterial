@@ -164,7 +164,7 @@ func main() {
 	*/
 	fmt.Println("\n\n====================")
 	for i = 0; i < 5; i++ {
-		for _, eachChar := range "Prakash"{
+		for _, eachChar := range "Prakash" {
 			fmt.Print(string(eachChar), "\t")
 		}
 		fmt.Println()

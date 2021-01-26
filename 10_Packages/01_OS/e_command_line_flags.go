@@ -1,4 +1,5 @@
 package main
+
 // Command-line flags are a common way to specify options for command-line programs.
 //For example, in wc -l the -l is a command-line flag.
 
@@ -25,6 +26,7 @@ func main() {
 	fmt.Println("tail:", flag.Args()) // similar to os.Args
 
 }
+
 /*
 To get the usage
 go run e_command_line_flags.go --help

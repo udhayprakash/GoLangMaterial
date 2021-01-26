@@ -1,12 +1,13 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 
-    "github.com/prprprus/scheduler"
+	"github.com/prprprus/scheduler"
 )
+
 /*
- Purpose: Scheduler 
+ Purpose: Scheduler
 	 - job scheduling packag
 	 - Installation command
 		 go get github.com/prprprus/scheduler

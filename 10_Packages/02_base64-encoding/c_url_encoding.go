@@ -16,7 +16,6 @@ func main() {
 	decodedMessage, _ := base64.StdEncoding.DecodeString(encodedMessage)
 	fmt.Println("decodedMessage =", string(decodedMessage))
 
-
 	// ENCODING for URLs
 	encodedMessage = base64.URLEncoding.EncodeToString([]byte(originalMessage))
 	fmt.Println("\nencodedMessage =", encodedMessage)

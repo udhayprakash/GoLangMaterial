@@ -4,7 +4,8 @@ import (
 	"fmt"
 	"strconv"
 )
-func main(){
+
+func main() {
 	fmt.Println(strconv.ParseFloat("1.234", 64))
 	fmt.Println(strconv.ParseFloat("1.234 23", 64))
 

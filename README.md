@@ -1,4 +1,5 @@
 # GoLangMaterial
+
 Go Language Material
 
     Go
@@ -147,6 +148,7 @@ Go Language Material
 
 Important Links:
 ----------------
+
         - tour.golang.org
         - lean.go.dev
         - gophercises.com
@@ -180,28 +182,33 @@ Important Links:
         https://programming.guide/go/
         godoc.org
             standard library and 3rd party packages
+
 This source code is tested in go 1.13.5
 
 
 TODO:
 -----
+
     - https://www.sohamkamani.com/blog/golang/2018-06-20-golang-factory-patterns/
     - https://go101.org/article/channel.html
     - https://exercism.io/tracks/go/learning
 
 Articles
 --------
+
     https://medium.com/@kevalpatel2106/why-should-you-learn-go-f607681fad65
     [Farewell Node.js](https://medium.com/code-adventures/farewell-node-js-4ba9e7f3e52b?)
+
 Quotes
 ------
+
     “Go will be the server language of the future.” — Tobias Lütke, Shopify 
     “With constant pressure to add features and options and configurations, and to 
      ship code quickly, it’s easy to neglect simplicity, even though in the long 
      run simplicity is the key to good software” — Rob Pike, One of Golang creators 
-    
-    
+
 Packages
 --------
+
 1. GoReleaser,  http://github.com/goreleaser
 2. Cobra( for creating CLIs), https://github.com/spf13/cobra 

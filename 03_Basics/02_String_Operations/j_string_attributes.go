@@ -6,7 +6,7 @@ import (
 	"unicode/utf8"
 )
 
-func main(){
+func main() {
 	x := "my new text is this long"
 	fmt.Println("x=", x)
 

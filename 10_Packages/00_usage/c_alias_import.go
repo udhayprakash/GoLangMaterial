@@ -4,6 +4,6 @@ import (
 	f "fmt"
 )
 
-func main(){
+func main() {
 	f.Println("Alias import")
 }

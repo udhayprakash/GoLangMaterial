@@ -8,7 +8,7 @@ then it’s called a multi-dimensional array.
 
 */
 
-func main(){
+func main() {
 	a1 := [3][2]int{
 		[2]int{1, 2},
 		[2]int{3, 4},

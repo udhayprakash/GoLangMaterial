@@ -5,7 +5,8 @@ package main
 import (
 	log "github.com/Sirupsen/logrus"
 )
-func main(){
+
+func main() {
 	log.Debug("Useful debugging information.")
 	log.Info("Something noteworthy happened!")
 	log.Warn("You should probably take a look at this.")

@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func main()  {
+func main() {
 	log.Println("message 1")
 
 	file, e := os.OpenFile("e_LogRedirects.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)

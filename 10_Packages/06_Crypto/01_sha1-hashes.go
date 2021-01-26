@@ -1,4 +1,5 @@
 package main
+
 /*
 
 SHA1 hashes are frequently used to compute short

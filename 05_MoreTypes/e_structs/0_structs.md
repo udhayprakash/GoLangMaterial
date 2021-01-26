@@ -1,5 +1,6 @@
 Structs
 =======
+
     - User-defined type that contains a collection of named fields/properties.
     - so, struct type variables are also called "named-types".
     - used to group related data together to form a single unit.

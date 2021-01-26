@@ -1,4 +1,5 @@
 package main
+
 /*
 Purpose: Sometimes we’d like our Go programs to intelligently
 handle Unix signals. For example, we might want a server to
@@ -12,7 +13,6 @@ import (
 	"os/signal"
 	"syscall"
 )
-
 
 func main() {
 	// Go signal notification works by sending os.Signal values on a

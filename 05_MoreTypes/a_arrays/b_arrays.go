@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-func main(){
+func main() {
 
 	// comparision on arrays
 	a1 := [3]int{1, 2, 3}
@@ -17,8 +17,7 @@ func main(){
 	fmt.Println("a1 == a3 :", a1 == a3) // false
 	fmt.Println("a1 == a4 :", a1 == a4) // true
 
-
-	fmt.Printf("a1 is of type : %T\n", a1)              // [3]int
+	fmt.Printf("a1 is of type : %T\n", a1)             // [3]int
 	fmt.Println("a1 is of type :", reflect.TypeOf(a1)) // [3]int
 	fmt.Println()
 

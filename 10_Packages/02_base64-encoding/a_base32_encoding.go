@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func main(){
+func main() {
 	originalMessage := "abc123!?$*&()'-=@~"
 	fmt.Println("originalMessage=", originalMessage)
 

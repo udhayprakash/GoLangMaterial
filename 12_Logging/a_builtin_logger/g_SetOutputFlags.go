@@ -2,7 +2,7 @@ package main
 
 import "log"
 
-func main(){
+func main() {
 	log.Println("Default")
 
 	// the date in the local time zone: 2009/01/23
@@ -12,7 +12,6 @@ func main(){
 	// the time in the local time zone: 01:23:23
 	log.SetFlags(log.Ltime)
 	log.Println("Using log.Ltime")
-
 
 	// microsecond resolution: 01:23:23.123123
 	log.SetFlags(log.Lmicroseconds)

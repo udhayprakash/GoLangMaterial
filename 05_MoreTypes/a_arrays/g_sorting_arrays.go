@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-func main(){
+func main() {
 
 	strs := []string{"c", "a", "b"}
 

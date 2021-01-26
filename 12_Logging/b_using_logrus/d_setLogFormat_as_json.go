@@ -27,7 +27,6 @@ func main() {
 	log.Warning("This is a warning log")
 	log.Error("This is an error log")
 
-
 	log.WithFields(log.Fields{
 		"animal": "walrus",
 		"size":   10,

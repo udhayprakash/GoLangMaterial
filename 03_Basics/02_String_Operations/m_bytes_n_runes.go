@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func main(){
+func main() {
 	b1 := byte('a')
 	b2 := []byte("A")
 	b3 := []byte{'a', 'b', 'c'}
@@ -34,7 +34,5 @@ func main(){
 	fmt.Printf("s6 = %s\n", s6) // [one two three]
 	fmt.Printf("%s\n", bytes.Join(s6, []byte(", ")))
 	// one, two, three
-
-
 
 }

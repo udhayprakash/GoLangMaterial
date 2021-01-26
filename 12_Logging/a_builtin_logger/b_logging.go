@@ -2,13 +2,13 @@ package main
 
 import "log"
 
-func init(){
+func init() {
 	log.SetPrefix("LOG: ")
-	log.SetFlags(log.Ldate| log.Lmicroseconds| log.Lshortfile)  // log.Llongfile
+	log.SetFlags(log.Ldate | log.Lmicroseconds | log.Lshortfile) // log.Llongfile
 	log.Println("init Started")
 }
 
-func main(){
+func main() {
 	// Println writes to the standard logger.
 	log.Println("main started")
 

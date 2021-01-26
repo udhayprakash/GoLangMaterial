@@ -34,7 +34,7 @@ func main() {
 
 	// Declaring and initializing variable for slice
 	t := []string{"g", "h", "i"}
-	fmt.Println("dcl:", t)  // [g h i]
+	fmt.Println("dcl:", t) // [g h i]
 
 	twoD := make([][]int, 3)
 	for i := 0; i < 3; i++ {

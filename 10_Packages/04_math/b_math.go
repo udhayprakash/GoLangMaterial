@@ -5,18 +5,17 @@ import (
 	"math"
 )
 
-func main(){
+func main() {
 
 	/* Absolute results in positive value
-		Abs(±Inf) = +Inf
-		Abs(NaN) = NaN
+	Abs(±Inf) = +Inf
+	Abs(NaN) = NaN
 	*/
 	x := math.Abs(-2)
 	fmt.Printf("%.1f\n", x)
 
 	y := math.Abs(2)
 	fmt.Printf("%.1f\n", y)
-
 
 	// Trigonometric functions
 	// Acos(x) = NaN if x < -1 or x > 1
@@ -47,6 +46,5 @@ func main(){
 		Atan(±Inf) = ±Pi/2
 	*/
 	fmt.Printf("%.2f\n", math.Atan(0))
-
 
 }

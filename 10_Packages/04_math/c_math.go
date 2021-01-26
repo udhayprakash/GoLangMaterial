@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func main()  {
+func main() {
 	fmt.Println("math.Exp(1)  = ", math.Exp(1))
 	fmt.Println("math.Exp(10) = ", math.Exp(10))
 	for x := 0; x < 8; x++ {
@@ -25,8 +25,6 @@ func main()  {
 	fmt.Println("math.Exp2(10)    =", math.Exp2(10))
 	fmt.Println("math.Exp2(math.E)=", math.Exp2(math.E))
 
-
-
 	/*
 		Log returns the natural logarithm of x.
 			Log(+Inf) = +Inf
@@ -44,8 +42,6 @@ func main()  {
 	// The special cases are the same as for Log.
 	fmt.Printf("%.1f\n", math.Log10(100))
 
-
-
 	/*
 		Sqrt returns the square root of x.
 		func Sqrt(x float64) float64
@@ -56,7 +52,5 @@ func main()  {
 	*/
 	fmt.Println("math.Sqrt(4) =", math.Sqrt(4))
 	fmt.Println("math.Sqrt(5) =", math.Sqrt(5))
-
-
 
 }

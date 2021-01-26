@@ -5,8 +5,9 @@ import (
 	"math/rand"
 	"time"
 )
+
 // Mersene Twister algorithms - PRNG algorithms
-func main(){
+func main() {
 	// To produce varying sequences, give it a seed that changes.
 	s1 := rand.NewSource(time.Now().UnixNano())
 	r1 := rand.New(s1)

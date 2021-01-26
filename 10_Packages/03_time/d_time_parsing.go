@@ -23,12 +23,11 @@ Purpose: Parsing time
 To use the MySQL date format, you’d use: “2006-01-02 15:04:05”
 
 */
-func main(){
+func main() {
 
 	// Parsing time units string
 	m, _ := time.ParseDuration("1m30s")
 	fmt.Printf("Take off in t-%.0f seconds.\n", m.Seconds())
-
 
 	input := "2020-08-31"
 	layout := "2006-01-02"
@@ -36,8 +35,6 @@ func main(){
 	fmt.Println(t)                       // 2020-08-31 00:00:00 +0000 UTC
 	fmt.Println(t.Format("02-Jan-2006")) // 31-Aug-2020
 	fmt.Println()
-
-
 
 	input2 := "2018-01-20 04:35"
 	layout2 := "2006-01-02 15:04"

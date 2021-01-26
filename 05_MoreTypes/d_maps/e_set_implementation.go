@@ -8,7 +8,7 @@ import (
 // Go does not provide a set type, but since the keys of a map
 // are distinct, a map can serve this purpose
 
-func main(){
+func main() {
 	//uniqueValues := map[string]int{
 	//	"red": 1,
 	//	"white": 2,
@@ -19,7 +19,7 @@ func main(){
 	fmt.Println("colors                                  =", colors)
 
 	uniqueColors := make(map[string]int)
-	for _, color := range colors{
+	for _, color := range colors {
 		uniqueColors[color] = 1
 	}
 	fmt.Println("uniqueColors                            =", uniqueColors)

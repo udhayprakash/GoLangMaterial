@@ -4,6 +4,6 @@ import (
 	. "fmt"
 )
 
-func main()  {
+func main() {
 	Println("Dot operator based import usage")
 }

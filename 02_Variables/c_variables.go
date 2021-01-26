@@ -19,10 +19,10 @@ func main() {
 }
 
 /*
-NOTE: 
+NOTE:
  1. unused global variables will be ignored.
 	No compilation Error.
- 2. Variables are of two types 
+ 2. Variables are of two types
 	a. Public(exportable) variables
 		- all variables starting with capital letter
 		- all unicode(non-english) variables

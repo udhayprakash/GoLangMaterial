@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func main(){
+func main() {
 	now := time.Now()       // current local time
 	secs := now.Unix()      // number of seconds since January 1, 1970 UTC
 	nsecs := now.UnixNano() // number of nanoseconds since January 1, 1970 UTC

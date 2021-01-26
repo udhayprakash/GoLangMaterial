@@ -1,22 +1,22 @@
 package main
 
- import (
-         "fmt"
-         "sort"
- )
+import (
+	"fmt"
+	"sort"
+)
 
- var strSlice sort.StringSlice = []string{"apple", "durian", "kiwi", "banana"}
+var strSlice sort.StringSlice = []string{"apple", "durian", "kiwi", "banana"}
 
- func main() {
+func main() {
 
-         fmt.Println("Original : ", strSlice[:])
+	fmt.Println("Original : ", strSlice[:])
 
-         strSlice.Sort()
+	strSlice.Sort()
 
-         fmt.Println("Sort : ", strSlice[:])
+	fmt.Println("Sort : ", strSlice[:])
 
-         sort.Sort(sort.Reverse(strSlice[:]))    
+	sort.Sort(sort.Reverse(strSlice[:]))
 
-         fmt.Println("Reverse : ", strSlice[:])
+	fmt.Println("Reverse : ", strSlice[:])
 
- }
+}

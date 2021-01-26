@@ -13,6 +13,7 @@ var (
 	Warning *log.Logger
 	Error   *log.Logger
 )
+
 func Init(
 	traceHandle io.Writer,
 	infoHandle io.Writer,
@@ -36,10 +37,8 @@ func Init(
 		log.Ldate|log.Ltime|log.Lshortfile)
 }
 
-
 func main() {
 	Init(ioutil.Discard, os.Stdout, os.Stdout, os.Stderr) // Trace logs were disabled as shown
-
 
 	Trace.Println("I have something standard to say")
 	Info.Println("Special Information")

@@ -12,7 +12,7 @@ func genRandomString(strLength int) string {
 		"abcdefghijklmnopqrstuvwxyzåäö" +
 		"0123456789")
 	buf := make([]rune, strLength)
-	for i := range buf{
+	for i := range buf {
 		buf[i] = chars[rand.Intn(len(chars))]
 		//fmt.Println("buf[i]:", buf[i])
 	}
@@ -21,7 +21,7 @@ func genRandomString(strLength int) string {
 	return string(buf)
 }
 
-func main(){
+func main() {
 	rand.Seed(time.Now().UnixNano())
 	fmt.Println("genRandomString(10):", genRandomString(10))
 	fmt.Println("genRandomString(10):", genRandomString(10))

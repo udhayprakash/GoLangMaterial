@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-func main(){
+func main() {
 	// Declaring and initializing new map in the same line
 	n := map[string]string{"a": "apple", "b": "ball", "c": "cat"}
 	fmt.Println("map         :", n)
 
-	fmt.Println(n["a"]) // apple
+	fmt.Println(n["a"])  // apple
 	fmt.Println(n["a1"]) // gives nothing when the key is not defined in that map
 
 	if x, ok := n["a"]; ok {

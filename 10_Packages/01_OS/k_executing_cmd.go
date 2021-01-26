@@ -5,7 +5,7 @@ import (
 	"os/exec"
 )
 
-func main(){
+func main() {
 	//time.Sleep(5 * time.Second)
 
 	cmd := exec.Command("sleep", "5")

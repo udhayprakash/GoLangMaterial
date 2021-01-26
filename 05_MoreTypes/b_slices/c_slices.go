@@ -20,7 +20,6 @@ func main() {
 	}
 	fmt.Println(names) // [Udhay Rob Prakash Thompson]
 
-
 	a := names[0:2]
 	b := names[1:3]
 	fmt.Println(a, b) // [Udhay Rob] [Rob Prakash]

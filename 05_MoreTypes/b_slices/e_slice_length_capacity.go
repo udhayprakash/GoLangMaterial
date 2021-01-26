@@ -4,15 +4,15 @@ import "fmt"
 
 func main() {
 	s := []int{2, 3, 5, 7, 11, 13}
-	printSlice(s)    // Length   = 6  	capacity = 6  value    = [2 3 5 7 11 13]
+	printSlice(s) // Length   = 6  	capacity = 6  value    = [2 3 5 7 11 13]
 
 	// Slice the slice to give it zero length.
 	s = s[:0]
-	printSlice(s)   // Length   = 0  	capacity = 6  value    = []
+	printSlice(s) // Length   = 0  	capacity = 6  value    = []
 
 	// Extend its length.
 	s = s[:4]
-	printSlice(s)  // Length   = 4  	capacity = 6  value    = [2 3 5 7]
+	printSlice(s) // Length   = 4  	capacity = 6  value    = [2 3 5 7]
 
 	// Drop its first two values.
 	s = s[2:]

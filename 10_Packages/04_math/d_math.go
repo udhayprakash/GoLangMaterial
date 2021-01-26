@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func main(){
+func main() {
 	/*
 		Ceil returns the least integer value greater than or equal to x.
 			Ceil(±0) = ±0
@@ -24,7 +24,6 @@ func main(){
 	c1 := math.Floor(1.51)
 	fmt.Printf("%.1f\n", c1)
 
-
 	/*
 		Round returns the nearest integer, rounding half away
 		from zero.
@@ -41,16 +40,15 @@ func main(){
 	n := math.Round(-10.5)
 	fmt.Printf("%.1f\n", n)
 
-
 	/*
 		RoundToEven returns the nearest integer, rounding ties to even.
 			RoundToEven(±0) = ±0
 			RoundToEven(±Inf) = ±Inf
 			RoundToEven(NaN) = NaN
 	*/
-	fmt.Println("math.RoundToEven(12.5) =", math.RoundToEven(12.5)) // 10 12 14 => 12
-	fmt.Println("math.RoundToEven(11.5) =", math.RoundToEven(11.5)) // 10 12 14 => 12
-	fmt.Println("math.RoundToEven(10.5) =", math.RoundToEven(10.5)) // 10 12 14 => 10
-	fmt.Println("math.RoundToEven(-11.5)=", math.RoundToEven(-11.5))// -14 -12 -10 => -12
+	fmt.Println("math.RoundToEven(12.5) =", math.RoundToEven(12.5))  // 10 12 14 => 12
+	fmt.Println("math.RoundToEven(11.5) =", math.RoundToEven(11.5))  // 10 12 14 => 12
+	fmt.Println("math.RoundToEven(10.5) =", math.RoundToEven(10.5))  // 10 12 14 => 10
+	fmt.Println("math.RoundToEven(-11.5)=", math.RoundToEven(-11.5)) // -14 -12 -10 => -12
 
 }

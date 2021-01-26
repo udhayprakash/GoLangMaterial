@@ -11,7 +11,7 @@ func main() {
 	//multiple-value user.Current() in single-value context
 
 	userObject, err := user.Current()
-	if err != nil{
+	if err != nil {
 		panic(err)
 	}
 
@@ -20,7 +20,6 @@ func main() {
 	fmt.Println("Username: " + userObject.Username)
 	fmt.Println("Name    : " + userObject.Name)
 	fmt.Println("Home Dir: " + userObject.HomeDir)
-
 
 	// Get "Real" User under sudo. - Useful in non-windows machines
 	// More Info: https://stackoverflow.com/q/29733575/402585

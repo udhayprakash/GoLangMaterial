@@ -28,14 +28,14 @@ func main() {
 
 	bq := []byte("quote:")
 	bq = strconv.AppendQuote(bq, `"Fran & Freddie's Diner"`)
-	fmt.Println(string(bq))  // quote:"\"Fran & Freddie's Diner\""
+	fmt.Println(string(bq)) // quote:"\"Fran & Freddie's Diner\""
 
 	br := []byte("rune:")
 	br = strconv.AppendQuoteRune(br, '☺')
-	fmt.Println(string(br))  // rune:'☺'
+	fmt.Println(string(br)) // rune:'☺'
 
 	ba := []byte("rune (ascii):")
 	ba = strconv.AppendQuoteRuneToASCII(ba, '☺')
-	fmt.Println(string(ba))  // rune (ascii):'\u263a'
+	fmt.Println(string(ba)) // rune (ascii):'\u263a'
 
 }

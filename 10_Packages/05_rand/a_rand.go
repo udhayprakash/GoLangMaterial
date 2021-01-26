@@ -5,13 +5,12 @@ import (
 	"math/rand"
 )
 
-func main(){
+func main() {
 	// random integr between 0 & 100
 	fmt.Println("rand.Intn(100):", rand.Intn(100))
 	fmt.Println("rand.Intn(100):", rand.Intn(100))
 	fmt.Println("rand.Intn(100):", rand.Intn(100))
 	fmt.Println("rand.Intn(100):", rand.Intn(100))
-
 
 	// `rand.Float64` returns a `float64` `f`,
 	// `0.0 <= f < 1.0`.

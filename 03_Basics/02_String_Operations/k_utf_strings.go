@@ -8,7 +8,7 @@ import (
 
 // go get golang.org/x/text/cases
 
-func main(){
+func main() {
 	s := "Hello, 世界"
 	fmt.Println("string length:", len(s))                    // "13"
 	fmt.Println("rune count   :", utf8.RuneCountInString(s)) // "9"

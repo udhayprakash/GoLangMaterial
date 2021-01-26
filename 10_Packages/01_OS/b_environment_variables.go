@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func main(){
+func main() {
 	// Retrieving the environment variables
 	fmt.Println("os.Environ():", os.Environ())
 
@@ -28,7 +28,6 @@ func main(){
 	// if the env variable is not set, it will result in empty string
 	language123 := os.Getenv("langauge123")
 	fmt.Println("language123 =", language123)
-
 
 }
 
