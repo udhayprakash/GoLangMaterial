@@ -1,9 +1,10 @@
 package main
+
 /*
 
-The primary mechanism for managing state in Go is communication over channels. 
-We saw this for example with worker pools. 
-There are a few other options for managing state though. 
+The primary mechanism for managing state in Go is communication over channels.
+We saw this for example with worker pools.
+There are a few other options for managing state though.
 Here we’ll look at using the sync/atomic package for atomic counters accessed by multiple goroutines.
 */
 import (
@@ -15,7 +16,6 @@ import (
 func main() {
 
 	var ops uint64
-
 	var wg sync.WaitGroup
 
 	for i := 0; i < 50; i++ {
@@ -23,7 +23,6 @@ func main() {
 
 		go func() {
 			for c := 0; c < 1000; c++ {
-
 				atomic.AddUint64(&ops, 1)
 			}
 			wg.Done()

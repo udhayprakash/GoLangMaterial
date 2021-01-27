@@ -20,7 +20,11 @@ func main() {
 
 	uniqueColors := make(map[string]int)
 	for _, color := range colors {
-		uniqueColors[color] = 1
+		_, alreadyPresent := uniqueColors[color]
+		if !alreadyPresent {
+			// add only if not present
+			uniqueColors[color] = 1
+		}
 	}
 	fmt.Println("uniqueColors                            =", uniqueColors)
 	fmt.Println("reflect.ValueOf(uniqueColors).MapKeys() =", reflect.ValueOf(uniqueColors).MapKeys())
