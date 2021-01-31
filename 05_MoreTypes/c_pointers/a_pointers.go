@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main(){
-	// pointers are refernces to defined variables
+	// pointers are references to defined variables
 	// some operations like 'call by reference' can be done based on pointer
 
 	// every variable is a memory location and every memory location has its address

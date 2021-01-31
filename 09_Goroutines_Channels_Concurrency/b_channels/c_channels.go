@@ -15,7 +15,6 @@ func main(){
 	var c1 chan int // default value is nil
 	go myGoRoutine(c1)
 	//c1 = 34 //  cannot use 34 (type int) as type chan int in assignment
-	//c1 = 34 //  cannot use 34 (type int) as type chan int in assignment
 	//c1 <- 34 // all goroutines are asleep - deadlock!
 	//<- c1
 	//close(c1) // panic: close of nil channel

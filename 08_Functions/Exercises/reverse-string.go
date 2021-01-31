@@ -66,6 +66,20 @@ func ReverseUsingRecursion(s string) string {
 	return s[0:0] + ReverseUsingRecursion(s[1:])
 }
 
+func ReverseUsingRuneAppend(value string) string {
+	// Convert string to rune slice.
+	// ... This method works on the level of runes, not bytes.
+	data := []rune(value)
+	result := []rune{}
+
+	// Add runes in reverse order.
+	for i := len(data) - 1; i >= 0; i-- {
+		result = append(result, data[i])
+	}
+
+	// Return new string.
+	return string(result)
+}
 func main() {
 	s := "Hello, world"
 	s = "Hello, 世界"
@@ -78,6 +92,7 @@ func main() {
 	fmt.Println(Reverse(s))
 	fmt.Println(ReverseUsingClosure(s))
 	fmt.Println(ReverseUsingRecursion(s))
+	fmt.Println(ReverseUsingRuneAppend(s))
 
 }
 
