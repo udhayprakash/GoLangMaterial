@@ -80,6 +80,7 @@ func ReverseUsingRuneAppend(value string) string {
 	// Return new string.
 	return string(result)
 }
+
 func main() {
 	s := "Hello, world"
 	s = "Hello, 世界"
@@ -93,7 +94,6 @@ func main() {
 	fmt.Println(ReverseUsingClosure(s))
 	fmt.Println(ReverseUsingRecursion(s))
 	fmt.Println(ReverseUsingRuneAppend(s))
-
 }
 
 /*
