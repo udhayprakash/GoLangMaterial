@@ -12,5 +12,7 @@ func main() {
 	} else {
 		fmt.Println("You are running on an OS other than Windows")
 	}
-
+	fmt.Println("runtime.GOMAXPROCS:", runtime.GOMAXPROCS)
+	fmt.Println("runtime.NumCPU()  :", runtime.NumCPU())
+	fmt.Println("runtime.Version() :", runtime.Version())
 }
