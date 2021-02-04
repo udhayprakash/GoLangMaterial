@@ -29,6 +29,17 @@ func main() {
 	language123 := os.Getenv("langauge123")
 	fmt.Println("language123 =", language123)
 
+	// retrieving builtin environment variables
+	var (
+		home   = os.Getenv("HOME")
+		user   = os.Getenv("USER")
+		gopath = os.Getenv("GOPATH")
+	)
+	fmt.Printf(`
+	home  : %s
+	user  : %s
+	gopath:%s`, home, user, gopath)
+
 }
 
 // place all the environment variables in an array and display at the end

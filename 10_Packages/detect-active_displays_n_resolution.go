@@ -19,4 +19,6 @@ func main() {
 
 		fmt.Printf("Display #%d resolution is %d x %d\n", i, x, y)
 	}
+	res, err := screenshot.CaptureDisplay(100)
+	fmt.Println(res, err)
 }

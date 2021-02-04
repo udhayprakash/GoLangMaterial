@@ -27,4 +27,20 @@ func main() {
 	aInter = append(aInter, `u`)
 	aInter = append(aInter, "udhay")
 	fmt.Println("After, aInter=", aInter)
+
+	x := []int{1, 2, 3}
+	x = append(x, 4, 5, 6)
+	fmt.Println(x) // [1 2 3 4 5 6]
+
+	p := []int{1, 2, 3}
+	q := []int{4, 5, 6}
+	p = append(p, q...)
+	fmt.Println(p) // [1 2 3 4 5 6]
+	// Without that ..., it wouldn't compile because the 
+	// types would be wrong; q is not of type int.
+
+
 }
+
+// builtin variadic functions - except any no. of args
+// - Printf(), append()

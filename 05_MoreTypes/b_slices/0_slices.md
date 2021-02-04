@@ -16,4 +16,4 @@ Slices
               
     - Multiple slices can share the same underlying array and may refer to overlapping
       parts of that array.
-      
+    - Slices hold references to an underlying array, and if you assign one slice to another, both refer to the same array.
