@@ -7,10 +7,11 @@ func f(n int) {
 		fmt.Println(n, ":", i)
 	}
 }
+
 func main() {
 	go f(0)
 
-
+	// blocking infinitely - NOT recommended
 	var input string
 	fmt.Scanln(&input)
 }

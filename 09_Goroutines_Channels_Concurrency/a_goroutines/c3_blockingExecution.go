@@ -5,23 +5,23 @@ import (
 	"time"
 )
 
-func sleep_250(){
-	fmt.Println("sleep_250 - start")
+func sleep250(){
+	fmt.Println("sleep250 - start")
 	time.Sleep(250 * time.Millisecond)
-	fmt.Println("sleep_250 - end")
+	fmt.Println("sleep250 - end")
 }
 
 
-func sleep_500(){
-	fmt.Println("sleep_500 - start")
+func sleep500(){
+	fmt.Println("sleep500 - start")
 	time.Sleep(500 * time.Millisecond)
-	fmt.Println("sleep_500 - end")
+	fmt.Println("sleep500 - end")
 }
 
 func main(){
 	fmt.Println("main -start")
-	go sleep_250()
-	go sleep_500()
+	go sleep250()
+	go sleep500()
 
 	time.Sleep(1000 * time.Millisecond)
 	fmt.Println("main - end")
@@ -30,10 +30,10 @@ func main(){
 
 BLOCKING EXECUTION
 	main -start
-	sleep_250 - start
-	sleep_250 - end
-	sleep_500 - start
-	sleep_500 - end
+	sleep250 - start
+	sleep250 - end
+	sleep500 - start
+	sleep500 - end
 	main - end
 
 */

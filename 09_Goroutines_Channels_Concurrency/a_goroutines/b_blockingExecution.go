@@ -19,7 +19,7 @@ func main(){
 	fmt.Println("End Script")
 
 	// Wait, giving time for the go routines to finish.
-	time.Sleep(1000)
+	time.Sleep(1000000)
 
 }
 // NOTE: Observe the go-routines may not execute in
