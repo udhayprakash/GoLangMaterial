@@ -8,6 +8,9 @@ import (
 
 func main() {
 
+	matched, _ := regexp.MatchString("food", "seafood")
+	fmt.Println(matched)
+	
 	match, _ := regexp.MatchString("p([a-z]+)ch", "peach")
 	fmt.Println(match)
 
