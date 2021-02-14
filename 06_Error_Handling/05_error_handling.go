@@ -10,7 +10,7 @@ func main() {
 	fmt.Println("Execution flow completed without any error")
 }
 
-func voting(voterAge int)  {
+func voting(voterAge int) {
 	if voterAge < 18 {
 		fmt.Println("Panicking!")
 		panic(fmt.Sprintf("%v", voterAge))
@@ -19,7 +19,7 @@ func voting(voterAge int)  {
 	defer ageRestriction()
 }
 
-func ageRestriction()  {
+func ageRestriction() {
 	if r := recover(); r != nil {
 		fmt.Println("Recovered in f", r)
 	}

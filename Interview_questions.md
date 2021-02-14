@@ -66,3 +66,36 @@ will run on Ubuntu Linux?
 
 **Ans)** A built-in function that stops teh function where it is called and any
 deferred functions in the function are executed. Then, it returns back to the caller and continues until all functions are returned. At that point, the program terminates and prints the error message and stack trace.
+
+---
+
+    In mac, below command will create mac specific binary
+    	$ GOOS=darwin GOARCH=386 go build someFile.go
+
+    How to create such cross-platform builds in windows, command line
+
+===
+anonymous functions - it has access to data both inside
+and outside of its code block - both local scope & the same scope
+of outer function in which the closure is defined
+
+package import format, if package is purely
+needed for init function execution & not used in
+in code. Used to import “side effects” (static reference) of a module
+
+    import \_ "image/png"
+
+`if` statements with initializers can be used
+to create more than one variable and can
+vary in type.
+
+go build github.com/ps/foo/...
+To compile the package "github.com/ps/foo" and all its sub-packages
+
+go install ./...
+from within parent package directory to compile a package and all od
+its subpackages , placing the result in workspace's pkg directory
+
+go install
+will, by default, compile a library and add it to the
+workspace's bin directory

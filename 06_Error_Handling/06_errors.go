@@ -1,9 +1,10 @@
 package main
+
 /*
-The errors package allows us to create errors, as per the error 
+The errors package allows us to create errors, as per the error
 interface, which can be dealt with like any other error.
 */
-// In Go it’s idiomatic to communicate errors via an explicit, 
+// In Go it’s idiomatic to communicate errors via an explicit,
 // separate return value.
 import (
 	"errors"

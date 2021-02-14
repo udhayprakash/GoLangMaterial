@@ -7,6 +7,7 @@ func add(a, b int) (sum int) {
 	sum = a + b
 	return
 }
+
 // NOTE: naked return signature must
 //  be enclosed in paranthesis.
 

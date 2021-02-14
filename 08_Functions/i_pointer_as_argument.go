@@ -12,5 +12,6 @@ func main() {
 	incr(&v)              // side effect: v is now 2
 	fmt.Println(incr(&v)) // "3" (and v is 3)
 }
+
 // Each time we take the address of a variable or copy a pointer,
 // we create new aliases or ways to identify the same variable.

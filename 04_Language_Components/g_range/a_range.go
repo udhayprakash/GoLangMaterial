@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main(){
+func main() {
 	// Looping over an Array
 	nums := []int{11, 22, 33, 44, 55, 66, 77}
 	for range nums {
@@ -22,5 +22,11 @@ func main(){
 	}
 	fmt.Println("summation=", summation)
 
-
+	for pos, char := range "Gő!" {
+		fmt.Printf("character '%c' starts at byte position %d\n", char, pos)
+	}
 }
+
+/*
+NOTE: for loop can be applied on any iterable object
+*/

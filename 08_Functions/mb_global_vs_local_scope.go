@@ -21,7 +21,6 @@ func main() {
 	zero(x)
 	fmt.Println("after  function call: x=", x) // 5
 
-
 	// case 2
 	fmt.Println("\n\nCall By Reference:")
 	fmt.Println("Before function call: x=", x) // 5

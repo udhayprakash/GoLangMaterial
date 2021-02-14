@@ -2,8 +2,8 @@ package main
 
 import "fmt"
 
-func sum(nums ...float64) (result float64){
-	for i:=0; i < len(nums); i++ {
+func sum(nums ...float64) (result float64) {
+	for i := 0; i < len(nums); i++ {
 		//fmt.Println("i=", i, nums[i])
 		result += nums[i]
 	}
@@ -12,8 +12,8 @@ func sum(nums ...float64) (result float64){
 	return result
 }
 
-func sum2(nums ...float64) (result float64){
-	for _, value := range nums{
+func sum2(nums ...float64) (result float64) {
+	for _, value := range nums {
 		result += value
 	}
 	fmt.Println("\nnums :", nums)
@@ -21,7 +21,7 @@ func sum2(nums ...float64) (result float64){
 	return
 }
 
-func main(){
+func main() {
 	sum()
 	sum(10)
 	sum(10, 20)

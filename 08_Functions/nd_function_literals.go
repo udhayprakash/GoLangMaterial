@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-func main(){
+func main() {
 	// Method 1
 	people := []string{"sudeep", "ram", "udhay", "prakash"}
 
@@ -17,7 +17,6 @@ func main(){
 		return len(people[i]) < len(people[j])
 	})
 	fmt.Println("After slicing, people:", people)
-
 
 	// Method 2
 	// It could also have been stored in an intermediate variable:
@@ -32,7 +31,4 @@ func main(){
 	//      people variable, which is declared outside the
 	//     function.
 
-
 }
-
-

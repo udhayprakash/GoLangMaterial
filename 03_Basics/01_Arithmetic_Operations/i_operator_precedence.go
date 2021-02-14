@@ -10,13 +10,13 @@ Unary operators
 
 Binary operators
 	------------------------------
-	Prio	Operators
+	Priority	Operators
 	------------------------------
-	1		*  /  %  <<  >>  &  &^
-	2		+  -  |  ^
-	3		==  !=  <  <=  >  >=
-	4		&&
-	5		||
+	1			*  /  %  <<  >>  &  &^
+	2			+  -  |  ^
+	3			==  !=  <  <=  >  >=
+	4			&&
+	5			||
 
 	Among binary operators multiplication operators bind strongest, followed by addition operators, comparison operators, && (logical and), and finally || (logical or).
 	Binary operators of the same precedence associate from left to right:

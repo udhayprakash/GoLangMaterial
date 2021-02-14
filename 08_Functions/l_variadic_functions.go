@@ -16,7 +16,7 @@ import "fmt"
 //}
 
 // ... - spread operator
-func funcWithAnyNoOfArgs(name ...interface{}){
+func funcWithAnyNoOfArgs(name ...interface{}) {
 	fmt.Println("funcWithAnyNoOfArgs - start")
 
 	fmt.Printf("value :%v\n", name)
@@ -27,8 +27,7 @@ func funcWithAnyNoOfArgs(name ...interface{}){
 	}
 }
 
-
-func main(){
+func main() {
 	// Function call
 	funcWithAnyNoOfArgs("Udhay")
 	funcWithAnyNoOfArgs(2342342)

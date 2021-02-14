@@ -12,7 +12,7 @@ func personDetails(name string, age int) {
 	fmt.Printf("%s's age is %d", name, age)
 }
 
-func main(){
+func main() {
 	// Function call
 	// personDetails()  // not enough arguments in call to personDetails
 	// personDetails("Ken Thompson") // not enough arguments in call to personDetails

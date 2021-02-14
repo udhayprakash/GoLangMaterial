@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 )
+
 /*Purpose: panic
 	- To raise an error to fail fast when something went
       unexpectedly wrong.
@@ -15,8 +16,6 @@ import (
 	but others, like an out-of-bounds array access or nil pointer
     dereference, require checks at run time. When the Go runtime
 	detects these mistakes, it pani cs.
-
-
 */
 func main() {
 	fmt.Println("first Statement")

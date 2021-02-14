@@ -17,7 +17,7 @@ func main() {
 	// Decode
 	decodedMessage, err := base64.StdEncoding.DecodeString(encodedMessage)
 	if err != nil {
-		panic(err)
+		panic("malformed input")
 	}
 	fmt.Println("decodedMessage =", string(decodedMessage))
 }

@@ -11,6 +11,7 @@ func squares() func() int {
 		return x * x
 	}
 }
+
 func main() {
 	f := squares()
 	fmt.Println(f()) // "1"

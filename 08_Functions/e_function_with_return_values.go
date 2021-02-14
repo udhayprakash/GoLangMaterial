@@ -6,7 +6,6 @@ Purpose: Function with two arguments and default return value
 	NOTE:
 	- return is the last statement in function execution
 	-  When no return statement in function, cant assign and use as value
-
 */
 import (
 	"fmt"
@@ -30,8 +29,7 @@ func divMod(x, y int) (q int, r int) {
 	return q, r
 }
 
-
-func main(){
+func main() {
 	num1 := 100
 	num2 := 200
 

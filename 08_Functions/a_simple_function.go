@@ -26,8 +26,7 @@ func myFunc() {
 	fmt.Println("Function myFunc is called!!!")
 }
 
-
-func main(){
+func main() {
 	fmt.Println("myFunc                ", myFunc)
 	fmt.Println("reflect.TypeOf(myFunc)", reflect.TypeOf(myFunc))
 
