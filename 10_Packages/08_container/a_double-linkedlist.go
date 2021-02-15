@@ -11,6 +11,7 @@ func main() {
 	fmt.Println("x                       :", x)
 	fmt.Println("reflect.TypeOf(x)       :", reflect.TypeOf(x))
 	fmt.Println("reflect.TypeOf(x).Kind():", reflect.TypeOf(x).Kind())
+
 	x.PushBack(1)
 	x.PushBack(2)
 	x.PushBack(3)
