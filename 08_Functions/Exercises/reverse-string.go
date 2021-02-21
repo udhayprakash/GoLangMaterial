@@ -81,6 +81,14 @@ func ReverseUsingRuneAppend(value string) string {
 	return string(result)
 }
 
+func ReverseUsingUTF8Decode(s string) (rs string) {
+	for i, w := 0, 0; i < len(s); i += w {
+		r, width := utf8.DecodeRuneInString(s[i:])
+		w = width
+		rs = string(r) + rs
+	}
+	return
+}
 func main() {
 	s := "Hello, world"
 	s = "Hello, 世界"
@@ -94,6 +102,7 @@ func main() {
 	fmt.Println(ReverseUsingClosure(s))
 	fmt.Println(ReverseUsingRecursion(s))
 	fmt.Println(ReverseUsingRuneAppend(s))
+	fmt.Println(ReverseUsingUTF8Decode(s))
 }
 
 /*
