@@ -37,15 +37,15 @@ func main() {
 	fmt.Println("i=", i)
 
 	var (
-		k float32
-		l float64
+		j float32
+		k float64
 	)
+	fmt.Println("j:", j)
 	fmt.Println("k:", k)
-	fmt.Println("l:", l)
 
 	// `:=` syntax for declaring and initializing a variable.
-	// E.g. for `var f string = "apple"` in this case.
-	j := "apple"
-	fmt.Println("j:", j)
+	// E.g. for `var l string = "apple"` in this case.
+	l := "apple"
+	fmt.Println("l:", l)
 
 }

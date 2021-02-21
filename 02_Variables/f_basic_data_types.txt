@@ -12,6 +12,7 @@ Go Data Types
                            but is sufficient to hold all the bits of a pointer value
                         - Used, mainly, in low level programming
                 3. general : int and uint - both either 32 or 64 bits
+
             ii) float(IEEE 754 standard implemented by all modern CPUs)
                 - float32
                     - 6 decimal digits precision
@@ -52,6 +53,7 @@ Comparable Types: booleans, numbers, Strings
 
 NOTE:
 =====
-The int, uint, and uintptr types are usually 32 bits wide on 32-bit systems
-and 64 bits wide on 64-bit systems. When you need an integer value you should
-use int unless you have a specific reason to use a sized or unsigned integer type.
+- The int, uint, and uintptr types are usually 32 bits wide on 
+    32-bit systems and 64 bits wide on 64-bit systems. 
+- When you need an integer value you should use int unless you 
+    have a specific reason to use a sized or unsigned integer type.

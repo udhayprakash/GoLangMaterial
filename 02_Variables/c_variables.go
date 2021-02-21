@@ -2,7 +2,10 @@ package main
 
 import "fmt"
 
-var num1, Num2, num3 int = 1, 2, 3
+var num1, num3 int = 1, 3
+
+// Exportable variables should be separately declared
+var Num2 int = 2
 
 func main() {
 	// Local Scope variable
