@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	fmt.Println(`len("Hello world")	=`, len("Hello world"))
@@ -39,4 +42,9 @@ func main() {
 	fmt.Println("name[len(name)- 3:]=", name[len(name)-3:])
 	fmt.Println("name[:len(name)- 3]=", name[:len(name)-3])
 
+	// Capitalize first half of the string
+	s := "i love food"
+	i := len(s) / 2
+	result1 := strings.ToUpper(s[:i]) + strings.ToLower(s[i:])
+	fmt.Println(result1)
 }
