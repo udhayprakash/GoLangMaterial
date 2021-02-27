@@ -121,5 +121,5 @@ func main() {
 	prod["a"] = 1
 	prod["p"] = 0
 	
-	if v := prod["p"]
+	//if v := prod["p"]
 }

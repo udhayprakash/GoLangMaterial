@@ -34,7 +34,7 @@ func main() {
 
 	p := []int{1, 2, 3}
 	q := []int{4, 5, 6}
-	p = append(p, q...)
+	p = append(p, q...)  // concatenation two arrays
 	fmt.Println(p) // [1 2 3 4 5 6]
 	// Without that ..., it wouldn't compile because the 
 	// types would be wrong; q is not of type int.
