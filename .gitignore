@@ -108,3 +108,6 @@ ENV/
 
 *.pem
 *.key
+
+# golang-delve debug file 
+__debug_bin
