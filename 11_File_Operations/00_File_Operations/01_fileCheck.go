@@ -16,8 +16,7 @@ func main() {
 	//fmt.Println("\ninfo:", info)
 	//fmt.Println("err :", err)
 
-
-	for _, eachFile := range [3]string{"example.tx", "C:\\Go\\README.md", "01_File_Operations"}{
+	for _, eachFile := range [3]string{"example.tx", "C:\\Go\\README.md", "01_File_Operations"} {
 		//fmt.Println(eachFile, fileExists(eachFile))
 		if fileExists(eachFile) {
 			fmt.Printf("file - %s exists\n", eachFile)
@@ -25,7 +24,6 @@ func main() {
 			fmt.Printf("file - %s does not exist (or is a directory)\n", eachFile)
 		}
 	}
-
 
 }
 
