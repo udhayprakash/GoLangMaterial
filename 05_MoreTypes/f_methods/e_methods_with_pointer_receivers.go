@@ -16,7 +16,6 @@ func (p *Point) ScaleBy(factor float64) {
 	p.Y *= factor
 }
 
-
 func main() {
 	p := Point{3, 4}
 	fmt.Println("Point            p = ", p)
@@ -24,12 +23,10 @@ func main() {
 	p.Translate(7, 9)
 	fmt.Println("After Translate, p = ", p)
 
-
 	//=========================================
 	r := &Point{1, 2}
 	r.ScaleBy(2)
 	fmt.Println("*r=", *r) // "{2, 4}"
-
 
 	r1 := Point{1, 2}
 	pptr := &r1

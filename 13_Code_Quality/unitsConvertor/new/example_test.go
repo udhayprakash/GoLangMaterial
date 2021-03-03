@@ -38,5 +38,5 @@ func BenchmarkTemplateParallel(b *testing.B) {
 	})
 }
 func main() {
-	
+
 }

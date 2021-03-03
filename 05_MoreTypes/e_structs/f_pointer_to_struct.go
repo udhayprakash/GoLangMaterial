@@ -18,7 +18,7 @@ type myVertex struct {
 	Y int
 }
 
-func main(){
+func main() {
 	value := myVertex{1, 2}
 	valuePtr := &value
 

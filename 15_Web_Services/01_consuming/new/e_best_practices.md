@@ -7,7 +7,6 @@
         }
         defer resp.Body.Close()
 
-
 #### TIP2: Always Use a Timeout
 
         timeout := time.Duration(5 * time.Second)

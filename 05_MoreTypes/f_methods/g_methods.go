@@ -1,4 +1,5 @@
 package main
+
 /*
 Purpose: Methods
 	- Go supports methods defined on struct types.

@@ -10,7 +10,7 @@ import (
 func main() {
 	args := os.Args[1:]
 
-	if len(args) == 1 && args[0] == "/help"{
+	if len(args) == 1 && args[0] == "/help" {
 		fmt.Println(`
 			USAGE  : c_dinnertotal <Total Meal Amount> <Tip Percentage>
 			EXAMPLE: c_dinnertotla 2000 10

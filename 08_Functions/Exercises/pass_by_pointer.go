@@ -18,6 +18,7 @@ func main() {
 	fmt.Println("x+1 = ", x1) // should print "x+1 = 4"
 	fmt.Println("x = ", x)    // should print "x=4"
 }
+
 /*
 Advantages of pointers:
 	• Allows us to use more functions to operate on one variable.

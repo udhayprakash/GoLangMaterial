@@ -15,24 +15,22 @@ func main() {
 	number := 1234567
 	slice := strconv.Itoa(number)
 
-	limit := len(slice)/2
-	if len(slice) % 2 != 0{
+	limit := len(slice) / 2
+	if len(slice)%2 != 0 {
 		limit += 1
-	} 
+	}
 	fmt.Println("limit=", limit)
 
 	result := ""
-	for i:=0; i < limit; i++{
+	for i := 0; i < limit; i++ {
 		result += slice[i:i+1] + slice[len(slice)-i-1:len(slice)-i]
 	}
 	fmt.Println("result=", result)
 	result1, _ := strconv.Atoi(result)
 	fmt.Println("result1=", result1)
-	
 
-
-	fmt.Println(3/2, 3 % 2)
-	fmt.Println(3/2, 3 % 2)
+	fmt.Println(3/2, 3%2)
+	fmt.Println(3/2, 3%2)
 }
 
 // reverseDigitsInNumber(54321)
@@ -48,7 +46,6 @@ func main() {
 //         N = N / 10;
 //     }
 // }
-
 
 // fmt.Println("Solution([]int{1, 3, 6, 4, 1, 2}):", Solution([]int{1, 3, 6, 4, 1, 2}))
 

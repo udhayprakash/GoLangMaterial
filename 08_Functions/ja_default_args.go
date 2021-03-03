@@ -18,15 +18,14 @@ import (
 //	return "Hello " + name
 //}
 
-
-func helloWorld(name string) (string){
+func helloWorld(name string) string {
 	if name == "" {
 		name = "GOLAND"
 	}
 	return "Hello " + name
 }
 
-func main(){
+func main() {
 	// Function call
 	fmt.Println("helloWorld(\"GoLANG\")=", helloWorld("GoLANG"))
 

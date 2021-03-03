@@ -19,6 +19,7 @@ func main() {
 	handler := cors.Default().Handler(mux)
 	http.ListenAndServe(":8080", handler)
 }
+
 // go get github.com/rs/cors
 
 // Usage:

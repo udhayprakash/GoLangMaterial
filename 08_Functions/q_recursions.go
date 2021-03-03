@@ -17,17 +17,16 @@ func factorial(num int) int {
 	if num <= 1 {
 		return 1
 	}
-	return num * factorial(num -1)
+	return num * factorial(num-1)
 }
 
-
-func main(){
+func main() {
 	result := factorial(9)
 	fmt.Println("factorial(9) = ", result)
 
 	fmt.Println("factorial(6):", factorial(6))
 
-	for i:= 0; i < 12; i++ {
+	for i := 0; i < 12; i++ {
 		fmt.Printf("factorial(%2d)=%8d\n", i, factorial(i))
 	}
 }

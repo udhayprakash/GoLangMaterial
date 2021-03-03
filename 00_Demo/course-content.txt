@@ -1,7 +1,7 @@
-                        ---------------------------
+---------------------------------------------------------------------------------
                         GO Language Course Content
-                        ---------------------------
-Duration        : 30+ days
+---------------------------------------------------------------------------------
+Duration        : 35+ days
 Target audience : beginner- and intermediate-level developers in the Go programming language.
 Prerequisite    : No knowledge of any language, nor design patterns is expected.
 
@@ -11,6 +11,7 @@ Chapter 01: Introduction
             comment operators 
             Keywords & Identifiers
             Data Types in Golang
+
 Chapter 02: Variables 
             Variables & Declarations
             Constants
@@ -20,6 +21,7 @@ Chapter 02: Variables
             Type conversions
             Custom Type Creation
             Run-Time Input
+
 Chapter 03: Basics
             Arithmetic Operations
                 Arithmetic operators
@@ -47,6 +49,7 @@ Chapter 04: Language Components
                 Loops 
                 Range 
                 Init
+
 Chapter 05: MoreTypes
                 Arrays 
                 Slices
@@ -55,12 +58,16 @@ Chapter 05: MoreTypes
                 Structs
                 Methods
                 Interfaces
+
 Chapter 06: Error Handling
                 Defer 
                 panic 
                 recover
                 create erros
+
 Chapter 07: Debugging
+				delve package & commands
+
 Chapter 08: Functions
                 Functions signature
                 Functions with args 
@@ -73,7 +80,9 @@ Chapter 08: Functions
                 Closure, Generator, 
                 Recursions 
                 Higher-Order Functions 
+
 Chapter 09: Goroutines, Channels, Concurrency
+
 Chapter 10: Modules
                 OS 
                 base64-encoding
@@ -87,6 +96,9 @@ Chapter 10: Modules
                 hash & Cryptography 
                 StrConv
                 runtime
+				context
+				reflect
+
 Chapter 11: File Operations
                 UnStructured,Structured, 
                 ZipFiles
@@ -94,9 +106,19 @@ Chapter 11: File Operations
 Chapter 12: Logging
                 Built-in logger 
                 Logrus
+
 Chapter 13: Code Quality
-                unit testing
-Chapter 14: Regular Expressions 
+                unit testing, 
+					table driven tests, 
+					asserts
+				coverage, profiling, benchmarking
+
+Chapter 14: Regular Expressions
+ 
 Chapter 15: Web Services
                 Consuming REST API 
                 Creating REST API
+				
+----------------------------------------------------------------
+Daily assignments will be given, which includes interview questions
+asked in major company interviews

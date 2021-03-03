@@ -7,7 +7,7 @@ func ReturnData() interface{} {
 	return 5
 }
 
-func main(){
+func main() {
 	result := ReturnData()
 	fmt.Println("result:", result)
 }

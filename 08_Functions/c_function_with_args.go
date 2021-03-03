@@ -14,14 +14,14 @@ Purpose: Function with one input argument and no return value
 */
 
 // Function Definitions
-func hello(name string){
+func hello(name string) {
 	fmt.Println("Hello", name)
 }
 
-func main(){
+func main() {
 	// Function calls
 	//hello() // not enough arguments in call to hello
-	hello("Udhay")  //Hello Python
+	hello("Udhay") //Hello Python
 	//hello("Udhay", "Prakash")  // too many arguments in call to hello
 
 	// keyword arguments not possible

@@ -13,6 +13,7 @@ func gotoUseCase() {
 myNum:
 	fmt.Println(87)
 }
+
 // goto "label" & call should be in same function.
 
 func main() {

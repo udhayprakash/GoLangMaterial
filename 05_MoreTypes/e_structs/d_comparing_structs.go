@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type myPoint struct{
+type myPoint struct {
 	X, Y int
 }
 

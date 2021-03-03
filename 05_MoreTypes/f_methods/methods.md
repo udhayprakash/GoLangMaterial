@@ -1,5 +1,6 @@
 Methods
 =======
+
     - Functions with  a special reciever argument
     - The receiver argument has a name and a type. 
         - It appears between the func keyword and the method name -

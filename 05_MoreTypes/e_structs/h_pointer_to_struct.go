@@ -22,7 +22,6 @@ func main() {
 	nano.launchYear = 2019
 	fmt.Println("nano = ", nano) //nano =  {3242342 something 2019}
 
-
 	// You can also get a pointer to a struct using the built-in new() function
 	// It allocates enough memory to fit a value of the given struct type, and returns a pointer to it
 	sumo := new(Car)

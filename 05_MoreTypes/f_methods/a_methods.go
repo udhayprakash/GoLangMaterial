@@ -12,18 +12,17 @@ Purpose: Methods
 
 */
 
-
 type Degrees struct {
-	angle float64
+	angle     float64
 	something string
 }
 
 // method
 func (deg Degrees) toRad() float64 {
-	return deg.angle * (3.14 /180.0)
+	return deg.angle * (3.14 / 180.0)
 }
 
-func main(){
+func main() {
 	angle := Degrees{90.0, "udhay"}
 	fmt.Println("angle:", angle)
 	fmt.Println("Angle, in radians: ", angle.toRad())

@@ -20,7 +20,7 @@ func (p Person) String() string {
 
 func main() {
 	list := make(List, 3)
-	list[0] = 1 //an int
+	list[0] = 1       //an int
 	list[1] = "Hello" //a string
 	list[2] = Person{"Dennis", 70}
 

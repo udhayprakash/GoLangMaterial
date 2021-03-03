@@ -1,4 +1,5 @@
 package main
+
 /*
 Purpose: Function overwriting Problem
 
@@ -8,14 +9,14 @@ Purpose: Function overwriting Problem
 
 import "fmt"
 
-func myAddition(var1, var2, var3 int)(int) {
+func myAddition(var1, var2, var3 int) int {
 	return var1 + var2 + var3
 }
+
 //
 //func myAddition(num1, num2 int)(int) {
 //	return num1 + num2
 //}
-
 
 func main() {
 	fmt.Println("myAddition(10, 20, 30):", myAddition(10, 20, 30))

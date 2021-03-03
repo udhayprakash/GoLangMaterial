@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"log"
 	"strings"
-
-	"gopkg.in/jdkato/prose.v2"
 )
 
 func main() {

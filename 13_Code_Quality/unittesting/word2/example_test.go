@@ -51,7 +51,7 @@ func TestCanalPalindrome(t *testing.T) {
 func TestIsPalindrome(t *testing.T) {
 	var tests = []struct {
 		input string
-		want bool
+		want  bool
 	}{
 		{"", true},
 		{"a", true},
@@ -65,7 +65,7 @@ func TestIsPalindrome(t *testing.T) {
 		{"été", true},
 		{"Et se resservir, ivresse reste.", true},
 		{"palindrome", false}, // non-palindrome
-		{"desserts", false}, // semi-palindrome
+		{"desserts", false},   // semi-palindrome
 	}
 	for _, test := range tests {
 		if got := IsPalindrome(test.input); got != test.want {

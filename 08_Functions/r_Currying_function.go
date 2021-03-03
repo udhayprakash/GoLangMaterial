@@ -17,13 +17,13 @@ func plus(x, y int) int {
 	return x + y
 }
 
-func partialPlus(x int) func(int) int{
+func partialPlus(x int) func(int) int {
 	return func(y int) int {
 		return plus(x, y)
 	}
 }
 
-func main(){
+func main() {
 	plusOne := partialPlus(1)
 	fmt.Println("plusOne(5):", plusOne(5)) //prints 6
 	fmt.Println("plusOne(7):", plusOne(7)) //prints 8

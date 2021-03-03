@@ -11,7 +11,7 @@ var fibValues = make(map[int]int)
 
 func fibonacciNum(num int) int {
 	val, isKeyPresent := fibValues[num]
-	if isKeyPresent != false{
+	if isKeyPresent != false {
 		fmt.Printf("\tfibValues[%2d]=%4d\n", num, val)
 		return val
 	}
@@ -29,7 +29,7 @@ func main() {
 	//fmt.Println("fibonacciNum(4)=", fibonacciNum(4))
 
 	for i := 0; i < 15; i++ {
-		fibValues[i]  = fibonacciNum(i)
+		fibValues[i] = fibonacciNum(i)
 		fmt.Printf("fibonacci(%d) :%2d\n", i, fibValues[i])
 
 	}

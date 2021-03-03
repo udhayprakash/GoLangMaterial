@@ -10,15 +10,15 @@ func fibonacciNumber(num int) int {
 	} else if num == 1 {
 		return 1
 	} else {
-		return fibonacciNumber(num - 1) + fibonacciNumber(num -2)
+		return fibonacciNumber(num-1) + fibonacciNumber(num-2)
 	}
 }
 
-func main()  {
+func main() {
 	fmt.Println("fibonacciNumber(3):", fibonacciNumber(3))
 	fmt.Println("fibonacciNumber(5):", fibonacciNumber(5))
 
-	for i := 0; i < 25; i++{
+	for i := 0; i < 25; i++ {
 		fmt.Printf("fibonacciNumber(%2d) = %4d\n", i, fibonacciNumber(i))
 	}
 }

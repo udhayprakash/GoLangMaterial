@@ -11,8 +11,8 @@ type ChopStick struct {
 
 type Philosopher struct {
 	leftChopStick, rightChopStick *ChopStick
-	position int
-	hostChannel chan int
+	position                      int
+	hostChannel                   chan int
 }
 
 func main() {
@@ -30,7 +30,7 @@ func main() {
 	Philosophers := make([]*Philosopher, 5)
 
 	for j := 0; j < 5; j++ {
-		Philosophers[j] = &Philosopher{ChopSticks[j], ChopSticks[(j+1)%5], j+1, hostChannel}
+		Philosophers[j] = &Philosopher{ChopSticks[j], ChopSticks[(j+1)%5], j + 1, hostChannel}
 	}
 
 	var waitGroup sync.WaitGroup
@@ -66,6 +66,6 @@ func (p Philosopher) Eat() {
 		fmt.Printf("Finishing eating %d (turn %d)...\n", p.position, turns+1)
 
 		// Release a spot for other philosophers to start eating
-		<- p.hostChannel
+		<-p.hostChannel
 	}
 }

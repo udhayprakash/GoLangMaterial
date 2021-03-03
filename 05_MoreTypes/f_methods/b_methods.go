@@ -6,7 +6,7 @@ import (
 )
 
 // Struct type - `Point`
-type Point struct{
+type Point struct {
 	X, Y float64
 }
 
@@ -18,7 +18,6 @@ func IsAboveFunc(p Point, y float64) bool {
 func (p Point) IsAbove(y float64) bool {
 	return p.Y > y
 }
-
 
 func main() {
 	p := Point{2.0, 4.0}

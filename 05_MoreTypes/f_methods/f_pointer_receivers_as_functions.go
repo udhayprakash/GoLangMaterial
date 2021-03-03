@@ -1,4 +1,5 @@
 package main
+
 // Methods with Pointer receivers as Functions
 
 import (

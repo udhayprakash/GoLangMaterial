@@ -10,8 +10,8 @@ func main() {
 /*
 NOTE:
 	To know current installed delve version,
-		dlv version 
-	
+		dlv version
+
 	Debugging
 		go run a_example.go
 		dlv debug a_example.go

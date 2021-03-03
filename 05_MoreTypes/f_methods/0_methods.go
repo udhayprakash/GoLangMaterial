@@ -21,4 +21,3 @@ func main() {
 }
 
 // NOTE: You can only define methods on types within the same package.
-

@@ -6,16 +6,13 @@ func myFunc1(word string) {
 	fmt.Printf("In myFunc1: %10T %v\n", word, word)
 }
 
-
 func myFunc2(word interface{}) {
 	fmt.Printf("In myFunc2: %10T %v\n", word, word)
 }
 
-
-func main(){
+func main() {
 	myFunc1("World")
 	//myFunc1(123213) // cannot use 123213 (type untyped int) as type string in argument to myFunc1
-
 
 	myFunc2("World")
 	myFunc2(2131)

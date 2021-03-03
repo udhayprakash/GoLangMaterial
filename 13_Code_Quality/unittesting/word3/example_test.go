@@ -6,6 +6,7 @@ import (
 	"time"
 	"unicode"
 )
+
 // IsPalindrome reports whether s reads the same forward and backward.
 // Letter case is ignored, as are non-letters.
 func IsPalindrome(s string) bool {

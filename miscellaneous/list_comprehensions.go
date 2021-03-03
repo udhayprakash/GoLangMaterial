@@ -1,11 +1,9 @@
-package main 
-
-import "fmt"
+package main
 
 func main() {
 	a := [1, 3, 5, 7, 11]
-	b := [x*x for x <- a, x > 3]
-	println(b)
+b := [x*x for x <- a, x > 3]
+println(b)
 }
 
 // NOTE: https://github.com/qiniu/goplus

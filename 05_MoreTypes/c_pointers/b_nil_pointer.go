@@ -2,9 +2,9 @@ package main
 
 import "fmt"
 
-func main(){
+func main() {
 	var ptr *float64
-	fmt.Printf("The value of ptr is : %x\n", ptr  )
+	fmt.Printf("The value of ptr is : %x\n", ptr)
 	fmt.Println("Before ptr != nil :", ptr != nil)
 
 	num2 := 123.213

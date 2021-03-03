@@ -1,13 +1,13 @@
 package D-example
 
 import (
-	"bufio"
-	"fmt"
-	"io"
-	"net/http"
+"bufio"
+"fmt"
+"io"
+"net/http"
 
-	"golang.org/x/net/html/charset"
-	"golang.org/x/text/encoding"
+"golang.org/x/net/html/charset"
+"golang.org/x/text/encoding"
 )
 
 // $ go get -u golang.org/x/text

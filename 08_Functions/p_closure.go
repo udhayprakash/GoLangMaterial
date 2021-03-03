@@ -11,14 +11,13 @@ Purpose: Closures
 NOTE: Inner functions are most often anonymous functions (or function literals).
 */
 
-func callingHello() func() string{
+func callingHello() func() string {
 	fmt.Println("starting callingHello ...")
 	return func() string { // anonymous function
 		fmt.Println("starting inner function ...")
 		return "Hello world"
 	}
 }
-
 
 func main() {
 	fmt.Println("starting main ...")

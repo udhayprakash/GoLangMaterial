@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func main(){
+func main() {
 	var dozen int
 	dozen = 12
 	fmt.Println("dozen:", dozen)

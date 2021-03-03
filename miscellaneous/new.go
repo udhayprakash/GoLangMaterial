@@ -11,6 +11,5 @@ func main() {
 	fmt.Println(length(vs...))
 }
 
-
-// -race is the flg need to be added in command line 
+// -race is the flg need to be added in command line
 // to find data race

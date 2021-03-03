@@ -35,12 +35,10 @@ type math interface {
 	substr() float64
 }
 
-
 func result(m math) {
 	fmt.Println("Sum   : ", m.sum())
 	fmt.Println("Substr: ", m.substr())
 }
-
 
 func main() {
 	a := item1{num1: 10, num2: 5}
@@ -49,6 +47,7 @@ func main() {
 	b := item2{num1: 20, num2: 10}
 	result(b)
 }
+
 //Sum   :  15
 //Substr:  5
 //Sum   :  30

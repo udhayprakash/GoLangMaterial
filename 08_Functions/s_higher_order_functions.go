@@ -17,12 +17,12 @@ func add2(character rune) rune {
 	return character + 1
 }
 
-func caesarCipher(character rune) rune  {
+func caesarCipher(character rune) rune {
 	if character == ' ' {
 		return character
 	}
 	return character + 3
-	
+
 }
 
 func main() {
@@ -30,7 +30,6 @@ func main() {
 	fmt.Println(strings.Map(add2, "bcdefghi"))
 	fmt.Println(strings.Map(add2, "Golang"))
 	fmt.Println(strings.Map(add2, "Udhay123"))
-
 
 	fmt.Println(strings.Map(caesarCipher, "Let's attack at the river edge to night"))
 }

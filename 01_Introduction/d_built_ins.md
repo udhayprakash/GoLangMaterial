@@ -6,8 +6,7 @@
     const       fallthrough if      range       type
     continue    for         import  return      var
 
-In addition, three dozen predeclared names.
-Constants :
+In addition, three dozen predeclared names. Constants :
 
         true    false   iota    nil
 

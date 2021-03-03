@@ -12,17 +12,16 @@ func NewCounter() (Count func()) {
 	}
 }
 
-
-func main(){
+func main() {
 	counter := NewCounter()
 	otherCounter := NewCounter()
 
-	counter()      // n:1
-	counter()      // n:2
-	counter()      // n:3
+	counter() // n:1
+	counter() // n:2
+	counter() // n:3
 
 	otherCounter() // n: 1
 	otherCounter() // n: 2
 
-	counter()      // n:4
+	counter() // n:4
 }

@@ -1,10 +1,8 @@
 package main
 
 import (
-"errors"
-"fmt"
-"strconv"
-"strings"
+	"strconv"
+	"strings"
 )
 
 const (
@@ -13,16 +11,14 @@ const (
 	milesToKilometres = 1.60934
 )
 
-func Convert (from, to string) (string,error) {
+func Convert(from, to string) (string, error) {
 	var result float64
 	switch {
-	case strings.HasSuffix(from,"mi"):
-		miles,err := strconv.ParseFloat(from[:len(from)-2],64)
+	case strings.HasSuffix(from, "mi"):
+		miles, err := strconv.ParseFloat(from[:len(from)-2], 64)
 		if err != nil {
-			return "",err
+			return "", err
 		}
-
-
 
 		switch to {
 		case "km":

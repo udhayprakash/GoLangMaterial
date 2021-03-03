@@ -15,6 +15,7 @@ Purpose: Scope - Global and local
 */
 
 var pi float32 = 3.141
+
 const PI float32 = 3.141
 
 func case1() {
@@ -43,7 +44,7 @@ func case3(pi float32) {
 	fmt.Println("after  change pi = ", pi)
 
 }
-func main(){
+func main() {
 	case1()
 	case2()
 	fmt.Println("Outside change pi = ", pi)
@@ -53,6 +54,6 @@ func main(){
 	fmt.Println("Outside change pi = ", pi)
 
 }
+
 // NOTE:
 //1. Global variables can be used within functions, without passing as arguments
-

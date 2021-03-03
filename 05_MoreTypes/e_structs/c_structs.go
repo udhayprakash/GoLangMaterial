@@ -16,10 +16,10 @@ func main() {
 	fmt.Println()
 
 	//fmt.Println(person{"Udhay"}) // too few values in person literal
-	fmt.Println(person{name:"Udhay"})
+	fmt.Println(person{name: "Udhay"})
 	fmt.Println()
 
-	fmt.Println(&person{name:"Udhay"})
+	fmt.Println(&person{name: "Udhay"})
 	fmt.Println(NewPerson("Udhay"))
 	fmt.Println()
 
@@ -34,10 +34,9 @@ func main() {
 
 }
 
-
 func NewPerson(name string) *person {
 	// Function returning `person` struct type
-	p := person{name:name}
+	p := person{name: name}
 	p.age = 23
 	return &p
 }

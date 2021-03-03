@@ -114,12 +114,11 @@ package main
 // 	s = append(s, string(n[3]))
 // }
 
-
 func main() {
 
 	var prod map[string]int
 	prod["a"] = 1
 	prod["p"] = 0
-	
+
 	//if v := prod["p"]
 }

@@ -15,7 +15,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println(os.Args, )
+	fmt.Println(os.Args)
 	for _, url := range os.Args[1:] {
 		resp, err := http.Get(url)
 		if err != nil {

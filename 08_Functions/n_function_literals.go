@@ -10,7 +10,7 @@ Purpose: Function Literals
 */
 
 func square(x int) func() int {
-	return func() int {// anonymous functions
+	return func() int { // anonymous functions
 		x = x * x
 		return x
 	}

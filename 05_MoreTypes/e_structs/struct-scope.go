@@ -20,5 +20,5 @@ func main() {
 
 	mt.Value = "bar"
 	mt.SetValuePtr("baz")
-	println("mt.Value:", mt.Value)// baz
+	println("mt.Value:", mt.Value) // baz
 }

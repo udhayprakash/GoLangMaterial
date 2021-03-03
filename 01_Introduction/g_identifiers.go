@@ -2,9 +2,9 @@ package main
 
 import "fmt"
 
-func main()  {
-	emptyString1  := ""
-	var emptyString2 string  // default initial value for string is ""
+func main() {
+	emptyString1 := ""
+	var emptyString2 string // default initial value for string is ""
 	var emptyString3 = ""
 	var emptyString4 string = ""
 	fmt.Println("emptyString1 == emptyString2 :", emptyString1 == emptyString2) // true

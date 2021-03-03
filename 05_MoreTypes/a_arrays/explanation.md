@@ -1,5 +1,6 @@
 arrays
 ======
+
     - Collection of elements of same data type
     - array length is fixed on declaration
         - size can neither be reduced or increased

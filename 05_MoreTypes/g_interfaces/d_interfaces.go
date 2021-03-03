@@ -18,6 +18,7 @@ type rect struct {
 type circle struct {
 	radius float64
 }
+
 // methods to structs
 func (r rect) area() float64 {
 	return r.width * r.height
@@ -26,7 +27,6 @@ func (r rect) perim() float64 {
 	return 2*r.width + 2*r.height
 }
 
-
 func (c circle) area() float64 {
 	return math.Pi * c.radius * c.radius
 }
@@ -34,13 +34,12 @@ func (c circle) perim() float64 {
 	return 2 * math.Pi * c.radius
 }
 
-
 type geometry interface {
 	area() float64
 	perim() float64
 }
 
-func measure(g geometry){
+func measure(g geometry) {
 	fmt.Println("g        :", g)
 	fmt.Println("g.area() :", g.area())
 	fmt.Println("g.perim():", g.perim())
@@ -56,4 +55,3 @@ func main() {
 }
 
 //Further ref: https://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go
-
