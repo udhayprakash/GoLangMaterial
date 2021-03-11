@@ -25,7 +25,13 @@ func main() {
 		"gri": 1908,
 		"adg": 912,
 	}
-	fmt.Println(commits)
+	fmt.Println("commits:", commits)
+
+	// To clear all keys in map
+	for k := range commits {
+		delete(commits, k)
+	}
+	fmt.Println("After clean up, commits:", commits)
 
 }
 
