@@ -60,3 +60,7 @@ based on usage,
 
 To get the platforms supported by Go,
     go tool dist list 
+
+
+https://devdocs.io/go/
+https://pkg.go.dev/

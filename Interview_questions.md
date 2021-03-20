@@ -225,3 +225,46 @@ Find Combination of pair elements which give 0, Input = [ -1, 0, 1, -2, 2, 3, 4,
 Write a program use type interface with goroutines and channels.
 Generate N digit random number based on input. input : 5 , Output : 93657 Input : 2, Output : 47
 
+What is Package Context in Go" and how we are using it? 
+
+What is the type Assertion?
+
+How Go's interface is different from Java Interface
+
+Design database design for particular system consider normalization
+
+Inline function in Go?
+
+Inline struct in Go?
+
+What is GORM?
+
+What is Gorilla Mux?
+
+Difference between Switch and Select in Go?
+
+What is First-Class Function in Go?
+
+How to define an anonymous function in Go?
+
+How to define an anonymous struct in Go?
+
+Function closures in Go
+
+What is Pass by Value and Pass by Reference?
+
+What is Slice Capacity and Length?
+
+What is struct composition?
+
+What is a nested struct?
+
+How to delete elements from Slice?
+
+What is Nil Interface
+
+What is Zero Value, Write down for all basic types?
+
+What is Atoi and Itoa ?
+
+What is gRPC?
