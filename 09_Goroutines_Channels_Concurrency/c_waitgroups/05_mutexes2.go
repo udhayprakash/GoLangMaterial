@@ -1,66 +1,25 @@
 package main
-/*
-Purpose:
-In the previous example, we saw how to manage simple counter state 
-using atomic operations. 
-For more complex state we can use a mutex to safely 
-access data across multiple goroutines.
-*/
+
 import (
 	"fmt"
-	"math/rand"
 	"sync"
-	"sync/atomic"
-	"time"
 )
 
+var x = 0
+
+func increment(wg *sync.WaitGroup, m *sync.Mutex) {
+	m.Lock()
+	x = x + 1
+	m.Unlock()
+	wg.Done()
+}
 func main() {
-
-	var state = make(map[int]int)
-
-	var mutex = &sync.Mutex{}
-
-	var readOps uint64
-	var writeOps uint64
-
-	for r := 0; r < 100; r++ {
-		go func() {
-			total := 0
-			for {
-
-				key := rand.Intn(5)
-				mutex.Lock()
-				total += state[key]
-				mutex.Unlock()
-				atomic.AddUint64(&readOps, 1)
-
-				time.Sleep(time.Millisecond)
-			}
-		}()
+	var w sync.WaitGroup
+	var m sync.Mutex
+	for i := 0; i < 1000; i++ {
+		w.Add(1)
+		go increment(&w, &m)
 	}
-
-	for w := 0; w < 10; w++ {
-		go func() {
-			for {
-				key := rand.Intn(5)
-				val := rand.Intn(100)
-				mutex.Lock()
-				state[key] = val
-				mutex.Unlock()
-				atomic.AddUint64(&writeOps, 1)
-				time.Sleep(time.Millisecond)
-			}
-		}()
-	}
-
-	time.Sleep(time.Second)
-
-	readOpsFinal := atomic.LoadUint64(&readOps)
-	fmt.Println("readOps:", readOpsFinal)
-	writeOpsFinal := atomic.LoadUint64(&writeOps)
-	fmt.Println("writeOps:", writeOpsFinal)
-
-	mutex.Lock()
-	fmt.Println("state:", state)
-	mutex.Unlock()
+	w.Wait()
+	fmt.Println("final value of x", x)
 }

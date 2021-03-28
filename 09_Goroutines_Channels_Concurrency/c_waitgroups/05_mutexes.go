@@ -5,6 +5,7 @@ import (
 	"sync"
 )
 
+// mutex - needed for solving race condition
 func main() {
 	m := make(map[int]string)
 	m[2] = "First Value"
