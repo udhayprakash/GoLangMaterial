@@ -9,10 +9,14 @@ func main() {
 	fmt.Println("Hello")
 	fmt.Println("Hello" + "world")
 	fmt.Println("Hello", "world")
-	fmt.Println("Hello", "world", 123, -2.2, true, nil)
+	fmt.Println("Hello", "world", 123, -3.1416, true, nil)
 
-	fmt.Printf("Hello %d\n", 23)
-	fmt.Fprint(os.Stdout, "Hello ", 23, "\n")
+	// f - formatting
+	fmt.Printf("Hello\n")
+	fmt.Printf("Hello %d\n", 123)
+
+	fmt.Fprint(os.Stdout, "Hello ", 99, "\n")
+
 	fmt.Println("Hello", 23)
 	fmt.Println(fmt.Sprint("Hello ", 23))
 	fmt.Println(fmt.Sprintf("Hello %d", 23))

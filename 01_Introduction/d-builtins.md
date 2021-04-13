@@ -6,7 +6,9 @@
     const       fallthrough if      range       type
     continue    for         import  return      var
 
-In addition, three dozen predeclared names. Constants :
+In addition, three dozen predeclared names.
+
+    Constants :
 
         true    false   iota    nil
 
@@ -15,6 +17,7 @@ In addition, three dozen predeclared names. Constants :
         unit    unit8   unit16      uint32      uint64  uintptr
         float32 float64 complex128  complex64
         bool    byte    rune        string      error
+
 
 ## Built-in Functions (15)
 

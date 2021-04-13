@@ -3,11 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	//NOTE: Go supports both single and multi-line comments
 	fmt.Println("111")
-	fmt.Println("222") //Single line comment
-
-	fmt.Println("333")
+	fmt.Println("222") // Single line comment
+	// fmt.Println("333")
 
 	//fmt.Println("444")     Single line comment
 	//fmt.Println("555")	 Single line comment
@@ -21,3 +19,5 @@ func main() {
 
 	fmt.Println("000")
 }
+
+// NOTE: Go supports both single and multi-line comments

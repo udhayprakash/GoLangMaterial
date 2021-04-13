@@ -2,31 +2,16 @@ package main
 
 import "fmt"
 
-/*
-KEYWORDS in Go
-----------------
-	break 		default 	func 	interface 	select
-	case 		defer 		go 		map 		struct
-	chan 		else 		goto 	package 	switch
-	const 		fallthrough if 		range 		type
-	continue 	for 		import 	return 		var
-
-In addition, three dozen predeclared names.
-	Constants : true 	false 	iota 	nil
-	Types     : int 	int8 	int32 	int64
-
-	unit 	unit8 	unit16 		uint32 		uint64 	uintptr
-	float32 float64 complex128 	complex64
-	bool 	byte 	rune 		string 		error
-*/
-
 func main() {
+	fruit := "apple"
+	fmt.Println("fruit:", fruit)
+
 	// NOTE 1: keywords should not be used as identifiers
 	// break := "one" //syntax error: unexpected := at end of statement
 
 	// NOT RECOMMENDED - predeclared variables should not be used as keywords
-	true := "one"
-	fmt.Println("true = ", true)
+	true := "One"
+	fmt.Println("true:", true)
 
 	break_one := "one"
 	fmt.Println("break_one =", break_one)
@@ -41,4 +26,5 @@ func main() {
 
 	NoOfProcessesRunning := 3
 	fmt.Println("NoOfProcessesRunning=", NoOfProcessesRunning)
+
 }
