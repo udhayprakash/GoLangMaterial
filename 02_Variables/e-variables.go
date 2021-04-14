@@ -34,4 +34,7 @@ func main() {
 	fmt.Println("a=", a)
 	fmt.Println("b=", b)
 	fmt.Println("c=", c)
+
+	myRune := 'a'
+	fmt.Println(myRune)
 }

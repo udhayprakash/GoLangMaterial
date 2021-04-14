@@ -10,6 +10,7 @@ func main() {
 	blue += 1
 	fmt.Printf("blue: %3d BinaryForm: %b\n", blue, blue)
 
+	fmt.Println()
 	//var green int8 = 255  // constant 255 overflows int8  - 0 till 255  --> 2^8 - 1 = 255
 	var green uint8 = 255
 	fmt.Printf("green: %3d BinaryForm: %b\n", green, green)

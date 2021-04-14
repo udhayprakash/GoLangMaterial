@@ -1,4 +1,4 @@
-package main
+package main 
 
 import "fmt"
 
@@ -8,7 +8,8 @@ A var declaration can include initializers, one per variable.
 If an initializer is present, the type can be omitted;
 the variable will take the type of the initializer.
 */
-func main() {
+
+func main(){
 	// `var` declares 1 or more variables
 	var a = "initial"
 	fmt.Println("a=", a)
@@ -22,7 +23,7 @@ func main() {
 	// More than One variable can be declared at once
 	var d, e = 10, 20
 	fmt.Println("d =", d, "e=", e)
-
+	
 	var f, g int = 30, 40
 	fmt.Println("f =", f, "g =", g)
 
@@ -47,5 +48,4 @@ func main() {
 	// E.g. for `var l string = "apple"` in this case.
 	l := "apple"
 	fmt.Println("l:", l)
-
 }

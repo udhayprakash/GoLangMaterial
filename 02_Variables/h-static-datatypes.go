@@ -9,7 +9,6 @@ func main() {
 	fmt.Println("x=", x)
 
 	x = "second"
-
 	// NOTE: Modified value should be of same data type
 
 	//x = 44 // cannot use 44 (type untyped int) as type string in assignment
@@ -17,5 +16,4 @@ func main() {
 
 	//var x float32 = 4.4 // x redeclared in this block
 	//NOTE: A variable cant be declared more than once
-
 }

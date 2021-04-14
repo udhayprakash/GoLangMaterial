@@ -20,7 +20,6 @@ func main() {
 	fmt.Println("version :", version)
 	fmt.Println("isLatest:", isLatest)
 }
-
 /*
 NOTE:
  1. unused global variables will be ignored.
