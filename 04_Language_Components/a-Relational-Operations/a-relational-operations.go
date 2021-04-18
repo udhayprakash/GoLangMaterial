@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	usd := 74
@@ -13,5 +15,4 @@ func main() {
 	fmt.Println("usd == cand =", usd == cand)
 	fmt.Println("usd != cand =", usd != cand)
 	//fmt.Println("usd <> cand =", usd <> cand) syntax error: unexpected >, expecting expression
-
 }
