@@ -1,3 +1,7 @@
+package main
+
+import "fmt"
+
 // UTF-8 is the encoding scheme in Go
 /*
 Escape Sequences:
@@ -11,11 +15,7 @@ Escape Sequences:
 	\' single quote (only in the rune literal '\'')
 	\" double quote (only within "..." literals)
 	\\ backslash
-
 */
-package main
-
-import "fmt"
 
 func main() {
 	// Strings are represented with double quotes or back-tick

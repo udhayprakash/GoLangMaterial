@@ -1,3 +1,7 @@
+package main
+
+import "fmt"
+
 /*
 Purpose: Enum
 	- Grouping and expecting only some related values
@@ -6,17 +10,14 @@ Purpose: Enum
 	- To increase the code readability and the maintainability
 
 */
-package main
-
-import "fmt"
-
 func main() {
-	//const (
-	//	a1 = 10
-	//	a2 = 11
-	//	a3 = 2
-	//	a4 = 3
-	//)
+	// const (
+	// 	a1 = 10
+	// 	a2 = 11
+	// 	a3 = 12
+	// 	a4 = 13
+	// )
+
 	/*
 		Go does not have enumerate types
 
@@ -53,16 +54,16 @@ func main() {
 		b                // 9
 		c                // 8
 	)
-	fmt.Println(a, b, c) // "1 2 4"
+	fmt.Println(a, b, c) // 10 9 8
 
 	// ---------------------------------------
 	const (
-		p1 = iota + 1
+		p1 = iota + 3
+		_  // blank identifier to skip a value in a list of constants.
 		p3
-		_ // blank identifier to skip a value in a list of constants.
 		p4
 	)
-	fmt.Println(p1, p3, p4) // "1 2 4"
+	fmt.Println(p1, p3, p4) // 3 5 6
 	fmt.Println()
 
 	// ---------------------------------------
@@ -74,12 +75,12 @@ func main() {
 		May
 		June
 	)
-	fmt.Println("January  :", January)
-	fmt.Println("February :", February)
-	fmt.Println("March    :", March)
-	fmt.Println("April    :", April)
-	fmt.Println("May      :", May)
-	fmt.Println("June     :", June)
+	fmt.Println("January  :", January)  // 1
+	fmt.Println("February :", February) // 2
+	fmt.Println("March    :", March)    // 3
+	fmt.Println("April    :", April)    // 10
+	fmt.Println("May      :", May)      // 10
+	fmt.Println("June     :", June)     // 10
 
 	// ---------- Multiple iotas in a single line
 	const (
@@ -88,10 +89,11 @@ func main() {
 
 		// Passive = 1, Stopped = 1, Stale = 1
 		Passive, Stopped, Stale
+		something1, something2, something3
 	)
 	fmt.Print("Active, Moving, Running :")
 	fmt.Println(Active, Moving, Running)
 	fmt.Print("Passive, Stopped, Stale :")
 	fmt.Println(Passive, Stopped, Stale)
-
+	fmt.Println("something1, something2, something3:", something1, something2, something3)
 }

@@ -23,8 +23,8 @@ func main() {
 	fmt.Printf("r: %.1f, θ: %.1f*π", r, theta/math.Pi)
 	fmt.Println()
 
-	var x complex128 = complex(1, 2)                    // 1+2i
-	var y complex128 = complex(3, 4)                    // 3+4i
+	var x complex128 = complex(1, 2)           // 1+2i
+	var y complex128 = complex(3, 4)           // 3+4i
 	fmt.Println("x * y       			=", x*y)       // "(-5+10i)"
 	fmt.Println("real(x * y) 			=", real(x*y)) // "-5"
 	fmt.Println("imag(x * y) 			=", imag(x*y)) // "10"

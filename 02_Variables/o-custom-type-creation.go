@@ -5,11 +5,16 @@ import (
 	"reflect"
 )
 
-type fruit string
+// Type aliases
+type fruit int
 
 func main() {
-	var apple fruit = "Kashmir apple"
-	fmt.Println(apple, reflect.TypeOf(apple)) // Kashmir apple main.fruit
+	var apple int = 10
+	fmt.Println(apple, reflect.TypeOf(apple)) // 10 int
+
+	var banana fruit = 10
+	fmt.Println(banana, reflect.TypeOf(banana),
+		reflect.TypeOf(banana).Kind()) // 10 main.fruit int
 
 	type Weekday int
 	const (
@@ -36,4 +41,5 @@ func main() {
 	)
 	fmt.Print("a, b, c, d : ")
 	fmt.Println(a, b, c, d)
+
 }

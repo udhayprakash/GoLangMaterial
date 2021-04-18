@@ -1,12 +1,13 @@
+package main
+
+import (
+	"fmt"
+)
+
 /*
 	converts from feet into meters.
         (1 ft = 0.3048 m)
 */
-
-package main
-
-import "fmt"
-
 func main() {
 	//const (
 	//	meters float32

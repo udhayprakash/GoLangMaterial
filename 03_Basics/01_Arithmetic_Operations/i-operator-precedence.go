@@ -1,10 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 /*
 Purpose: Operator precedence
-
+	- PEDMAS
 Unary operators
 	- have the highest precedence and bind the strongest.
 
@@ -32,10 +34,15 @@ Examples
 	1 + 2*a[i] is the same as 1 + (2*a[i])
 	m == n+1 && <-ch > 0 is the same as (m == (n+1)) && ((<-ch) > 0)
 */
-func main() {
-	x := 10
-	y := 20
-	z := 30
 
-	fmt.Println("x / y * z", x/y*z)
+func main() {
+	// x, y, z := 10, 20, 30
+	x, y, z := 10.0, 20.0, 30.0
+
+	fmt.Println("x = ", x)
+	fmt.Println("y = ", y)
+	fmt.Println("z = ", z)
+
+	fmt.Println(x / y * z)
+	fmt.Println((x / y) * z)
 }

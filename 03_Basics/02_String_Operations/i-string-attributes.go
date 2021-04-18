@@ -100,7 +100,6 @@ func main() {
 	fmt.Println(strings.IndexByte("golang", 'g'))  // 0
 	fmt.Println(strings.IndexByte("gophers", 'h')) // 3
 	fmt.Println(strings.IndexByte("golang", 'x'))  // -1
-
 	// String IndexFunc returns the index into s of the first Unicode code point satisfying f(c), or -1 if none do.
 	fmt.Println("\n ==== strings.IndexFunc ====")
 	f1 := func(c rune) bool {
