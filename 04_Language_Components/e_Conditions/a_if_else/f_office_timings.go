@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func main(){
+func main() {
 	/*
 		Monday 		9 AM to 6 PM
 		Tuesday		9 AM to 6 PM
@@ -25,7 +25,7 @@ func main(){
 
 	if weekOfDay == "monday" {
 		fmt.Println("Timings: 9 AM to 6 PM ")
-	}  else if weekOfDay == "tuesday" {
+	} else if weekOfDay == "tuesday" {
 		fmt.Println("Timings: 9 AM to 6 PM ")
 	} else if weekOfDay == "wednesday" {
 		fmt.Println("Timings: 9 AM to 6 PM ")

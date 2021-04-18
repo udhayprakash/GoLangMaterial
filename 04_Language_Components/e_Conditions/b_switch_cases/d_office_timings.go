@@ -23,9 +23,7 @@ func main() {
 	//// Converting to lower case
 	//weekOfDay = strings.ToLower(weekOfDay)
 
-
-
-	switch time.Now().Weekday() {  // switch initializer
+	switch time.Now().Weekday() { // switch initializer
 	case time.Monday, time.Tuesday, time.Wednesday, time.Thursday, time.Friday:
 		fmt.Println("Timings: 9 AM to 6 PM ")
 	case time.Saturday:

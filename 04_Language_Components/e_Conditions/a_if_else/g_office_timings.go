@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func main(){
+func main() {
 	/*
 		Monday 		9 AM to 6 PM
 		Tuesday		9 AM to 6 PM
@@ -24,7 +24,7 @@ func main(){
 	weekOfDay = strings.ToLower(weekOfDay)
 
 	if weekOfDay == "monday" || weekOfDay == "tuesday" || weekOfDay == "wednesday" ||
-	 weekOfDay == "thursday" || weekOfDay == "friday" {
+		weekOfDay == "thursday" || weekOfDay == "friday" {
 		fmt.Println("Timings: 9 AM to 6 PM ")
 	} else if weekOfDay == "saturday" {
 		fmt.Println("Timings: 9 AM to 1 PM ")
