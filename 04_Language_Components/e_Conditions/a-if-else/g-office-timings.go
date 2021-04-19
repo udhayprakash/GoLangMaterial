@@ -5,8 +5,8 @@ import (
 	"strings"
 )
 
-func main() {
-	/*
+/*
+	OFFICE TIMINGS
 		Monday 		9 AM to 6 PM
 		Tuesday		9 AM to 6 PM
 		Wednesday	9 AM to 6 PM
@@ -14,8 +14,9 @@ func main() {
 		Friday 		9 AM to 6 PM
 		Saturday	9 AM to 1 PM
 		Sunday 		HOLIDAY
-	*/
-	fmt.Println("Enter day of the week:")
+*/
+func main() {
+	println("Enter day of the week:")
 
 	var weekOfDay string
 	fmt.Scanf("%s", &weekOfDay)
@@ -23,15 +24,16 @@ func main() {
 	// Converting to lower case
 	weekOfDay = strings.ToLower(weekOfDay)
 
-	if weekOfDay == "monday" || weekOfDay == "tuesday" || weekOfDay == "wednesday" ||
-		weekOfDay == "thursday" || weekOfDay == "friday" {
-		fmt.Println("Timings: 9 AM to 6 PM ")
+	if weekOfDay == "monday" || weekOfDay == "tuesday" ||
+		weekOfDay == "wednesday" || weekOfDay == "thursday" ||
+		weekOfDay == "friday" {
+		println("Timings: 9 AM to 6 PM ")
 	} else if weekOfDay == "saturday" {
-		fmt.Println("Timings: 9 AM to 1 PM ")
+		println("Timings: 9 AM to 1 PM ")
 	} else if weekOfDay == "sunday" {
-		fmt.Println("----HOLIDAY ----------")
+		println("----HOLIDAY ----------")
 	} else {
-		fmt.Println("INVALID ENTRY")
+		println("INVALID ENTRY")
 	}
 
 }
