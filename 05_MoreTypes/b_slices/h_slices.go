@@ -18,6 +18,7 @@ func main() {
 	fmt.Println("apd:", s)      // [a b c d e f]
 	fmt.Println("len:", len(s)) // 6
 
+	// Dynamic slice
 	c := make([]string, len(s))
 	copy(c, s) // safe copy
 	fmt.Println("cpy:", c)

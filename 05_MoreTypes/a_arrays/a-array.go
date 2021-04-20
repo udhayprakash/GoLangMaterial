@@ -1,18 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 /*
 Array - data structure  to store a collection of data of the same type
 Declaration
-	Var array_name[length]Type
+	var array_name [length]Type
 	or
-	var array_name[length]Typle{item1, item2, item3, ...itemN}
+	var array_name[length]Type{item1, item2, item3, ...itemN}
 
 Short declaration
 	array_name:= [length]Type{item1, item2, item3,...itemN}
 
 */
+
 func main() {
 	// Declaration of Arrays
 	var emptyArray1 [3]int
@@ -64,4 +68,10 @@ func main() {
 	fmt.Println("len(greetings1)  :", len(greetings1))
 	fmt.Println("len(greetings2)  :", len(greetings2))
 	fmt.Println("len(greetings3)  :", len(greetings3))
+
+	fmt.Printf("\n\ngreetings1 - type=%T", greetings1)
+	fmt.Printf("\ngreetings1 - type=%T", greetings2)
+	fmt.Printf("\ngreetings1 - type=%T", greetings3)
+
+	fmt.Println(reflect.TypeOf(greetings1))
 }

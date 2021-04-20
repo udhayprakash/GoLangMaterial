@@ -2,19 +2,19 @@ package main
 
 import (
 	"fmt"
-	"time"
 )
 
-var weekday string
+func main() {
+	fmt.Println("In main() loop - start")
 
-func init() {
-	fmt.Println("Init is called ...")
-	weekday = time.Now().Weekday().String()
 }
 
-func main() {
-	fmt.Println("main is called ...")
-	fmt.Printf("Today is %s", weekday)
+func myFunc() {
+	fmt.Println("in myFunc - start")
+}
+
+func init() {
+	fmt.Println("In init() function - start ")
 }
 
 /*

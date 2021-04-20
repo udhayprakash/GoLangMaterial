@@ -4,6 +4,7 @@
 Duration        : 35+ days
 Target audience : beginner- and intermediate-level developers in the Go programming language.
 Prerequisite    : No knowledge of any language, nor design patterns is expected.
+Course Composure: 80% practical and 20 % theory
 
 Chapter 01: Introduction
             Necessity & importance of Golang

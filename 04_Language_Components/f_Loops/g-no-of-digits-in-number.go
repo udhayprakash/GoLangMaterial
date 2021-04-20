@@ -1,3 +1,6 @@
+// Get number of digits in number
+// input : 8768 --> output: 4
+// input : 876  --> output: 3
 package main
 
 import (
