@@ -5,8 +5,8 @@ import (
 	"time"
 )
 
-func main() {
-	/*
+/*
+	OFFICE TIMINGS
 		Monday 		9 AM to 6 PM
 		Tuesday		9 AM to 6 PM
 		Wednesday	9 AM to 6 PM
@@ -14,16 +14,13 @@ func main() {
 		Friday 		9 AM to 6 PM
 		Saturday	9 AM to 1 PM
 		Sunday 		HOLIDAY
-	*/
-	//fmt.Println("Enter day of the week:")
-	//
-	//var weekOfDay string
-	//fmt.Scanf("%s", &weekOfDay)
-	//
-	//// Converting to lower case
-	//weekOfDay = strings.ToLower(weekOfDay)
+*/
 
-	switch time.Now().Weekday() { // switch initializer
+func main() {
+
+	fmt.Println("time.Now().Weekday()=", time.Now().Weekday())
+
+	switch time.Now().Weekday() { // switch initilizer
 	case time.Monday, time.Tuesday, time.Wednesday, time.Thursday, time.Friday:
 		fmt.Println("Timings: 9 AM to 6 PM ")
 	case time.Saturday:

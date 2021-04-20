@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 /*
 Purpose: Execution Order in switch Statements
@@ -10,25 +12,26 @@ Purpose: Execution Order in switch Statements
           of the statements of the associated case,
 		- the other cases are skipped.
 */
-
-// Foo prints and returns n.
+// Foo prints  and returns n
 func Foo(n int) int {
-	fmt.Println(n)
+	fmt.Println("n=", n)
 	return n
 }
 
-
 func main() {
-	//Foo(1)
-	//Foo(2131)
-	//Foo(1)
+	// Foo(1)
+	// Foo(2)
+	// Foo(3)
+	// Foo(4)
 
-	switch Foo(2) {
-	case Foo(1), Foo(2), Foo(3):
+	switch Foo(2) { // 2
+	case Foo(1), Foo(2), Foo(3): // 1, 2, 3
 		fmt.Println("First case")
-		fallthrough
-	case Foo(4):
+	case Foo(4): // 4
 		fmt.Println("Second case")
+	default:
+		fmt.Println("Default case")
 	}
 
+	// OBSERVE that Foo(3) & Foo(4) are not executed
 }

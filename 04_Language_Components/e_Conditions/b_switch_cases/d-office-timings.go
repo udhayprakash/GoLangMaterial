@@ -5,8 +5,8 @@ import (
 	"strings"
 )
 
-func main() {
-	/*
+/*
+	OFFICE TIMINGS
 		Monday 		9 AM to 6 PM
 		Tuesday		9 AM to 6 PM
 		Wednesday	9 AM to 6 PM
@@ -14,7 +14,9 @@ func main() {
 		Friday 		9 AM to 6 PM
 		Saturday	9 AM to 1 PM
 		Sunday 		HOLIDAY
-	*/
+*/
+
+func main() {
 	fmt.Println("Enter day of the week:")
 
 	var weekOfDay string
@@ -32,6 +34,6 @@ func main() {
 		fmt.Println("----HOLIDAY ----------")
 	default:
 		fmt.Println("INVALID ENTRY")
-	}
 
+	}
 }

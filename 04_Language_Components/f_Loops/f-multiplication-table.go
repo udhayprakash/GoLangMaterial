@@ -1,15 +1,27 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	// Multiplication Table
+	// for i := 1; i <= 10; i ++ {
+	// 	fmt.Println(i)
+	// }
+
+	// for j := 1; j <= 10; j++ {
+	// 	fmt.Println(j)
+	// }
+
 	for i := 1; i <= 10; i++ {
-		//fmt.Printf("%d\n", i)
 		for j := 1; j <= 10; j++ {
+			// fmt.Println(i, "*", j, "=", i * j)
 			fmt.Printf("%2d * %2d = %3d\n", i, j, i*j)
 		}
-		fmt.Println("====================")
+		// fmt.Println("==========================")
+		fmt.Println(strings.Repeat("=", 16))
 	}
 
 }

@@ -30,5 +30,4 @@
         - default statement is optional in switch statement.
         - If a case contains multiple values, separate them by a comma(,).
 
-
 Ref: GeekforGeeks
