@@ -1,3 +1,5 @@
+package main
+
 /*
 Purpose:
 	To allocate memory Go has two primitives, new and make.
@@ -16,8 +18,6 @@ Purpose:
 			and not a pointer: *T.
 		- It creates slices, maps, and channels only
 */
-package main
-
 import "fmt"
 
 func main() {
@@ -36,4 +36,12 @@ func main() {
 	fmt.Println(new([]bool))     // &[]
 	fmt.Println(make([]bool, 5)) // [false false false false false]
 
+	
+	ci := make(chan int)
+	cs := make(chan string)
+	cf := make(chan interface{})
+
+	fmt.Println("ci=", ci)
+	fmt.Println("cs=", cs)
+	fmt.Println("cf=", cf)
 }

@@ -6,19 +6,19 @@ func main() {
 	// Array doesnt support copy, whereas slices will
 
 	// Single-dimension slices
-	myArray1 := []int{11, 22, 33, 44}
-	myArray2 := make([]int, 4)
+	slice1 := []int{11, 22, 33, 44}
+	slice2 := make([]int, 4)
 
 	// Assignment will lead to leakage
-	//myArray2 = myArray1
+	//slice2 = slice1
 
 	// Deep Copy
-	copy(myArray2, myArray1) // destSlice, sourceSlice
+	copy(slice2, slice1) // destSlice, sourceSlice
 
-	fmt.Println("Before :", myArray1, myArray2)
+	fmt.Println("Before :", slice1, slice2)
 
-	myArray1[2] = 20
-	fmt.Println("After  :", myArray1, myArray2)
+	slice1[2] = 20
+	fmt.Println("After  :", slice1, slice2)
 	fmt.Println()
 
 	// ================================================

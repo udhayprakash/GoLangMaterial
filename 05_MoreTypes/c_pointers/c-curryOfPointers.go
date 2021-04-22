@@ -11,7 +11,7 @@ func main() {
 	fmt.Println("intVar             :", intVar)
 	fmt.Println("pointerVar         :", pointerVar)
 	fmt.Println("pointerToPointerVar:", pointerToPointerVar)
-
+	
 	intVar = 100
 	pointerVar = &intVar
 	pointerToPointerVar = &pointerVar
@@ -30,4 +30,5 @@ func main() {
 	fmt.Println("*pointerVar          :", *pointerVar)
 	fmt.Println("*pointerToPointerVar :", *pointerToPointerVar)
 	fmt.Println("**pointerToPointerVar:", **pointerToPointerVar)
+
 }

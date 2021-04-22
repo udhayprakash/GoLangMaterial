@@ -4,8 +4,7 @@ import (
 	"fmt"
 	"reflect"
 )
-
-func main() {
+func main(){
 	a1 := [...]string{"a", "b", "c", "d", "e", "f", "g"} // len-7; cap-7
 	//                 0    1    2    3    4    5    6
 	// last index is not included, in slice
@@ -41,3 +40,5 @@ func main() {
 	fmt.Println("cap(s5)=", cap(s5))
 
 }
+
+

@@ -19,11 +19,14 @@ func main() {
 		"Thompson",
 	}
 	fmt.Println(names) // [Udhay Rob Prakash Thompson]
+	//                       0    1    2       3
+	//                           xxx
 
 	a := names[0:2]
 	b := names[1:3]
 	fmt.Println(a, b) // [Udhay Rob] [Rob Prakash]
 
+	// slices are mutable- but changes will be on array underlying
 	b[0] = "XXX"
 	fmt.Println(a, b)  // [Udhay XXX] [XXX Prakash]
 	fmt.Println(names) // [Udhay XXX Prakash Thompson]

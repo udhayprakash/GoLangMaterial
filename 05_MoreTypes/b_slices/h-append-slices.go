@@ -21,22 +21,9 @@ func main() {
 	// Dynamic slice
 	c := make([]string, len(s))
 	copy(c, s) // safe copy
-	fmt.Println("cpy:", c)
+	fmt.Println("cpy:", c)// [a b c d e f]
 
-	// slicing- upper bound is excluded
-	l := s[2:5]
-	fmt.Println("sl1:", l) // [c d e]
-
-	l = s[:5]
-	fmt.Println("sl2:", l) // [a b c d e]
-
-	l = s[2:]
-	fmt.Println("sl3:", l) // [c d e f]
-
-	// Declaring and initializing variable for slice
-	t := []string{"g", "h", "i"}
-	fmt.Println("dcl:", t) // [g h i]
-
+	// Declaring 2-D slice
 	twoD := make([][]int, 3)
 	for i := 0; i < 3; i++ {
 		innerLen := i + 1
@@ -46,4 +33,6 @@ func main() {
 		}
 	}
 	fmt.Println("2d: ", twoD) // [[0] [1 2] [2 3 4]]
+
+
 }
