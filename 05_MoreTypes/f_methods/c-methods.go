@@ -46,7 +46,7 @@ func (p Point) Distance(q Point) float64 {
 // for the receivers.
 
 /*
-The expression p.Distance is calle d a selector, because it selects the appropriate Distance
+The expression p.Distance is called a selector, because it selects the appropriate Distance
 method for the receiver p of type Point. Selectors are also used to select fields of struct types,
 as in p.X. Since methods and fields in habit the same namespace, declaring a method X on the
 struct type Point would be ambiguous and the compiler will reject it.
