@@ -3,3 +3,5 @@ https://github.com/golang/go/wiki#learning-more-about-go
 Garbage collection in go
     - https://www.ardanlabs.com/blog/2018/12/garbage-collection-in-go-part1-semantics.html
     
+Communicating between Go and Python
+	- https://blog.kchung.co/faster-python-with-go-shared-objects/
