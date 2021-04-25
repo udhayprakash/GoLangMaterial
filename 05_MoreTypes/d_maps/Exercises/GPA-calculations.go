@@ -25,7 +25,12 @@ func main() {
 	var grade string
 
 	for {
-		fmt.Scanf("%s", &grade)
+		fmt.Scanln(&grade)
+		if grade == "" {
+			break
+		}
 		fmt.Println("grade: ", grade, "\tpoints: ", POINTS[grade])
+		grade = ""
 	}
+
 }
