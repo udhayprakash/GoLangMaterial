@@ -36,10 +36,10 @@ func main() {
 	q := []int{4, 5, 6}
 	p = append(p, q...) // concatenation two arrays
 	fmt.Println(p)      // [1 2 3 4 5 6]
-	// Without that ..., it wouldn't compile because the 
+	// Without that ..., it wouldn't compile because the
 	// types would be wrong; q is not of type int.
 
 }
 
 // builtin variadic functions - except any no. of args
-// - Printf(), append()
+// - Printf(), Println, append()
