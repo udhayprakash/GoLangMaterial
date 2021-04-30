@@ -40,6 +40,11 @@ func main() {
 	user  : %s
 	gopath:%s`, home, user, gopath)
 
+	fmt.Println(os.ExpandEnv(`
+	home  : $HOME
+	user  : $USER
+	gopath: $GOPATH`))
+
 }
 
 // place all the environment variables in an array and display at the end
