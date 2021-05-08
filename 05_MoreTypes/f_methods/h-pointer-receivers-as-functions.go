@@ -11,7 +11,8 @@ type Point struct {
 }
 
 /*
-  Translates the current Point, at location (X,Y), by dx along the x axis and dy along the y axis
+  Translates the current Point, at location (X,Y),
+   by dx along the x axis and dy along the y axis
   so that it now represents the point (X+dx,Y+dy).
 */
 func TranslateFunc(p *Point, dx, dy float64) {

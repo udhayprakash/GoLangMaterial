@@ -2,18 +2,18 @@ package main
 
 import "fmt"
 
-type Human struct {
+type Human struct { // inheritance- parent struct
 	name  string
 	age   int
 	phone string
 }
 
-type Student struct {
+type Student struct { // inheritance- child struct
 	Human
 	school string
 }
 
-type Employee struct {
+type Employee struct { // inheritance- child struct
 	Human
 	company string
 }
