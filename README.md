@@ -4,17 +4,17 @@ Go Language Material
 
     Go
         - General Purpose Compiled Programing language
-        - created by Ken Thompson (B, C, Unix, UTF-8), Rob Pike(Unix, UTF-8), 
+        - created by Ken Thompson (B, C, Unix, UTF-8), Rob Pike(Unix, UTF-8),
           Robert Griesemer(Hotspot, JVM) and few google engineers.
         - first release was on March 2012.
         - No pre-requisites need. Can be learned as first programming language.
         - C language is the most direct influence on Go.
-        - Platform-independent. 
-            - Create executable build based on the platform. 
+        - Platform-independent.
+            - Create executable build based on the platform.
             - Means, source code is translated into language that the system understands.
         - comes with its own compiler
         - statically typed programming language
-        - Concurrency 
+        - Concurrency
             - allows multiple processes running simultaneously and effectively.
         - garbage collector - automatic memory management
         - Execution flow - top to botton and left to right order
@@ -30,7 +30,7 @@ Go Language Material
         - Functions are building blocks of a Go Program
         - All versions are backward compatible (promised).
         - Go has replaced the traditional features of class inheritance with the help of
-        its two features, i.e., type embedding and interfaces. 
+        its two features, i.e., type embedding and interfaces.
         - Other features
             - Fast compilation process
             - Default concurrency support
@@ -49,9 +49,9 @@ Go Language Material
              - no macros
              - no function annotations
              - no thread-local storage
-        -  It is meant to replace C++ and Java in terms of Google's needs. 
-           Go was meant to alleviate some of the slowness and clumsiness of development 
-           of very large software systems. 
+        -  It is meant to replace C++ and Java in terms of Google's needs.
+           Go was meant to alleviate some of the slowness and clumsiness of development
+           of very large software systems.
         - To be a little more specific, Go helps solve …
              - slow compilation and slow execution
              - programmers that collaborate using different subsets of languages
@@ -61,16 +61,16 @@ Go Language Material
              - multi-language builds
              - dependencies being hard to maintain
         - Compilers
-            - There are two Go compiler implementations, gc, and gccgo. 
-                Gc uses a different calling convention and linker and because of this, 
-                can only be linked with C programs following the same convention. 
-                Gccgo is a GCC frontend that can be linked with GCC-compiled C or C++ programs. 
-                Gccgo is slower to compile than the default gc, but supports more powerful 
-                optimizations so many programs compiled with it will run faster. 
+            - There are two Go compiler implementations, gc, and gccgo.
+                Gc uses a different calling convention and linker and because of this,
+                can only be linked with C programs following the same convention.
+                Gccgo is a GCC frontend that can be linked with GCC-compiled C or C++ programs.
+                Gccgo is slower to compile than the default gc, but supports more powerful
+                optimizations so many programs compiled with it will run faster.
                 This takes great care and even more patience.
-            
+
             - The cgo program provides the mechanism for a foreign function interface to
-                allow safe calling of C libraries from Go code. SWIG extends this capability 
+                allow safe calling of C libraries from Go code. SWIG extends this capability
                 to C++ libraries.
         - Limitations of Go
             - No Generics, no .map, .reduce, .filter
@@ -85,7 +85,7 @@ Go Language Material
               The number 1 feature of GoLang is the exact opposite definition of what OOP stands for.
             - Keep It Simple Stupid (KISS)
                 - Only one way of doing things
-                    No more spaces vs tabs, functions vs objects, for vs while … 
+                    No more spaces vs tabs, functions vs objects, for vs while …
                     Developers write the same code, compiler can optimize it better.
         - OOP
             - There are no classes in Go, but some features of Object Oriented programming are supported:
@@ -93,13 +93,13 @@ Go Language Material
                 - Composition (possible through embedding in Go)
                 - Polymorphism (possible through Interface satisfaction in Go)
                 - Inheritance (Not possble - overloading makes code harder to debug)
-                
+
     Go Tools
-        - To check the go version, 
+        - To check the go version,
                 go version
-        - To know all the options, 
+        - To know all the options,
                 go help
-        - To get help about a package, 
+        - To get help about a package,
                 godoc fmt Println
 
     DataTypes
@@ -108,7 +108,7 @@ Go Language Material
             - Integers
                 - unsigned - uint8, uint16, uint32, uint64
                 - signed - int8, int16, int32, int64
-                - aliases: 
+                - aliases:
                     - rune is alias for int32
                     - byte is alias for uint8
                         1 byte = 8 bits
@@ -127,14 +127,14 @@ Go Language Material
             - NaN (not a number)
                 - To represent 0/0
             - +∞ and −∞ (positive and negative infinity)
-            - Complex 
+            - Complex
                 - complex64
                 - complex128
 
             - Strings
                 - Go Strings are made up of individual bytes, usually one for each character
                 - non-english characters are represented by more than 1 byte
-                - created using 
+                - created using
                     - double quotes("Hello world")
                         - single-line strings
                         - Allow special sequences
@@ -144,10 +144,9 @@ Go Language Material
     Identifier Naming Convention
         - first character - A-Z, a-z
         - remaining chars - A-Z, a-z, 0-9, _
-        - pascalCase or CamelCase is recommended. 
+        - pascalCase or CamelCase is recommended.
 
-Important Links:
-----------------
+## Important Links:
 
         - tour.golang.org
         - lean.go.dev
@@ -158,57 +157,52 @@ Important Links:
         - https://www.golang-book.com/
         - https://www.gopl.io/
         - https://www.goinggo.net/
-        
+
         - https://github.com/GoesToEleven/svcc-19
-        
+
         - Bill Kennedy
             - https://www.ardanlabs.com/blog/
-        
+
         - https://www.twitter.com/joncalhoun?lang=en
         - https://www.gophercises.com/
-        
+
         https://www.udemy.com/user/toddmcleod/
         https://www.greatercommons.com/
-        
+
         https://www.changelog.com/gotime
-        
-        
+        https://golangbyexample.com/
+
         https://golang.org/
         golang spec
         effective golang
         https://go.libhunt.com/
         forum.golangbridge.org
-        
+
         https://programming.guide/go/
         godoc.org
             standard library and 3rd party packages
 
 This source code is tested in go 1.13.5
 
-
-TODO:
------
+## TODO:
 
     - https://www.sohamkamani.com/blog/golang/2018-06-20-golang-factory-patterns/
     - https://go101.org/article/channel.html
     - https://exercism.io/tracks/go/learning
 
-Articles
---------
+## Articles
 
     https://medium.com/@kevalpatel2106/why-should-you-learn-go-f607681fad65
     [Farewell Node.js](https://medium.com/code-adventures/farewell-node-js-4ba9e7f3e52b?)
 
-Quotes
-------
+## Quotes
 
-    “Go will be the server language of the future.” — Tobias Lütke, Shopify 
-    “With constant pressure to add features and options and configurations, and to 
-     ship code quickly, it’s easy to neglect simplicity, even though in the long 
-     run simplicity is the key to good software” — Rob Pike, One of Golang creators 
+    “Go will be the server language of the future.” — Tobias Lütke, Shopify
+    “With constant pressure to add features and options and configurations, and to
+     ship code quickly, it’s easy to neglect simplicity, even though in the long
+     run simplicity is the key to good software” — Rob Pike, One of Golang creators
 
-Packages
---------
+## Packages
 
-1. GoReleaser,  http://github.com/goreleaser
-2. Cobra( for creating CLIs), https://github.com/spf13/cobra 
+1. GoReleaser, http://github.com/goreleaser
+2. Cobra( for creating CLIs), https://github.com/spf13/cobra

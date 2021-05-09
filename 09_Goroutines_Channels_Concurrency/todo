@@ -1,2 +1,23 @@
 https://talks.golang.org/2012/concurrency.slide#1
 https://talks.golang.org/2013/advconc.slide#1
+
+
+Scatter-Gather Design Pattern 
+
+    // Scatter
+    c := make(chan result, 10)
+    for i := 0; i < cap(c); i++ {
+        go func() {
+            val, err := process()
+            c <- result{val, err}
+        }()
+    }
+
+    // Gather
+    var total int
+    for i := 0; i < cap(c); i++ {
+        res := <-c
+        if res.err != nil {
+            total += res.val
+        }
+    }

@@ -5,6 +5,7 @@ import (
 )
 
 func TestAdd2(t *testing.T) {
+	// Table driven test cases - reduces the boilerplate
 	testTable := []struct {
 		a, b            int
 		expectedOutcome int
