@@ -10,19 +10,24 @@ print “Buzz”. For numbers which are multiples of both
 three and five, print “FizzBuzz”.
 */
 func main() {
-	var value string
-	for i := 0; i <= 100; i++ {
-		value = ""
+	fizzBuzz(15)
+}
+
+func fizzBuzz(n int32) {
+	var i int32
+	var output string
+	for i = 1; i <= n; i++ {
+		output = ""
 		if i%3 == 0 {
-			value += "Fizz"
+			output += "Fizz"
 		}
 		if i%5 == 0 {
-			value += "Buzz"
+			output += "Buzz"
 		}
-		if value == "" {
-			fmt.Println(i)
-		} else {
-			fmt.Println(value)
+		if output == "" {
+			output = fmt.Sprintf("%d", i)
 		}
+		fmt.Println(output)
 	}
+
 }
