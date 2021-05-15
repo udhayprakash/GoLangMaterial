@@ -39,7 +39,7 @@ func main() {
 	fmt.Println(`H`) // H
 	fmt.Println(`Hello go world`)
 	fmt.Println(`Hello\tgo\nworld`) // Escape sequences were not recognized
-cls	fmt.Println(`Quotes: "`)
+	fmt.Println(`Quotes: "`)
 	fmt.Println(`Backslash: \\`)
 	fmt.Println(`Hello 
                       world`)
