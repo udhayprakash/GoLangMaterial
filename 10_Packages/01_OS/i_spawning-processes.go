@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"os/exec"
 )
 
@@ -30,4 +31,12 @@ func main() {
 		panic(pingErr)
 	}
 	fmt.Println("pingOutput =", string(pingOutput))
+
+	//
+	output, err := exec.Command("cmd", "/c", "node -v").CombinedOutput()
+	if err != nil {
+		os.Stderr.WriteString(err.Error())
+	}
+	fmt.Println(string(output))
+
 }
