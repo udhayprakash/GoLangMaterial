@@ -12,8 +12,11 @@ func main() {
 	fmt.Printf("num2      =%v\n", num2)
 	fmt.Printf("num2      =%b\n\n", num2)
 
+	// Bitwise AND - &
 	fmt.Println("num1 & num2 =", num1&num2)
+	// Bitwise OR  - |
 	fmt.Println("num1 | num2 =", num1|num2)
+	// Bitwise XOR  - ^
 	fmt.Println("num1 ^ num2 =", num1^num2)
 
 }
@@ -28,3 +31,5 @@ func main() {
 	^     0  0  0  1 1 0 0 0   => 24     bitwise XOR
 
 */
+
+// Assignment - bitwise left shift(<<) and right shift(>>)

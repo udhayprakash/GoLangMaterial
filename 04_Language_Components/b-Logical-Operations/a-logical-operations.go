@@ -28,5 +28,4 @@ func main() {
 	//           false        ||      false      ||       true
 	//                       false               ||       true  = true
 	fmt.Println("result			=", result)
-
 }

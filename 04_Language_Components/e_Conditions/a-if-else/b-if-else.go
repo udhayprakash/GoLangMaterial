@@ -1,30 +1,27 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 	var choice bool // default value is false
 
 	if choice == true {
-		fmt.Println("Value is true")
+		fmt.Println("choice is true")
 	} else {
-		fmt.Println("Value is false")
+		fmt.Println("choice is false")
 	}
 
-	choice = (true == choice)
+	choice = (true != choice)
 	if choice == true {
-		fmt.Println("Value2 is true")
+		fmt.Println("new choice is true")
 	} else {
-		fmt.Println("Value2 is false")
+		fmt.Println("new choice is false")
 	}
 
 	const num1 = 33444
 	if num1%2 == 0 {
-		fmt.Println("num1 is even number")
+		fmt.Printf("%d is even number", num1)
 	} else {
-		fmt.Println("num1 is odd number")
+		fmt.Printf("%d is odd number", num1)
 	}
-
 }

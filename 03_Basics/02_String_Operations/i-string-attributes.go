@@ -13,6 +13,7 @@ func main() {
 	fmt.Println(strings.Compare("a", "a")) //  0
 	fmt.Println(strings.Compare("b", "a")) //  1
 
+	fmt.Println(strings.Compare("aa", "ab")) //  -1
 	fmt.Println(strings.Compare("apple", "apple"))   // 0
 	fmt.Println(strings.Compare("apple", "apparao")) // 1
 	fmt.Println()
@@ -22,6 +23,7 @@ func main() {
 	fmt.Println(strings.Contains("seafood", "foo")) // true
 	fmt.Println(strings.Contains("seafood", "bar")) // false
 	fmt.Println(strings.Contains("seafood", ""))    // true
+	fmt.Println(strings.Contains("", "foo"))        // false
 	fmt.Println(strings.Contains("", ""))           // true
 	fmt.Println()
 
@@ -58,7 +60,7 @@ func main() {
 
 	// String Fields splits string around one or more consecutive white space characters
 	fmt.Println("\n ==== strings.Fields ====")
-	fmt.Printf("Fields are: %q \n", strings.Fields("  foo bar &^%&^&$%$@$#@ baz   ")) // "foo" "bar" "&^%&^&$%$@$#@" "baz"]
+	fmt.Printf("Fields are: %q \n", strings.Fields("  foo bar &^%&^&$%$@$#@ baz   ")) // ["foo" "bar" "&^%&^&$%$@$#@" "baz"]
 
 	fmt.Printf("Fields are: %q \n", strings.Fields("foo bar baz %^%^%$^")) // ["foo" "bar" "baz" "%^%^%$^"]
 	fmt.Printf("Fields are: %q \n", strings.Fields("foobarbaz"))           // ["foobarbaz"]

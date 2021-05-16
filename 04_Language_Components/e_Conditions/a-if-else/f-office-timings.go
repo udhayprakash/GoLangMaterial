@@ -21,7 +21,7 @@ func main() {
 	var weekOfDay string
 	fmt.Scanf("%s", &weekOfDay)
 
-	// Converting to lower case
+	// converting to lower case
 	weekOfDay = strings.ToLower(weekOfDay)
 
 	if weekOfDay == "monday" {
@@ -41,5 +41,4 @@ func main() {
 	} else {
 		println("INVALID ENTRY")
 	}
-
 }

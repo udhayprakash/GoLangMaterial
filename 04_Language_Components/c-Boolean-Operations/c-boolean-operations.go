@@ -15,7 +15,7 @@ func main() {
 	fmt.Printf("type: %T\n\n", val2)
 
 	// Assigning an expression result
-	val3 := 0 == 0
+	val3 := 0 == 0.0
 	fmt.Printf("val : %v\n", val3)
 	fmt.Printf("type: %T\n\n", val3)
 
@@ -23,5 +23,4 @@ func main() {
 	fmt.Printf("val : %v\n", val4)
 	fmt.Printf("type: %T\n", val4)
 	fmt.Println("reflect.TypeOf(val4):", reflect.TypeOf(val4))
-
 }

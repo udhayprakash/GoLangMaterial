@@ -2,16 +2,26 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 	"strconv"
 )
 
 func main() {
+
+	// int to string conversion
 	x := 123
 	y := fmt.Sprintf("%d", x)
-	fmt.Println(y, strconv.Itoa(x)) // "123 123"
-	fmt.Println()
+	z := string(x) // gets the char correponding to unicode number
+
+	fmt.Println(x, reflect.TypeOf(x)) // 123 int
+	fmt.Println(y, reflect.TypeOf(y)) // 123 string
+	fmt.Println(z, reflect.TypeOf(z)) // { string
+
+	p := strconv.Itoa(x)
+	fmt.Println(p, reflect.TypeOf(p)) // 123 string
 
 	// To format number in different base
+	// 2 - binary; 8 -octal 10-decimal 16-hexadecimal
 	fmt.Println(strconv.FormatInt(int64(x), 2)) // "1111011"
 	s := fmt.Sprintf("x=%b", x)                 // "x=1111011"
 	fmt.Println(s)
@@ -20,8 +30,8 @@ func main() {
 	// To format string representing an integer,
 	x, err := strconv.Atoi("123") // x is an int
 	fmt.Println(x, err)
-	z, err1 := strconv.ParseInt("123", 10, 64) // base 10, up to 64 bits
-	fmt.Println(z, err1)
+	z1, err1 := strconv.ParseInt("123", 10, 64) // base 10, up to 64 bits
+	fmt.Println(z1, err1)
 
 	// With `ParseFloat`, this `64` tells how many bits of
 	// precision to parse.
@@ -55,4 +65,5 @@ func main() {
 	// // Parse functions return an error on bad input.
 	_, e := strconv.Atoi("wat")
 	fmt.Println(e)
+
 }

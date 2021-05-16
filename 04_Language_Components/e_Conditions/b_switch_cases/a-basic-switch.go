@@ -11,13 +11,15 @@ func main() {
 
 	switch value {
 	case 1:
-		fmt.Println("------------ONE---------------")
+		fmt.Println("value is 1")
 	case 2:
-		fmt.Println("------------TWO---------------")
+		fmt.Println("value is 2")
 	case 3:
-		fmt.Println("------------THREE-------------")
+		fmt.Println("value is 3")
 	default:
-		fmt.Println("__INVALID NUMBER__")
+		fmt.Println("default case")
 	}
-	// NOTE: default is optional
+
 }
+
+// NOTE: default is optional

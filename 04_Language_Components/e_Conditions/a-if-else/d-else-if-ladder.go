@@ -10,12 +10,13 @@ import "fmt"
 	-90 South Pole
 
 */
+
 func main() {
 	var latitude float32
 	fmt.Println("Please enter the latitude degrees:")
 	fmt.Scanf("%f", &latitude)
-
 	fmt.Println("You entered:", latitude)
+
 	if latitude == 90 {
 		fmt.Println("You are located at North Pole")
 	} else if latitude < 90 && latitude > 0 {
@@ -32,4 +33,4 @@ func main() {
 
 }
 
-// NOTE: else block is optional
+// NOTE: else block is not mandatory
