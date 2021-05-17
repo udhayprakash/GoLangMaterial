@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// Iterable object - object that supports looping over its elements
 func main() {
 	// value := true
 	// for index, val := range value {
@@ -37,9 +38,16 @@ func main() {
 	// } // cannot range over value2 (type rune)
 
 	// Looping over an Array
-	nums := []int{11, 22, 33, 44, 55, 66, 77}
+	numsArray := [7]int{11, 22, 33, 44, 55, 66, 77}
 	//            0   1   2    3   4   5   6
-	for index, val := range nums {
+	for index, val := range numsArray {
+		fmt.Println(index, val)
+	}
+
+	// Looping over an Slice
+	numsSlice := []int{11, 22, 33, 44, 55, 66, 77}
+	//            0   1   2    3   4   5   6
+	for index, val := range numsSlice {
 		fmt.Println(index, val)
 	}
 

@@ -1,32 +1,34 @@
-// Get number of digits in number
-// input : 8768 --> output: 4
-// input : 876  --> output: 3
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-func CountDigits(i int) (count int) {
-	for i != 0 {
-
-		i /= 10
-		count = count + 1
-	}
-	return count
-}
+/*
+Get number of digits in number
+	input : 8768 --> output: 4
+	input : 876  --> output: 3
+*/
 
 func main() {
+	var num int
+	fmt.Println("Enter an integer value:")
 
-	var i int
-	fmt.Println("Enter an integer value : ")
-
-	_, err := fmt.Scanf("%d", &i)
-
+	_, err := fmt.Scanf("%d", &num)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("Error - ", err)
 	}
 
-	fmt.Println("You have entered a : ", CountDigits(i), "digit(s) integer value")
+	// Count the digits
+	digitsCount := 0
+	sumOfDigits := 0
+	fmt.Printf("Number %d ", num)
+	for num != 0 {
+		fmt.Println("\nnum /10=", num /10)
+		fmt.Println("num %10=", num %10)
+		sumOfDigits = sumOfDigits + (num % 10)
+		num = num / 10
+		digitsCount++
+	}
+	fmt.Printf("has %d digits\n", digitsCount)
+	fmt.Println("Sum of digits =", sumOfDigits)
 
 }
