@@ -1,9 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 
+	// tweecking index position with custom positions
 	months := [...]string{
 		1:  "January",
 		2:  "February",
@@ -15,8 +19,14 @@ func main() {
 		8:  "August",
 		9:  "September",
 		10: "October",
-		11: "November",
-		12: "December"}
+		11: "November",``
+		45: "December"}
+	fmt.Println(months)
+	fmt.Println(reflect.TypeOf(months).Kind())
+
+	fmt.Println("months[3]=", months[3])
+	fmt.Println("months[12]=", months[12])
+	fmt.Println("months[45]=", months[45])
 
 	Q2 := months[4:7]
 	fmt.Println("Q2    :", Q2) // ["April" "May" "June"]

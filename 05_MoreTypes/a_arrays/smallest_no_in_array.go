@@ -1,20 +1,20 @@
-package main
+package main 
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	arr := []uint{
-		28, 33, 16,
-		7, 5, 88,
-	}
+	numbers := [7]int{11, 44, 22, -88, 33, 44, 56}
+	fmt.Println("numbers=", numbers)
 
-	min := arr[0] // assume first value is the smallest
-
-	for _, value := range arr {
-		if value < min {
-			min = value // found another smaller value, replace previous value in min
+	// assuming first value is smallest
+	minValue := numbers[0]
+	for _, value := range numbers {
+		if value < minValue {
+			// updating smallest value
+			minValue = value
 		}
 	}
-
-	fmt.Println("The smallest value is : ", min)
+	fmt.Printf("Smallest value in %v is %v", numbers, minValue)
 }

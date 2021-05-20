@@ -1,32 +1,24 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	marks := [6]float32{89, 56, 89, 99, 78, 90}
-	fmt.Println("marks    :", marks)
-	fmt.Println("summation:", summation(marks))
-	fmt.Println("Avaerge  :", average(marks))
-}
+	var numbers [5]int
 
-func summation(nums [6]float32) float32 {
-	var result float32
-
-	for _, value := range nums {
-		result += value
-		fmt.Println("\tvalue:", value)
+	fmt.Println("Before- numbers=", numbers)
+	for i := 0; i < len(numbers); i++ {
+		fmt.Scan(&numbers[i])
 	}
-	return result
-}
+	fmt.Println("After - numbers=", numbers)
 
-func average(nums [6]float32) float32 {
-	var result float32
-
-	for index := 0; index < len(nums); index++ {
-		result += nums[index]
-		fmt.Println("\tnums[index]= ", nums[index])
-
+	// Summation & Average
+	var sum int
+	for _, num := range numbers {
+		sum += num
 	}
-
-	return result / float32(len(nums))
+	fmt.Println("Sum of Values:", sum)
+	fmt.Println("Avg of Values:", sum/len(numbers))
+	fmt.Println("Avg of Values:", float32(sum)/float32(len(numbers)))
 }

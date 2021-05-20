@@ -19,3 +19,5 @@ func init() {
 }
 
 func main() {}
+
+// init() functions will execute in order of definition
