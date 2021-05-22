@@ -16,10 +16,10 @@ func main() {
 	// }  // Compilation Error: duplicate key "red" in map literal
 
 	colors := [...]string{"red", "white", "red", "blue", "yellow", "white", "red"}
-	fmt.Println("colors                                  =", colors)
+	fmt.Println("colors       =", colors)
 
 	uniqueColors := make(map[string]int)
-	// zero value of map 
+	// zero value of map
 	fmt.Println("uniqueColors == nil:", uniqueColors == nil)
 
 	for _, color := range colors {
@@ -28,11 +28,20 @@ func main() {
 		if isKeyPresent == false {
 			uniqueColors[color] = 1
 		} else {
-			uniqueColors[color] += 1
+			uniqueColors[color]++
 		}
 
 	}
-	fmt.Println("\nuniqueColors                            =", uniqueColors)
+	fmt.Println("\nuniqueColors    =", uniqueColors)
+
+	uniqueColors = make(map[string]int)
+	for _, color := range colors {
+		// Lookup
+		val, _ := uniqueColors[color]
+		uniqueColors[color] = val + 1
+
+	}
+	fmt.Println("\nuniqueColors    =", uniqueColors)
 	fmt.Println("reflect.ValueOf(uniqueColors).MapKeys() =", reflect.ValueOf(uniqueColors).MapKeys())
 
 	// To get non-duplicate colors
@@ -43,4 +52,5 @@ func main() {
 		}
 	}
 	fmt.Println("nonDuplicateColors=", nonDuplicateColors)
+
 }

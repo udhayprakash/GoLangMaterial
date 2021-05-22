@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"reflect"
 )
+
 /*
-NOTE: 
+NOTE:
 key type must have an == operation (NO  maps, slices or funcs as keys)
 operations run in constant expected time O(1)
 
@@ -23,11 +24,12 @@ func main() {
 		"c": "cat", // last comma is mandatory
 	}
 	fmt.Printf("alphabets=%v - %[1]T\n", alphabets) // [a:apple b:banana c:cat]
-	fmt.Println(reflect.TypeOf(alphabets), reflect.TypeOf(alphabets).Kind())
+	fmt.Println("reflect.TypeOf(alphabets)       =", reflect.TypeOf(alphabets))
+	fmt.Println("reflect.TypeOf(alphabets).Kind()=", reflect.TypeOf(alphabets).Kind())
 
 	another := map[bool]string{
-		true:  "This is true",
-		false: "This is false",
+		true:  "This is True",
+		false: "This is False",
 	}
 	fmt.Println("another=", another)
 	// Its rare to use bool as key
@@ -53,6 +55,6 @@ func main() {
 
 	// For maps, Printf sorts the output in lexicographically by key.
 	fmt.Printf("%#v\n", timeZone)
-}
 
+}
 // NOTE: map stores the value in ascending order of the keys

@@ -20,15 +20,16 @@ func main() {
 	}
 	fmt.Println(names) // [Udhay Rob Prakash Thompson]
 	//                       0    1    2       3
-	//                           xxx
 
-	a := names[0:2]
-	b := names[1:3]
-	fmt.Println(a, b) // [Udhay Rob] [Rob Prakash]
+	sliceA := names[0:2]
+	sliceB := names[1:3]
+	fmt.Println(sliceA, sliceB) // [Udhay Rob] [Rob Prakash]
 
 	// slices are mutable- but changes will be on array underlying
-	b[0] = "XXX"
-	fmt.Println(a, b)  // [Udhay XXX] [XXX Prakash]
-	fmt.Println(names) // [Udhay XXX Prakash Thompson]
+	fmt.Println("sliceB[0]:", sliceB[0]) // Rob
+	sliceB[0] = "xxx"
+	fmt.Println("sliceA=", sliceA) // [Udhay xxx]
+	fmt.Println("sliceB=", sliceB) // [xxx Prakash]
+	fmt.Println("names =", names) //  [Udhay xxx Prakash Thompson]
 
 }

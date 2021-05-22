@@ -20,7 +20,6 @@ func main() {
 
 	// To overwrite all key-value pairs
 	studentRank = map[string]int{"Apparao": 3, "subbarao": 1, "ramarao": 2}
-
 	fmt.Println("\nstudentRank      = ", studentRank)
 	fmt.Println("len(studentRank) = ", len(studentRank))
 
@@ -44,7 +43,7 @@ func main() {
 
 	// To delete a key-value pair
 	fmt.Println("\n Before delete, studentRank=", studentRank)
-	delete(studentRank, "apparao")
+	delete(studentRank, "Apparao")
 
 	// deleting a key which doesnt exits, wonyt through an error
 	delete(studentRank, "rajinikanth")
@@ -54,6 +53,6 @@ func main() {
 /*
 Assignment:
 	Get 10 times values from runtime, store them in slice
-	After 10 trails, give how many times, head is greater/lower than the tails.
+	Return number of times, each value is repeating
 
 */

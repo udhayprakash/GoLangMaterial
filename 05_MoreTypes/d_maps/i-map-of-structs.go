@@ -19,15 +19,13 @@ func main() {
 		occupation: "driver",
 	}
 
-	u3 := User{
-		name:       "Lucy Smith",
-		occupation: "teacher",
-	}
-
 	users := map[int]User{
 		1: u1,
 		2: u2,
-		3: u3,
+		3: User{
+			name:       "Lucy Smith",
+			occupation: "teacher",
+		},
 	}
 
 	fmt.Println(users)

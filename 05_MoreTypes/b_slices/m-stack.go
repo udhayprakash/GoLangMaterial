@@ -1,26 +1,41 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-func main() { // stack - LIFO
+func main() { // stack - LIFO (Last In First Out)
 	var stack []string
 
-	// Pushing
-	stack = append(stack, "One")
-	stack = append(stack, "Two")
-	stack = append(stack, "Three")
+	// Pushing  - To add elements
+	stack = append(stack, "one")
+	stack = append(stack, "two")
+	stack = append(stack, "three")
 
-	// Display
-	fmt.Println("stack =", stack)
+	// Peek/Display
+	fmt.Println("stack = ", stack)
 
-	for len(stack) > 0 {
-		// Retrieving top element
-		n := len(stack) - 1
-		fmt.Println(stack[n])
+	// pop - To remove elements
+	fmt.Println(stack[len(stack)-1]) // three
+	stack = stack[:len(stack)-1]
+	fmt.Println("stack = ", stack)
 
-		// Poping from stack
-		stack = stack[:n]
+	for _, value := range []string{"four", "five", "six"} {
+		stack = append(stack, value)
 	}
+	fmt.Println("stack = ", stack)
+
+	stack = append(stack, "seven", "eight")
+	stack = append(stack, []string{"nine", "ten"}...)
+	fmt.Println("stack = ", stack)
+
+	// pop all the elements
+	for len(stack) > 0 {
+		// Retrieving the last element
+		lastPos := len(stack) - 1
+		fmt.Println(stack[lastPos])
+
+		// poping that element
+		stack = stack[:lastPos]
+
+	}
+	fmt.Println("stack = ", stack)
 }
