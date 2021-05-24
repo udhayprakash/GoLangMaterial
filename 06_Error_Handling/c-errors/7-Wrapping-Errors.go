@@ -11,7 +11,6 @@ can be difficult to track down without this added context.
 */
 import (
 	"log"
-
 	// Note: we're using an 'enhanced' errors package
 	"github.com/pkg/errors"
 )

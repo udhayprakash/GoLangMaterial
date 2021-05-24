@@ -8,7 +8,7 @@ import (
 type MyError struct{}
 
 func (m *MyError) Error() string {
-	return "boom"
+	return "Booom !!!"
 }
 
 func sayHello() (string, error) {

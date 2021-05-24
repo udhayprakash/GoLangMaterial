@@ -6,13 +6,17 @@ import (
 )
 
 func boom() error {
-	return errors.New("barnacles")
+	return errors.New("OM BHEM BUSSHH!!!")
 }
 
 func main() {
+
+	// err := boom()
+	// if err != nil {
+
 	if err := boom(); err != nil {
 		fmt.Println("An error occurred:", err)
 		return
 	}
-	fmt.Println("Anchors away!")
+	fmt.Println("All's Good")
 }

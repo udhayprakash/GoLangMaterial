@@ -15,9 +15,11 @@ func (n Name) FullName() string {
 	return fmt.Sprintf("%s %c. %s", n.First, n.Middle[0], strings.ToUpper(n.Last))
 }
 
+func (n Name) Length() int {
+	return len(n.First + n.Middle + n.Last)
+}
 func main() {
 	n1 := Name{"Udhay", "Prakash", "Pethakamsetty"}
-	fmt.Printf("%s", n1.FullName())
+	fmt.Printf("%s\n", n1.FullName())
+	fmt.Printf("%v\n", n1.Length())
 }
-
-// NOTE: You can only define methods on types within the same package.
