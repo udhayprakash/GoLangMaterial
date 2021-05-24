@@ -42,7 +42,7 @@ func (p Point) Distance(q Point) float64 {
 	return math.Hypot(q.X-p.X, q.Y-p.Y)
 }
 
-// In Go, we don't use special variable like this or self
+// In Go, we don't use special variable like this/self
 // for the receivers.
 
 /*

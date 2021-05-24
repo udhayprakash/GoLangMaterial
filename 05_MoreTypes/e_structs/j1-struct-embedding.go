@@ -37,4 +37,3 @@ func main() {
 	w1.Spokes = 20
 	fmt.Println(w1)
 }
-k-function-as-field.go
