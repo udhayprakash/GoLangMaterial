@@ -5,27 +5,20 @@ import "fmt"
 type item1 struct {
 	num1, num2 float64
 }
-
-type item2 struct {
-	num1, num2 float64
-}
-
-// Method
 func (a item1) sum() float64 {
 	return a.num1 + a.num2
 }
-
-// Method
 func (a item1) substr() float64 {
 	return a.num1 - a.num2
 }
 
-// Method
+
+type item2 struct {
+	num1, num2 float64
+}
 func (b item2) sum() float64 {
 	return b.num1 + b.num2
 }
-
-// Method
 func (b item2) substr() float64 {
 	return b.num1 - b.num2
 }

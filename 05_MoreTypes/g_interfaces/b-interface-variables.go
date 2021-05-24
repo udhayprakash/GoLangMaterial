@@ -15,5 +15,7 @@ func main() {
 	n, ok := x.(int)
 	fmt.Println(n, ok) // "0 false"
 
-	n = x.(int) // ILLEGAL
+	// n = x.(int) // ILLEGAL
+	// panic: interface conversion: interface {} is string, not int  
+
 }
