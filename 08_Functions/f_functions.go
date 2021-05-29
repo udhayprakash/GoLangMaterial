@@ -13,6 +13,12 @@ func add(x, y int) int {
 	return x + y
 }
 
+func addThree(p, q int, r float32) int {
+	return p + q + int(r)
+}
+
 func main() {
 	fmt.Println("add(42, 13)=", add(42, 13))
+
+	fmt.Println("addThree(23, 45, 5.6):", addThree(23, 45, 5.6))
 }

@@ -2,44 +2,58 @@ package main
 
 import "fmt"
 
-// Functions can have variadic parameters.
-//func funcWithAnyNoOfArgs(){
-//	fmt.Println("funcWithAnyNoOfArgs - start")
-//}
+/*
+variadic functions
+	- functions which support any no. of arguments
+	- spread operator
+*/
 
-//func funcWithAnyNoOfArgs(name string){
-//	fmt.Println("funcWithAnyNoOfArgs - start", name)
-//}
+func oneArgFunc(num int) {
+	fmt.Println("Args:", num)
+}
 
-//func funcWithAnyNoOfArgs(name interface{}){
-//	fmt.Println("funcWithAnyNoOfArgs - start", name)
-//}
+func AnyNoOfArgs(num ...int) {
+	fmt.Println("Args:", num)
+}
 
-// ... - spread operator
-func funcWithAnyNoOfArgs(name ...interface{}) {
-	fmt.Println("funcWithAnyNoOfArgs - start")
-
-	fmt.Printf("value :%v\n", name)
-	fmt.Printf("type  :%T\n\n", name)
-
-	for val := range name {
-		fmt.Println("val:", val)
-	}
+func AnyNoOfArgsAnyType(num ...interface{}) {
+	fmt.Println("Args:", num)
 }
 
 func main() {
-	// Function call
-	funcWithAnyNoOfArgs("Udhay")
-	funcWithAnyNoOfArgs(2342342)
-	funcWithAnyNoOfArgs("Udhay", "Prakash")
-	funcWithAnyNoOfArgs("Udhay", "Prakash", 123123, 213.23, []int{1, 2, 3})
+	oneArgFunc(111) // Args: 111
+
+	AnyNoOfArgs()
+	AnyNoOfArgs(1)
+	AnyNoOfArgs(1, 2)
+	AnyNoOfArgs(1, 2, 3, 5, 6, 3, 2, 213)
+
+	AnyNoOfArgsAnyType(1, '2', "udhay", true, [3]int{1, 2, 3})
+	fmt.Println()
+
+	Sum(12, 34, 67)
+	fmt.Println()
+
+	getFullName("udhay")
+	getFullName("udhay", "prakash")
+	getFullName("udhay", "prakash", "pethakamsetty")
+
 }
 
-/*
-Define a function sum(), which can add any number of value,
-either int or float or together
-if any other data type is given it should throw an error
+func Sum(nums ...int) {
+	result := 0
+	for _, num := range nums {
+		result += num
+	}
+	fmt.Printf("Sum(%d) = %d\n", nums, result)
+}
 
-HINT: func sum(nums ...int) {}
+func getFullName(name_parts ...string) {
+	fullName := ""
+	for _, name := range name_parts {
+		fullName += name
+	}
+	fmt.Printf("getFullName(%v)=%v\n", name_parts, fullName)
+}
 
-*/
+// Assignment: Try to compute mean, median and mode

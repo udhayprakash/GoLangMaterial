@@ -5,9 +5,13 @@ import (
 )
 
 type Point struct {
-	x, y int32
+	x, y int
 }
 
+func createPoint(x, y int) *Point {
+	p := Point{x, y}
+	return &p
+}
 func main() {
 	// var p1 = Point{1, 2}
 	var p1 = new(Point)
@@ -28,5 +32,7 @@ func main() {
 	fmt.Println("\n\np2 =", p2)
 	fmt.Println("(*p2).y =", (*p2).y)
 	fmt.Println("(*p2).y =", (*p2).y)
+
+	fmt.Println("createPoint(10, 20):", createPoint(10, 20)) //  &{10 20}
 
 }

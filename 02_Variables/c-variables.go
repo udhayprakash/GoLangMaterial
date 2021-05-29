@@ -30,4 +30,5 @@ NOTE:
 		- all unicode(non-english) variables
 	b. Private variables
 		- variables starting with small case letter
+ 3. Short Variable Declarations Can Be Used Only Inside Functions
 */

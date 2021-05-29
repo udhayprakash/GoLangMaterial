@@ -4,20 +4,33 @@ import "fmt"
 
 // It is perfectly safe for a function to return
 // the address of a local variable.
-func f() *int {
-	v := 1
-	return &v
+func getAddressLocation(num int) *int {
+	return &num
+}
+
+// func getAddressLocation2(num int) int {
+// 	return &num
+// }
+// cannot use &num (type *int) as type int in return argument
+
+func getAddressLocation3(num interface{}) *interface{} {
+	return &num
 }
 
 func main() {
-	var p = f()
-	fmt.Println("f():", p, *p)
+	num1 := 123 // int
+	fmt.Println(num1, getAddressLocation(num1))
 
-	p = f()
-	fmt.Println("f():", p, *p)
+	name := "udhay" // string 
+	fmt.Println(name, getAddressLocation3(name))
 
-	p = f()
-	fmt.Println("f():", p, *p)
+	result := true  //  bool
+	fmt.Println(result, getAddressLocation3(result))
 
-	fmt.Println(f() == f()) // "false"
+	myArray := [...]int{11, 22, 33} // array
+	fmt.Println(myArray, getAddressLocation3(myArray))
+
+	fmt.Println("myArray[0]=", myArray[0], &myArray[0])
+	fmt.Println("myArray[1]=", myArray[1], &myArray[1])
+	fmt.Println("myArray[2]=", myArray[2], &myArray[2])
 }

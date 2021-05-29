@@ -2,23 +2,40 @@ package main
 
 import "fmt"
 
-func find(num int, nums []int) {
-	fmt.Printf("\n\ntype of nums is %T\n", nums)
-	found := false
+func findFirstOccurrence(searchNum int, nums []int) {
 	for index, value := range nums {
-		if value == num {
+		if searchNum == value {
 			fmt.Printf("%d found at index %d\n", value, index)
-			found = true
+			return
 		}
 	}
-	if found == false {
-		fmt.Printf("%d not found in %d\n", num, nums)
+	fmt.Printf("%d not found in %d\n", searchNum, nums)
+}
+
+func findAllOccurrences(searchNum int, nums []int) {
+	foundIndices := []int{}
+	for index, value := range nums {
+		if searchNum == value {
+			foundIndices = append(foundIndices, index)
+		}
+	}
+	if foundIndices != nil {
+		fmt.Printf("%d found at indices %d\n", searchNum, foundIndices)
+	} else {
+		fmt.Printf("%d not found in %d\n", searchNum, nums)
 	}
 }
 
 func main() {
-	find(89, []int{89, 90, 95})
-	find(45, []int{56, 67, 45, 90, 109})
-	find(78, []int{38, 56, 98})
-	find(87, []int{})
+	findFirstOccurrence(45, []int{56, 67, 45, 90, 45})
+	findFirstOccurrence(78, []int{78, 78, 78})
+	findFirstOccurrence(87, []int{})
+	fmt.Println()
+
+	findAllOccurrences(45, []int{56, 67, 45, 90, 45})
+	findAllOccurrences(78, []int{78, 78, 78})
+	findAllOccurrences(87, []int{})
+
 }
+
+// Assignment -- FindLastOccurrence()
