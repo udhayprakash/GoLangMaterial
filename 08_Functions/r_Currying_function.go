@@ -29,4 +29,18 @@ func main() {
 	fmt.Println("plusOne(7):", plusOne(7)) //prints 8
 	fmt.Println("plusOne(8):", plusOne(8)) //prints 9
 
+	fmt.Println()
+	addWith10 := addition(10)
+	fmt.Println(" addWith10(23) = ", addWith10(23))
+	fmt.Println("addWith10(-23) = ", addWith10(-23))
+	fmt.Println(" addWith10(-0) = ", addWith10(-0))
+	fmt.Println(" addWith10(2.3)= ", addWith10(2.3))
+
+}
+func addition(n1 float32) func(float32) float32 {
+	return func(n2 float32) float32 {
+		// fmt.Println( "n1 = ", n1)
+		// fmt.Println( "n2 = ", n2)
+		return n1 + n2
+	}
 }
