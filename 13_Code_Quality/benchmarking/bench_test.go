@@ -1,4 +1,4 @@
-package bench
+package benchmarking
 
 import "testing"
 
