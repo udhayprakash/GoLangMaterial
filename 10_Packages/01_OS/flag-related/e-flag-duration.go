@@ -16,4 +16,4 @@ func main() {
 
 }
 
-// go run d_command_line_flags.go -period 50ms
+// go run e_flag_duration.go -period 50ms

@@ -12,8 +12,8 @@ func main() {
 
 	if len(args) == 1 && args[0] == "/help" {
 		fmt.Println(`
-			USAGE  : c_dinnertotal <Total Meal Amount> <Tip Percentage>
-			EXAMPLE: c_dinnertotla 2000 10
+			USAGE  : 1_dinnertotal <Total Meal Amount> <Tip Percentage>
+			EXAMPLE: 1_dinnertotal 2000 10
 			`)
 	}
 	if len(args) != 2 {

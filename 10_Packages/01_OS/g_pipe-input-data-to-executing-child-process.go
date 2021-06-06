@@ -23,7 +23,7 @@ func main() {
 		panic(err)
 	}
 
-	for k, v := range data {
-		fmt.Printf("key :  %v, value :  %v \n", k, string(v))
+	for index, v := range data {
+		fmt.Printf("index :  %2v, value :  %v \n", index, string(v))
 	}
 }

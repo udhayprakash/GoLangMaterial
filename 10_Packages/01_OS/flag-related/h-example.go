@@ -29,20 +29,19 @@ func main() {
 
 /*
 To get the usage
-go run e_command_line_flags.go --help
-go run e_command_line_flags.go -h
+go run h-example.go --help
+go run h-example.go -h
 
 Usage
-	go run e_command_line_flags.go -word=opt -numb=7 -fork -svar=flag
+	go run h-example.go -word=opt -numb=7 -fork -svar=flag
 
 
-// When some args were not given, they will take default values
-// go run e_command_line_flags.go -word=opt
+When some args were not given, they will take default values
+	go run h-example.go -word=opt
 
-// Trailing positional arguments can be provided after any flags.
-// go run e_command_line_flags.go -word=opt a1 a2 a3
+Trailing positional arguments can be provided after any flags.
+	go run h-example.go -word=opt a1 a2 a3
 
-// Note that the flag package requires all flags to appear before positional arguments (otherwise the flags will be interpreted as positional arguments).
-// go run e_command_line_flags.go -word=opt a1 a2 a3 -numb=7
-
+Note that the flag package requires all flags to appear before positional arguments (otherwise the flags will be interpreted as positional arguments).
+	go run h-example.go -word=opt a1 a2 a3 -numb=7
 */

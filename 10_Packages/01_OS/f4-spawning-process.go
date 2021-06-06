@@ -12,8 +12,10 @@ func main() {
 	grepIn, _ := grepCmd.StdinPipe()
 	grepOut, _ := grepCmd.StdoutPipe()
 	grepCmd.Start()
+
 	grepIn.Write([]byte("hello grep\ngoodbye grep"))
 	grepIn.Close()
+
 	grepBytes, _ := ioutil.ReadAll(grepOut)
 	grepCmd.Wait()
 
@@ -27,10 +29,4 @@ func main() {
 	}
 	fmt.Println("> ls -a -l -h")
 	fmt.Println(string(lsOut))
-
-	pathInfo, err := exec.LookPath("go")
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println("pathInfo:", pathInfo)
 }

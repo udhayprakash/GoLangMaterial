@@ -1,17 +1,16 @@
 package main
 
 import (
-	"log"
+	"fmt"
 	"os/exec"
 )
 
 func main() {
-
 	cmd := exec.Command("calc")
-
 	err := cmd.Run()
 
 	if err != nil {
-		log.Fatal(err)
+		panic(err)
 	}
+	fmt.Println("Process started running ...")
 }

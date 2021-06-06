@@ -6,7 +6,9 @@ import (
 )
 
 func main() {
-	//time.Sleep(5 * time.Second)
+	// fmt.Println("First Line")
+	// time.Sleep(5 * time.Second)
+	// fmt.Println("Second Line")
 
 	cmd := exec.Command("sleep", "5")
 	err := cmd.Start()
@@ -17,4 +19,5 @@ func main() {
 
 	err = cmd.Wait()
 	log.Printf("Command finished with error: %v", err)
+
 }

@@ -8,6 +8,12 @@ import (
 )
 
 func main() {
+	pathInfo, err := exec.LookPath("go")
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("pathInfo:", pathInfo)
+
 	binary, lookErr := exec.LookPath("ls")
 	if lookErr != nil {
 		panic(lookErr)

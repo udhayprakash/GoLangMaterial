@@ -8,6 +8,8 @@ import (
 	"github.com/joho/godotenv"
 )
 
+// go get -u github.com/joho/godotenv
+
 func init() {
 
 	err := godotenv.Load(".env")

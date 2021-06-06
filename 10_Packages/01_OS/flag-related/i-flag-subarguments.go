@@ -48,12 +48,9 @@ func main() {
 }
 
 /*
-
-go run f_command_line_subarguments.go foo -enable -name=joe a1 a2
-go run f_command_line_subarguments.go bar -level 8 a1
+go run i-flag-subarguments.go foo -enable -name=joe a1 a2
+go run i-flag-subarguments.go bar -level 8 a1
 
 But bar won’t accept foo’s flags.
-go run f_command_line_subarguments.go foo bar -enable a1
-
-
+	go run i-flag-subarguments.go foo bar -enable a1
 */

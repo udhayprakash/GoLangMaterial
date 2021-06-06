@@ -26,10 +26,11 @@ import (
 )
 
 func hello() {
-	fmt.Println("hello - start")
-	os.Exit(1)
+	fmt.Println("\thello - start")
+	defer fmt.Println("\t\thello - defer")
+	// os.Exit(1)
 	// unreachable code
-	fmt.Println("hello - end")
+	fmt.Println("\thello - end")
 }
 
 func main() {
@@ -37,7 +38,7 @@ func main() {
 	defer fmt.Println("This is deferred statement")
 
 	hello()
-	//os.Exit(7687) // program execution terminates
+	os.Exit(7687) // program execution terminates
 
 	// Below code is not reachable
 	fmt.Println("main - end")

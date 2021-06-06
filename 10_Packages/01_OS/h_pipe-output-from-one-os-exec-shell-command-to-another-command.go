@@ -7,7 +7,7 @@ import (
 	"os/exec"
 )
 
-// To get similar to unix/linux ->  ls | wc -l
+// To get similar to unix/linux ->  ps -ef | wc -l
 
 func main() {
 	first := exec.Command("ps", "-ef")
