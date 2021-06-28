@@ -48,6 +48,18 @@ func main() {
 	// deleting a key which doesnt exits, wonyt through an error
 	delete(studentRank, "rajinikanth")
 	fmt.Println("After delete, studentRank=", studentRank)
+
+	// To delete all keys from map
+	// Method 1
+	for k, _ := range studentRank {
+		delete(studentRank, k)
+	}
+	fmt.Println("After delete all , studentRank=", studentRank)
+
+	// Method 2 - recreating map will reallocate memory by Garbage collector
+	studentRank = make(map[string]int)
+	fmt.Println("After re-creating , studentRank=", studentRank)
+
 }
 
 /*
