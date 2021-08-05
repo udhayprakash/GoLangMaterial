@@ -16,22 +16,22 @@ func main() {
 	// An example of sorting `int`s.
 	ints := []int{7, 2, 4}
 	sort.Ints(ints)
-	fmt.Println("Ints:   ", ints)
+	fmt.Println("Ints   :", ints)
 
 	// We can also use `sort` to check if a slice is
 	// already in sorted order.
 	s := sort.IntsAreSorted(ints)
-	fmt.Println("Sorted: ", s)
+	fmt.Println("Sorted :", s)
 
-	fmt.Println("Original : ", strSlice[:])
+	fmt.Println("Original :", strSlice[:])
 
 	strSlice.Sort()
 
-	fmt.Println("Sort : ", strSlice[:])
+	fmt.Println("Sort     :", strSlice[:])
 
 	sort.Sort(sort.Reverse(strSlice[:]))
 
-	fmt.Println("Reverse : ", strSlice[:])
+	fmt.Println("Reverse  :", strSlice[:])
 
 }
 

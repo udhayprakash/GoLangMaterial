@@ -30,6 +30,11 @@ func main() {
 			} else {
 				fmt.Print("Lookup CNAME failed with err: ", err)
 			}
+			DNSTextRecords, err := net.LookupTXT(website)
+			if err == nil {
+				fmt.Println("DNSTextRecords:", DNSTextRecords)
+			}
+
 
 		} else {
 			log.Fatal("IP lookup failed. Error is: ", err)
