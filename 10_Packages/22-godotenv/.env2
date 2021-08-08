@@ -1,0 +1,8 @@
+# Person details
+NAME=udhay
+AGE=30
+HEIGHT=5.8
+
+# AWS S3 bucket
+S3_BUCKET=mybucket2
+SECRET_KEY=mykey2
