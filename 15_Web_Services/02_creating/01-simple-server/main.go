@@ -16,6 +16,12 @@ func main() {
 	})
 
 	log.Println("Starting server at 8000 ...")
+
+	// // Method 1 - windows security alert comes here
+	// log.Fatal(http.ListenAndServe(":8000", nil))
+
+	// // Method 2 - explicitly mentioning host. Then no prompt 
+	// log.Fatal(http.ListenAndServe("localhost:8000", nil))
 	log.Fatal(http.ListenAndServe("localhost:8000", nil))
 }
 
