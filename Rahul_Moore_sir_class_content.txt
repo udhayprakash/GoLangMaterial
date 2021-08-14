@@ -1,0 +1,73 @@
+---------------------------------------------------------------------------------
+                        GO Language Course Content
+						--------------------------
+Course Duration: 30 days(Each Day 2 hours)
+
+Weekend : morning after 9 AM IST to 8 PM IST 
+WeekDays: morning before 11 AM IST - and after 7 PM IST 
+
+Class 1: 29Th March 2021 - 11 AM IST - 01 PM IST
+
+30 days * 2 hours = 60 hours * 500 = 30,000/-
+
+21,000/-
+
+---------------------------------------------------------------------------------
+Chapter 05: Goroutines, Channels, Concurrency
+				Sync package
+					waitgroups 
+					mutex
+
+Chapter 06: Modules
+                bufio 
+				ioutil
+                container
+                runtime
+				context
+				reflect
+				encoding
+				
+				creating custom package 
+
+				
+Chapter 07: File Operations
+                UnStructured,
+				Structured
+					xml
+					csv 
+					json
+						nested json
+                ZipFiles
+                 
+Chapter 08: Logging
+                Built-in logger 
+                Logrus
+
+Chapter 09: Code Quality
+                unit testing, 
+					table driven tests, 
+					asserts
+				coverage, profiling, benchmarking
+					sonarQube 
+					CodeClimate 
+					
+Chapter 10: Web Services      
+				SOUP API
+				REST API 
+					Consuming REST API 
+					Creating REST API
+						built-in
+						JulianSmit Router (https://github.com/julienschmidt/httprouter)
+						Gorilla mux 
+						
+				RPC 
+					GRPC 
+					protobuf
+					
+					
+Chapter 11: Project 
+				Microservices
+				web layer 
+				service layer 
+				repository layer 
+				Messaging layer 
