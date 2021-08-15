@@ -5,3 +5,14 @@ https://www.ardanlabs.com/blog/2019/09/context-package-semantics-in-go.html
 http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/
 
 dependency injection - https://appliedgo.net/di/
+
+
+using context in Golang - cancellation, TImeouts and values
+    https://www.sohamkamani.com/golang/context-cancellation-and-values/
+
+ElasticSearch 
+https://developer.okta.com/blog/2021/04/23/elasticsearch-go-developers-guide
+
+okta Identity Manager
+https://developer.okta.com/blog/2021/02/03/api-key-best-practices-and-examples
+https://github.com/Dr-Phill-Edwards/api-keys
