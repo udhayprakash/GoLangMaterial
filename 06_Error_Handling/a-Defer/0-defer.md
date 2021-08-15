@@ -6,3 +6,7 @@
 
     - Go’s garbage collector recycles unused memory, but do not assume it will release unused operating system resources like open files and network connections.
     - They should be closed explicitly.
+	- Deferred function calls are executed in Last In First Out order after the surrounding function returns. 
+	- Deferred functions may read and assign to returning function's named return values. 
+
+	
