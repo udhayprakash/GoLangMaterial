@@ -17,5 +17,5 @@ func zero(z *int) {
 	*z = 0
 	fmt.Println("in func, After - z=", z, "*z=", *z)
 }
-// cALL by reference - chanegs within function are reflected outside
+// cALL by reference - changes within function are reflected outside
 //                     the function scope.

@@ -2,8 +2,11 @@ package main
 
 import "fmt"
 
-// naked structs dont have type definition
-// They are used only once
+/*
+naked structs dont have type definition.
+They are used only once.
+Also, called inline struct
+*/
 
 func main() {
 	firstStruct := struct {
@@ -26,11 +29,10 @@ func main() {
 	}{}
 	fmt.Println("secondStruct=", secondStruct)
 
-		// empty or un-initialize. Golang will populate them automatically with default value
+	// empty or un-initialize. Golang will populate them automatically with default value
 	// such as empty string or zero
 
 	fmt.Printf("firstStruct struct : %+v\n", firstStruct)
 	fmt.Printf("secondStruct struct : %+v\n", secondStruct)
-
 
 }
