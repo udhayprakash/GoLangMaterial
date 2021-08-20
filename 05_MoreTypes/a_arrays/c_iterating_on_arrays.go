@@ -17,4 +17,15 @@ func main() {
 	for index, value := range oddNumbers{
 		fmt.Printf("At position %d -> %2d\n", index, value)
 	}
+	
+	// ------- Generate even numbers between 1 & 100
+	evenNumbers := make([]int, 50)
+	
+	count := 0
+	for num := 1; num <= 100; num++{
+		if num % 2 == 0 {
+			evenNumbers[count] = num
+			count++	
+		}
+	}
 }

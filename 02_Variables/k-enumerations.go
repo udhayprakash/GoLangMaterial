@@ -29,6 +29,8 @@ func main() {
 		C1 = iota
 		C2 = iota
 	)
+	
+	
 	fmt.Println(C0, C1, C2) // "0 1 2"
 	fmt.Println()
 
