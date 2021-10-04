@@ -19,7 +19,7 @@ func main() {
 	// 0   	1	2	3	4	5	6	7	8	9	10
 	fmt.Println()
 	fmt.Println("name[0]			=", name[0])
-	fmt.Printf("name[0]			= %c\n", name[0])
+	fmt.Printf("name[0]			= %c\n", name[0]) // ascii value
 	fmt.Printf("name[4]			= %c\n", name[4])
 	fmt.Printf("name[5]			= %q\n", name[5])
 	fmt.Printf("name[10]		= %q\n", name[10])

@@ -13,9 +13,13 @@ func main() {
 	fmt.Println(strings.Compare("a", "a")) //  0
 	fmt.Println(strings.Compare("b", "a")) //  1
 
-	fmt.Println(strings.Compare("aa", "ab")) //  -1
+	fmt.Println(strings.Compare("aa", "ab"))         // -1
 	fmt.Println(strings.Compare("apple", "apple"))   // 0
 	fmt.Println(strings.Compare("apple", "apparao")) // 1
+
+	fmt.Println(strings.Compare("Hacker", "Haler"))  // -1
+	fmt.Println(strings.Compare("HAcker", "Hacker")) // -1
+	fmt.Println(strings.Compare("Hacker", "Hacker")) //  0
 	fmt.Println()
 
 	// String Contains reports whether substr is within s.
