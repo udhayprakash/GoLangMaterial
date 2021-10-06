@@ -81,4 +81,3 @@ func main() {
 	out := r.ReplaceAllFunc(in, bytes.ToUpper)
 	fmt.Println(string(out))
 }
-strconv.ParseFloat
