@@ -1,13 +1,11 @@
 package main
 
-import (
-	"fmt"
-)
-
+import "fmt"
 /*
 	converts from feet into meters.
         (1 ft = 0.3048 m)
 */
+
 func main() {
 	//const (
 	//	meters float32
@@ -22,7 +20,7 @@ func main() {
 	fmt.Println("\tmeters =", meters)
 	fmt.Println("\tfeet   =", feet)
 	fmt.Println()
-
+	
 	// Get the meters value in run time
 	fmt.Print("Enter no. of meters =")
 	fmt.Scanf("%f", &meters)
@@ -31,3 +29,4 @@ func main() {
 	fmt.Println("\tmeters =", meters)
 	fmt.Println("\tfeet   =", feet)
 }
+ 

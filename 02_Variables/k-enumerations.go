@@ -10,6 +10,7 @@ Purpose: Enum
 	- To increase the code readability and the maintainability
 
 */
+
 func main() {
 	// const (
 	// 	a1 = 10
@@ -29,8 +30,7 @@ func main() {
 		C1 = iota
 		C2 = iota
 	)
-	
-	
+
 	fmt.Println(C0, C1, C2) // "0 1 2"
 	fmt.Println()
 
@@ -49,14 +49,18 @@ func main() {
 
 	// ---------COUNTING BACKWARD----------------
 	const (
-		max = 10
-	)
-	const (
-		a = (max - iota) // 10
-		b                // 9
-		c                // 8
+		a = (10 - iota) // 10 -0 = 10
+		b               // 10 -1 = 9
+		c               // 10 - 2 = 8
 	)
 	fmt.Println(a, b, c) // 10 9 8
+
+	const (
+		a1 = (0 - iota) // 0 -0 = 0
+		b1              // 0 -1 = -1
+		c1              // 0 - 2 = -2
+	)
+	fmt.Println(a1, b1, c1) // 0 -1 -2
 
 	// ---------------------------------------
 	const (
@@ -73,7 +77,7 @@ func main() {
 		January int = 1 + iota
 		February
 		March
-		April int = 10 //+ iota
+		April int = 10 //+ iota  // iota index value will reset
 		May
 		June
 	)
@@ -86,16 +90,15 @@ func main() {
 
 	// ---------- Multiple iotas in a single line
 	const (
-		// Active = 0, Moving = 0, Running = 0
-		Active, Moving, Running = iota, iota, iota
+		q1, q2, q3= iota, iota, iota
+		r1, r2, r3
+		s1, s2, s3
 
-		// Passive = 1, Stopped = 1, Stale = 1
-		Passive, Stopped, Stale
-		something1, something2, something3
 	)
-	fmt.Print("Active, Moving, Running :")
-	fmt.Println(Active, Moving, Running)
-	fmt.Print("Passive, Stopped, Stale :")
-	fmt.Println(Passive, Stopped, Stale)
-	fmt.Println("something1, something2, something3:", something1, something2, something3)
+	fmt.Printf(`
+	q1: %d, q: %d, q3: %d
+	r1: %d, r2: %d, r3: %d
+	s1: %d, s2: %d, s3: %d
+	`, q1, q2, q3, r1, r2, r3, s1, s2, s3)
 }
+ 

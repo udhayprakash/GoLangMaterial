@@ -1,12 +1,13 @@
-package main 
+package main
 
 import (
 	"fmt"
 )
 
-func main(){
+func main() {
 	// String Concatenation
 	fmt.Println("Hello" + "world")
+	fmt.Println("Hello" + "" + "world")
 	fmt.Println("Hello" + " " + "world")
 	fmt.Println("Hello" + " " + `world`)
 	// fmt.Println("Hello" + ' ' + `world`)
@@ -16,5 +17,7 @@ func main(){
 
 	// string repetition
 	//fmt.Println("Hello " * 3)  //(mismatched types string and int)
-	fmt.Println('H' * 3) // 216 
+	fmt.Println('H' * 3) // 216
+
 }
+ 
