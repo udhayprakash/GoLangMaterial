@@ -6,18 +6,19 @@ import "fmt"
 var name = "package-level"
 
 func main() {
+	fmt.Println("In main()  : name   =", name)
+
 	// Function-level declaration
-	fmt.Println("In main()  : name   =", name)
-
 	var name = "function-level"
+
 	fmt.Println("In main()  : name   =", name)
 
-	myFunc()
+	MyFunc()
 }
 
-func myFunc() {
+func MyFunc() {
 	fmt.Println("In myFunc(): name   =", name)
 }
 
 // NOTE: Function-level declarations will be prioritized,
-// compared to package-level declarations
+// compared to package-level declarations 
