@@ -2,9 +2,9 @@ package main
 
 import "fmt"
 
-// ABCDEFGHJKLMNOPQRSTUVWXYZ
-// EX: DOG IS BARKING
-//     GR...
+// abcdefghijklmnopqrstuvwxyz
+// EX: I am in mozambique now
+//     L dp lq prcdpeltxh qrz
 
 func main() {
 	fmt.Printf("\t rune       : %c \n", 'a') // a
@@ -19,7 +19,10 @@ func main() {
 
 	s := "hello world"
 	encryptedString := ""
+
 	for i := 0; i < len(s); i++ {
+		// fmt.Println(i, string(s[i]), s[i])
+
 		// fmt.Printf("\t rune       : %c \t", s[i])
 		// fmt.Printf("\t UTF8 code  : %v \n", s[i])
 
@@ -27,12 +30,12 @@ func main() {
 		// fmt.Printf("\t rune       : %c \t", s[i]+3)
 		// fmt.Printf("\t UTF8 code  : %v \n\n", s[i]+3)
 
-		// encryptedString += s[i] + 3
-		encryptedString += fmt.Sprintf("%c", s[i]+3)
-		// fmt.Println()
+		encryptedString += string(s[i] + 3)
+
 	}
 	fmt.Println("encryptedString=", encryptedString)
+
 }
 
-
 // Assignment - caesar cipher  decrypting - 3
+ 

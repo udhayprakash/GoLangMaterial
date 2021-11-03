@@ -16,13 +16,12 @@ verb        Description
 %q          quoted string "abc" or rune 'c'
 %v          any value in a natural for mat
 %T          type of any value
-%%          literal percent sig n (no operand)
+%%          literal percent sign (no operand)
 
 
 Other formatting functions like log.Printf, fmt.Errorf, ... use same rules
 
 */
-
 func main() {
 	fmt.Println("Hello")
 	fmt.Println("world") // automatically, cursor moves to newline after displaying
@@ -35,20 +34,22 @@ func main() {
 
 	fmt.Println("=====================================")
 	s := "Hello World"
-	fmt.Println("len(s) =%d", len(s))
+	fmt.Println("len(s) =", len(s))
 	fmt.Printf("len(s) =%d\n", len(s))
 
 	for i := 0; i < len(s); i++ {
-		fmt.Printf("\t data type  : %T \n", s[i])
+		// fmt.Println(i, s[i], string(s[i]))
 
-		fmt.Printf("\t rune       : %c \n", s[i])
-		fmt.Printf("\t quoted     : %q \n", s[i])
-		fmt.Printf("\t string     : %s \n", s[i])
-		fmt.Printf("\t UTF8 code  : %v \n", s[i])
+		fmt.Printf("\t data type  : %T \n", s[i]) // data type
+
+		fmt.Printf("\t rune       : %c \n", s[i]) // character
+		fmt.Printf("\t quoted     : %q \n", s[i])  // quoted character
+		fmt.Printf("\t string     : %s \n", s[i])  // string
+		fmt.Printf("\t UTF8 code  : %v \n", s[i])  // any data type
 
 		fmt.Printf("\t Hexadecimal: %x \n", s[i])
 		fmt.Printf("\t Octal      : %o \n", s[i])
 		fmt.Printf("\t Binary     : %b \n\n", s[i])
 	}
-
 }
+ 

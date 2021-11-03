@@ -16,25 +16,36 @@ Escape Sequences:
 	\" double quote (only within "..." literals)
 	\\ backslash
 */
-
 func main() {
 	// Strings are represented with double quotes or back-tick
 	// runes are represented with single quotes
 	fmt.Println("a") // output: a
 	fmt.Println('a') // output: 97
 
-	fmt.Println("Җ", 'Җ')
+	fmt.Println("â", 'â')
 
+	
 	fmt.Println("\t", '\t')
 	fmt.Println("\n", '\n')
 	fmt.Println("\\", '\\')
+
+	fmt.Println("C:\\newdir\\newfile")
+
+	name:= "Gautchi"
+	fmt.Println("name = ", name)
+	fmt.Printf("name = %s\n", name)
 
 	// Runes are printed with %c, or with %q if quoting is desired:
 	ascii := 'a'
 	unicode := 'D'
 	newline := '\n'
-	fmt.Printf("%d %[1]c %[1]q\n", ascii)   // "97 a 'a'"
-	fmt.Printf("%d %[1]c %[1]q\n", unicode) // "22269 D 'D'"
-	fmt.Printf("%d %[1]q\n", newline)       // "10 '\n'"
+	
+	fmt.Printf("%d %c %q\n", ascii, ascii, ascii) // 97 a 'a'
+	fmt.Printf("%d %[1]c %[1]q\n", ascii) // 97 a 'a'
 
-}
+	fmt.Printf("%d %[1]c %[1]q\n", unicode) // 68 D 'D'
+	fmt.Printf("%d %[1]c %[1]q\n", newline) // 10  	'\n'
+
+
+
+} 

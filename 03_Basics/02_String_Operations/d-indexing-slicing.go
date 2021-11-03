@@ -13,53 +13,81 @@ func main() {
 	fmt.Println("name				=", name)
 	fmt.Println("len(name)			=", len(name))
 	fmt.Println("utf8.RuneCountInString(name)=", utf8.RuneCountInString(name))
+	fmt.Println()
+
+	name2 := "OlÃ¡ Mundo"
+	fmt.Println("name2				=", name2)
+	fmt.Println("len(name2)			=", len(name2))
+	fmt.Println("utf8.RuneCountInString(name2)=", utf8.RuneCountInString(name2))
+	fmt.Println()
 
 	// Indexing - starts with zero
 	// H	e	l	l	o	 	w	o	r	l	d
 	// 0   	1	2	3	4	5	6	7	8	9	10
-	fmt.Println()
+	fmt.Println("name				=", name)
 	fmt.Println("name[0]			=", name[0])
 	fmt.Printf("name[0]			= %c\n", name[0]) // ascii value
-	fmt.Printf("name[4]			= %c\n", name[4])
 	fmt.Printf("name[5]			= %q\n", name[5])
 	fmt.Printf("name[10]		= %q\n", name[10])
+
 	// fmt.Printf("name[11]		= %q\n", name[11])
 	// panic: runtime error: index out of range
 
 	fmt.Printf("name[-0]		= %c\n", name[-0])
 	// fmt.Printf("name[-1]		= %c\n", name[-1])
-	// invalid string index -1 (index must be non-negative)
+	// error: string index out of bounds - (index must be non-negative)
 	fmt.Println()
 
 	// H	e	l	l	o	 	w	o	r	l	d
 	// 0   	1	2	3	4	5	6	7	8	9	10
 
 	// slicing - last position char is not included
+	fmt.Printf("name[2]			=%q\n", name[2])
+	fmt.Printf("name[7]			=%q\n", name[7])
 	fmt.Println("name[2:7]			=", name[2:7])
-	fmt.Println("name[1:10]			=", name[1:10])
-	fmt.Println("name[1:11]			=", name[1:11])
-	// fmt.Println("name[1:12]			=", name[1:12])
-	// slice bounds out of range
+	fmt.Println("name[1:10]			=", name[1:10]) // ello	worl
+	fmt.Println("name[1:11]			=", name[1:11]) // ello world
 
+	// fmt.Println("name[1:12]			=", name[1:12])
+	// panic: runtime error: string index out of bounds
 	fmt.Println()
+
+	/*
+		default
+			start index = 0
+			final index = len(string)
+	*/
 	fmt.Println("name[1:]			=", name[1:]) // default final index -> len(string)
 	fmt.Println("name[:]			=", name[:])   // default start index -> 0
 
-	// fmt.Println("name[1:11:1]			=", name[1:11:1]) // invalid operation name[1:11:1] (3-index slice of string)
+	// fmt.Println("name[1:11:1]			=", name[1:11:1])
+	// error: invalid 3-index slice of string
 
 	fmt.Println()
-	fmt.Println("name[len(name)- 3:]=", name[len(name)-3:])
-	fmt.Println("name[:len(name)- 3]=", name[:len(name)-3])
+	// H	e	l	l	o	 	w	o	r	l	d
+	// 0   	1	2	3	4	5	6	7	8	9	10
+
+	// To Get last N characters;  len(name)= 11
+	fmt.Println("name[len(name)- 3:]=", name[len(name)-3:]) // rld
+	fmt.Println("name[len(name)- 5:]=", name[len(name)-5:]) // world
+
+	// To Get from strat till last N characters;  len(name)= 11
+	fmt.Println("name[:len(name)- 3]=", name[:len(name)-3]) // Hello wo
+	fmt.Println("name[:len(name)- 5]=", name[:len(name)-5]) // Hello
 
 	// To print 'world'
 	fmt.Println(name[6:11], name[len(name)-5:])
 	fmt.Println()
 
 	// Capitalize first half of the string
-	s := "i love food"
-	half := len(s) / 2
-	fmt.Println("s    = ", s)
-	fmt.Println("s[:half]=", s[:half])
-	result := strings.ToUpper(s[:half]) + strings.ToLower(s[half:])
-	fmt.Println(result)
+	sentence := " I love mozambique"
+
+	half_len := len(sentence) / 2
+	fmt.Printf("sentence            = %s\n", sentence)
+	fmt.Printf("sentence[:half_len] = %s\n", sentence[:half_len])
+	fmt.Printf("sentence[half_len:] = %s\n", sentence[half_len:])
+
+	result := strings.ToUpper(sentence[:half_len]) + strings.ToLower(sentence[half_len:])
+	fmt.Println("result = ", result)
 }
+ 
