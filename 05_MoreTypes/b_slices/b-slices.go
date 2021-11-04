@@ -40,5 +40,3 @@ func main(){
 	fmt.Println("cap(s5)=", cap(s5))
 
 }
-
-

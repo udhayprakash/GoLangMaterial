@@ -27,3 +27,4 @@ func main() {
 	fmt.Println("After truncating to primeNumbers[4:9] - ", primeNumbers)
 
 }
+ 

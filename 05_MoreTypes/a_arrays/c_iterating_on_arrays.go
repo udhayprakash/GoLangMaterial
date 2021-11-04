@@ -8,24 +8,31 @@ func main() {
 	//                     0  1  2  3  4   5   6   7
 
 	// Method 1 - using for loop
-	for index := 0 ; index < len(oddNumbers); index++{
+	for index := 0; index < len(oddNumbers); index++ {
 		fmt.Printf("At position %d -> %2d\n", index, oddNumbers[index])
 	}
 	fmt.Println()
 
 	// Method 2 - using range
-	for index, value := range oddNumbers{
+	for index, value := range oddNumbers {
 		fmt.Printf("At position %d -> %2d\n", index, value)
 	}
-	
+
 	// ------- Generate even numbers between 1 & 100
-	evenNumbers := make([]int, 50)
-	
+	var evenNumbers1 [50]int
+	fmt.Println("evenNumbers1=", evenNumbers1)
+
+	evenNumbers2 := make([]int, 50)
+	fmt.Println("evenNumbers2=", evenNumbers2)
+
 	count := 0
-	for num := 1; num <= 100; num++{
-		if num % 2 == 0 {
-			evenNumbers[count] = num
-			count++	
+	for num := 1; num <= 100; num++ {
+		if num%2 == 0 {
+			evenNumbers2[count] = num
+			count++
 		}
 	}
+	fmt.Println("evenNumbers2=", evenNumbers2)
+
 }
+ 
