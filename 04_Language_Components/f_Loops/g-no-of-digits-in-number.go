@@ -10,25 +10,28 @@ Get number of digits in number
 
 func main() {
 	var num int
-	fmt.Println("Enter an integer value:")
+	fmt.Print("Enter an integer value:")
 
-	_, err := fmt.Scanf("%d", &num)
+	success, err := fmt.Scanf("%d", &num)
+	fmt.Println("success= ", success) // 1 if scanned, else 0
 	if err != nil {
 		fmt.Println("Error - ", err)
 	}
 
-	// Count the digits
-	digitsCount := 0
-	sumOfDigits := 0
-	fmt.Printf("Number %d ", num)
-	for num != 0 {
-		fmt.Println("\nnum /10=", num /10)
-		fmt.Println("num %10=", num %10)
-		sumOfDigits = sumOfDigits + (num % 10)
-		num = num / 10
-		digitsCount++
-	}
-	fmt.Printf("has %d digits\n", digitsCount)
-	fmt.Println("Sum of digits =", sumOfDigits)
+    // Count the digits, in the number
+	fmt.Printf("\nNumber %d ", num)
+    sumOfDigits := 0
+    noOfDigits := 0
+    for num != 0 {
+        // fmt.Println("\nnum /10=", num /10)
+		// fmt.Println("num %10=", num %10)
+        sumOfDigits = sumOfDigits + (num %10)
+
+        num = num /10
+        noOfDigits++
+    }
+    fmt.Printf("has %d digits\n", noOfDigits)
+    fmt.Println("Sum of digits =", sumOfDigits)
 
 }
+ 

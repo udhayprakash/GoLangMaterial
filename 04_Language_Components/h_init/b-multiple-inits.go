@@ -10,7 +10,7 @@ func init() {
 	fmt.Println("Second init")
 }
 
-func init() {
+func initThird() {               // Not an init function, but ordinary function
 	fmt.Println("Third init")
 }
 
@@ -20,4 +20,5 @@ func init() {
 
 func main() {}
 
-// init() functions will execute in order of definition
+
+// NOTE: init() functions will execute in order of definition 

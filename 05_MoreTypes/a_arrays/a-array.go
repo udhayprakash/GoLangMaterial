@@ -14,11 +14,10 @@ Declaration
 
 Short declaration
 	array_name:= [length]Type{item1, item2, item3,...itemN}
-
 */
 
 func main() {
-	// Declaration of Arrays
+	// Method1 - Declaration of Arrays
 	var emptyArray1 [3]int
 	fmt.Println("emptyArray1 = ", emptyArray1) // [0 0 0]
 
@@ -29,7 +28,7 @@ func main() {
 	fmt.Println("emptyArray3 =", emptyArray3) // ["" ""]
 	fmt.Println()
 
-	// Declaration & initialization
+	// Method2 - Declaration & initialization
 	var myArray1 [3]int = [3]int{11, 22, 33}
 	fmt.Println("myArray1    = ", myArray1)
 
@@ -37,7 +36,10 @@ func main() {
 	fmt.Println("myArray2    = ", myArray2)
 
 	myArray3 := [3]int{11, 22, 33}
-	fmt.Println("myArray3    = ", myArray3)
+	fmt.Println("myArray3    = ", myArray3) // [11 22 33]
+
+	myArray4 := [3]int{11, 22}
+	fmt.Println("myArray4    = ", myArray4) // [11 22 0]
 	fmt.Println()
 
 	// Multi-line initialization
@@ -73,5 +75,7 @@ func main() {
 	fmt.Printf("\ngreetings1 - type=%T", greetings2)
 	fmt.Printf("\ngreetings1 - type=%T", greetings3)
 
-	fmt.Println(reflect.TypeOf(greetings1))
+	fmt.Println("\n", reflect.TypeOf(greetings1))
+
 }
+ 

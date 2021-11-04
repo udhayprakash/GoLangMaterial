@@ -1,10 +1,9 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 // Iterable object - object that supports looping over its elements
+// range clause must have array, slice, string, map, or channel type
 func main() {
 	// value := true
 	// for index, val := range value {
@@ -26,20 +25,20 @@ func main() {
 	// 	fmt.Println(index, val)
 	// } // use of untyped nil
 
+	// value2 := '3'
+	// for index, val := range value2 {
+	// 	fmt.Println(index, val)
+	// } // cannot range over value2 (type rune)
+
 	value := "32344234" // strings are iterable
 	for index, val := range value {
 		fmt.Println(index, val)
 	}
 	fmt.Println()
 
-	// value2 := '3'
-	// for index, val := range value2 {
-	// 	fmt.Println(index, val)
-	// } // cannot range over value2 (type rune)
-
 	// Looping over an Array
 	numsArray := [7]int{11, 22, 33, 44, 55, 66, 77}
-	//            0   1   2    3   4   5   6
+	//                   0   1   2    3   4   5  6
 	for index, val := range numsArray {
 		fmt.Println(index, val)
 	}
@@ -66,5 +65,5 @@ func main() {
 	for key, value := range kvs {
 		fmt.Printf("%s -> %s\n", key, value)
 	}
-
 }
+ 
