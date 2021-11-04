@@ -6,18 +6,20 @@ import (
 
 func main() {
 	fmt.Println("One")
-	goto Prakash
 	fmt.Println("Two")
-	goto Udhay
+	goto India
+
 	fmt.Println("Last statement")
+	goto Mozambique
 
-Prakash:
-	fmt.Println("You are in Prakash Block")
+Mozambique:
+	fmt.Println("I am in Mozambique block ")
 
-Udhay:
-	fmt.Println("You Entered Udhay Block")
+India:
+	fmt.Println("I am in India block ")
+	// goto Mozambique --- leads to infinite lop
 
 }
 
 // NOTE: The goto labels need to be defined in order of
-// their usage.
+// their usage. 

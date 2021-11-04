@@ -3,31 +3,35 @@ package main
 import "fmt"
 
 /*
-for initialization; condition; post {
+for initialization; condition; incre/decr {
 	// zero or more statements
 	}
 
 */
-
-func main(){
+func main() {
 	// Method 1
-	var i int 
-	for i = 0; i <= 5; i++{
+	var i int
+	for i = 0; i <= 5; i++ {
 		fmt.Printf("%d\t", i)
 	}
 	fmt.Println()
 
-	// Method 2 
-	for j := 0; j <=5; j++{
+	// Method 2
+	
+	// for var j int = 0; j <= 5; j++ {  
+	// error: var declaration not allowed in for initializer
+	
+	for j := 0; j <= 5; j++ {
 		fmt.Printf("%d\t", j)
 	}
 	fmt.Println()
 
-	// Method 3  --> like while loop style
-	j := 0
-	for j <= 5{
-		fmt.Printf("%d\t", j)
-		j++
+	// Method 3 --> in while loop style
+	k := 0
+	for k <= 5 {
+		fmt.Printf("%d\t", k)
+		k++
 	}
 
 }
+ 

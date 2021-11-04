@@ -1,10 +1,27 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-// A type `switch` compares types instead of values.
-// It can be used to discover the type of an interface
-// value.
+// `Type switch`.
+// func main() {
+// 	fmt.Print("Enter some number:")
+
+// 	var value int
+// 	fmt.Scanf("%d", &value)
+// 	fmt.Println(value, reflect.TypeOf(value))
+
+// 	var valu2 float32
+// 	fmt.Scanf("%f", &valu2)
+// 	fmt.Println(valu2, reflect.TypeOf(valu2))
+
+// 	var valu3 interface{}
+// 	fmt.Scanf("%v", &valu3)
+// 	fmt.Println(valu3, reflect.TypeOf(valu3))
+
+// }
+
 func main() {
 	getDataType(true)
 	getDataType(1)
@@ -13,13 +30,15 @@ func main() {
 	getDataType(123.21)
 }
 
+// It can be used to discover the type of an interface
+// value.
 func getDataType(value interface{}) {
-	fmt.Printf("\n\nvalue =%v \tdataType - %T\n", value, value)
+	fmt.Printf("\nvalue =%v \tdataType - %T\n", value, value)
 
 	// fmt.Println("value.(type)=", value.(type))
 	// use of .(type) outside type switch
 
-	switch t := value.(type) {
+	switch t:= value.(type) {
 	case bool:
 		fmt.Println("I'm a bool")
 	case int, int32, int64:
@@ -33,3 +52,4 @@ func getDataType(value interface{}) {
 
 	}
 }
+ 

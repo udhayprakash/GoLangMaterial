@@ -6,9 +6,11 @@ import (
 
 func main() {
 	fmt.Println("Even number between 56 & 100:")
-	for i := 56; i <= 100; i++ {
-		if i%2 == 0 {
-			fmt.Printf("%d,", i)
+
+	for num := 56; num <= 100; num++ {
+		if num % 2 == 0{
+			fmt.Printf("%d,", num)
 		}
 	}
-}
+	fmt.Println()
+} 

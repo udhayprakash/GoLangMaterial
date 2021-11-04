@@ -16,12 +16,12 @@ import (
 		Sunday 		HOLIDAY
 */
 func main() {
-	println("Enter day of the week:")
+	fmt.Println("Enter day of the week:")
 
 	var weekOfDay string
-	fmt.Scanf("%s", &weekOfDay)
+	fmt.Scanf("%s", &weekOfDay) // will pick only the characters
 
-	// converting to lower case
+	// conversting to lower case
 	weekOfDay = strings.ToLower(weekOfDay)
 
 	if weekOfDay == "monday" {
@@ -42,3 +42,6 @@ func main() {
 		println("INVALID ENTRY")
 	}
 }
+
+// NOTE: else block  is not mandatory
+ 

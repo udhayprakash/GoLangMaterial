@@ -3,13 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	// days := 2
+	// days := 4
 	// switch days {
 
-	switch days := 1; days {
+	switch days := 4; days {
 	case 1:
 		fmt.Println("One")
-		fallthrough
 	case 2:
 		fmt.Println("Two")
 		fallthrough
@@ -23,7 +22,9 @@ func main() {
 		fmt.Println("Default case")
 	}
 }
-
-// NOTE: ;(semicolon) is statement separator
-// All statements after a match using
-// fallthrough statement will be executed.
+/*
+NOTE:
+	1) ;(semicolon) is statement separator
+	2) All statements after a match using
+     fallthrough statement will be executed.
+*/ 
