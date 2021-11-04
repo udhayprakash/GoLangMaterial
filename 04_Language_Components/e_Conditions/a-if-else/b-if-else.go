@@ -10,7 +10,7 @@ func main() {
 	} else {
 		fmt.Println("choice is false")
 	}
-
+	
 	choice = (true != choice)
 	if choice == true {
 		fmt.Println("new choice is true")
@@ -25,3 +25,4 @@ func main() {
 		fmt.Printf("%d is odd number", num1)
 	}
 }
+ 

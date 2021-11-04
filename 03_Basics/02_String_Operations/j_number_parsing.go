@@ -30,6 +30,8 @@ func main() {
 	// To format string representing an integer,
 	x, err := strconv.Atoi("123") // x is an int
 	fmt.Println(x, err)
+	x1, err := strconv.Atoi("12.3") // x1 is an int
+	fmt.Println(x1, err) 
 	z1, err1 := strconv.ParseInt("123", 10, 64) // base 10, up to 64 bits
 	fmt.Println(z1, err1)
 

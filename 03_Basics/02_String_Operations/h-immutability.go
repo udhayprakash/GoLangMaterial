@@ -6,15 +6,22 @@ func main() {
 	myStr := "Hello world"
 	fmt.Println("myStr= ", myStr, &myStr)
 
-	// myStr[0] = "F"
-	// cannot assign to myStr[0] (strings are immutable)
+	// Indexing
+	fmt.Println("myStr[0]= ", myStr[0], string(myStr[0])) //  72  H
 
+	// myStr[0] = "F"
+	// error: invalid left hand side of assignment
+	// 	// cannot assign to myStr[0] (strings are immutable)
+
+	// Slicing
 	fmt.Println("myStr[6:11] = ", myStr[6:11])
 
-	// myStr[6:11] = "Bold"
-	// cannot assign to myStr[6:11] (strings are immutable)
+	// myStr[6:11] = "Bould"
+	// error: invalid left hand side of assignment
+	// 	// cannot assign to myStr[6:11] (strings are immutable)
 
-	myStr = myStr[:6] + "Bold"
+	// Overwriting
+	myStr = myStr[:6] + "Bould"
 	fmt.Println("After OVERWRITE: myStr=", myStr, &myStr)
 
 	// rune value can be updated
@@ -23,9 +30,5 @@ func main() {
 
 	myrune = 'W'
 	fmt.Println("after   myrune =", myrune)
-
 }
-
-/*
-NOTE: strings are immutable; runes are mutable
-*/
+ 

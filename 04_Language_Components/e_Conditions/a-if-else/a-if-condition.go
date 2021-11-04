@@ -8,6 +8,10 @@ func main() {
 	if true {
 		fmt.Println("It is true")
 	}
+	
+	if false {
+		fmt.Println("It is false")
+	}
 
 	if !false {
 		fmt.Println("It is !false")

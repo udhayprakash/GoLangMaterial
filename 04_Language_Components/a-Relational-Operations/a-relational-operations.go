@@ -15,4 +15,7 @@ func main() {
 
 	// fmt.Println("usd <> cand =", usd <> cand)
 	// syntax error: unexpected >, expecting expression
+	
+	fmt.Println(12 < 34) // true
+	// fmt.Println(12 < 34 < 45) // InValid Syntax 
 }
