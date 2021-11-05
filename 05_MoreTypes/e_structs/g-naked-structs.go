@@ -17,22 +17,23 @@ func main() {
 		Age:  18,
 	} // populating with values
 
-	fmt.Println("firstStruct=", firstStruct)
-	fmt.Println("firstStruct.Name=", firstStruct.Name)
+	fmt.Println("firstStruct=", firstStruct)           //  {udhay 18}
+	fmt.Println("firstStruct.Name=", firstStruct.Name) // udhay
 
 	firstStruct.Name = "prakash"
-	fmt.Println("firstStruct=", firstStruct)
+	fmt.Println("firstStruct=", firstStruct) // {prakash 18}
 
 	secondStruct := struct {
 		Name string
 		Age  int
 	}{}
-	fmt.Println("secondStruct=", secondStruct)
+	fmt.Println("secondStruct=", secondStruct) // { 0}
 
 	// empty or un-initialize. Golang will populate them automatically with default value
 	// such as empty string or zero
 
 	fmt.Printf("firstStruct struct : %+v\n", firstStruct)
-	fmt.Printf("secondStruct struct : %+v\n", secondStruct)
+	fmt.Printf("secondStruct struct : %#v\n", secondStruct)
 
 }
+ 

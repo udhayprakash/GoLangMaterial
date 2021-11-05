@@ -5,15 +5,32 @@ import (
 	"reflect"
 )
 
-func main() {
-	map1 := map[string]int{
-		"one": 1,
-		"two": 2,
-	}
+// comparable types: boolean, numeric, string, pointer,
+//                    channel, and interface types
 
+func main() {
+	choice1, choice2 := true, false
+	fmt.Println("choice1 == choice2 :", choice1 == choice2)
+
+	num1, num2 := 12, 34
+	fmt.Println("num1 == num2       :", num1 == num2)
+
+	name1, name2 := "Ravi", "ravi"
+	fmt.Println("name1 == name2     :", name1 == name2)
+
+	map1 := map[string]int{}
 	map2 := map1
 
-	// if map1 == map2 { } // map can only be compared to nil
+	// fmt.Println("map1 == map2     :", map1 == map2)
+	// error: map can only be compared to nil
+
+	fmt.Println("map1 == nill     :", map1 == nil)
+	fmt.Println("map2 == nill     :", map2 == nil)
 
 	fmt.Println("reflect.DeepEqual(map1, map2):", reflect.DeepEqual(map1, map2))
+
+	map3 := make(map[string]int)
+	fmt.Println("reflect.DeepEqual(map1, map3):", reflect.DeepEqual(map1, map3))
+
 }
+ 

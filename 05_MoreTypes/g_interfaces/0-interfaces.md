@@ -6,8 +6,9 @@ usage of interfaces:
     - hiding implementation details
     - providing interception points
 
-Go Types 1. abstract types - int8, int16, int32, int64, string, ... 2. concreate types - io.Reader, io.Writer,
-fmt.Stringer, ...
+Go Types :
+    1. abstract types - int8, int16, int32, int64, string, ... 
+    2. concreate types - io.Reader, io.Writer, fmt.Stringer, ...
 
 ## union of interfaces
 
@@ -36,3 +37,4 @@ Sometimes we use English to make it nicer:
     }
 
 When an interface includes multiple methods, choose a name that accurately describes its purpose (examples: net.Conn, http.ResponseWriter, io.ReadWriter).
+ 
