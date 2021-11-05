@@ -16,7 +16,7 @@ func main() {
 		value : %[1]v
 		Type  : %[1]T
 		type  : %[2]v
-	`, err, reflect.TypeOf(err))
+	`, err, reflect.TypeOf(err).Kind())
 
 	timeErr := fmt.Errorf("error occurred at: %v", time.Now())
 	fmt.Println("\nError is :", timeErr)
@@ -26,6 +26,6 @@ func main() {
 		value : %[1]v
 		Type  : %[1]T
 		type  : %[2]v
-	`, timeErr, reflect.TypeOf(timeErr))
-
+	`, timeErr, reflect.TypeOf(timeErr).Kind())
 }
+ 

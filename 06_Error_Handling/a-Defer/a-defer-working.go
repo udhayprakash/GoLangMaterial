@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 	defer fmt.Println("First")
@@ -10,6 +8,13 @@ func main() {
 	defer fmt.Println("Third")
 }
 
-// Second
-// Third
-// First
+// Defers will execute in LIFO (Last-In First-OUt) order
+
+/*
+ OUTPUT:
+
+ 	Second
+	Third
+	First
+*/
+ 

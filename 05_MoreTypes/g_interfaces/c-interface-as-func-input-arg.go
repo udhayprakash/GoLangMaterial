@@ -17,14 +17,16 @@ func main() {
 	// cannot use 123112 (type untyped int) as type string in argument to myFunc1
 	fmt.Println()
 
-	myFunc2("World")         // string
-	myFunc2("2131")          // string
-	myFunc2(2131)            // int
-	myFunc2('2')             // rune
-	myFunc2(123.213)         // float
-	myFunc2(12 + 3i)         // complex
-	myFunc2(true)            // bool
-	myFunc2([3]int{1, 2, 3}) // array
-	myFunc2([]int{1, 2, 3})  // slice
+	myFunc2("World")                // string
+	myFunc2("2131")                 // string
+	myFunc2(2131)                   // int
+	myFunc2('2')                    // rune
+	myFunc2(123.213)                // float
+	myFunc2(12 + 3i)                // complex
+	myFunc2(true)                   // bool
+	myFunc2([3]int{1, 2, 3})        // array
+	myFunc2([]int{1, 2, 3})         // slice
+	myFunc2(map[string]int{"a": 1}) // map
 
 }
+ 
