@@ -57,4 +57,7 @@ func main() {
 	fmt.Printf("%#v\n", timeZone)
 
 }
-// NOTE: map stores the value in ascending order of the keys
+/* NOTE: 
+1. fmt.Print displays map in ascending order of the keys
+2. Map order is undefined/unpredictable
+*/ 

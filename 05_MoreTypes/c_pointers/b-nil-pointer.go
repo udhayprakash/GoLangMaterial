@@ -1,14 +1,12 @@
-package main 
-
+package main
 
 import (
 	"fmt"
 )
 
-func main(){
+func main() {
 	var ptr *float64
 	fmt.Printf("The value of ptr is : %x\n", ptr)
-	fmt.Println("Before ptr != nil :", ptr != nil)
 
 	num2 := 123.213
 
@@ -17,7 +15,12 @@ func main(){
 
 	// myStr := "Golang"
 	// ptr = &myStr
+	// // error: incompatible types in assignment
 
+	// num3 := 123
+	// ptr = &num3
+	// incompatible types in assignment
 }
 
-// NOTE: You are refer values of same data types as defined in pointer
+
+// NOTE: You can refer values of same data types as defined in pointer 

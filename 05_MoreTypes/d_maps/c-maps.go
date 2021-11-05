@@ -5,7 +5,12 @@ import (
 )
 
 func main() {
-	// Declaring, but not initializing the map
+	// Method 1 - Declaring, and  initializing the map
+	studentRank1 := map[string]int{}
+	fmt.Println("\nstudentRank1      = ", studentRank1)
+	fmt.Println("len(studentRank1) = ", len(studentRank1))
+
+	// Method2 - Declaring, and  initializing the map
 	studentRank := make(map[string]int)
 	fmt.Println("\nstudentRank      = ", studentRank)
 	fmt.Println("len(studentRank) = ", len(studentRank))
@@ -24,7 +29,7 @@ func main() {
 	fmt.Println("len(studentRank) = ", len(studentRank))
 
 	// maps are indexed by keys, not position
-	fmt.Println("studentRank[\"subbarao\"]=", studentRank["subbarao"])
+	fmt.Println("\nstudentRank[\"subbarao\"]=", studentRank["subbarao"])
 	fmt.Println("studentRank[\"Mahesh\"]=", studentRank["Mahesh"])
 
 	// To check for present of a key
@@ -32,20 +37,20 @@ func main() {
 	fmt.Printf("\nval=%v \t isKeyPresent=%v\n", val, isKeyPresent)
 
 	val, isKeyPresent = studentRank["superman"]
-	fmt.Printf("\nval=%v \t isKeyPresent=%v\n", val, isKeyPresent)
+	fmt.Printf("val=%v \t isKeyPresent=%v\n", val, isKeyPresent)
 
 	val = studentRank["Apparao"]
 	fmt.Println("val=", val)
 
-	// blank identifier _ -used when we dont need a value
+	// blank identifier _ - used when we dont need a value
 	_, isKeyPresent = studentRank["superman"]
 	fmt.Println("isKeyPresent:", isKeyPresent) // false
 
 	// To delete a key-value pair
-	fmt.Println("\n Before delete, studentRank=", studentRank)
+	fmt.Println("\nBefore delete, studentRank=", studentRank)
 	delete(studentRank, "Apparao")
 
-	// deleting a key which doesnt exits, wonyt through an error
+	// deleting a key which doesnt exits, won't through an error
 	delete(studentRank, "rajinikanth")
 	fmt.Println("After delete, studentRank=", studentRank)
 
@@ -67,4 +72,4 @@ Assignment:
 	Get 10 times values from runtime, store them in slice
 	Return number of times, each value is repeating
 
-*/
+*/ 
