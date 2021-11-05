@@ -19,7 +19,7 @@ func main() {
 	for key := range myMap {
 		keys = append(keys, key)
 	}
-	fmt.Println("All Keys 	:", keys)
+	fmt.Println("All Keys 	:", keys) // [4 1 2 3]
 	sort.Ints(keys)
 	fmt.Println("sorted keys:", keys)
 
@@ -30,7 +30,7 @@ func main() {
 	}
 	fmt.Println("\nAll values	:", values)
 	sort.Strings(values)
-	fmt.Println("sorted values:", values)
+	fmt.Println("sorted values  :", values)
 
 	myMap2 := map[int]string{
 		99: "nine",
@@ -48,9 +48,11 @@ func main() {
 	fmt.Println("myMap2:", myMap2)
 }
 
-// NOTE: When iterating over a map with a range loop, 
-// the iteration order is not specified and is not 
-// guaranteed to be the same from one iteration to the next.
+/*
+NOTE: When iterating over a map with a range loop, 
+	the iteration order is not specified and is not 
+	guaranteed to be the same from one iteration to the next.
 
-// when stable order is expected in iteration, sort keys
-// and access value from them.
+	when stable order is expected in iteration, sort keys
+	and access value from them.
+*/ 
