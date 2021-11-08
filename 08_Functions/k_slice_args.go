@@ -4,7 +4,7 @@ import "fmt"
 
 func findFirstOccurrence(searchNum int, nums []int) {
 	for index, value := range nums {
-		if searchNum == value {
+		if value == searchNum {
 			fmt.Printf("%d found at index %d\n", value, index)
 			return
 		}
@@ -19,6 +19,7 @@ func findAllOccurrences(searchNum int, nums []int) {
 			foundIndices = append(foundIndices, index)
 		}
 	}
+
 	if foundIndices != nil {
 		fmt.Printf("%d found at indices %d\n", searchNum, foundIndices)
 	} else {
@@ -28,6 +29,7 @@ func findAllOccurrences(searchNum int, nums []int) {
 
 func main() {
 	findFirstOccurrence(45, []int{56, 67, 45, 90, 45})
+	//                             0   1   2   3   4
 	findFirstOccurrence(78, []int{78, 78, 78})
 	findFirstOccurrence(87, []int{})
 	fmt.Println()
@@ -37,5 +39,4 @@ func main() {
 	findAllOccurrences(87, []int{})
 
 }
-
-// Assignment -- FindLastOccurrence()
+ 
