@@ -1,32 +1,29 @@
 package main
 
-//Importing ftm for basic functions
 import "fmt"
 
-//Declaring Variables
-var num1 float32
-var num2 float32
-var operator string
-
-//Declaring Function
+// Function Definitions
 func add(a float32, b float32) float32 {
 	return a + b
 }
 
-func substract(a float32, b float32) float32 {
+func subtract(a, b float32) float32 {
 	return a - b
 }
 
-func multiply(a float32, b float32) float32 {
+func multiply(a, b float32) float32 {
 	return a * b
 }
 
-func divide(a float32, b float32) float32 {
+func divide(a, b float32) float32 {
 	return a / b
 }
 
-//main function
 func main() {
+	// Declare variables
+	var num1, num2 float32
+	var operator string
+
 	fmt.Print("Enter No 1: ")
 	fmt.Scanln(&num1)
 
@@ -36,25 +33,18 @@ func main() {
 	fmt.Print("Enter operator: ")
 	fmt.Scanln(&operator)
 
-	if operator == "+" {
-		fmt.Print("Your answer is: ")
-		fmt.Println(add(num1, num2))
-		fmt.Println("\n")
-
-	} else if operator == "-" {
-		fmt.Print("Your answer is: ")
-		fmt.Println(substract(num1, num2))
-		fmt.Println("\n")
-
-	} else if operator == "*" {
-		fmt.Print("Your answer is: ")
-		fmt.Println(multiply(num1, num2))
-		fmt.Println("\n")
-
-	} else if operator == "/" {
-		fmt.Print("Your answer is: ")
-		fmt.Println(divide(num1, num2))
-		fmt.Println("\n")
+	switch operator {
+	case "+":
+		fmt.Println("Your answer is: ", add(num1, num2))
+	case "-":
+		fmt.Println("Your answer is: ", subtract(num1, num2))
+	case "*":
+		fmt.Println("Your answer is: ", multiply(num1, num2))
+	case "/":
+		fmt.Println("Your answer is: ", divide(num1, num2))
+	default:
+		fmt.Println("Invalid operator")
 	}
 
 }
+ 

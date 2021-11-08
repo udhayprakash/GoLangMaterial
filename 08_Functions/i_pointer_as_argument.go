@@ -2,16 +2,36 @@ package main
 
 import "fmt"
 
-func incr(p *int) int {
+// Call by Value -- local changes won't reflect outside
+func incrment(val int) int {
+	val++
+	return val
+}
+
+// Call by Reference -- local changes WILL reflect outside
+func incrmentPointer(p *int) int {
+	// fmt.Println("p = ", p, "*p =", *p)
 	*p++ // increments what p points to; does not change p
 	return *p
 }
 
 func main() {
 	v := 1
-	incr(&v)              // side effect: v is now 2
-	fmt.Println(incr(&v)) // "3" (and v is 3)
+	// Method 1 - updating the value
+	v = incrment(v) 
+	fmt.Println("v =", v)
+
+	v = incrment(v)
+	fmt.Println("v =", v)
+
+	// Method 2 - Using Pointer reference
+	incrmentPointer(&v)
+	fmt.Println("v =", v)
+
+	incrmentPointer(&v)
+	fmt.Println("v =", v)
 }
+
 
 /*
 Advantages:
@@ -23,4 +43,4 @@ Advantages:
 	- Each time we take the address of a variable or copy a pointer,
   	we create new aliases or ways to identify the same variable.
 
-*/
+*/ 
