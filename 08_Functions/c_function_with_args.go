@@ -14,16 +14,30 @@ Purpose: Function with one input argument and no return value
 */
 
 // Function Definitions
-func hello(name string) {
+func hello() {
+	fmt.Println("Hello World")
+}
+
+func hello2(name string) {
 	fmt.Println("Hello", name)
+}
+
+func hello3(name string, age int) {
+	fmt.Println("Hello", name, "! Your age is", age)
 }
 
 func main() {
 	// Function calls
-	//hello() // not enough arguments in call to hello
-	hello("Udhay") //Hello Python
-	//hello("Udhay", "Prakash")  // too many arguments in call to hello
+	hello()
 
-	// keyword arguments not possible
-	//hello(name="python")  // syntax error
+	// hello2() // not enough arguments in call to hello2
+	hello2("Danilo")
+
+	// hello2("Danilo", "Jo")  // too many arguments in call to hello2
+
+	// // keyword arguments not possible
+	// hello2(name = "Danilo") // syntax error: unexpected =, expecting comma or )
+
+	hello3("Danilo", 29)
 }
+ 
