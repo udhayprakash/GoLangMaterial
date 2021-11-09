@@ -19,7 +19,7 @@ func main() {
 	})
 	fmt.Println("After slicing, people:", people)
 
-		// Method 2
+	// Method 2
 	// It could also have been stored in an intermediate variable:
 	people1 := []string{"sudeep", "ram", "udhay", "prakash"}
 	lesserLength := func(i, j int) bool {
