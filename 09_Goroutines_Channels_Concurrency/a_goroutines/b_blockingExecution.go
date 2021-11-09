@@ -5,15 +5,14 @@ import (
 	"time"
 )
 
-
 func printItem(i int) {
-	fmt.Printf("Print Item: %2v\n", i + 1)
+	fmt.Printf("\tPrint Item: %2v\n", i+1)
 }
 
-func main(){
+func main() {
 	fmt.Println("Start Script")
 
-	for j := 0; j < 10; j++{
+	for j := 0; j < 10; j++ {
 		go printItem(j)
 	}
 	fmt.Println("End Script")
@@ -22,5 +21,24 @@ func main(){
 	time.Sleep(1000000)
 
 }
+
 // NOTE: Observe the go-routines may not execute in
 //       the order of initialization
+
+/*
+
+Blocking
+	statement1  -- 5 sec
+	statement2  -- 3 sec
+	statement3  -- 3 sec
+	--------------------
+			TOTAL: 5 + 3 + 3 = 11 sec
+
+Non-Blocking Execution    --> go routine
+	statement1  -- 5 sec
+	statement2  -- 3 sec
+	statement3  -- 3 sec
+	--------------------
+			TOTAL:             5 sec
+
+*/

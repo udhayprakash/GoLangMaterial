@@ -5,35 +5,33 @@ import (
 	"time"
 )
 
-func sleep250(){
+func sleep250() {
 	fmt.Println("sleep250 - start")
 	time.Sleep(250 * time.Millisecond)
 	fmt.Println("sleep250 - end")
 }
 
-
-func sleep500(){
+func sleep500() {
 	fmt.Println("sleep500 - start")
 	time.Sleep(500 * time.Millisecond)
 	fmt.Println("sleep500 - end")
 }
 
-func main(){
+func main() {
 	fmt.Println("main -start")
 	go sleep250()
 	go sleep500()
 
-	time.Sleep(1000 * time.Millisecond)
+	time.Sleep(500 * time.Millisecond)
 	fmt.Println("main - end")
 }
-/*
 
-BLOCKING EXECUTION
+/*
+Non-Blocking Execution:
 	main -start
 	sleep250 - start
-	sleep250 - end
 	sleep500 - start
+	sleep250 - end
 	sleep500 - end
 	main - end
-
 */

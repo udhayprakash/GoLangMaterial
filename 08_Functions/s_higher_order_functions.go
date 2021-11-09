@@ -26,10 +26,12 @@ func caesarCipher(character rune) rune {
 }
 
 func main() {
-	fmt.Println(strings.Map(add2, "abcdefgh"))
-	fmt.Println(strings.Map(add2, "bcdefghi"))
-	fmt.Println(strings.Map(add2, "Golang"))
-	fmt.Println(strings.Map(add2, "Udhay123"))
+	fmt.Println(strings.Map(add2, "abcdefgh")) // "bcdefghi"
+	fmt.Println(strings.Map(add2, "bcdefghi")) // "cdefghij"
+	fmt.Println(strings.Map(add2, "Golang"))   // "Hpmboh"
+	fmt.Println(strings.Map(add2, "Udhay123")) // "Veibz234"
 
 	fmt.Println(strings.Map(caesarCipher, "Let's attack at the river edge to night"))
+	// Ohw*v dwwdfn dw wkh ulyhu hgjh wr qljkw
+
 }

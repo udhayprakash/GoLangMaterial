@@ -12,8 +12,9 @@ Tail call Optimization (TCO)
 	- TCO is not implemented in Golang
 */
 
+// factorial(9) = 9 * 8 * 7 * 6 * .... * 1
 func factorial(num int) int {
-	// 9 -> 9 * 8 * 7 * 6 * .... * 1
+	// fmt.Println("\tnum =", num)
 	if num <= 1 {
 		return 1
 	}
@@ -25,6 +26,7 @@ func main() {
 	fmt.Println("factorial(9) = ", result)
 
 	fmt.Println("factorial(6):", factorial(6))
+
 
 	for i := 0; i < 12; i++ {
 		fmt.Printf("factorial(%2d)=%8d\n", i, factorial(i))
