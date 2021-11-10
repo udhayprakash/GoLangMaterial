@@ -13,9 +13,9 @@ Channels
             <-ch     // receive value from channel, ch, and discard value
     - close: 
         close(ch)    // closes channel, ch
-      - sets a flag, after which 
-          – Additional receives get zero value
-          – Additional sends panic
+  - sets a flag, after which 
+	  – Additional receives get zero value
+	  – Additional sends panic
       
     - Types
         1) Unbuffered (or synchronous) Channel
