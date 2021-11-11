@@ -19,7 +19,7 @@ func main() {
 		// fmt.Println(pair[0])
 		envNames = append(envNames, pair[0])
 	}
-	fmt.Println("ENv Names in your system:", envNames)
+	fmt.Println("ENV Names in your system:", envNames)
 
 	// Setting the environment variables
 	os.Setenv("langauge", "Golang")
@@ -45,9 +45,10 @@ func main() {
 		gopath:%s`, home, user, gopath)
 
 	fmt.Println(os.ExpandEnv(`
-		home  : $HOME
-		user  : $USER
-		gopath: $GOPATH`))
+	home  : $HOME
+	user  : $USER
+	gopath: $GOPATH
+	Trainer: $RAVI`))
 
 	path := os.Getenv("PATH")
 	gobin := filepath.Join(gopath, "bin")

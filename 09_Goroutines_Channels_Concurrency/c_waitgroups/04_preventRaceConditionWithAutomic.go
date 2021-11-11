@@ -18,14 +18,28 @@ var (
 	waitgroup sync.WaitGroup
 )
 
+func increment(name string) {
+	// Done() function used to tell that it is done.
+	defer waitgroup.Done()
+
+	for _, ch := range name {
+		fmt.Printf("%2d) name - %s - char - %q\n", c, name, ch)
+
+		// Atomic Functions for fix race condition
+		atomic.AddInt32(&c, 1)
+
+		// enter thread in the line by line
+		runtime.Gosched()
+	}
+}
+
 func main() {
 
+	// with the help of Add() function add one
 	// with the help of Add() function add one
 	// for each goroutine a count of total 3
 	waitgroup.Add(3)
 
-	// increment with the help
-	// of increment() function
 	go increment("one")
 	go increment("two")
 	go increment("three")
@@ -36,19 +50,4 @@ func main() {
 	// print the counter
 	fmt.Println("Counter:", c)
 
-}
-
-func increment(name string) {
-
-	// Done() function used to tell that it is done.
-	defer waitgroup.Done()
-
-	for range name {
-
-		// Atomic Functions for fix race condition
-		atomic.AddInt32(&c, 1)
-
-		// enter thread in the line by line
-		runtime.Gosched()
-	}
 }

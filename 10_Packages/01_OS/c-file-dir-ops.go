@@ -17,11 +17,9 @@ func main() {
 
 	fmt.Printf("os.DevNull       :%v\n", os.DevNull)
 
-
-
 	// To get the current working directory
 	cwd, err := os.Getwd()
-	// if err != nil {
+	// if err != nil{
 	// 	panic(err)
 	// }
 	CheckError(err)
@@ -37,6 +35,7 @@ func main() {
 
 	}
 }
+
 
 // ioutil.ReadDir("./") also gives same result.
 // But this module is getting deprecated

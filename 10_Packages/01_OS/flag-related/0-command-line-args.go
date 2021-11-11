@@ -4,19 +4,24 @@ package main
 import (
 	"fmt"
 	"os"
+	"reflect"
 )
 
+// Program to display the command line arguments
 func main() {
+	// var num1 int
+	// fmt.Print("Enter something:")
+	// fmt.Scanf("%d", &num1)
+
 	fmt.Println("The command line args given are:")
 
-	//fmt.Println("os.Args:", os.Args)
-	// os.Args - It is a slice of strings
-	programName := os.Args[0]
-	arguments := os.Args[1:]
+	// fmt.Println("os.Args:", os.Args)
 
-	fmt.Println("\tprogramName = ", programName)
-	fmt.Println("\targuments   = ", arguments)
+	fmt.Println("No of args:", len(os.Args))
+	fmt.Println("this file :", os.Args[0])
+	fmt.Println("Arguments:", os.Args[1:])
 
+	fmt.Println(reflect.TypeOf(os.Args))  // []string
 }
 
 // [_Command-line arguments_](http://en.wikipedia.org/wiki/Command-line_interface#Arguments)

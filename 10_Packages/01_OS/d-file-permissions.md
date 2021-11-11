@@ -41,5 +41,5 @@ chmod 777 FileForEveryone.txt
 3	    Execute + Write	        -wx
 4	    Read	                r--         4
 5	    Read + Execute	        r-x
-6	    Read +Write	            rw-
+6	    Read + Write	        rw-
 7	    Read + Write +Execute	rwx

@@ -6,11 +6,11 @@ import (
 )
 
 func worker(id int, jobs <-chan int, results chan<- int) {
-	for j := range jobs {
-		fmt.Println("worker", id, "started  job", j)
+	for eachJob := range jobs {
+		fmt.Printf("Worder:%d - Started  job:%v\n", id, eachJob)
 		time.Sleep(time.Second)
-		fmt.Println("worker", id, "finished job", j)
-		results <- j * 2
+		fmt.Printf("Worder:%d - Finished job:%v\n", id, eachJob)
+		results <- eachJob * 2
 	}
 }
 
@@ -18,7 +18,7 @@ func main() {
 
 	jobs := make(chan int, 100)
 	results := make(chan int, 100)
-
+	
 	for w := 1; w <= 3; w++ {
 		go worker(w, jobs, results)
 	}

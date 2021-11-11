@@ -1,22 +1,22 @@
 package main
-// To wait for multiple goroutines to finish, we can use a wait group.
+
 import (
 	"fmt"
 	"sync"
 	"time"
 )
+// To wait for multiple goroutines to finish, we can use a wait group.
 
 func worker(id int, wg *sync.WaitGroup) {
-	fmt.Printf("Worker %d starting\n", id)
+	fmt.Printf("Worder:%d - Started\n", id)
 
 	time.Sleep(time.Second)
-	fmt.Printf("Worker %d done\n", id)
+	fmt.Printf("\tWorder:%d - Finished\n", id)
 
 	wg.Done()
 }
 
 func main() {
-
 	var wg sync.WaitGroup
 
 	for i := 1; i <= 5; i++ {
@@ -25,4 +25,5 @@ func main() {
 	}
 
 	wg.Wait()
+
 }

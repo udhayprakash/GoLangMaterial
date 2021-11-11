@@ -3,19 +3,28 @@ package main
 import (
 	"encoding/base32"
 	"fmt"
+	"reflect"
 )
 
-func main() {
-	originalMessage := "abc123!?$*&()'-=@~"
-	fmt.Println("originalMessage=", originalMessage)
-
-	encodedMessage := base32.StdEncoding.EncodeToString([]byte(originalMessage))
-	fmt.Println("encodedMessage =", encodedMessage)
-
-	decodedMessage, _ := base32.StdEncoding.DecodeString(encodedMessage)
-	fmt.Println("decodedMessage =", string(decodedMessage))
+func CheckError(e error) {
+	if e != nil {
+		panic(e)
+	}
 }
+func main() {
+	orgMsg := "abc123!?$*&()'-=@~"
+	fmt.Println("orgMsg=", orgMsg, reflect.TypeOf(orgMsg))
 
+	byteStr := []byte(orgMsg)
+	fmt.Println("byteStr=", byteStr, reflect.TypeOf(byteStr))
+
+	encodeMsg := base32.StdEncoding.EncodeToString(byteStr)
+	fmt.Println("encodeMsg=", encodeMsg, reflect.TypeOf(encodeMsg))
+
+	decodeMsg, err := base32.StdEncoding.DecodeString(encodeMsg)
+	CheckError(err)
+	fmt.Println("decodeMsg=", decodeMsg, reflect.TypeOf(decodeMsg))
+}
 /*
 The types of encoding available are:
 	StdEncoding		: standard base64 encoding

@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-
+	// Scenario 1
 	c1 := make(chan string, 1)
 	go func() {
 		time.Sleep(2 * time.Second)
@@ -26,6 +26,7 @@ func main() {
 		fmt.Println("timeout 1")
 	}
 
+	// Scenario 2
 	c2 := make(chan string, 1)
 	go func() {
 		time.Sleep(2 * time.Second)

@@ -26,12 +26,12 @@ func main() {
 	check(err)
 	fmt.Println("Current Directory:", currDir)
 
+
+	// To create a sub-directory
 	// Cleanup - remove all if exits
 	if FileExits("subdir") == true {
 		os.RemoveAll("subdir") // rm -rf
 	}
-
-	// To create a sub-directory
 	err = os.Mkdir("subdir", 0755)
 	check(err)
 
