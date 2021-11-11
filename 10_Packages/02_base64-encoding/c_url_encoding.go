@@ -7,7 +7,7 @@ import (
 
 func main() {
 	// Here's the `string` we'll encode/decode.
-	originalMessage := "abc123!?$*&()'-=@~"
+	originalMessage := "ab c123!?$*&()'-=@~"
 	fmt.Println("originalMessage=", originalMessage)
 
 	encodedMessage := base64.StdEncoding.EncodeToString([]byte(originalMessage))
@@ -24,5 +24,5 @@ func main() {
 	fmt.Println("decodedMessage =", string(decodedMessage))
 }
 
-//YWJjMTIzIT8kKiYoKSctPUB+
-//YWJjMTIzIT8kKiYoKSctPUB%2B
+// YWIgYzEyMyE/JComKCknLT1Afg==
+// YWIgYzEyMyE_JComKCknLT1Afg==

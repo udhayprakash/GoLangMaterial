@@ -30,9 +30,9 @@ func main() {
 	m, _ := time.ParseDuration("1m30s")
 	fmt.Printf("Take off in t-%.0f seconds.\n", m.Seconds())
 
-	t1 := time.Date(2019, time.December, 15, 0, 0, 0, 0, time.UTC)
-	t2 := time.Date(2020, time.October, 16, 0, 0, 0, 0, time.UTC)
-	fmt.Println(t2.Sub(t1).String()) // 7344h0m0s
+	t1 := time.Date(2019, time.December, 15, 0, 9, 0, 0, time.UTC)
+	t2 := time.Date(2021, time.October, 16, 0, 32, 4, 0, time.UTC)
+	fmt.Println(t2.Sub(t1).String()) // 16104h23m4s
 
 	d := time.Date(2000, 2, 1, 12, 30, 0, 0, time.UTC)
 	year, month, day := d.Date()
