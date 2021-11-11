@@ -7,32 +7,29 @@ send-only 		: chan<- int
 receive-only	: <-chan int
 
 */
-
-func counter(out chan<- int){
-	// out - send-only channel
+func counter(outChannel chan<- int){
+	// outChannel - send-only channel
 	for x := 0; x < 10; x++ {
-		out <- x
+		outChannel <- x
 	}
-	close(out)
+	close(outChannel)
 }
 
-
-func squarer(out chan<- int, in <-chan int) {
-	// out - send-only channel
-	// in  - receive-only channel
-	for v := range in {
-		out <- v * v
+func squarer(outChannel chan<- int, inChannel <-chan int ) {
+	// outChannel - send-only channel
+	// inChannel  - receive-only channel
+	for val := range inChannel {
+		outChannel <- val * val
 	}
-	close(out)
+	close(outChannel)
 }
 
-func printer(in <-chan int) {
-	// in  - receive-only channel
-	for v := range in {
+func printer(inChannel <-chan int){
+	// inChannel  - receive-only channel
+	for v := range inChannel {
 		fmt.Println(v)
-	}
+	}	
 }
-
 
 func main() {
 	naturals := make(chan int)

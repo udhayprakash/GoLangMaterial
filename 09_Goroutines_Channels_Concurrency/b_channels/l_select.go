@@ -27,15 +27,19 @@ func main() {
 		c2 <- "two"
 	}()
 
+	// msg1 := <-c1
+	// msg2 := <-c2
+	// fmt.Println("msg1 =", msg1)
+	// fmt.Println("msg2 =", msg2)
+
 	for i := 0; i < 2; i++ {
 		select {
 		case msg1 := <-c1:
-			fmt.Println("received", msg1)
+			fmt.Println("msg1 received", msg1)
 		case msg2 := <-c2:
-			fmt.Println("received", msg2)
+			fmt.Println("msg2 received", msg2)
 		}
 	}
-
 	// select - works like a switch but for channels
 
 }
