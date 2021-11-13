@@ -8,8 +8,7 @@ import (
 // logrus has seven log levels: Trace, Debug, Info, Warn, Error, Fatal, and Panic.
 func main() {
 	// default log level is INFO. To set the level
-	log.SetLevel(log.TraceLevel) // log.WarnLevel
-
+	log.SetLevel(log.DebugLevel) // log.WarnLevel
 
 	log.Trace("Something very low level.")
 	log.Debug("Useful debugging information.")

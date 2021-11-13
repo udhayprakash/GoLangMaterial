@@ -6,18 +6,6 @@ import (
 	"net/http"
 )
 
-func main() {
-	// Routing
-	http.HandleFunc("/hello", hello)
-	http.HandleFunc("/headers", requestHeaders)
-	http.HandleFunc("/request-details", requestDetails)
-
-	log.Println("Starting server at 8090 ...")
-
-	// Starting server - default is localhost
-	http.ListenAndServe(":8090", nil)
-}
-
 func hello(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprintf(w, "hello\n")
 }
@@ -42,4 +30,16 @@ func requestDetails(resp http.ResponseWriter, req *http.Request) {
 	fmt.Fprintf(resp, "User      : %v\n", req.URL.User)
 	fmt.Fprintf(resp, "IsAbs()   : %v\n", req.URL.IsAbs())
 	fmt.Fprintf(resp, "Scheme    : %v\n", req.URL.Scheme)
+}
+
+func main() {
+	// Routing
+	http.HandleFunc("/hello", hello)
+	http.HandleFunc("/headers", requestHeaders)
+	http.HandleFunc("/request-details", requestDetails)
+
+	log.Println("Starting server at 8090 ...")
+
+	// Starting server - default is localhost
+	http.ListenAndServe("localhost:8090", nil)
 }
