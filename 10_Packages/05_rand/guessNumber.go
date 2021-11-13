@@ -13,7 +13,8 @@ func main() {
 	)
 	rand.Seed(time.Now().Unix())
 	n := min + rand.Intn(max-min+1)
-	fmt.Printf("I thought of a number between %d and %d... Guess it!\n", min, max)
+	// fmt.Println(n)
+
 loop:
 	for {
 		var guess int

@@ -13,6 +13,8 @@ var onlyOnce sync.Once
 var dice = []int{1, 2, 3, 4, 5, 6}
 
 func rollDice() int {
+	// rand.Seed(time.Now().UnixNano())
+	// fmt.Println(1 + rand.Intn(6-1))
 
 	onlyOnce.Do(func() {
 		rand.Seed(time.Now().UnixNano()) // only run once

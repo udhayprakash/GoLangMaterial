@@ -7,6 +7,9 @@ import (
 
 func main() {
 
+	var num1 int = 99
+	fmt.Println(num1, string(num1)) // 99  c
+
 	// Create our number
 	var myNumber uint64
 	myNumber = 18446744073709551615

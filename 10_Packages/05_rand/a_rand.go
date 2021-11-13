@@ -10,7 +10,8 @@ func main() {
 	fmt.Println("rand.Intn(100):", rand.Intn(100))
 	fmt.Println("rand.Intn(100):", rand.Intn(100))
 	fmt.Println("rand.Intn(100):", rand.Intn(100))
-	fmt.Println("rand.Intn(100):", rand.Intn(100))
+	// between 0 to 25
+	fmt.Println("rand.Intn(25) :", rand.Intn(25))
 
 	// `rand.Float64` returns a `float64` `f`,
 	// `0.0 <= f < 1.0`.

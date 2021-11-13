@@ -49,6 +49,7 @@ func main() {
 		       1  <- Remainder
 	*/
 	fmt.Println("17/2   = ", 17/2)   // 8  ==> Quotient
+	fmt.Println("17%2   = ", 17%2)   // 8  ==> Remainder
 	fmt.Println("17/2.0 = ", 17/2.0) // 8.5  ===> true result
 
 	/*

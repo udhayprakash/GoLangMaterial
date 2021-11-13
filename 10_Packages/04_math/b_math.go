@@ -12,10 +12,10 @@ func main() {
 	Abs(NaN) = NaN
 	*/
 	x := math.Abs(-2)
-	fmt.Printf("%.1f\n", x)
+	fmt.Printf("%.1f\n", x) // 2.0
 
 	y := math.Abs(2)
-	fmt.Printf("%.1f\n", y)
+	fmt.Printf("%.1f\n", y) // 2.0
 
 	// Trigonometric functions
 	// Acos(x) = NaN if x < -1 or x > 1
