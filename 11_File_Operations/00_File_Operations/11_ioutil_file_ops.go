@@ -10,6 +10,7 @@ func check(err error) {
 		panic(err)
 	}
 }
+
 func main() {
 	// Reading content from a file
 	content, err := ioutil.ReadFile("myFile.txt")

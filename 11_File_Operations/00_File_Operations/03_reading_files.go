@@ -36,5 +36,5 @@ func main(){
 	fileContent := string(bs)
 	fmt.Println("fileContent:", fileContent)
 
-	//     filename, _ := filepath.Abs("./fruits.yml")
+	// filename, _ := filepath.Abs("./fruits.yml")
 }

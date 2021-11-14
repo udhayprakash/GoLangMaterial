@@ -6,13 +6,6 @@ import (
 	"os"
 )
 
-func main() {
-	err := WriteToFile("result.txt", "Hello Readers of golangcode.com\n")
-	if err != nil {
-		log.Fatal(err)
-	}
-}
-
 // WriteToFile will print any string of text to a file safely by
 // checking for errors and syncing at the end.
 func WriteToFile(filename string, data string) error {
@@ -27,4 +20,11 @@ func WriteToFile(filename string, data string) error {
 		return err
 	}
 	return file.Sync()
+}
+
+func main() {
+	err := WriteToFile("result.txt", "Hello Readers of golangcode.com\n")
+	if err != nil {
+		log.Fatal(err)
+	}
 }

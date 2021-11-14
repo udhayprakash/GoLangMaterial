@@ -5,11 +5,11 @@ import (
 	"os"
 )
 
-func main(){
+func main() {
 	/*
-	.   	current directory
-	.. 		parent directory
-	../.. 	parent's parent directory
+		.   	current directory
+		.. 		parent directory
+		../.. 	parent's parent directory
 
 	*/
 	dir, err := os.Open("../..")
@@ -24,4 +24,5 @@ func main(){
 	}
 	for _, fi := range fileInfos {
 		fmt.Println(fi.Name())
-	}}
+	}
+}

@@ -7,23 +7,21 @@ import (
 	"os"
 )
 
-func main() {
-	inputFile, err := os.Open("file.txt.compressed")
-
-	if err != nil {
-		fmt.Println(err)
+func CheckError(e error, msg string) {
+	if e != nil {
+		fmt.Println(e)
 		os.Exit(1)
 	}
 
+}
+
+func main() {
+	inputFile, err := os.Open("file.txt.compressed")
+	CheckError(err, "Unable to Open file.txt.compressed")
 	defer inputFile.Close()
 
 	outputFile, err := os.Create("file.txt.decompressed")
-
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
-	}
-
+	CheckError(err, "Unable to Create file.txt.decompressed")
 	defer outputFile.Close()
 
 	flateReader := flate.NewReader(inputFile)

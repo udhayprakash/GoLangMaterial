@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func main(){
+func main() {
 	file, err := os.Create("test.txt")
 	if err != nil {
 		// handle the error here

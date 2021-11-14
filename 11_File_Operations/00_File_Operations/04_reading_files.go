@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 )
 
-func main(){
+func main() {
 	fileContent, err := ioutil.ReadFile("myFile.txt")
 	if err != nil {
 		fmt.Println(err)

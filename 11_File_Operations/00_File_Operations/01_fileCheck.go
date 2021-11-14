@@ -5,6 +5,15 @@ import (
 	"os"
 )
 
+func fileExists(filename string) bool {
+	info, err := os.Stat(filename)
+	if os.IsNotExist(err) {
+		return false
+	}
+	fmt.Println("\n\tinfo.IsDir():", info.IsDir())
+	return info != nil
+}
+
 func main() {
 	//// if the file is not present
 	//info, err := os.Stat("example.txt")
@@ -25,13 +34,4 @@ func main() {
 		}
 	}
 
-}
-
-func fileExists(filename string) bool {
-	info, err := os.Stat(filename)
-	if os.IsNotExist(err) {
-		return false
-	}
-	fmt.Println("\n\tinfo.IsDir():", info.IsDir())
-	return info != nil
 }
