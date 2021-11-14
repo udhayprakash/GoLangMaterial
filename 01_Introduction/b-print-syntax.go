@@ -41,3 +41,5 @@ func main() {
 	print("Hello world\n")
 	println("Hello world")
 }
+
+// Ref: https://cheatography.com/fenistil/cheat-sheets/go-fmt-formattings/
