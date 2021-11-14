@@ -27,9 +27,12 @@
 
     when opening file with os.OpenFile, flags control how the file behaves.
 
+ 	// Exactly one of O_RDONLY, O_WRONLY, or O_RDWR must be specified.
     os.O_RDONLY             open the file read only
     os.O_WRONGLY            open the file write only
     os.O_RDWR               open the file read write
+    
+    // The remaining values may be or'ed in to control behavior.
     os.O_APPEND             append data to the file when writing
     os.O_CREATE             create a new file if none exists
     os.O_EXCL               used with O_CREATE, file must not exit
@@ -77,3 +80,21 @@
                     byteSlice, err := ioutil.ReadAll(file)
     Read from offset
                     n, err := file.ReadAt(byteSlice, 10)
+
+## Work with directories
+
+    create a directory
+                    err := os.MKdir("myDir", 0600)
+    Recursively create a directory
+                    err := os.MKdirAll("dir/subdir/myDir", 0600)
+    Delete a directory recursively
+                    err := os.RemoveAll("dir/")
+    List directory files
+                    fileInfo, err := ioutil.ReadDir(".")
+
+## Temporary files and directories
+
+    create temp dir
+                    ioutil.TempDir(dir, prefix string)(name string, err error)
+    create temp file
+                    ioutil.TempFile(dir, prefix string)(f *os.File, err error)
