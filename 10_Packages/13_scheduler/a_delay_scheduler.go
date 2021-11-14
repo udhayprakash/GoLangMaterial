@@ -17,6 +17,13 @@ import (
 		- Cancel job
 		- Failure retry
 */
+func task1(name string, age int) {
+	fmt.Printf("run task1, with arguments: %s, %d\n", name, age)
+}
+
+func task2() {
+	fmt.Println("run task2, without arguments")
+}
 
 func main() {
 	s, err := scheduler.NewScheduler(1000)
