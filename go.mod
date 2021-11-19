@@ -3,13 +3,14 @@ module github.com/udhayprakash/GoLangMaterial
 go 1.15
 
 require (
-	github.com/PuerkitoBio/goquery v1.7.1
+	github.com/PuerkitoBio/goquery v1.8.0
 	github.com/gin-gonic/gin v1.7.4
 	github.com/go-playground/validator/v10 v10.9.0 // indirect
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/goml/gobrain v0.0.0-20201212123421-2e2d98ca8249 // indirect
 	github.com/gorilla/mux v1.8.0
+	github.com/jarcoal/httpmock v1.0.8 // indirect
 	github.com/jinzhu/now v1.1.1
 	github.com/joho/godotenv v1.3.0
 	github.com/json-iterator/go v1.1.11 // indirect
