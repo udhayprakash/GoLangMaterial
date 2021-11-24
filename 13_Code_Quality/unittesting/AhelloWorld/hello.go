@@ -1,3 +1,6 @@
+//+build !test
+
+// empty line after build tag line is mandatory
 package main
 
 import (

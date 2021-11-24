@@ -6,7 +6,7 @@ import (
 
 func TestHello(t *testing.T) {
 	got := Hello()
-	expecting := "Hello world"
+	expecting := "Hello World"
 
 	if got != expecting {
 		t.Errorf("Got %s \t Expecting:%s", got, expecting)

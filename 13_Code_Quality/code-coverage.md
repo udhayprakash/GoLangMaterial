@@ -17,3 +17,15 @@ mocking
 
 
 cheat-sheet: https://steveazz.xyz/blog/go-performance-tools-cheat-sheet/
+
+
+
+//+build build_on_this_tag !not_on_this
+
+package somePackage
+
+// ...code...
+
+// Use:
+// go build -tags build_on_this_tag
+// more info https://golang.org/pkg/go/build/
