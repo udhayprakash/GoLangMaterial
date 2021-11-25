@@ -84,8 +84,12 @@ go tool dist list
     go build main.go
     go build TasksDir  // parses all .go files, except *_test.go files
 
-    -o flag to change name of binary
-    go build -o tasks
+
+    go build -o tasks // -o flag to change name of binary
+
+    go build -ldflags "-s -w" main.go
+
+        ldflags stand for linker flags, it passes flags to underlying Go toolchain linker. The flags -s & -w will disable creation of symbol tables for the compiler and hence reduce down the size of the executable.
 
 ### Build time
 
@@ -120,10 +124,11 @@ go tool dist list
 https://devdocs.io/go/
 https://pkg.go.dev/
 
-# Importance of GoLang 
-- A containerized Golang API runs beautiflly on Amazon ECS. 
-- Goroutines have growable segmented stacks. That means they will use more memory only when needed. 
-- Goroutines have a faster startup time than threads. 
+# Importance of GoLang
+
+- A containerized Golang API runs beautiflly on Amazon ECS.
+- Goroutines have growable segmented stacks. That means they will use more memory only when needed.
+- Goroutines have a faster startup time than threads.
 - Goroutines come with built-in primitives to communicate safely between themselves (channels).
-- Goroutines allow you to avoid having to resort to mutex locking when sharing data structures. 
-- Goroutines and OS threads do not have 1:1 mapping. A single goroutine can run on multiple threads. Goroutines are multiplexed into small number of OS threads. 
+- Goroutines allow you to avoid having to resort to mutex locking when sharing data structures.
+- Goroutines and OS threads do not have 1:1 mapping. A single goroutine can run on multiple threads. Goroutines are multiplexed into small number of OS threads.
