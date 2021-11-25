@@ -10,6 +10,7 @@ func check(e error) {
 		panic(e)
 	}
 }
+
 func main() {
 	p := fmt.Println
 	t := time.Now()
