@@ -1,5 +1,4 @@
-Testing in Go
-=============
+# Testing in Go
 
     Rules
     -----
@@ -7,22 +6,22 @@ Testing in Go
     2) The test function must start with the word Test
     3) The test function takes one argument only t *testing.T
 
-    To run all test scripts in current directory , 
+    To run all test scripts in current directory ,
         go test ./...
-    
+
     To check the test coverage,
         Step 1: go test -coverprofile cover.out
-        Step 2: go tool cover -html=cover.out 
+        Step 2: go tool cover -html=cover.out
                 It opens cover.out in your default browser
+        Step 3:
+            go test -v -coverage=./.. -coverprofile=coverage.out - json ./.. >test-report.json
 
+## BenchMarking
 
-BenchMarking
--------------
-
-    1) benchmarking function definition as 
+    1) benchmarking function definition as
             func BenchmarkXxx(*testing.B)
     2) go test -bench
     go test -cpu
 
 TODO
-https://dev.to/quii/learn-go-by-writing-tests--m63  
+https://dev.to/quii/learn-go-by-writing-tests--m63

@@ -90,10 +90,9 @@ func main() {
 
 	// ---------- Multiple iotas in a single line
 	const (
-		q1, q2, q3= iota, iota, iota
+		q1, q2, q3 = iota, iota, iota
 		r1, r2, r3
 		s1, s2, s3
-
 	)
 	fmt.Printf(`
 	q1: %d, q: %d, q3: %d
@@ -101,4 +100,3 @@ func main() {
 	s1: %d, s2: %d, s3: %d
 	`, q1, q2, q3, r1, r2, r3, s1, s2, s3)
 }
- 
