@@ -5,6 +5,11 @@ import (
 	"time"
 )
 
+/*
+Try time.Now() in Go PLayground
+It will return 2009-11-10 23:00:00 +0000 UTC m=+0.000000001
+Because, It is the time and date of Go Lang's birthday.
+*/
 func main() {
 	now := time.Now()       // current local time
 	secs := now.Unix()      // number of seconds since January 1, 1970 UTC

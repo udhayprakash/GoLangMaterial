@@ -1,9 +1,9 @@
 package main
 
-// go get "github.com/Sirupsen/logrus"
+// go get "github.com/sirupsen/logrus"
 
 import (
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 )
 
 func main() {
