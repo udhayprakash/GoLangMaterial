@@ -5,7 +5,6 @@ import (
 	"reflect"
 )
 
-
 func main() {
 	// changing value after declaration
 	var x string
@@ -34,7 +33,11 @@ func main() {
 
 	fmt.Println()
 
-	y := 5; y += 1 // ; - statement separator
+	// y := 5
+	// y += 1
+
+	y := 5
+	y += 1 // ; - statement separator
 	fmt.Println("y =", y)
 	fmt.Println("reflect.TypeOf(y)   	=", reflect.TypeOf(y))
 
@@ -44,6 +47,11 @@ func main() {
 	fmt.Println("reflect.TypeOf('a') 	=", reflect.TypeOf('a'))  // int32
 	fmt.Println("reflect.TypeOf(\"a\")	=", reflect.TypeOf("a")) // string
 	fmt.Println("reflect.TypeOf(true)	=", reflect.TypeOf(true)) // bool
+	fmt.Println()
+
+	z := 'a'
+	fmt.Println("reflect.TypeOf(z).String()=", reflect.TypeOf(z).String())
+	fmt.Println("reflect.TypeOf(z).Kind()  =", reflect.TypeOf(z).Kind())
 	fmt.Println()
 
 	fmt.Printf("%T\n", 0)      // "int"

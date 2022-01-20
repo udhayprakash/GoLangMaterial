@@ -1,25 +1,34 @@
 package main
 
+import "fmt"
+
 /*
 Fahrenheit into Celsius
         C = (F - 32) * 5/9
 */
 
-import "fmt"
-
 func main() {
 	const F float32 = 100
 	const C float32 = (F - 32) * 5 / 9
-	fmt.Println("F = ", F)
-	fmt.Println("C = ", C)
+
+	fmt.Printf(`
+		F = %f
+		C = %f
+	`, F, C)
 
 	var F1 float32
 	fmt.Print("Please Enter temperature in degrees Fahrenheit:")
 	fmt.Scanf("%f", &F1)
+
 	C1 := (F1 - 32) * 5 / 9
-	fmt.Println("F1 = ", F1)
-	fmt.Println("C1 = ", C1)
+	fmt.Printf(`
+		F1 = %f 
+		C1 = %f`, F1, C1)
 }
 
-// Assignment : take two values in run time and compute +, -, *, /
- 
+/*
+asignments:
+	1) WAP to implement celcius to fahrenheit conversion
+	2) WAP to take two values in runtime and compute +, -, *, /
+
+*/

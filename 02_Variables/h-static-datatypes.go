@@ -1,20 +1,22 @@
-package main 
+package main
 
 import "fmt"
 
 var data float32 = 6.7
 
-func main(){
+// data = 3453 // here, we can only declare; not update values
+
+func main() {
 
 	fmt.Printf("data = %v type = %T\n", data, data) // package-level value
 
-	var data string 
+	var data string
 	fmt.Printf("data = %v type = %T\n", data, data)
 
 	data = "first"
 	fmt.Printf("data = %v type = %T\n", data, data)
 
-	data = "juayguyagsd8768763*&^*&^(*)("
+	data = "juayguya gsd8768763*&^*&^(*)("
 	fmt.Printf("data = %v type = %T\n", data, data)
 	// NOTE: Modified value should be of same data type
 
@@ -22,18 +24,12 @@ func main(){
 	fmt.Printf("data = %v type = %T\n", data, data)
 
 	// data = 'a'
-	// fmt.Printf("data = %v type = %T\n", data, data)
-	// error: incompatible types in assignment 
-
+	// cannot use 'a' (type untyped rune) as type string in assignment
 
 	// data = 3453
-	// fmt.Printf("data = %v type = %T\n", data, data)
-	// error: incompatible types in assignment (cannot use type int as type string)
+	// cannot use 3453 (type untyped int) as type string in assignment
 
 	// var data int = 3453
-	// fmt.Printf("data = %v type = %T\n", data, data)
-	// error: redefinition of âdataâ
-}
 
-	//NOTE: A variable cant be declared more than once
- 
+}
+    //NOTE: A variable cant be declared more than once

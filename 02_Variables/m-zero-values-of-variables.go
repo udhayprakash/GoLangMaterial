@@ -32,6 +32,7 @@ ZERO VALUES:
 	var f float32 // defaults to 0
 	var c complex64 // defaults to 0
 	var b bool // defaults to false
+
 	var arr [2]int // defaults to [0 0]
 	var obj struct {
 		a bool

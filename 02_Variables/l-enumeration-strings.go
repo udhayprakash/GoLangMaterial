@@ -1,12 +1,19 @@
-package main 
-
+package main
 
 import "fmt"
 
-// data type aliases
+// data type alias
 type Direction int
 
 func main() {
+	const (
+		north int = iota
+		east
+		south
+		west
+	)
+	fmt.Println(north, east, south, west)
+
 	const (
 		North Direction = iota
 		East
@@ -14,7 +21,6 @@ func main() {
 		West
 	)
 
-	fmt.Println("South     =", South)
-	fmt.Println("NorthEast =", North, East)
+	fmt.Println(North, East, South, West)
 
 }

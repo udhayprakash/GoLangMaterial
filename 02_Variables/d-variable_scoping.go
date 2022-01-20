@@ -5,11 +5,14 @@ import "fmt"
 var x string = "Global Scope"
 
 func main() {
+	fmt.Println("In main()       :", x, &x)
+
 	var x string = "Block Scope"
 
 	// Local will be preferred
 	fmt.Println("In main()       :", x, &x)
 
+	// function call
 	myFunc()
 	anotherFunc(x)
 }

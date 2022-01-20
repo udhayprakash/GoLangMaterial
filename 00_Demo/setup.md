@@ -52,6 +52,6 @@ https://goplay.space/
 
         rm go1.11.linux-amd64.tar.gz
 
-## Windows Installation Procedure
+## Windows/MAC Installation Procedure
 
 Go to Download Link (https://golang.org/dl) and download the corresponding executable

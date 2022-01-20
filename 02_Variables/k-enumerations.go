@@ -12,12 +12,13 @@ Purpose: Enum
 */
 
 func main() {
-	// const (
-	// 	a1 = 10
-	// 	a2 = 11
-	// 	a3 = 12
-	// 	a4 = 13
-	// )
+	const (
+		a1 = 10
+		a2 = 11
+		a3 = 12
+		a4 = 13
+	)
+	fmt.Println(a1, a2, a3, a4) // 10 11 12 13
 
 	/*
 		Go does not have enumerate types
@@ -26,51 +27,55 @@ func main() {
 		const declaration to get a series of increasing values.
 	*/
 	const (
-		C0 = iota
-		C1 = iota
-		C2 = iota
+		b1 = iota
+		b2 = iota
+		b3 = iota
 	)
+	fmt.Println(b1, b2, b3) // 0 1 2
 
-	fmt.Println(C0, C1, C2) // "0 1 2"
-	fmt.Println()
-
-	// ---------------------------------------
-	// When an initialization expression is omitted for a const,
-	// 	it reuses the preceding expression.
 	const (
-		red   = iota // red == 0
-		blue         // blue == 1
-		green        // green == 2
+		c1 = 10 + iota
+		c2 = iota
+		c3 = iota
 	)
-	fmt.Println("red   =", red)
-	fmt.Println("blue  =", blue)
-	fmt.Println("green =", green)
-	fmt.Println()
+	fmt.Println(c1, c2, c3) // 10 1 2
+
+	const (
+		d1 = 10 + iota
+		d2
+		d3
+	)
+	fmt.Println(d1, d2, d3) // 10 11 12
+
+	const (
+		e1 = 10
+		e2
+		e3
+	)
+	fmt.Println(e1, e2, e3) // 10 10 10
 
 	// ---------COUNTING BACKWARD----------------
 	const (
-		a = (10 - iota) // 10 -0 = 10
-		b               // 10 -1 = 9
-		c               // 10 - 2 = 8
+		f1 = (10 - iota) // 10 - 0 = 10
+		f2               // 10 -1  = 9
+		f3               // 10 -2 = 8
 	)
-	fmt.Println(a, b, c) // 10 9 8
+	fmt.Println(f1, f2, f3) // 10 9 8
 
 	const (
-		a1 = (0 - iota) // 0 -0 = 0
-		b1              // 0 -1 = -1
-		c1              // 0 - 2 = -2
+		g1 = (0 - iota) // 0 - 0 = 0
+		g2
+		g3
 	)
-	fmt.Println(a1, b1, c1) // 0 -1 -2
+	fmt.Println(g1, g2, g3) // 0 -1 -2
 
-	// ---------------------------------------
 	const (
-		p1 = iota + 3
+		h1 = iota + 3
 		_  // blank identifier to skip a value in a list of constants.
-		p3
-		p4
+		h2
+		h3
 	)
-	fmt.Println(p1, p3, p4) // 3 5 6
-	fmt.Println()
+	fmt.Println(h1, h2, h3) // 3 5 6
 
 	// ---------------------------------------
 	const (
@@ -94,9 +99,13 @@ func main() {
 		r1, r2, r3
 		s1, s2, s3
 	)
+
+	fmt.Printf("q1: %d, q: %d, q3: %d r1: %d, r2: %d, r3: %d s1: %d, s2: %d, s3: %d", q1, q2, q3, r1, r2, r3, s1, s2, s3)
+
+	// multi-line strings - `` quotes
 	fmt.Printf(`
-	q1: %d, q: %d, q3: %d
-	r1: %d, r2: %d, r3: %d
-	s1: %d, s2: %d, s3: %d
-	`, q1, q2, q3, r1, r2, r3, s1, s2, s3)
+	q1: %d, q: %d, q3: %d 
+	r1: %d, r2: %d, r3: %d 
+	s1: %d, s2: %d, s3: %d`, q1, q2, q3, r1, r2, r3, s1, s2, s3)
+
 }

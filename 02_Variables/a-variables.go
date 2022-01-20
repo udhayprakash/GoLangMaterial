@@ -17,7 +17,7 @@ func main() {
 	var b = 12312323
 	fmt.Println("b =", b)
 
-	var c float64 = 123.45
+	var c = 123.45
 	fmt.Println("c =", c)
 
 	var c1 float64 = 12345
@@ -47,9 +47,8 @@ func main() {
 	fmt.Println("j:", j)
 	fmt.Println("k:", k)
 
-	j= 88
+	j = 88 //  updating value, for already created variable
 	fmt.Println("j:", j)
-
 
 	// `:=` syntax for declaring and initializing a variable.
 	// E.g. for `var l string = "apple"` in this case.
@@ -63,6 +62,4 @@ func main() {
 	fmt.Println("o:", o)
 	fmt.Println("p:", p)
 	fmt.Println("q:", q)
-
 }
- 

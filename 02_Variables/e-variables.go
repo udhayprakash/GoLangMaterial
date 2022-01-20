@@ -35,6 +35,11 @@ func main() {
 	fmt.Println("b=", b)
 	fmt.Println("c=", c)
 
+	
 	myRune := 'a'
-	fmt.Println(myRune)
+	fmt.Println(myRune) // 97
+
+	myRune = 'A'
+	fmt.Println(myRune) // 65
+
 }
