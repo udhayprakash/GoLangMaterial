@@ -22,30 +22,31 @@ func main() {
 	fmt.Println("a") // output: a
 	fmt.Println('a') // output: 97
 
-	fmt.Println("â", 'â')
+	fmt.Println("â", 'â') // â 226
 
-	
 	fmt.Println("\t", '\t')
 	fmt.Println("\n", '\n')
 	fmt.Println("\\", '\\')
 
+	fmt.Println("var/user/somebody")
+	fmt.Println("C:\newdir\newfile")
 	fmt.Println("C:\\newdir\\newfile")
 
-	name:= "Gautchi"
+	name := "Golang"
 	fmt.Println("name = ", name)
 	fmt.Printf("name = %s\n", name)
 
 	// Runes are printed with %c, or with %q if quoting is desired:
 	ascii := 'a'
-	unicode := 'D'
-	newline := '\n'
-	
-	fmt.Printf("%d %c %q\n", ascii, ascii, ascii) // 97 a 'a'
-	fmt.Printf("%d %[1]c %[1]q\n", ascii) // 97 a 'a'
 
+	fmt.Printf("%d %c %q\n", ascii, ascii, ascii) // 97 a 'a'
+	fmt.Printf("%d %c %q\n", ascii)               // 97 %!c(MISSING) %!q(MISSING)
+	fmt.Printf("%d %[1]c %[1]q\n", ascii)         // 97 a 'a'
+
+	unicode := 'D'
 	fmt.Printf("%d %[1]c %[1]q\n", unicode) // 68 D 'D'
+
+	newline := '\n'
 	fmt.Printf("%d %[1]c %[1]q\n", newline) // 10  	'\n'
 
-
-
-} 
+}

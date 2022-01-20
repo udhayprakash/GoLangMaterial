@@ -4,16 +4,18 @@ import (
 	"fmt"
 	"math"
 	"math/cmplx"
-	"reflect"
 )
 
 func main() {
-	var cNum complex64 = 3 + 4i
-	fmt.Println("cNum                   =", cNum)
-	fmt.Println("reflect.TypeOf(cNum)   =", reflect.TypeOf(cNum))
+	var cNum complex128 = 3 + 4i
+	fmt.Printf("value = %v  datatype  = %T\n", cNum, cNum)
 	fmt.Println()
 
+	fmt.Println("cmplx.Abs(cNum) =", cmplx.Abs(cNum))
+
 	fmt.Println("cmplx.Abs(3+4i)        =", cmplx.Abs(3+4i))
+	// sqrt of (sum of real value squre and imag value square)
+
 	fmt.Println("cmplx.Conj(3+4i)       =", cmplx.Conj(3+4i))
 
 	fmt.Println("cmplx.Exp(1i*math.Pi)+1=", cmplx.Exp(1i*math.Pi)+1)

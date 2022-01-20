@@ -6,7 +6,16 @@ import (
 
 /*
 Purpose: Operator precedence
-	- PEDMAS
+	 - BODMAS
+	 
+		B - Brackets
+		O - Order of powers or roots
+		D - Division
+		M - Multiplication 
+		A - Addition
+		S - Subtraction
+	 
+
 Unary operators
 	- have the highest precedence and bind the strongest.
 
@@ -36,13 +45,21 @@ Examples
 */
 
 func main() {
-	// x, y, z := 10, 20, 30
-	x, y, z := 10.0, 20.0, 30.0
 
-	fmt.Println("x = ", x)
-	fmt.Println("y = ", y)
-	fmt.Println("z = ", z)
+	// BODMAS
 
-	fmt.Println(x / y * z)
-	fmt.Println((x / y) * z)
+	//   12/3*10 - 4
+	/*
+		4*10 -4
+		40 -4
+		36
+
+
+	*/
+	fmt.Println(12/3*10 - 4) // 36
+
+	fmt.Println((12/3)*10 - 4)       // 36
+	fmt.Println((12 / 3) * (10 - 4)) // 24
+	fmt.Println(12/(3*10) - 4)       // -4
+
 }

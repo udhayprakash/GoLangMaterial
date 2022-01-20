@@ -5,19 +5,20 @@ import (
 )
 
 func main() {
+	fmt.Println("Hello", "world")
+
 	// String Concatenation
 	fmt.Println("Hello" + "world")
 	fmt.Println("Hello" + "" + "world")
 	fmt.Println("Hello" + " " + "world")
 	fmt.Println("Hello" + " " + `world`)
+
 	// fmt.Println("Hello" + ' ' + `world`)
-	// mismatched types untyped string and untyped rune
+	// (mismatched types untyped string and untyped rune)
 
-	//fmt.Println('H' + "H")  // (mismatched types untyped rune and untyped string)
+	// string repetion
+	// fmt.Println("Hello " * 3)
+	// invalid operation: "Hello " * 3 (mismatched types untyped string and untyped int)
 
-	// string repetition
-	//fmt.Println("Hello " * 3)  //(mismatched types string and int)
-	fmt.Println('H' * 3) // 216
-
+	fmt.Println('H', 'H'*3) // 72, 216
 }
- 

@@ -19,6 +19,28 @@ func main() {
 	fmt.Println("Hello World")
 	// fmt.Println('Hello World')// more than one character in rune literal
 	// single quotes can't be used
+package main
+
+import (
+	"fmt"
+)
+
+/*
+Go natively handles Unicode, so
+it can process text in all the world’s languages.
+*/
+
+func main() {
+	fmt.Println("H") // H
+	fmt.Println('H') // 72  - because 72 is ascii code for 'H'
+
+	fmt.Println("α") // α
+	fmt.Println('α') // 945 -- UNICODE
+	fmt.Println()
+
+	fmt.Println("Hello World")
+	// fmt.Println('Hello World')// more than one character in rune literal
+	// single quotes can't be used
 
 	// double Quote Strings -single line strings
 	fmt.Println("Hello go world")
@@ -43,4 +65,5 @@ func main() {
 	fmt.Println(`Backslash: \\`)
 	fmt.Println(`Hello 
                       world`)
+
 }

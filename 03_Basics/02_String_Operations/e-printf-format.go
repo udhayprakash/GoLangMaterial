@@ -42,14 +42,13 @@ func main() {
 
 		fmt.Printf("\t data type  : %T \n", s[i]) // data type
 
-		fmt.Printf("\t rune       : %c \n", s[i]) // character
-		fmt.Printf("\t quoted     : %q \n", s[i])  // quoted character
-		fmt.Printf("\t string     : %s \n", s[i])  // string
-		fmt.Printf("\t UTF8 code  : %v \n", s[i])  // any data type
+		fmt.Printf("\t rune       : %c \n", s[i])         // character
+		fmt.Printf("\t quoted     : %q \n", s[i])         // quoted character
+		fmt.Printf("\t string     : %s \n", string(s[i])) // string
+		fmt.Printf("\t UTF8 code  : %v \n", s[i])         // any data type
 
 		fmt.Printf("\t Hexadecimal: %x \n", s[i])
 		fmt.Printf("\t Octal      : %o \n", s[i])
 		fmt.Printf("\t Binary     : %b \n\n", s[i])
 	}
 }
- 

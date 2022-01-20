@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	fmt.Println(`len("Hello world")	=`, len("Hello world"))
+	fmt.Println(`len("Hello world")	=`, len("Hello world")) // 11
 
 	name := "Hello world"
 	fmt.Println("name				=", name)
@@ -15,7 +15,7 @@ func main() {
 	fmt.Println("utf8.RuneCountInString(name)=", utf8.RuneCountInString(name))
 	fmt.Println()
 
-	name2 := "OlÃ¡ Mundo"
+	name2 := "హలో వరల్డ్"
 	fmt.Println("name2				=", name2)
 	fmt.Println("len(name2)			=", len(name2))
 	fmt.Println("utf8.RuneCountInString(name2)=", utf8.RuneCountInString(name2))
@@ -27,6 +27,8 @@ func main() {
 	fmt.Println("name				=", name)
 	fmt.Println("name[0]			=", name[0])
 	fmt.Printf("name[0]			= %c\n", name[0]) // ascii value
+	fmt.Printf("name[0]		    = %q\n", name[0])
+
 	fmt.Printf("name[5]			= %q\n", name[5])
 	fmt.Printf("name[10]		= %q\n", name[10])
 
@@ -49,8 +51,7 @@ func main() {
 	fmt.Println("name[1:11]			=", name[1:11]) // ello world
 
 	// fmt.Println("name[1:12]			=", name[1:12])
-	// panic: runtime error: string index out of bounds
-	fmt.Println()
+	// panic: runtime error: slice bounds out of range [:12] with length 11
 
 	/*
 		default
@@ -71,7 +72,7 @@ func main() {
 	fmt.Println("name[len(name)- 3:]=", name[len(name)-3:]) // rld
 	fmt.Println("name[len(name)- 5:]=", name[len(name)-5:]) // world
 
-	// To Get from strat till last N characters;  len(name)= 11
+	// To Get from start till last N characters;  len(name)= 11
 	fmt.Println("name[:len(name)- 3]=", name[:len(name)-3]) // Hello wo
 	fmt.Println("name[:len(name)- 5]=", name[:len(name)-5]) // Hello
 
@@ -89,5 +90,5 @@ func main() {
 
 	result := strings.ToUpper(sentence[:half_len]) + strings.ToLower(sentence[half_len:])
 	fmt.Println("result = ", result)
+
 }
- 
