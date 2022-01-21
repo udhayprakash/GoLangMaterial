@@ -8,6 +8,7 @@ import (
 // Multiplictaion table
 
 func main() {
+
 	// for num1 := 1; num1 <= 10; num1++ {
 	// 	fmt.Printf("num1 = %d\n", num1)
 	// }
@@ -15,27 +16,25 @@ func main() {
 
 	// for num2 := 1; num2 <= 10; num2++ {
 	// 	fmt.Printf("num2 = %d\n", num2)
-
 	// }
-	// fmt.Println()
 
-	// Loop within Loop
+	// Loop within a loop
+
 	for num1 := 1; num1 <= 10; num1++ {
 		// fmt.Printf("num1 = %d\n", num1)
 
 		for num2 := 1; num2 <= 10; num2++ {
-			// fmt.Printf("\tnum2 = %d\n", num2)
+			// fmt.Printf("num2 = %d\n", num2)
 			// fmt.Println(num1, "*", num2, "=", num1 * num2)
-
 			// fmt.Printf("%d * %d = %d\n", num1, num2, num1 * num2)
 			fmt.Printf("%2d * %2d = %3d\n", num1, num2, num1*num2)
 		}
-		// fmt.Println("================")
-		fmt.Println(strings.Repeat("=", 16))
-
+		// fmt.Println("-------------")
+		fmt.Println(strings.Repeat("-", 16))
 	}
+
 }
- 
+
 /*
 Assignment
 -----------

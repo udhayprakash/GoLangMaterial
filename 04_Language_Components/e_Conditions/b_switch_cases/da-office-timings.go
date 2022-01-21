@@ -21,6 +21,7 @@ func main() {
 	fmt.Println("time.Now().Weekday()=", time.Now().Weekday())
 
 	switch time.Now().Weekday() { // switch initilizer
+
 	case time.Monday, time.Tuesday, time.Wednesday, time.Thursday, time.Friday:
 		fmt.Println("Timings: 9 AM to 6 PM ")
 	case time.Saturday:

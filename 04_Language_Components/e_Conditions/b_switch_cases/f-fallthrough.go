@@ -4,9 +4,11 @@ import "fmt"
 
 func main() {
 	// days := 4
-	// switch days {
+	// switch {
+	// 	case 1
+	// }
 
-	switch days := 4; days {
+	switch days := 2; days {
 	case 1:
 		fmt.Println("One")
 	case 2:
@@ -21,10 +23,12 @@ func main() {
 	default:
 		fmt.Println("Default case")
 	}
+
 }
+
 /*
 NOTE:
 	1) ;(semicolon) is statement separator
 	2) All statements after a match using
      fallthrough statement will be executed.
-*/ 
+*/

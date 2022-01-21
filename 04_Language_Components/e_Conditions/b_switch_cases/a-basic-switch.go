@@ -2,11 +2,12 @@ package main
 
 import "fmt"
 
+
 // Switch cases evaluate cases from top to bottom,
 // stopping when a case succeeds.
 
 func main() {
-	fmt.Println("Enter some number:")
+	fmt.Print("Enter some number:")
 
 	var value int8
 	fmt.Scanf("%d", &value)
@@ -20,8 +21,7 @@ func main() {
 		fmt.Println("value is 3")
 	default: // similar to else
 		fmt.Println("default case")
-
 	}
 }
 
-// NOTE: default case is optional  
+// NOTE: default case is optional

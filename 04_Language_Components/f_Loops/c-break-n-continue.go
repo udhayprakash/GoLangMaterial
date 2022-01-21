@@ -13,27 +13,27 @@ func main() {
 	fmt.Println("\n\nImportance of break")
 	for i := 1; i <= 10; i++ {
 		if i == 5 {
-			break // breaks out of for loop
+			break // breaks out of the current for loop
 		}
-		fmt.Print(i, " ")
-	} // OUTPUT - 1 2 3 4
 
-	
+		fmt.Print(i, " ")
+	} //  OUTPUT - 1 2 3 4
+
 	fmt.Println("\n\nImportance of continue")
 	for i := 1; i <= 10; i++ {
 		if i == 5 {
-			continue // skips that loop
+			continue // skips that current loop
 		}
 		fmt.Print(i, " ")
 	} // OUTPUT - 1 2 3 4 6 7 8 9 10
 
-
 	fmt.Println("\n\nImportance of continue")
+
 	for i := 1; i <= 10; i++ {
-		if i % 2 != 0 {
-			continue // skips the odd numbers
+		if i%2 == 0 {
+			continue // skips the even numbers
 		}
 		fmt.Print(i, " ")
-	} // OUTPUT - 2 4 6 8 10
+	} // OUTPUT - 1 3 5 7 9
 
-} 
+}

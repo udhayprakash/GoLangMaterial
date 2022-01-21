@@ -1,14 +1,15 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
+
 	i := 0
-	// goto Here
+
+	goto Here
+
 Here:
-	fmt.Println("i=", i)
+	fmt.Println("i =", i)
 	i++
 	if i <= 10 {
 		goto Here

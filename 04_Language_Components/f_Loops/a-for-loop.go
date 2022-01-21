@@ -17,14 +17,12 @@ func main() {
 	fmt.Println()
 
 	// Method 2
-	
-	// for var j int = 0; j <= 5; j++ {  
-	// error: var declaration not allowed in for initializer
-	
+	// for var j int =0; j <= 5; j ++ {
+	// 	var declaration not allowed in for initializer
+
 	for j := 0; j <= 5; j++ {
 		fmt.Printf("%d\t", j)
 	}
-	fmt.Println()
 
 	// Method 3 --> in while loop style
 	k := 0
@@ -32,6 +30,4 @@ func main() {
 		fmt.Printf("%d\t", k)
 		k++
 	}
-
 }
- 
