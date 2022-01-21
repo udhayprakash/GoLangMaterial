@@ -38,7 +38,7 @@ func main() {
 	myArray3 := [3]int{11, 22, 33}
 	fmt.Println("myArray3    = ", myArray3) // [11 22 33]
 
-	myArray4 := [3]int{11, 22}
+	myArray4 := [3]int{11, 22}              // Partial assignment
 	fmt.Println("myArray4    = ", myArray4) // [11 22 0]
 	fmt.Println()
 

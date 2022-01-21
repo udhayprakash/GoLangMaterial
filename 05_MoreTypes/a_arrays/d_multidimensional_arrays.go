@@ -9,12 +9,23 @@ then it’s called a multi-dimensional array.
 */
 
 func main() {
-	a1 := [3][2]int{
+	oneDArray := [3]int{11, 22, 33}
+	twoDArray := [3][2]int{
 		[2]int{1, 2},
 		[2]int{3, 4},
+		[2]int{4, 5},
 	}
-	fmt.Println("a1:", a1) // [[1 2] [3 4] [0 0]]
-	fmt.Println()
+	threeDArray := [3][3]string{
+		{"Hyderbad", "Amaravathi", "Chennai"},
+		{"Kochi", "Banglore", "Panagi"},
+		{"Mumbai", "Ahmedabad", "Jaipur"},
+	}
+
+	fmt.Printf(`
+		oneDArray = %#v 
+		twoDArray = %#v
+		threeDArray = %#v
+	`, oneDArray, twoDArray, threeDArray)
 
 	a2 := [...][2]int{
 		[2]int{1, 2},
