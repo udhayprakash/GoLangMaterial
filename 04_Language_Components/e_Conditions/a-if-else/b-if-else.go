@@ -3,14 +3,20 @@ package main
 import "fmt"
 
 func main() {
-	var choice bool // default value is false
+	var choice bool // zero value is false
 
 	if choice == true {
 		fmt.Println("choice is true")
 	} else {
 		fmt.Println("choice is false")
 	}
-	
+
+	if choice { // indirectly you are checing for choice == true
+		fmt.Println("choice is true")
+	} else {
+		fmt.Println("choice is false")
+	}
+
 	choice = (true != choice)
 	if choice == true {
 		fmt.Println("new choice is true")
@@ -25,4 +31,3 @@ func main() {
 		fmt.Printf("%d is odd number", num1)
 	}
 }
- 

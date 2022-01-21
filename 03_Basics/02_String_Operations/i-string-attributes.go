@@ -61,22 +61,7 @@ func main() {
 	fmt.Println(strings.EqualFold("Go", "Go")) // true
 	fmt.Println(strings.EqualFold("Go", "go")) // true
 	fmt.Println(strings.EqualFold("Go", "GO")) // true
-	fmt.Println()
-
-	// String Fields splits string around one or more consecutive white space characters
-	fmt.Println("\n ==== strings.Fields ====")
-	fmt.Printf("Fields are: %q \n", strings.Fields("Ravi Teja Golang"))               // ["Ravi", "Teja", "Golang"]
- 	fmt.Printf("Fields are: %q \n", strings.Fields("  foo bar &^%&^&$%$@$#@ baz   ")) // ["foo" "bar" "&^%&^&$%$@$#@" "baz"]
-	fmt.Printf("Fields are: %q \n", strings.Fields("foo bar baz %^%^%$^")) // ["foo" "bar" "baz" "%^%^%$^"]
-	fmt.Printf("Fields are: %q \n", strings.Fields("foobarbaz"))           // ["foobarbaz"]
-	fmt.Println()
-
-	// String FieldsFunc splits string around custom condition
-	fmt.Println("\n ==== strings.FieldsFunc ====")
-	f := func(c rune) bool {
-		return !unicode.IsLetter(c) && !unicode.IsNumber(c)
-	}
-	fmt.Printf("Fields are: %q \n", strings.FieldsFunc("  foo1;bar2,baz3...", f)) // ["foo1" "bar2" "baz3"]
+	fmt.Println(strings.EqualFold("", ""))     // true
 	fmt.Println()
 
 	// String HasPrefix tests whether the string s begins with prefix.
@@ -96,9 +81,11 @@ func main() {
 
 	// String Index returns the index of the first instance of substr in s, or -1 if substr is not present in s.
 	fmt.Println("\n ==== strings.Index ====")
+	// c h i c k e n
+	// 0 1 2 3 4 5 6
 	fmt.Println(strings.Index("chicken", "c"))   // 0  -- first occurrence
 	fmt.Println(strings.Index("chicken", "ken")) // 4
-	fmt.Println(strings.Index("chicken", "dmr")) // -1
+	fmt.Println(strings.Index("chicken", "kne")) // -1
 	fmt.Println()
 
 	// String IndexAny returns index of any character in substring
@@ -114,6 +101,13 @@ func main() {
 	fmt.Println(strings.IndexByte("golang", 'x'))  // -1
 	fmt.Println()
 
+	// String IndexRune returns the index of the first instance of the Unicode code point r, or -1 if rune is not present in s. If r is utf8.RuneError, it returns the first instance of any invalid UTF-8 byte sequence.
+	fmt.Println("\n ==== strings.IndexRune ====")
+	fmt.Println(strings.IndexRune("chicken", 'k')) // 4
+	fmt.Println(strings.IndexRune("chicken", 'a')) // -1
+	fmt.Println(strings.IndexRune("chicken", 97))  // -1
+	fmt.Println()
+
 	// String IndexFunc returns the index into s of the first Unicode code point satisfying f(c), or -1 if none do.
 	fmt.Println("\n ==== strings.IndexFunc ====")
 	f1 := func(c rune) bool {
@@ -121,21 +115,6 @@ func main() {
 	}
 	fmt.Println(strings.IndexFunc("Hello, 世界", f1))    // 7
 	fmt.Println(strings.IndexFunc("Hello, world", f1)) // -1
-	fmt.Println()
-	
-	// String IndexRune returns the index of the first instance of the Unicode code point r, or -1 if rune is not present in s. If r is utf8.RuneError, it returns the first instance of any invalid UTF-8 byte sequence.
-	fmt.Println("\n ==== strings.IndexRune ====")
-	fmt.Println(strings.IndexRune("chicken", 'k')) // 4
-	fmt.Println(strings.IndexRune("chicken", 'a')) // -1
-	fmt.Println(strings.IndexRune("chicken", 97))  // -1 
-	fmt.Println()
-
-	// String concatenates joins strings to single string
-	fmt.Println("\n ==== strings.Join ====")
-	s := []string{"foo", "bar", "baz"}
-	fmt.Println(strings.Join(s, ","))  //  foo,bar,baz
-	fmt.Println(strings.Join(s, ", ")) // foo, bar, baz
-	fmt.Println(strings.Join(s, "_")) // foo_bar_baz 
 	fmt.Println()
 
 	// String LastIndex returns the index of the last instance of substr in s, or -1 if substr is not present in s.
@@ -166,6 +145,30 @@ func main() {
 	fmt.Println(strings.LastIndexFunc("go", unicode.IsNumber))     // -1
 	fmt.Println()
 
+	// String Fields splits string around one or more consecutive white space characters
+	fmt.Println("\n ==== strings.Fields ====")
+	fmt.Printf("Fields are: %q \n", strings.Fields("Ravi Teja Golang"))               // ["Ravi", "Teja", "Golang"]
+	fmt.Printf("Fields are: %q \n", strings.Fields("  foo bar &^%&^&$%$@$#@ baz   ")) // ["foo" "bar" "&^%&^&$%$@$#@" "baz"]
+	fmt.Printf("Fields are: %q \n", strings.Fields("foo bar baz %^%^%$^"))            // ["foo" "bar" "baz" "%^%^%$^"]
+	fmt.Printf("Fields are: %q \n", strings.Fields("foobarbaz"))                      // ["foobarbaz"]
+	fmt.Println()
+
+	// String FieldsFunc splits string around custom condition
+	fmt.Println("\n ==== strings.FieldsFunc ====")
+	f := func(c rune) bool {
+		return !unicode.IsLetter(c) && !unicode.IsNumber(c)
+	}
+	fmt.Printf("Fields are: %q \n", strings.FieldsFunc("  foo1;bar2,baz3...", f)) // ["foo1" "bar2" "baz3"]
+	fmt.Println()
+
+	// String concatenates joins strings to single string
+	fmt.Println("\n ==== strings.Join ====")
+	s := []string{"foo", "bar", "baz"}
+	fmt.Println(strings.Join(s, ","))  //  foo,bar,baz
+	fmt.Println(strings.Join(s, ", ")) // foo, bar, baz
+	fmt.Println(strings.Join(s, "_"))  // foo_bar_baz
+	fmt.Println()
+
 	// String Map
 	fmt.Println("\n ==== strings.Map  ====")
 	rot13 := func(r rune) rune {
@@ -184,16 +187,18 @@ func main() {
 	//        It panics if count is negative or if the result of (len(s) * count) overflows.
 	fmt.Println("\n ==== strings.Repeat  ====")
 	// fmt.Println("Ravi" * 3)
-	fmt.Println(strings.Repeat("Ravi", 3))  // "Ravi" * 3
-	fmt.Println(strings.Repeat("Go ", 5))  // "Ravi" * 3 
+	fmt.Println(strings.Repeat("Ravi", 3)) // RaviRaviRavi
+	fmt.Println(strings.Repeat("Go ", 5))  // Go Go Go Go Go
 	fmt.Println()
 
 	// String func Replace(s, old, new string, n int) string
 	//  If n < 0, there is no limit on the number of replacements.
+	// cant replace from last to first
 	fmt.Println("\n ==== strings.Replace  ====")
-	fmt.Println(strings.Replace("10001000101", "6", "33", 2))  // 10001000101
-	fmt.Println(strings.Replace("10001000101", "1", "33", 2))  // 3300033000101
-	fmt.Println(strings.Replace("10001000101", "1", "33", -1)) // 330003300033033
+	fmt.Println(strings.Replace("10001000101", "6", "3", 2))       // 10001000101
+	fmt.Println(strings.Replace("10001000101", "1", "3", 2))       // 30003000101
+	fmt.Println(strings.Replace("10001000101", "1", "3", -1))      // 30003000303
+	fmt.Println(strings.Replace("10001000101", "1", "33", -1))     // 330003300033033
 	fmt.Println(strings.Replace("Golang is Good", "Go", "Po", -1)) // Polang is Pood
 	fmt.Println()
 
@@ -201,14 +206,15 @@ func main() {
 	fmt.Println("\n ==== strings.ReplaceAll  ====")
 	fmt.Println(strings.ReplaceAll("10001000101", "6", "33")) // 10001000101
 	fmt.Println(strings.ReplaceAll("10001000101", "1", "33")) // 3300033000101
+	fmt.Println(strings.ReplaceAll("10001000101", "", "P"))   // 3300033000101
 	fmt.Println()
 
 	// String func Split(s, sep string) []string
 	fmt.Println("\n ==== strings.Split  ====")
-	fmt.Printf("%q\n", strings.Split("a,b,c", ","))  // ["a" "b" "c"]
-	fmt.Printf("%q\n", strings.Split("a,,b,c", ",")) // ["a" "" "b" "c"]
+	fmt.Printf("%q\n", strings.Split("a,b,c", ","))   // ["a" "b" "c"]
+	fmt.Printf("%q\n", strings.Split("a,,b,c", ","))  // ["a" "" "b" "c"]
 	fmt.Printf("%q\n", strings.Split("a,,b,c,", ",")) // ["a" "" "b" "c" ""]
- 
+
 	fmt.Printf("%q\n", strings.Split("a b c", " "))   // ["a" "b" "c"]
 	fmt.Printf("%q\n", strings.Split("a  b  c", " ")) // ["a" "" "b" "" "c"]
 
@@ -222,8 +228,8 @@ func main() {
 	// String func SplitAfter(s, sep string) []string
 	// SplitAfter slices s into all substrings after each instance of sep and returns a slice of those substrings.
 	fmt.Println("\n ==== strings.SplitAfter  ====")
-	fmt.Printf("%q\n", strings.SplitAfter("a,b,c", ","))
-	fmt.Printf("%q\n", strings.SplitAfter("a,,b,c", ","))
+	fmt.Printf("%q\n", strings.SplitAfter("a,b,c", ","))  // ["a," "b," "c"]
+	fmt.Printf("%q\n", strings.SplitAfter("a,,b,c", ",")) // ["a," "," "b," "c"
 	fmt.Println()
 
 	// func SplitAfterN(s, sep string, n int) []string
@@ -249,15 +255,15 @@ func main() {
 	// string  Title
 	fmt.Println("\n ==== strings.Title  ====")
 	// Compare this example to the ToTitle example.
-	fmt.Println(strings.Title("her royal highness"))
-	fmt.Println(strings.Title("loud noises"))
-	fmt.Println(strings.Title("хлеб"))
+	fmt.Println(strings.Title("her royal highness")) // Her Royal Highness
+	fmt.Println(strings.Title("loud noises"))        // Loud Noises
+	fmt.Println(strings.Title("хлеб"))               // Хлеб
 	fmt.Println()
 
 	// string ToTitle
 	fmt.Println("\n ==== strings.ToTitle  ====")
 	// Compare this example to the Title example.
-	fmt.Println(strings.ToTitle("her royal highness"))
+	fmt.Println(strings.ToTitle("her royal highness")) // HER ROYAL HIGHNESS
 	fmt.Println(strings.ToTitle("loud noises"))
 	fmt.Println(strings.ToTitle("хлеб"))
 	fmt.Println()
@@ -286,9 +292,10 @@ func main() {
 
 	// func Trim(s string, cutset string) string
 	fmt.Println("\n ==== strings.Trim  ====")
-	fmt.Println(strings.Trim("¡¡¡Hello, Gophers!!!", "!¡")) // Hello, Gophers
-	fmt.Println(strings.Trim(" Hello, Gophers  ", " "))     // Hello, Gophers
-	fmt.Println(strings.Trim(" Hello, Gophers  ", ""))      //   Hello, Gophers
+	fmt.Println(strings.Trim("¡¡¡Hello, Gophers!!!", "!¡"))   // Hello, Gophers
+	fmt.Println(strings.Trim("¡¡¡Hello¡, !Gophers!!!", "!¡")) // Hello¡, !Gophers
+	fmt.Println(strings.Trim(" Hello, Gophers  ", " "))       // Hello, Gophers
+	fmt.Println(strings.Trim(" Hello, Gophers  ", ""))        //   Hello, Gophers
 	fmt.Println()
 
 	// func TrimFunc(s string, f func(rune) bool) string
@@ -312,10 +319,8 @@ func main() {
 
 	// func TrimPrefix(s, prefix string) string
 	fmt.Println("\n ==== strings.TrimPrefix  ====")
-	var s1 = "¡¡¡Hello, Gophers!!!"
-	s1 = strings.TrimPrefix(s1, "¡¡¡Hello, ")
-	s1 = strings.TrimPrefix(s1, "¡¡¡Howdy, ")
-	fmt.Print(s1) // Gophers!!!
+	fmt.Println(strings.TrimPrefix("¡¡¡Hello, Gophers!!!", "¡¡¡Hello, ")) // Gophers!!!
+	fmt.Println(strings.TrimPrefix("¡¡¡Hello, Gophers!!!", "¡¡¡Howdy, ")) // ¡¡¡Hello, Gophers!!!
 	fmt.Println()
 
 	// func TrimRight(s string, cutset string) string
@@ -333,7 +338,7 @@ func main() {
 
 	// func TrimSpace(s string) string
 	fmt.Println("\n ==== strings.TrimSpace  ====")
-	fmt.Println(strings.TrimSpace(" \t\n Hello, Gophers \n\t\r\n"))
+	fmt.Println(strings.TrimSpace(" \t\n Hello, Gophers \n\t\r\n"))  // Hello, Gophers
 	fmt.Println()
 
 	// func TrimSuffix(s, suffix string) string
@@ -344,3 +349,5 @@ func main() {
 	fmt.Print(s2)
 
 }
+
+// assignmengt - try find the second occourance of a substr , within a string

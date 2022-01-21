@@ -1,16 +1,20 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-// Display largest number, among two numbers
+// Display largest number, among two given numbers
 
 func main() {
+
 	var num1, num2 int
 	fmt.Println("Please enter two numbers, space separated:")
 	fmt.Scanf("%d", &num1)
 	fmt.Scanf("%d", &num2)
+
+	fmt.Printf(`
+			num1 = %d
+			num2 = %d
+	`, num1, num2)
 
 	if num1 == num2 {
 		fmt.Println("Both are equal")
@@ -20,11 +24,6 @@ func main() {
 		fmt.Println("num2 is greater")
 	}
 
-	// var num3 int = 4 
-	// var num4 float32 = 4.0
-	// fmt.Println("num3 == num4:", num3 == num4)
-	// incompatible types in binary expression
 }
 
 // Assignment - Display largest number, among three numbers
- 

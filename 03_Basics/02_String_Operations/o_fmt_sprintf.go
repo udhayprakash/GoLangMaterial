@@ -1,38 +1,24 @@
-// Golang program to illustrate the usage of
-// fmt.Sprintf() function
-
-// Including the main package
 package main
 
-// Importing fmt, io and os
 import (
 	"fmt"
 	"io"
 	"os"
 )
 
-// Calling main
 func main() {
+	const name, dept = "Ravi", "Finance"
 
-	// Declaring some const variables
-	const name, dept = "GeeksforGeeks", "CS"
+	s := fmt.Sprintf("%s is working in %s department\n", name, dept)
 
-	// Calling Sprintf() function
-	s := fmt.Sprintf("%s is a %s Portal.\n", name, dept)
-
-	// Calling WriteString() function to write the
-	// contents of the string "s" to "os.Stdout"
-	io.WriteString(os.Stdout, s)
 	fmt.Println(s)
+	io.WriteString(os.Stdout, s)
 
-	// Declaring some const variables
+	// another example
+
 	const num1, num2, num3 = 5, 10, 15
-
-	// Calling Sprintf() function
 	s = fmt.Sprintf("%d + %d = %d\n", num1, num2, num3)
 
-	// Calling WriteString() function to write the
-	// contents of the string "s" to "os.Stdout"
 	io.WriteString(os.Stdout, s)
 	fmt.Println(s)
 }

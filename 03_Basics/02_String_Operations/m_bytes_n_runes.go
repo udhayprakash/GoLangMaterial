@@ -6,9 +6,16 @@ import (
 )
 
 func main() {
+	myRune := 'a'
+	fmt.Printf("%T  %[1]v\n", myRune) // int32  97
+	fmt.Println()
+
 	b1 := byte('a')
-	b2 := []byte("A")
+	b2 := []byte("a")
 	b3 := []byte{'a', 'b', 'c'}
+	fmt.Printf("%T  %[1]v\n", b1) // uint8  97
+	fmt.Printf("%T  %[1]v\n", b2) // []uint8  [97]
+	fmt.Printf("%T  %[1]v\n", b3) // []uint8  [97 98 99]
 
 	fmt.Printf("b1 = %c\n", b1) // a
 	fmt.Printf("b2 = %c\n", b2) // [A]
