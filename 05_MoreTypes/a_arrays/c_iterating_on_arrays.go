@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 
@@ -19,20 +22,15 @@ func main() {
 	}
 
 	// ------- Generate even numbers between 1 & 100
-	var evenNumbers1 [50]int
-	fmt.Println("evenNumbers1=", evenNumbers1)
+	var evenNumbers1 [50]int // array
+	fmt.Println("evenNumbers1=", evenNumbers1, reflect.TypeOf(evenNumbers1).Kind())
 
-	evenNumbers2 := make([]int, 50)
-	fmt.Println("evenNumbers2=", evenNumbers2)
-
-	count := 0
+	posCount := 0
 	for num := 1; num <= 100; num++ {
 		if num%2 == 0 {
-			evenNumbers2[count] = num
-			count++
+			evenNumbers1[posCount] = num
+			posCount++
 		}
 	}
-	fmt.Println("evenNumbers2=", evenNumbers2)
-
+	fmt.Println("evenNumbers1=", evenNumbers1)
 }
- 

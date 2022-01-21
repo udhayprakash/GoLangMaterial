@@ -6,6 +6,11 @@ import (
 )
 
 func main() {
+
+	// for range time.Tick(time.Second * 2) {
+	// 	fmt.Println("HElllo")
+	// }
+
 	count := 0
 
 	// run loop  for every 2 seconds
@@ -18,4 +23,4 @@ func main() {
 		}
 	}
 }
- 
+

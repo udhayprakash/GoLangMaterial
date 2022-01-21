@@ -19,7 +19,7 @@ func main() {
 
 	fmt.Println("Avg of Values:", sum/len(numbers)) // type-casting loss
 	fmt.Println("Avg of Values:", float32(sum)/float32(len(numbers)))
+
 }
 
-
-// Assignment - extend this to compute max, min and median values 
+// Assignment - extend this to compute max, min and median  and rank values 

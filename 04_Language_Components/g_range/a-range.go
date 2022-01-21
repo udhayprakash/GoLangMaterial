@@ -1,11 +1,10 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 // range can be used to iterate(loop) over any iterable object
-// iterables -
+// iterables - strings, bytes, array, slice, map
+
 func main() {
 	name := "Go Language"
 
@@ -14,20 +13,24 @@ func main() {
 
 	// Method 1 - traditional
 	for i := 0; i < len(name); i++ {
-		fmt.Printf("%q\n", name[i])
+		fmt.Printf(" index= %d  character= %q\n", i, name[i])
 	}
+	fmt.Println()
 
 	// Method 2 - using range
 	for index := range name {
-		fmt.Println("index=", index)
+		fmt.Printf(" index= %d  character= %q\n", index, name[index])
 	}
+	fmt.Println()
 
 	for index, eachChr := range name {
-		fmt.Printf("index= %d\t eachChr=%q\n", index, eachChr)
+		fmt.Printf(" index= %d  character= %q\n", index, eachChr)
 	}
+	fmt.Println()
 
 	for _, eachChr := range name {
-		fmt.Printf("eachChr=%q\n", eachChr)
+		fmt.Printf("character= %q\n", eachChr)
 	}
+	fmt.Println()
 
 }

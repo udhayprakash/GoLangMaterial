@@ -4,6 +4,7 @@ import "fmt"
 
 // Iterable object - object that supports looping over its elements
 // range clause must have array, slice, string, map, or channel type
+
 func main() {
 	// value := true
 	// for index, val := range value {
@@ -32,7 +33,13 @@ func main() {
 
 	value := "32344234" // strings are iterable
 	for index, val := range value {
-		fmt.Println(index, val)
+		fmt.Println(index, string(val))
+	}
+	fmt.Println()
+
+	value = "3" // strings are iterable
+	for index, val := range value {
+		fmt.Println(index, string(val))
 	}
 	fmt.Println()
 
@@ -66,4 +73,3 @@ func main() {
 		fmt.Printf("%s -> %s\n", key, value)
 	}
 }
- 

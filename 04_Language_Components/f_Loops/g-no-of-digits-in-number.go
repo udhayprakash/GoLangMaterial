@@ -16,22 +16,18 @@ func main() {
 	fmt.Println("success= ", success) // 1 if scanned, else 0
 	if err != nil {
 		fmt.Println("Error - ", err)
+	} else {
+		// Count the digits, in the number
+
+		noOfDigits, sumOfDigits := 0, 0
+		for num != 0 {
+			sumOfDigits += num % 10 // lastDigit
+
+			num = num / 10
+			noOfDigits++
+		}
+		fmt.Println("noOfDigits =", noOfDigits)
+		fmt.Println("sumOfDigits =", sumOfDigits)
 	}
 
-    // Count the digits, in the number
-	fmt.Printf("\nNumber %d ", num)
-    sumOfDigits := 0
-    noOfDigits := 0
-    for num != 0 {
-        // fmt.Println("\nnum /10=", num /10)
-		// fmt.Println("num %10=", num %10)
-        sumOfDigits = sumOfDigits + (num %10)
-
-        num = num /10
-        noOfDigits++
-    }
-    fmt.Printf("has %d digits\n", noOfDigits)
-    fmt.Println("Sum of digits =", sumOfDigits)
-
 }
- 
