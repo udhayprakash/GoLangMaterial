@@ -4,7 +4,16 @@ import (
 	"fmt"
 	"reflect"
 )
-func main(){
+
+/*
+
+Slice consists of three things:
+	1) Pointer - A reference to an underlying array
+	2) Length  - The length of the segment of array, that the slice contains
+	3) Capacity- max. size up to which the segment can grow
+
+*/
+func main() {
 	a1 := [...]string{"a", "b", "c", "d", "e", "f", "g"} // len-7; cap-7
 	//                 0    1    2    3    4    5    6
 	// last index is not included, in slice
@@ -39,4 +48,17 @@ func main(){
 	fmt.Println("len(s5)=", len(s5))
 	fmt.Println("cap(s5)=", cap(s5))
 
+	// creating a slice from another slice
+	s51 := s5[1:3]
+
+	fmt.Println("\ns51=", s51, reflect.TypeOf(s51).Kind())
+	fmt.Println("len(s51)=", len(s51))
+	fmt.Println("cap(s51)=", cap(s51))
+	fmt.Println()
+
+	// make() will take type, length , capacity ; to create slice
+	var my_slice = make([]int, 5, 8)
+	fmt.Printf("Slice = %v", my_slice)
+	fmt.Printf("\nLength = %d", len(my_slice))
+	fmt.Printf("\nCapacity = %d", cap(my_slice))
 }
