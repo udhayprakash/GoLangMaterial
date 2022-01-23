@@ -5,6 +5,9 @@ import (
 	"math"
 )
 
+// Golang doesnt support function overloading/overwriting,
+// but supports method overloading
+
 type ArithmeticProgression struct {
 	A, D float64
 }

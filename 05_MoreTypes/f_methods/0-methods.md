@@ -1,6 +1,8 @@
 # Methods
 
-    - Functions with  a special reciever argument
+    - Functions with  a special reciever argument.
+    - Methods are always associated with a type. 
+    - Methods can be created for any data type.
     - The receiver argument has a name and a type.
         - It appears between the func keyword and the method name -
         - Syntax:

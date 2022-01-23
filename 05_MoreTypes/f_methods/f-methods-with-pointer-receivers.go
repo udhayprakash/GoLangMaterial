@@ -6,6 +6,7 @@ type Point struct {
 	X, Y float64
 }
 
+// Pointer Receivers
 func (p *Point) Translate(dx, dy float64) {
 	p.X = p.X + dx
 	p.Y = p.Y + dy

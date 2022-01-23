@@ -39,4 +39,3 @@ func main() {
 	fmt.Printf("n1.Length()   =%v\n", n1.Length())
 
 }
- 

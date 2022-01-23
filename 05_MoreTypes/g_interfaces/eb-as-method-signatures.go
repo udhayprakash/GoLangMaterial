@@ -8,17 +8,24 @@ import (
 /*
 Purpose: Interfaces
 	- are named collections of method signatures.
+	- Polymorphism can be achieved using interfaces.
 
+SYNTAX:
+	type InterfaceName interface{
+		MethodName(argument argumentType) returnType
+	}
+
+
+To implement an interface in Go, we just need to
+implement all the methods in the interface.
 */
-
-// Here's a basic interface for geometric shapes.
+// Interfaces Definition
 type geometry interface {
 	area() float64
 	perim() float64
 }
 
-// For our example we'll implement this interface on
-// `rect` and `circle` types.
+// Type Declarations
 type rect struct {
 	width, height float64
 }
@@ -26,9 +33,9 @@ type circle struct {
 	radius float64
 }
 
-// To implement an interface in Go, we just need to
-// implement all the methods in the interface. Here we
-// implement `geometry` on `rect`s.
+// Method Definitions
+
+// for `rect` struct
 func (r rect) area() float64 {
 	return r.width * r.height
 }
@@ -36,7 +43,7 @@ func (r rect) perim() float64 {
 	return 2*r.width + 2*r.height
 }
 
-// The implementation for `circle`s.
+// for `circle` struct
 func (c circle) area() float64 {
 	return math.Pi * c.radius * c.radius
 }
@@ -60,8 +67,7 @@ func main() {
 
 	// The `circle` and `rect` struct types both
 	// implement the `geometry` interface so we can use
-	// instances of
-	// these structs as arguments to `measure`.
+	// instances of these structs as arguments to `measure`.
 	measure(r)
 	measure(c)
 }

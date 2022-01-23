@@ -7,11 +7,13 @@ type MyType struct {
 }
 
 func (mt MyType) SetValue(value string) {
+	// call  by value
 	mt.Value = value
 	fmt.Println("\nIn SetValue method, ", mt.Value)
 }
 
 func (mt *MyType) SetValuePtr(value string) {
+	// call  by reference
 	mt.Value = value
 	fmt.Println("\nIn SetValuePtr method, ", mt.Value)
 }
