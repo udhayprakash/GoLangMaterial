@@ -20,22 +20,21 @@ func main() {
 	name2 = "Prakash"
 	fmt.Printf("after copy - name1 = %s \t name2 = %s\n", name1, name2)
 
-
 	// maps are reference types
 	var myMap1 = map[string]int{
-		"one": 1, 
-		"two": 2, 
+		"one":   1,
+		"two":   2,
 		"three": 3,
 	}
 
-	myMap2 := myMap1 
+	myMap2 := myMap1
 	fmt.Printf("\nBefore copy - myMap1=%v \n\t\t myMap2=%v\n", myMap1, myMap2)
 
 	myMap2["three"] = 333
 
 	fmt.Printf("After copy - myMap1=%v \n\t\t myMap2=%v", myMap1, myMap2)
 
-	// Better way to copy map 
+	// Better way to copy map
 	myMap3 := make(map[string]int)
 	for key, value := range myMap1 {
 		myMap3[key] = value
@@ -45,4 +44,18 @@ func main() {
 	myMap3["one"] = 111
 	fmt.Printf("After copy - myMap1=%v \n\t\t myMap3=%v", myMap1, myMap3)
 
+}
+
+func CopyMap(m map[string]interface{}) map[string]interface{} {
+	cp := make(map[string]interface{})
+	for k, v := range m {
+		vm, ok := v.(map[string]interface{})
+		if ok {
+			cp[k] = CopyMap(vm)
+		} else {
+			cp[k] = v
+		}
+	}
+
+	return cp
 }

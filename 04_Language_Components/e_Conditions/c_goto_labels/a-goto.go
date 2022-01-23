@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 )
+//  goto  is used to tranfer control to a labelled statement
 
 func main() {
 	fmt.Println("One")

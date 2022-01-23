@@ -53,3 +53,5 @@ Shift operators implement arithmetic shifts if the left operand is a signed inte
 These functions operate on unsigned integers.
 They come in different forms that take arguments of different sizes. For example, Len, Len8, Len16, Len32, and Len64 apply to the types uint, uint8, uint16, uint32, and uint64, respectively.
 The functions are recognized by the compiler and on most architectures they are treated as intrinsics for additional performance.
+
+

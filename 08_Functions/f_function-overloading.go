@@ -17,6 +17,11 @@ func addThree(p, q int, r float32) int {
 	return p + q + int(r)
 }
 
+// func add(x, y, z int) int {
+// 	return x + y + z
+// }
+// NOTE: Golang supports neither function-overloading, nor function-overwriting
+
 func main() {
 	fmt.Println("add(42, 13)=", add(42, 13))
 

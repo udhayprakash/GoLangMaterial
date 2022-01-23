@@ -16,7 +16,5 @@ func main() { // queue - FIFO
 
 		// Dequeuing
 		queue = queue[1:]
-
 	}
-
 }

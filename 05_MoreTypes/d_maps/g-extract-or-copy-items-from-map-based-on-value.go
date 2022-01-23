@@ -56,3 +56,7 @@ func main() {
 	}
 
 }
+
+// Maps are reference types. When you assign a map to a new variable, both of
+// them refer to the same underlying data structure. Therefore, changes done by
+// one variable are visible to the other.

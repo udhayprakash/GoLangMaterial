@@ -75,4 +75,3 @@ func main() {
 		p2.Salary = %f`, p2.FirstName, p2.LastName, p2.Age, p2.Salary)
 
 }
- 

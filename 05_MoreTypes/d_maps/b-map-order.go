@@ -22,4 +22,3 @@ func main() {
 		fmt.Println("There are", views, "views for", key)
 	} // Map order is undefined
 }
- 

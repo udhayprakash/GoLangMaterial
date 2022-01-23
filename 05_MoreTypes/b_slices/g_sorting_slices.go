@@ -16,13 +16,11 @@ func main() {
 	sort.Strings(strs)
 	fmt.Printf("\nAfter sorting -  strs = %v", strs)
 
-
 	ints := []int{213, 234, 213, 43, 2, 4}
 	fmt.Println("\nBefore sorting - ints = ", ints)
 	sort.Ints(ints)
 	fmt.Println("After  sorting - ints = ", ints)
 	fmt.Println()
-
 
 	s := sort.IntsAreSorted(ints)
 	fmt.Println("Sorted: ", s)
@@ -30,5 +28,3 @@ func main() {
 }
 
 // Assignment: Explore the sort module
-
- 

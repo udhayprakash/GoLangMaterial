@@ -19,7 +19,7 @@ func main() {
 		8:  "August",
 		9:  "September",
 		10: "October",
-		11: "November",``
+		11: "November",
 		45: "December"}
 	fmt.Println(months)
 	fmt.Println(reflect.TypeOf(months).Kind())

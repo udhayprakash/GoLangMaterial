@@ -72,4 +72,4 @@ Assignment:
 	Get 10 times values from runtime, store them in slice
 	Return number of times, each value is repeating
 
-*/ 
+*/

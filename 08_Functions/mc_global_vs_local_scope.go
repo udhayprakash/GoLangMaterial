@@ -13,4 +13,3 @@ func main() {
 	modify(a[:])
 	fmt.Println(a) // [23 90 91]
 }
- 

@@ -30,6 +30,6 @@ func main() {
 	sliceB[0] = "xxx"
 	fmt.Println("sliceA=", sliceA) // [Udhay xxx]
 	fmt.Println("sliceB=", sliceB) // [xxx Prakash]
-	fmt.Println("names =", names) //  [Udhay xxx Prakash Thompson]
+	fmt.Println("names =", names)  //  [Udhay xxx Prakash Thompson]
 
 }

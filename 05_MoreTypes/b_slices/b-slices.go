@@ -6,6 +6,7 @@ import (
 )
 
 /*
+Slices are reference types, and they refer to the underlying arrays
 
 Slice consists of three things:
 	1) Pointer - A reference to an underlying array
@@ -24,41 +25,41 @@ func main() {
 	s5 := a1[:7]  // [a b c d e f g] 	len-7; cap-7
 	// s6 := a1[:8]  - error - invalid slice index 8 (out of bounds for 7-element array)
 
-	fmt.Println("\na1=", a1, reflect.TypeOf(a1).Kind())
+	fmt.Println("\na1     =", a1, reflect.TypeOf(a1).Kind())
 	fmt.Println("len(a1)=", len(a1))
 	fmt.Println("cap(a1)=", cap(a1))
 
-	fmt.Println("\ns1=", s1, reflect.TypeOf(s1).Kind())
+	fmt.Println("\ns1     =", s1, reflect.TypeOf(s1).Kind())
 	fmt.Println("len(s1)=", len(s1))
 	fmt.Println("cap(s1)=", cap(s1))
 
-	fmt.Println("\ns2=", s2, reflect.TypeOf(s2).Kind())
+	fmt.Println("\ns2     =", s2, reflect.TypeOf(s2).Kind())
 	fmt.Println("len(s2)=", len(s2))
 	fmt.Println("cap(s2)=", cap(s2))
 
-	fmt.Println("\ns3=", s3, reflect.TypeOf(s3).Kind())
+	fmt.Println("\ns3     =", s3, reflect.TypeOf(s3).Kind())
 	fmt.Println("len(s3)=", len(s3))
 	fmt.Println("cap(s3)=", cap(s3))
 
-	fmt.Println("\ns4=", s4, reflect.TypeOf(s4).Kind())
+	fmt.Println("\ns4     =", s4, reflect.TypeOf(s4).Kind())
 	fmt.Println("len(s4)=", len(s4))
 	fmt.Println("cap(s4)=", cap(s4))
 
-	fmt.Println("\ns5=", s5, reflect.TypeOf(s5).Kind())
+	fmt.Println("\ns5     =", s5, reflect.TypeOf(s5).Kind())
 	fmt.Println("len(s5)=", len(s5))
 	fmt.Println("cap(s5)=", cap(s5))
 
 	// creating a slice from another slice
 	s51 := s5[1:3]
 
-	fmt.Println("\ns51=", s51, reflect.TypeOf(s51).Kind())
+	fmt.Println("\ns5[1:3] =", s51, reflect.TypeOf(s51).Kind())
 	fmt.Println("len(s51)=", len(s51))
 	fmt.Println("cap(s51)=", cap(s51))
 	fmt.Println()
 
 	// make() will take type, length , capacity ; to create slice
 	var my_slice = make([]int, 5, 8)
-	fmt.Printf("Slice = %v", my_slice)
-	fmt.Printf("\nLength = %d", len(my_slice))
+	fmt.Printf("my_slice = %v", my_slice)
+	fmt.Printf("\nLength   = %d", len(my_slice))
 	fmt.Printf("\nCapacity = %d", cap(my_slice))
 }

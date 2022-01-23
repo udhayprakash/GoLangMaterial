@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 /*
 variadic functions
@@ -19,8 +22,8 @@ func TwoArgFunc(num1, num2 int) {
 	fmt.Println("Args:", num1, num2)
 }
 
-
-func AnyNoOfArgs(num ...int){
+// variadic functions
+func AnyNoOfArgs(num ...int) {
 	fmt.Println("Args:", num)
 }
 
@@ -40,8 +43,7 @@ func main() {
 	fmt.Println(1, 2, 3)
 	fmt.Println(1, 2, 3, 4, 5, 6, 7, 8)
 
-	fmt.Println(1, 2.3, true, nil, []int{7, 8}, map[int]int{1:1, 2:2})
-
+	fmt.Println(1, 2.3, true, nil, []int{7, 8}, map[int]int{1: 1, 2: 2})
 
 	AnyNoOfArgs()
 	AnyNoOfArgs(1)
@@ -55,13 +57,17 @@ func main() {
 	SumAvg(12, 34, 67)
 	fmt.Println()
 
-	
 	getFullName("udhay")
 	getFullName("udhay", "prakash")
 	getFullName("udhay", "prakash", "pethakamsetty")
+	fmt.Println()
+
+	fmt.Println(createSentence([]string{"udhay"}...))
+	fmt.Println(createSentence([]string{"udhay", "prakash"}...))
+	fmt.Println(createSentence([]string{"udhay", "prakash", "pethakamsetty"}...))
 }
 
-func SumAvg(nums ...int){
+func SumAvg(nums ...int) {
 	summation := 0
 	for _, num := range nums {
 		summation += num
@@ -70,7 +76,6 @@ func SumAvg(nums ...int){
 	fmt.Printf("Avg(%d) = %f\n", nums, float32(summation)/float32(len(nums)))
 
 }
-
 
 func getFullName(name_parts ...string) {
 	fullName := ""
@@ -82,4 +87,6 @@ func getFullName(name_parts ...string) {
 
 // Assignment: Try to compute mean, median and mode
 
- 
+func createSentence(words ...string) string {
+	return strings.Join(words, " ")
+}

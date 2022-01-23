@@ -3,6 +3,7 @@
     - represent varaible-length sequences, []T
     - Looks like an array type without size
     - all elements are of same data type
+    - Indexable
     - slice has three components
         1. Pointer
             - Pointer points to first element of array that is reachable through slice,

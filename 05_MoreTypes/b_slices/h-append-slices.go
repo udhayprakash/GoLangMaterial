@@ -20,8 +20,8 @@ func main() {
 
 	// Dynamic slice
 	c := make([]string, len(s))
-	copy(c, s) // safe copy
-	fmt.Println("cpy:", c)// [a b c d e f]
+	copy(c, s)             // safe copy
+	fmt.Println("cpy:", c) // [a b c d e f]
 
 	// Declaring 2-D slice
 	twoD := make([][]int, 3)
@@ -33,6 +33,5 @@ func main() {
 		}
 	}
 	fmt.Println("2d: ", twoD) // [[0] [1 2] [2 3 4]]
-
 
 }

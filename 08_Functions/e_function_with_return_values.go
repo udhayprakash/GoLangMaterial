@@ -18,11 +18,11 @@ func add(x int, y int) int {
 func add1(x, y int) (output int) {
 	output = x + y // return keyword is mandatory when defined above
 	//return output
-	return      // <------ naked return
+	return // <------ naked return
 }
 
 // Function to return Quotient and Remainder of Division
-func divMod(x, y int)(q, r int){
+func divMod(x, y int) (q, r int) {
 	q = x / y
 	r = x % y
 	return q, r
@@ -36,7 +36,7 @@ func main() {
 	num1, num2 := 100, 200 // Tuple assignment
 	fmt.Printf("add(%3d, %3d) = %3d\n", num1, num2, add(num1, num2))
 	fmt.Printf("add1(%3d, %3d) = %3d\n", num1, num2, add1(num1, num2))
-	
+
 	addResult := add1(num1, num2)
 	fmt.Println("addResult:", addResult)
 
@@ -47,9 +47,6 @@ func main() {
 	fmt.Println("quotient :", quotient)
 	fmt.Println("remainder:", remainder)
 
-	
 	_, remainder1 := divMod(num1, num2)
 	fmt.Println("remainder1:", remainder1)
 }
-
- 
