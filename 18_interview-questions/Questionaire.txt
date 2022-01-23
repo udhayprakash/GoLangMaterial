@@ -1,0 +1,118 @@
+Go Programming Language 
+	- created by Robert Greiesemer, Rob Pike, Ken Thompson 
+	- created in 2007 
+	- Go compiler was initially written in C, but now written in Go itself.
+
+	- System-Level programming language, for large distributed systems ans highly scalable network servers.
+
+Features 
+	- Efficient concurrency 
+	- Flexible approach to data abstraction 
+	- Supports automatic memory management, i.e., garbage collection
+	
+Go-Routines
+	- In java, it takes 1MB of memory heap size approximately, for creating a new thread.
+	- go routines consume around ~ 2KB heap memory.
+	- go routines have faster startup time and they use more meory on a need basis only.
+	- Also, single goroutine can run on multiple threads since goroutines and OS threads dont have 1:1 mapping
+	
+	
+	1. What is Golang and what are its benefits?
+2. How can we print the type of a variable in Golang?
+3. What are Goroutines? Explain the benefits of using them.
+4. What is the static type declaration of a variable in Golang?
+5. What are typed constants and untyped constants?
+6. What is the difference between = and := operator?
+7. What is a string literal in Golang?
+8. What are packages in Golang?
+9. What is the default value of a local variable in Golang?
+10. What is the static type variable declaration in Golang?
+11. How do we find the length of a string in Golang?
+12. What is the string data type in Golang? Can you change a specific
+character in a string?
+
+
+1. Write the syntax for creating a function in Golang.
+2. What is the difference between multiple returns and named returns?
+Explain with a Go program.
+3. Write a Go program to explain call by value in Golang.
+4. What are variadic functions? Explain scenarios where it can be used.
+5. What is the defer statement in Golang?
+
+conditions
+-----------
+1. Write a Go program to explain the use of if..else statement.
+2. State true or false:
+a. The for loop is not available in Golang.
+b. Go doesn’t have while or do…while loops.
+c. The for loop is available in Golang.
+3. Write the syntax of if…else if…else statement.
+4. What is the switch…case statement? Write a Go program to explain the
+use of the switch…case statement.
+5. What is the role of the goto statement in the Go program? Explain with
+a Go program.
+6. How many types of loop control statements does Go support? Write a
+Go program to explain it.
+7. State true or false:
+	a. The goto statement is used to transfer control to the labeled
+	statement in the Go program.
+	b. The continue statement is not used to skip over the execution part
+	of the loop on a certain condition.
+	c. In Go, a for loop can work as an infinite loop if you omit the loop
+	condition or use a true.
+8. Write the syntax for nested for loops in Golang.
+
+arrays
+-------
+1. How can we check whether or not an array is empty in Golang?
+2. Write a Go program to find the length of an array.
+3. Write a Go program to set the value at an array index and access it.
+4. Explain the role of array in Golang. Write a Go program to iterate over
+an array.
+5. How can we pass arrays to functions in Golang? Explain using a Go
+program.
+
+slices
+------
+1. How can we create a slice using slice literal? Explain using a Go
+program.
+2. Write a Go program to create a slice from an array.
+3. How can we create a slice from another slice? Explain using a Go
+program.
+4. Write a Go program to create a slice using the make() function.
+5. Write a Go program to modify a slice.
+6. How can we compare two slices in Golang? Write a Go program.
+7. Write a Go program to create and access the multi-dimensional slice.
+8. Write a Go program to sort a slice using the sort package.
+9. How can we iterate over slice? Explain using a Go program.
+10. Explain different ways to iterate over the slice in Golang.
+
+
+Map
+----
+1. What are Golang maps? Write a Go program to initialize a map using
+map literal.
+2. Explain the initialization of maps using the make() function in Golang.
+3. Write a Go program to explain iteration over maps.
+4. How can we add key-value pairs in a Golang map? Explain using a Go
+program.
+5. Write a Go program to update key-value pairs in a Golang map.
+6. How can we retrieve the value of a key in the map? Explain with the
+help of a Go program.
+7. How can we check if a key exists in a Golang map? Write a Go
+program to explain it.
+8. Write a Go program to explain key deletion from maps.
+
+
+struct 
+-------
+1. Write a Go program to declare and initialize a struct.
+2. What is the zero value of a atruct? Write a Go program to explain the
+zero value of a struct.
+3. Write a Go program to access the fields of a given struct.
+4. How can we use a pointer to a struct? Write a Go program to explain
+the concept of pointer in struct.
+5. Write a Go program to update the values of struct members using the
+pointer.
+6. Explain how structs are value types using a Go program.
+7. Write a Go program to check if two structs are equal.

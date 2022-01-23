@@ -31,9 +31,16 @@ func main() {
 		{"Jesudas", 26},
 	}
 	fmt.Println("Before sorting =", students)
+	// Method1
 	sort.Sort(ByMarks(students))
 	fmt.Println("After sorting  =", students)
 
 	sort.Sort(sort.Reverse(ByMarks(students)))
 	fmt.Println("After reversing=", students)
+
+	// Method2
+	sort.Slice(students, func(i, j int) bool {
+		return students[i].Marks < students[j].Marks
+	})
+	fmt.Println("After sorting  =", students)
 }
