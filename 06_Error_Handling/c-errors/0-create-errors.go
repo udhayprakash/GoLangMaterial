@@ -8,6 +8,9 @@ import (
 )
 
 func main() {
+	var er error
+	fmt.Printf("%%s: %s\n%%v: %v\n%%#v: %#v", er, er, er)
+
 	err := errors.New("Zero Division Error")
 	fmt.Println("\nError is :", err)
 
@@ -28,4 +31,3 @@ func main() {
 		type  : %[2]v
 	`, timeErr, reflect.TypeOf(timeErr).Kind())
 }
- 

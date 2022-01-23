@@ -1,5 +1,6 @@
 Channels
 --------
+    - Do not communicate by sharing memory; instead, share memory by communicating.
     - If goroutines are the activities of a concurrent Go program, channels are the 
       connections between them.
     - channels let one goroutine send values to another

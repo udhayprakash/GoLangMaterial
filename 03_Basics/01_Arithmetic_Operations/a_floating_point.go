@@ -35,7 +35,13 @@ func main() {
 	for x := 0; x < 10; x++ {
 		fmt.Printf("x = %d eA = %10.2f\n", x, math.Exp(float64(x)))
 	}
-
+	/*
+		%f     default width, default precision
+		%9f    width 9, default precision
+		%.2f   default width, precision 2
+		%9.2f  width 9, precision 2
+		%9.f   width 9, precision 0
+	*/
 	var z float64
 	fmt.Println(z, -z, 1/z, -1/z, z/z) // "0 -0 +Inf -Inf NaN"
 	// NaN - not-a-number value

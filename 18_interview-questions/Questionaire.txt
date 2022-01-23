@@ -116,3 +116,257 @@ the concept of pointer in struct.
 pointer.
 6. Explain how structs are value types using a Go program.
 7. Write a Go program to check if two structs are equal.
+
+
+Methods
+======
+1. What is the output of the following code?
+	package main
+	import "fmt"
+	type person struct {
+		id int
+		name string
+	}
+	func (p person) setName(name string) {
+		p.name = name
+	}
+	func main() {
+		p := person{101, "Xyz"}
+		p.setName("Abc")
+		fmt.Println(p)
+	}
+	
+2. State true or false:
+	a. We can create an overloaded method in Golang
+	b. The pointer receiver method can only be called on the address of
+	the type on which the method is declared.
+	c. We can create a method without specifying a receiver variable. The
+	receiver type is enough to declare a method.
+	d. It is not necessary to declare a method of a type in the same file
+	where the type is declared.
+3. Write a program to define the following custom types of int: Distance,
+Millimeter, Centimeter, Meter, Kilometer. You need to add methods on
+each type to convert and return the values of other types. For example,
+you can define methods on Millimeter to convert its value to Centimeter,
+Meter, and Kilometer.
+4. Consider the program from question 1. What will be the output if we call
+the setName() method on the address of the person type?
+5. Find the problem in the following program:
+	package main
+	import "fmt"
+	type A struct {
+	}
+	func (a A) m1() {
+		fmt.Println("M1 of A")
+	}
+	type B struct {
+		A
+	}
+	func (b B) m1(a int) {
+		fmt.Println("M1 of B")
+	}
+	func main() {
+		b := B{}
+		b.m1()
+	}
+	
+Interfaces 
+-----------
+1. What will be the result of the following program?
+	package main
+	import "fmt"
+	type I interface {
+		m1()
+	}
+	type T struct {
+	}
+	func (t *T) m1() {
+		fmt.Println("M1 of T")
+	}
+	func main() {
+		var i I
+		t := T{}
+		i = t
+		i.m1()
+	}
+	a. M1 of T
+	b. Compilation error
+2. What will be the result of the following program?
+	package main
+	import "fmt"
+	type I interface {
+	m1()
+	}
+	type T struct {
+	}
+	func (t *T) m1() {
+	fmt.Println("M1 of T")
+	}
+	func (t *T) m2() {
+	fmt.Println("M2 of T")
+	}
+	func main() {
+	var i I
+	t := T{}
+	i = &t
+	i.m2()
+	}
+	a. M2 of T
+	b. M1 of T
+	c. Compilation error
+3. What is the stringer interface?
+	a. It converts every object into a string.
+	b. It is an empty interface and every type by default implements this.
+	c. It has a method named String(). When you implement the String
+	method on any type, we can customize the output of the type.
+	d. There is no such interface in Golang.
+4. Which is the name of the interface which can be used for sorting?
+	a. Sorter
+	b. SortInterface
+	c. Comparator
+	d. Interface
+5. Select true statements from the followings.
+	a. The implements key can be used to implement an interface.
+	b. A type can implement more than one interface.
+	c. An interface can be implemented by many types.
+	d. There is no syntax to implement an interface
+	e. To implement an interface in any type, the type needs to implement
+	all the methods of the interface.
+	
+Pointers
+---------
+1. What will be the output of the following program?
+	package main
+	import "fmt"
+	type person struct {
+		id int
+		name string
+	}
+	func main() {
+		p1 := &person{101, "XYX"}
+		modify(p1)
+		fmt.Println("Person p1:", *p1)
+	}
+	func modify(p1 *person) {
+		p1 = &person{202, "ABC"}
+	}
+	a. Person p1: {101 XYX}
+	b. Person p1: {202 ABC}
+2. What will be the result in the following program?
+	package main
+	import "fmt"
+	func main() {
+		var a *int
+		b := 10.3
+		a = &b
+		fmt.Println(*a)
+	}
+	a. The program will panic with nil pointer dereferencing error.
+	b. It will print 10.3.
+	c. There will be a compilation error because we cannot assign the
+	address of the float variable to the int type pointer variable.
+3. Point out the error in the following program:
+	package main
+	import "fmt"
+	func main() {
+	var a *int
+	fmt.Println(*a)
+	}
+4. Which of the following statements will return true?
+	a. var a *int
+	fmt.Println(a == nil)
+	b. var a *int
+	var b *int
+	fmt.Println(a == b)
+	c. a := 10
+	b := 10
+	x := &a
+	y := &b
+	fmt.Println(x == y)
+5. What will be the output of the following program?
+	package main
+	import "fmt"
+	func main() {
+	a := 10
+	b := &a
+	fmt.Println(a == b)
+	}
+	a. true
+	b. false
+	c. Compilation error
+	
+Error Handling 
+---------------
+1. Which of the following is the constructor method to create a new error object?
+	a. New()
+	b. NewErr()
+	c. NewError()
+	d. Err()
+2. Modify the following code so this program will finish gracefully by
+	print error. Note: Don’t modify the array index.
+	package main
+	import "fmt"
+	func main() {
+		arr := [5]int{10, 20, 30, 40, 50}
+		index := 5
+		fmt.Println(arr[index])
+	}
+3. Which method do we need to define to create a custom error type?
+	a. Error()
+	b. Errors()
+	c. Err()
+	d. NewErr()
+4. Which of the following statements is true about defer?
+	a. Defer function executes when the whole call stack is finished
+	b. Defer function executes at the end of the parent function. When the
+	parent function finishes its execution, only then the defer function
+	executes.
+	c. Defer function executes at the start of the parent function.
+	d. Defer function only runs when there is an error in the parent
+	function.
+5. Is it necessary to call the recover function in the defer function?
+	a. Yes
+	b. No
+	
+concurrency
+------------
+1. Write a producer-consumer program where there are two producer
+goroutines that produce data int at different intervals. One goroutine
+will produce data every 300 milliseconds and another goroutine will
+produce data every 400 milliseconds. There will be one consumer
+goroutine that will consume the data. Please note that producers should
+produce data 100 times only.
+2. Find an error in the following program:
+	package main
+	import (
+		"fmt"
+		"sync"
+	)
+	func main() {
+		wg := sync.WaitGroup{}
+		wg.Add(2)
+		go func() {
+			fmt.Println("Running go routine")
+			wg.Done()
+		}()
+		wg.Wait()
+	}
+3. What is the difference between buffered and unbuffered channels?
+4. Which of the following code defines a real-only channel as a function argument?
+	a. func read(ch <-chan int) {
+	ch <- 10
+	}
+	b. func read(ch chan<- int) {
+	ch <- 10
+	}
+	c. func read(ch chan int) {
+	ch <- 10
+	}
+	d. func read(<-ch chan int) {
+	ch <- 10
+	}
+5. What will happen when data is sent to an unbuffered channel but there is
+no goroutine to read that data?
+	a. The program will be stuck for an infinite time.
+	b. The program will panic because it is a deadlock.
+	c. The program will end whether or not there is a listener.

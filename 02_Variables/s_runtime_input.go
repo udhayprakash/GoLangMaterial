@@ -21,4 +21,14 @@ func main() {
 	// into successive arguments as determined by the format.
 	fmt.Sscanf("(500, 600)", "(%d, %d)", &X, &Y)
 	fmt.Printf("\nSscanf,    X: %d, Y: %d", X, Y)
+	fmt.Println()
+
+	var name string
+	var age int
+	n, err := fmt.Sscanf("Kim is 22 years old", "%s is %d years old", &name, &age)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Printf("%d: %s, %d\n", n, name, age)
+
 }

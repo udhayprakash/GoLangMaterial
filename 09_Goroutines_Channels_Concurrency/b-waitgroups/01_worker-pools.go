@@ -9,7 +9,7 @@ func worker(id int, jobs <-chan int, results chan<- int) {
 	for eachJob := range jobs {
 		fmt.Printf("Worder:%d - Started  job:%v\n", id, eachJob)
 		time.Sleep(time.Second)
-		fmt.Printf("Worder:%d - Finished job:%v\n", id, eachJob)
+		fmt.Printf("\tWorder:%d - Finished job:%v\n", id, eachJob)
 		results <- eachJob * 2
 	}
 }
