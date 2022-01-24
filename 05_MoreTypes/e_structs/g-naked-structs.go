@@ -17,7 +17,7 @@ func main() {
 		Age:  18,
 	} // populating with values
 
-	fmt.Println("firstStruct=", firstStruct)           //  {udhay 18}
+	fmt.Println("firstStruct=", firstStruct)           // {udhay 18}
 	fmt.Println("firstStruct.Name=", firstStruct.Name) // udhay
 
 	firstStruct.Name = "prakash"
@@ -36,4 +36,3 @@ func main() {
 	fmt.Printf("secondStruct struct : %#v\n", secondStruct)
 
 }
- 

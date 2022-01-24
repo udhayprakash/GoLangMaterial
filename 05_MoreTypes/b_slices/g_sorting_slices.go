@@ -9,8 +9,8 @@ import (
 func main() {
 
 	strs := []string{"c", "a", "b"}
-	fmt.Printf("\nstrs = %T", strs)
-	fmt.Printf("\nBefore sorting - strs = %v", strs)
+	fmt.Printf("\nstrs = %T", strs)                  // []string
+	fmt.Printf("\nBefore sorting - strs = %v", strs) // [c a b]
 
 	// sorting the slices
 	sort.Strings(strs)
@@ -20,11 +20,11 @@ func main() {
 	fmt.Println("\nBefore sorting - ints = ", ints)
 	sort.Ints(ints)
 	fmt.Println("After  sorting - ints = ", ints)
-	fmt.Println()
 
 	s := sort.IntsAreSorted(ints)
-	fmt.Println("Sorted: ", s)
+	fmt.Println("Sorted: ", s) // true
 
 }
 
-// Assignment: Explore the sort module
+// Assignment: Explore the sort module,
+// and try to sorting in descending order for both strings and ints

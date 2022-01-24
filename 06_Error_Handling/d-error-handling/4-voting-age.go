@@ -11,12 +11,12 @@ func main() {
 }
 
 func voting(voterAge int) {
+	defer ageRestriction()
 	if voterAge < 18 {
 		fmt.Println("Panicking!")
 		panic(fmt.Sprintf("%v", voterAge))
 	}
 	fmt.Println("You are Eligible for voting")
-	defer ageRestriction()
 }
 
 func ageRestriction() {

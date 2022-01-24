@@ -18,60 +18,58 @@ SYNTAX:
 	}
 
 */
-type Number int
-type FloatNum float32
+type MyInt int
+type MyFloat float64
 type MyStr string
 
-// type MyInterface interface{}
-
-// method
-func (num Number) displayText() {
-	fmt.Printf("number = %d\n", num)
+// methods
+func (num MyInt) displayText() {
+	fmt.Printf("MyInt   = %d\n", num)
 }
 
-func (num FloatNum) displayTextFloat() {
-	fmt.Printf("number = %f\n", num)
+func (num MyFloat) displayText() {
+	fmt.Printf("MyFloat = %f\n", num)
 }
 
-func (str MyStr) displayTextString() {
-	fmt.Printf("string = %s\n", str)
+func (str MyStr) displayText() {
+	fmt.Printf("MyStr   = %s\n", str)
 }
 
-// func (gen MyInterface) displayTextMyInterface() {
-// 	fmt.Printf("value = %v  type = &[1]T\n", gen)
-// } // invalid receiver type MyInterface (MyInterface is an interface type)
+func (i MyInt) Add(j MyInt) MyInt {
+	return i + j
+}
+
+func (s MyStr) IsNotEmpty() bool {
+	return s != ""
+}
 
 func main() {
 	// var num1 int = 123
 
-	var num1 Number = 123
+	var num1 MyInt = 123
 	num1.displayText()
 
 	// num2 := 123.3
-	var num2 FloatNum = 123
-	num2.displayTextFloat()
+	var num2 MyFloat = 123.3
+	num2.displayText()
 
 	var mystr1 MyStr = "Go Language"
-	mystr1.displayTextString()
+	mystr1.displayText()
 
-	// var value1 MyInterface = 123
-	// value1.displayTextMyInterface()
+	//----------------
+	v1 := MyInt(5)
+	v2 := MyInt(6)
 
-	// -----------------
-	v1 := Number(5)
-	v2 := Number(6)
-	fmt.Println("v1.Add(v2)      =", v1.Add(v2))
-	fmt.Println("v1.Add(v2) + 12 =", v1.Add(v2)+12)
+	fmt.Println("v1.Add(v2)      =", v1.Add(v2))    // 11
+	fmt.Println("v1.Add(v2) + 12 =", v1.Add(v2)+12) // 23
 
-	// -----------
-	fmt.Println(mystr1.Required())         // true
-	fmt.Println(MyStr("Hello").Required()) // true
-}
+	fmt.Println("v1.Add(22)      =", v1.Add(22))    // 27
+	fmt.Println("v1.Add(22) + 12 =", v1.Add(22)+12) // 39
 
-func (i Number) Add(j Number) Number {
-	return i + j
-}
+	fmt.Println("mystr1.IsNotEmpty() =", mystr1.IsNotEmpty()) // true
+	// fmt.Println( "Ravi".IsNotEmpty())
+	// "Ravi".IsNotEmpty undefined (type string has no field or method IsNotEmpty)
 
-func (s MyStr) Required() bool {
-	return s != ""
+	fmt.Println(MyStr("Ravi").IsNotEmpty()) // true
+	fmt.Println(MyStr("").IsNotEmpty())     // false
 }

@@ -22,7 +22,10 @@ func main() {
 	// zero value of map
 	fmt.Println("uniqueColors == nil:", uniqueColors == nil)
 
+	// Method 1
 	for _, color := range colors {
+		fmt.Println(color)
+
 		// Lookup
 		_, isKeyPresent := uniqueColors[color]
 		if isKeyPresent == false {
@@ -30,9 +33,10 @@ func main() {
 		} else {
 			uniqueColors[color]++
 		}
-
 	}
 	fmt.Println("\nuniqueColors    =", uniqueColors)
+
+	// Method 2
 
 	uniqueColors = make(map[string]int)
 	for _, color := range colors {
@@ -52,5 +56,4 @@ func main() {
 		}
 	}
 	fmt.Println("nonDuplicateColors=", nonDuplicateColors)
-
 }

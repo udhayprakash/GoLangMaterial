@@ -5,22 +5,30 @@ import (
 )
 
 func main() {
-	var ptr *float64
-	fmt.Printf("The value of ptr is : %x\n", ptr)
+	var ptr *float64                              // nil pointer
+	fmt.Printf("The value of ptr is : %x\n", ptr) // 0
 
+	// var num2 float64 = 123.213
 	num2 := 123.213
+	fmt.Println("Before ptr != nil :", ptr != nil) // false
 
 	ptr = &num2
-	fmt.Println("After  ptr != nil :", ptr != nil)
+	fmt.Println("After  ptr != nil :", ptr != nil) // true
 
 	// myStr := "Golang"
 	// ptr = &myStr
-	// // error: incompatible types in assignment
+	// cannot use &myStr (type *string) as type *float64 in assignment
 
 	// num3 := 123
 	// ptr = &num3
-	// incompatible types in assignment
-}
+	// cannot use &num3 (type *int) as type *float64 in assignment
 
+	// var num4 float32 = 1.3
+	// ptr = &num4
+	// cannot use &num4 (type *float32) as type *float64 in assignment
+
+	// var floatPtr *float  //  undefined: float
+
+}
 
 // NOTE: You can refer values of same data types as defined in pointer 

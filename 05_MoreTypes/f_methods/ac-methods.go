@@ -18,12 +18,15 @@ type Degrees struct {
 }
 
 // method
-func (deg Degrees) toRad() float64 {
+func (deg Degrees) toRadians() float64 {
 	return deg.angle * (3.14 / 180.0)
 }
 
 func main() {
-	angle := Degrees{90.0, "udhay"}
-	fmt.Println("angle:", angle)
-	fmt.Println("Angle, in radians: ", angle.toRad())
+	angle1 := Degrees{90.0, "Inclination Angle"}
+	fmt.Println("angle1 =", angle1) // {90 Inclination Angle}
+
+	fmt.Println("angle1.toRadians() =", angle1.toRadians()) // 1.5699999999999998
 }
+
+// assignment: Round off the result to two digits, after decimal

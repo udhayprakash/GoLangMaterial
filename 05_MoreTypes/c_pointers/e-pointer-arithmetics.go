@@ -6,8 +6,8 @@ func main() {
 	var val int = 42
 	var valPtr *int = &val
 
-	fmt.Println("val= ", val, "*valPtr=", *valPtr)
-	fmt.Println("valPtr= ", valPtr, "&val=", &val)
+	fmt.Println("val= ", val, "*valPtr=", *valPtr) // value
+	fmt.Println("valPtr= ", valPtr, "&val=", &val) // address location
 
 	// updating value directly
 	val = 66
@@ -36,5 +36,5 @@ func main() {
 // NOTE - pointer arithmetics is not supported in go;
 // But can be done using "unsafe" package
 
-// Assignment - if two pointer are refering to same variable,
+// Assignment - If two pointer are refering to same variable,
 // try arithmetic on those pointers

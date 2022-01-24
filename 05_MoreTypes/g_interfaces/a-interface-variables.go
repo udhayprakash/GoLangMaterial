@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"reflect"
 	"time"
 )
 
@@ -39,6 +40,8 @@ func main() {
 
 	any = new(bytes.Buffer)
 	fmt.Printf("any:%10v , dataType:%T\n", any, any)
+
+	fmt.Println(reflect.TypeOf(any), reflect.TypeOf(any).Kind())
 
 	var x1 interface{} = []int{1, 2}
 	fmt.Printf("x1 :%10v , dataType:%T\n", x1, x1)

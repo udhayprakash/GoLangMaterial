@@ -19,12 +19,14 @@ func main() {
 	divResult, err := div(30, 2)
 	if err != nil {
 		fmt.Printf("Error is %v\n", err)
+	} else {
+		fmt.Println("divResult = ", divResult)
 	}
-	fmt.Println("divResult = ", divResult)
 
 	divResult, err = div(30, 0)
 	if err != nil {
 		fmt.Printf("Error is %v\n", err)
+	} else {
+		fmt.Println("divResult = ", divResult)
 	}
-	fmt.Println("divResult = ", divResult)
 }

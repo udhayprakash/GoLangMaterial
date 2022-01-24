@@ -20,9 +20,8 @@ func main() {
 
 	map1 := map[string]int{}
 	map2 := map1
-
 	// fmt.Println("map1 == map2     :", map1 == map2)
-	// error: map can only be compared to nil
+	// invalid operation: map1 == map2 (map can only be compared to nil)
 
 	fmt.Println("map1 == nill     :", map1 == nil)
 	fmt.Println("map2 == nill     :", map2 == nil)
@@ -31,6 +30,4 @@ func main() {
 
 	map3 := make(map[string]int)
 	fmt.Println("reflect.DeepEqual(map1, map3):", reflect.DeepEqual(map1, map3))
-
 }
- 

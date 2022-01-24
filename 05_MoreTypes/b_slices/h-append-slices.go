@@ -6,8 +6,8 @@ func main() {
 	s := make([]string, 3)
 	fmt.Println("emp:", s) // [  ]
 
-	s[0], s[1] = "a", "b"
-	s[2] = "c"
+	s[0] = "a"
+	s[1], s[2] = "b", "c"
 	fmt.Println("set:", s)    // [a b c]
 	fmt.Println("get:", s[2]) // c
 
@@ -22,6 +22,12 @@ func main() {
 	c := make([]string, len(s))
 	copy(c, s)             // safe copy
 	fmt.Println("cpy:", c) // [a b c d e f]
+	fmt.Println()
+
+	// In this case, changes in one slice, were not leaked into another slice
+	c[3] = "D"
+	fmt.Println("s =", s) // [a b c d e f]
+	fmt.Println("c =", c) // [a b c D e f]
 
 	// Declaring 2-D slice
 	twoD := make([][]int, 3)

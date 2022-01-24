@@ -26,16 +26,19 @@ func main() { // stack - LIFO (Last In First Out)
 	stack = append(stack, "seven", "eight")
 	stack = append(stack, []string{"nine", "ten"}...)
 	fmt.Println("stack = ", stack)
+	fmt.Println()
 
-	// pop all the elements
-	for len(stack) > 0 {
+	// pop all the elements 
+	for len(stack) > 0{
 		// Retrieving the last element
 		lastPos := len(stack) - 1
-		fmt.Println(stack[lastPos])
+		fmt.Println("popped element:", stack[lastPos])
 
-		// poping that element
+		// popping that last element 
 		stack = stack[:lastPos]
+		// fmt.Println("stack = ", stack)
 
 	}
 	fmt.Println("stack = ", stack)
+
 }

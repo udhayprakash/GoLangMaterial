@@ -6,6 +6,9 @@ import (
 
 func main() {
 	var x interface{} = "foo"
+
+	fmt.Println(x.(string)) // foo
+
 	var s string = x.(string)
 	fmt.Println(s) // "foo"
 
@@ -15,7 +18,11 @@ func main() {
 	n, ok := x.(int)
 	fmt.Println(n, ok) // "0 false"
 
-	// n = x.(int) // ILLEGAL
-	// panic: interface conversion: interface {} is string, not int  
+	// n = x.(int)
+	// panic: interface conversion: interface {} is string, not int
 
+	var y interface{} = "123"
+	fmt.Println("y.(string) =", y.(string))
+	// fmt.Println("y.(int) =", y.(int))
+	// panic: interface conversion: interface {} is string, not int
 }

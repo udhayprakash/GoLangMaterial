@@ -1,19 +1,17 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 	// Method 1 - Declaring, and  initializing the map
 	studentRank1 := map[string]int{}
-	fmt.Println("\nstudentRank1      = ", studentRank1)
-	fmt.Println("len(studentRank1) = ", len(studentRank1))
+	fmt.Println("\nstudentRank1      = ", studentRank1)    // map[]
+	fmt.Println("len(studentRank1) = ", len(studentRank1)) // 0
 
 	// Method2 - Declaring, and  initializing the map
 	studentRank := make(map[string]int)
-	fmt.Println("\nstudentRank      = ", studentRank)
-	fmt.Println("len(studentRank) = ", len(studentRank))
+	fmt.Println("\nstudentRank      = ", studentRank)    // map[]
+	fmt.Println("len(studentRank) = ", len(studentRank)) // 0
 
 	// To add key-value pairs
 	studentRank["Suresh"] = 1
@@ -64,7 +62,6 @@ func main() {
 	// Method 2 - recreating map will reallocate memory by Garbage collector
 	studentRank = make(map[string]int)
 	fmt.Println("After re-creating , studentRank=", studentRank)
-
 }
 
 /*
@@ -72,4 +69,9 @@ Assignment:
 	Get 10 times values from runtime, store them in slice
 	Return number of times, each value is repeating
 
+	input - 11 44 11 66 11 44 33 78
+
+	output - 11: 3, 44:2, 66: 1, 33:1, 78:1
+
+	HINT: isKeyPresent
 */
