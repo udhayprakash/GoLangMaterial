@@ -6,8 +6,11 @@ import (
 
 func main() {
 	fmt.Println("main()   - starting")
+
+	defer fmt.Println("defer main()")
 	myFunc()
 	AnotherFunc()
+
 	fmt.Println("main()   - ending")
 }
 
@@ -27,7 +30,7 @@ func AnotherFunc() {
 }
 
 /*
-OUTPUT
+OUTPUT:
 -------
 	main()   - starting
 			myFunc() - starting
@@ -37,4 +40,6 @@ OUTPUT
 			AnotherFunc() - ending
 					defer statement2
 	main()   - ending
+	defer main()
+
 */

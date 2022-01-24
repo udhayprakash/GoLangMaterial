@@ -1,6 +1,6 @@
 # Slices
 
-    - represent varaible-length sequences, []T
+    - represent variable-length sequences, []T
     - Looks like an array type without size
     - all elements are of same data type
     - Indexable

@@ -14,7 +14,7 @@ func (s GoLangStudent) String() string {
 	return fmt.Sprintf("%s: %d", s.Name, s.Marks)
 }
 
-type ByMarks []GoLangStudent
+type ByMarks []GoLangStudent // slice of structs
 
 // Len, Swap and Less methods , with same name, need to be defined, for sorting
 func (b ByMarks) Len() int      { return len(b) }
@@ -44,3 +44,5 @@ func main() {
 	})
 	fmt.Println("After sorting  =", students)
 }
+
+// assignment - try enhancing this custom sort, to sort by length of student name

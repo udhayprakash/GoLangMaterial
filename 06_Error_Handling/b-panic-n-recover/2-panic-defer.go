@@ -15,7 +15,7 @@ func main() {
 /*
 NOTE: 
 	1. panic() is the last executing statement 
-	2. Before panicking, it will execute all registered defers
+	2. After panicking, it will execute all registered defers, till that line
 */
 
 

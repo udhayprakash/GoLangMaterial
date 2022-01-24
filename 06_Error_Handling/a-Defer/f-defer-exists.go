@@ -12,6 +12,8 @@ func main() {
 		fmt.Println("Defer never reached")
 	}()
 
+	// os.Exit(statusCode)  // on occurrance, even registered defers wont execute
+
 	defer func() {
 		os.Exit(statusCode)
 	}()

@@ -35,6 +35,7 @@ require (
 	github.com/uptrace/bunrouter v1.0.8 // indirect
 	github.com/uptrace/bunrouter/extra/reqlog v1.0.8 // indirect
 	github.com/xuri/excelize/v2 v2.4.1 // indirect
+	go.mongodb.org/mongo-driver v1.8.2 // indirect
 	golang.org/x/crypto v0.0.0-20210813211128-0a44fdfbc16e
 	golang.org/x/text v0.3.7
 	golang.org/x/tools v0.0.0-20191112195655-aa38f8e97acc

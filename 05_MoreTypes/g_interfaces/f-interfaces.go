@@ -6,7 +6,7 @@ import (
 )
 
 type Element interface{}
-type List []Element
+type List []Element // slice of interfaces
 
 type Person struct {
 	name string
@@ -19,17 +19,18 @@ func (p Person) String() string {
 
 func main() {
 	list := make(List, 5)
-	list[0] = 1       //an int
-	list[1] = "Hello" //a string
-	list[2] = Person{"Dennis", 70}
-	list[3] = true
-	list[4] = []int{11, 22, 33}
+	fmt.Println("Initially, list =", list)
 
-	fmt.Println("list=", list)
-	fmt.Println()
+	list[0] = 1                    //an int
+	list[1] = "Hello"              //a string
+	list[2] = Person{"Dennis", 70} // struct instance
+	list[3] = true                 // bool
+	list[4] = []int{11, 22, 33}    // slice
+	fmt.Println("after initial, list =", list)
 
 	for index, element := range list {
-		switch value := element.(type) {
+		fmt.Println(index, element)
+		switch value := element.(type) { //  Type Switch
 		case int:
 			fmt.Printf("list[%d] is an int and its value is %d\n", index, value)
 		case string:

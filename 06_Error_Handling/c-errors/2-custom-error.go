@@ -9,11 +9,11 @@ type MyError struct {
 }
 
 func (e MyError) Error() string {
-	return fmt.Sprintf("%v", e.What)
+	return fmt.Sprintf("ERROR:%v", e.What)
 }
 
 func someError() error {
-	return MyError{"Some error occurred"}
+	return MyError{"Some Error Occurred!!!"}
 }
 
 func main() {
