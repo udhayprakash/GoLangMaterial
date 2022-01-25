@@ -33,6 +33,14 @@ func addition(n1 float32) func(float32) float32 {
 }
 
 func main() {
+
+	// myfunc(1, 4)
+	// myfunc(1, 3)
+	// myfunc(1, 5)
+	// myfunc(1, 43)
+	// myfunc(1, 324)
+	// myfunc(1, 2134)
+
 	plusOne := partialPlus(1)
 	fmt.Println("plusOne(5):", plusOne(5)) //prints 6
 	fmt.Println("plusOne(7):", plusOne(7)) //prints 8

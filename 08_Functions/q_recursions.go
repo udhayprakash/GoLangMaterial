@@ -14,7 +14,7 @@ Tail call Optimization (TCO)
 
 // factorial(9) = 9 * 8 * 7 * 6 * .... * 1
 func factorial(num int) int {
-	// fmt.Println("\tnum =", num)
+	fmt.Println("\tnum =", num)
 	if num <= 1 {
 		return 1
 	}
@@ -27,8 +27,17 @@ func main() {
 
 	fmt.Println("factorial(6):", factorial(6))
 
-
 	for i := 0; i < 12; i++ {
 		fmt.Printf("factorial(%2d)=%8d\n", i, factorial(i))
 	}
 }
+
+/*
+
+factorial(9) = 9 * factorial(8)
+			 = 9 * 8 * factorial(7)
+
+assignment: implement memoization design pattern
+
+	{8: 98789}
+*/

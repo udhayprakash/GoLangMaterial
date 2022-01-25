@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 	"strings"
 )
 
@@ -88,5 +89,6 @@ func getFullName(name_parts ...string) {
 // Assignment: Try to compute mean, median and mode
 
 func createSentence(words ...string) string {
+	fmt.Println(reflect.TypeOf(words)) // []string
 	return strings.Join(words, " ")
 }

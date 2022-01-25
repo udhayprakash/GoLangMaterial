@@ -39,4 +39,3 @@ func main() {
 	findAllOccurrences(87, []int{})
 
 }
- 

@@ -4,8 +4,10 @@ import "fmt"
 
 // four ways to declare a function with
 //        two parameters and one result
+
 func add(x int, y int) int {
-	return x + y
+	z := x + y
+	return z
 }
 
 func sub(x, y int) (z int) {
@@ -28,10 +30,12 @@ func main() {
 	fmt.Printf("%T\n", first) // "func(int, int) int"
 	fmt.Printf("%T\n", zero)  // "func(int, int) int"
 
+	fmt.Println("add(1, 2) =", add(1, 2))
+
 	// zero value of function type is nil
 	var f func(int) int
+	fmt.Printf("%T\n", f) // "func(int) int"
 	// f(3) // panic: runtime error: invalid memory address or nil pointer dereference
 	fmt.Println("f == nil :", f == nil)
 
 }
- 

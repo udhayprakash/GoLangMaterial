@@ -12,7 +12,6 @@ Purpose: Function with one input argument and no return value
               unless it's passed in explicitly
 		- by keyword arguments NOT possible in golang
 */
-
 // Function Definitions
 func hello() {
 	fmt.Println("Hello World")
@@ -23,20 +22,25 @@ func hello2(name string) {
 }
 
 func hello3(name string, age int) {
-	fmt.Println("Hello", name, "! Your age is", age)
+	fmt.Printf("Hello! Mr.%s with age %d !!\n", name, age)
 }
 
 func main() {
 	// Function calls
 	hello()
 
+	// 1) Function calls by positional arguments
+
 	// hello2() // not enough arguments in call to hello2
-	hello2("Danilo")
+	hello2("Girish")
 
-	// hello2("Danilo", "Jo")  // too many arguments in call to hello2
+	// hello2("Girish", "Harish")  // too many arguments in call to hello2
 
-	// // keyword arguments not possible
-	// hello2(name = "Danilo") // syntax error: unexpected =, expecting comma or )
+	// 2) keyword arguments not possible
+	// hello2(name ="Girish") // syntax error: unexpected =, expecting comma or )
+	// hello2(name : "Girish") // syntax error: unexpected =, expecting comma or )
 
-	hello3("Danilo", 29)
+	// hello3("Girish", "Harish")
+	hello3("Girish", 78)
+
 }

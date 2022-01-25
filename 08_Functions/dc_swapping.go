@@ -2,11 +2,14 @@ package main
 
 import "fmt"
 
-func swap(x, y string) (string, string) {
-	return y, x
+func swap(w1, w2 string) (string, string) {
+	return w2, w1
 }
 
 func main() {
-	a, b := swap("hello", "world")
-	fmt.Println(a, b)
+	// word1 := swap("Hello", "world")
+	// 1 variable but swap returns 2 values
+
+	word1, word2 := swap("Hello", "world")
+	fmt.Println(word1, word2)
 }

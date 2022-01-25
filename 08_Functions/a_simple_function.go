@@ -19,16 +19,21 @@ SYNTAX:
 	func name(parameter-list) (result-list) {
 		body
 	}
-*/
 
+
+main()  and init() will be automatically called
+*/
+// Functiopn defintion
 func myFunc() {
 	//Function with no arguments and no return value
 	fmt.Println("Function myFunc is called!!!")
 }
 
 func main() {
-	fmt.Println("myFunc                ", myFunc) // 0x23c580
-	fmt.Println("reflect.TypeOf(myFunc)", reflect.TypeOf(myFunc),  reflect.TypeOf(myFunc).Kind())
+	fmt.Println("myFunc                ", myFunc) // 0xe8c580
+	fmt.Println("reflect.TypeOf(myFunc)", reflect.TypeOf(myFunc), reflect.TypeOf(myFunc).Kind())
 
+	// function call
 	myFunc()
 }
+
