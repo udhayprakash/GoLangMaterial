@@ -2,33 +2,52 @@ package main
 
 import "fmt"
 
-
-func isOdd(integer int) bool{
-	if integer % 2 == 0{
+func isOdd(integer int) bool {
+	if integer%2 == 0 {
 		return false
 	}
 	return true
 }
 
-func isEven(integer int) bool{
-	if integer % 2 == 0 {
+func isEven(integer int) bool {
+	if integer%2 == 0 {
 		return true
 	}
 	return false
 }
 
-type testInt func(int) bool // define a function type of variable
-// pass the function `f` as an argument to another function
-func filter(slice []int, f testInt) []int{
-	var result []int
-	for _, value := range slice{
-		if f(value){
-			result  = append(result, value)
+func getAllOddNumbers(nums []int) []int {
+	var resultNums []int
+	for _, num := range nums {
+		if isOdd(num) == true {                // function
+			resultNums = append(resultNums, num)
 		}
 	}
-	return result
+	return resultNums
 }
 
+func getAllEvenNumbers(nums []int) []int {
+	var resultNums []int
+	for _, num := range nums {
+		if isEven(num) == true {                // function
+			resultNums = append(resultNums, num)
+		}
+	}
+	return resultNums
+}
+
+// Decorator design pattern - passing func as argument 
+type EvenOddFunc func(int) bool
+
+func Filter(nums []int, myfunc EvenOddFunc) []int {
+	var resultNums []int
+	for _, num := range nums {
+		if myfunc(num) == true {                // function
+			resultNums = append(resultNums, num)
+		}
+	}
+	return resultNums
+}
 
 func main() {
 	slice := []int{1, 2, 3, 4, 5, 7}
@@ -36,12 +55,12 @@ func main() {
 
 	fmt.Println("isOdd(2) =", isOdd(2))
 	fmt.Println("isOdd(3) =", isOdd(3))
+	fmt.Println()
+	
+	fmt.Println("getAllOddNumbers(slice)  =", getAllOddNumbers(slice))
+	fmt.Println("getAllEvenNumbers(slice) =", getAllEvenNumbers(slice))
+	fmt.Println()
 
-	odd := filter(slice, isOdd) // use function as values
-	fmt.Println("Odd elements of slice are: ", odd)
-
-	even := filter(slice, isEven)
-	fmt.Println("Even elements of slice are: ", even)
-
+	fmt.Println("Filter(slice, isEven)    =", Filter(slice, isEven))
+	fmt.Println("Filter(slice, isOdd)     =", Filter(slice, isOdd))
 }
- 

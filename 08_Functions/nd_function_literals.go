@@ -14,10 +14,16 @@ func main() {
 	fmt.Println("After sorting, people:", people)
 
 	// Custom sorting := sorting by length
-	sort.Slice(people, func(p1Pos, p2Pos int) bool {
-		return len(people[p1Pos]) < len(people[p2Pos])
+	sort.Slice(people, func(pos1, pos2 int) bool {
+		return len(people[pos1]) < len(people[pos2])
 	})
-	fmt.Println("After slicing, people:", people)
+	fmt.Println("After slicing, people:", people) // [john ashok shyam prakash]
+
+	// Custom sorting := sorting by length  -- descending order
+	sort.Slice(people, func(pos1, pos2 int) bool {
+		return len(people[pos1]) > len(people[pos2])
+	})
+	fmt.Println("After slicing, people:", people) // [prakash ashok shyam john]
 
 	// Method 2
 	// It could also have been stored in an intermediate variable:

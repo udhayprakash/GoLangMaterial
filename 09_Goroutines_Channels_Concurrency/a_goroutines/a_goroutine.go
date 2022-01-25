@@ -11,14 +11,18 @@ should block, such as while waiting for I/O, others continue
 to run. Their design hides many of the complexities of thread 
 creation and management.
 */
-func main() {
-	// calling a function
-	helloWorld()
+
+
+func helloWorld(){
+	println("Hello world")
+}
+
+func main(){
+
+	// call a function 
+	helloWorld()   // Hello world
 
 	// creating a go-routine
 	go helloWorld()
-}
 
-func helloWorld(){
-	println("Hello World")
 }
