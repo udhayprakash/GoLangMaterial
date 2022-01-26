@@ -54,4 +54,11 @@ https://goplay.space/
 
 ## Windows/MAC Installation Procedure
 
-Go to Download Link (https://golang.org/dl) and download the corresponding executable
+    - Go to Download Link (https://golang.org/dl) and download the corresponding executable
+
+## Environment variables Setup
+
+    - With latest versios of Go, GOPATH setup is not needed.
+    - Developers do not have to care about GOPATH anymore.
+    - It has a default value (depending on OS)
+    - GOPATH is still used by the Go toolchain internally, for caching downloaded modules and compilation artifacts.
