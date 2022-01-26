@@ -12,18 +12,23 @@ func hello(name string) {
 func pinger(c1 chan string) {
 	fmt.Println("In pinger function")
 	for i := 0; i < 10; i++ {
+		fmt.Println("In pinger:")
 		// placing the value into channel
 		// c1 <- "ping"
 		c1 <- fmt.Sprintf("\tping %d", i)
+
 	}
+
 }
 
 func printer(c2 chan string) {
 	fmt.Println("In printer function")
 	for {
+		fmt.Println("In printer:")
 		msg := <-c2 // retrieving value from channel
-		fmt.Println(msg)
+		fmt.Println("\t", msg)
 		time.Sleep(time.Second * 1)
+
 	}
 }
 

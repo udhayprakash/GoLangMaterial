@@ -18,11 +18,11 @@ func main() {
 
 	var myFloatChannel chan float64
 	fmt.Printf("\nmyFloatChannel - value: %v \n", myFloatChannel) // <nil>
-	fmt.Printf("myFloatChannel - type : %T \n", myFloatChannel)
+	fmt.Printf("myFloatChannel - type : %T \n", myFloatChannel)   // chan float64
 
 	var myBoolChannel chan bool
 	fmt.Printf("\nmyBoolChannel - value: %v \n", myBoolChannel) // <nil>
-	fmt.Printf("myBoolChannel - type : %T \n", myBoolChannel)
+	fmt.Printf("myBoolChannel - type : %T \n", myBoolChannel)   // chan bool
 
 	//const myIntConstChannel chan
 	// ERROR: const declaration cannot have type without expression
@@ -37,5 +37,5 @@ func main() {
 
 	myInterfaceChannel := make(chan interface{})
 	fmt.Printf("\nmyInterfaceChannel - value: %v \n", myInterfaceChannel) // 0xc00001a240
-	fmt.Printf("myInterfaceChannel - type : %T \n", myInterfaceChannel)
+	fmt.Printf("myInterfaceChannel - type : %T \n", myInterfaceChannel)   // chan interface {}
 }
