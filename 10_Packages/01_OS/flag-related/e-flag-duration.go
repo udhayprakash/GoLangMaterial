@@ -15,5 +15,17 @@ func main() {
 	fmt.Println()
 
 }
+/*
 
-// go run e_flag_duration.go -period 50ms
+~go run e-flag-duration.go -period 10ms
+	Sleeping for 10ms...
+
+~go run e-flag-duration.go -period 3s  
+	Sleeping for 3s...
+
+go run e-flag-duration.go -period 10
+	invalid value "10" for flag -period: parse errorUsage of C:\Users\Amma\AppData\Local\Temp\go-build3362939746\b001\exe\e-flag-duration.exe:  -period duration        sleep period (default 1s)exit status 2
+
+
+
+*/

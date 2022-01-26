@@ -24,7 +24,10 @@ func main() {
 	decodeMsg, err := base32.StdEncoding.DecodeString(encodeMsg)
 	CheckError(err)
 	fmt.Println("decodeMsg=", decodeMsg, reflect.TypeOf(decodeMsg))
+
+	fmt.Println(string(decodeMsg)) // abc123!?$*&()'-=@~
 }
+
 /*
 The types of encoding available are:
 	StdEncoding		: standard base64 encoding
