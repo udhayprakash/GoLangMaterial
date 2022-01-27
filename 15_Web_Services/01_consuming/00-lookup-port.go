@@ -8,6 +8,9 @@ import (
 func main() {
 	for _, service := range []string{
 		"http",
+		"https",
+		"smtp",
+		"tls",
 		"ssl",
 		"invalidService",
 	} {

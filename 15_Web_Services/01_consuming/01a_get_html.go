@@ -29,9 +29,11 @@ func main() {
 /*
 
 HTTP Status Codes
+-----------------
 100 Continue
 101 Switching Protocols
 103 Early Hints
+
 200 OK
 201 Created
 202 Accepted
@@ -39,6 +41,7 @@ HTTP Status Codes
 204 No Content
 205 Reset Content
 206 Partial Content
+
 300 Multiple Choices
 301 Moved Permanently
 302 Found
@@ -46,6 +49,7 @@ HTTP Status Codes
 304 Not Modified
 307 Temporary Redirect
 308 Permanent Redirect
+
 400 Bad Request
 401 Unauthorized
 402 Payment Required
@@ -72,6 +76,8 @@ HTTP Status Codes
 429 Too Many Requests
 431 Request Header Fields Too Large
 451 Unavailable For Legal Reasons
+
+
 500 Internal Server Error
 501 Not Implemented
 502 Bad Gateway

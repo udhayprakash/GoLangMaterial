@@ -1,4 +1,4 @@
-// Fetch prints the content found at a URL.
+// Fetch prints the content from a url
 package main
 
 import (
@@ -8,12 +8,15 @@ import (
 	"os"
 )
 
-func main() {
+func init() {
 	if len(os.Args) != 2 {
 		fmt.Println("USAGE:\n fileName.go <URL>")
 		fmt.Println("Example:03_fetch.go https://www.facebook.com/")
 		os.Exit(1)
 	}
+}
+
+func main() {
 
 	fmt.Println(os.Args)
 	for _, url := range os.Args[1:] {
@@ -31,3 +34,6 @@ func main() {
 		fmt.Printf("%s", b)
 	}
 }
+
+
+// Assignment: try writing the outouts in files with the same domain name

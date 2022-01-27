@@ -16,12 +16,19 @@ func IsPalindrome(s string) bool {
 }
 
 func TestPalindrome(t *testing.T) {
+	if IsPalindrome("detartrated") == false {
+		t.Error(`IsPalindrome("detartrated") = false`)
+	}
+
 	if !IsPalindrome("detartrated") {
 		t.Error(`IsPalindrome("detartrated") = false`)
 	}
+
+	
 	if !IsPalindrome("kayak") {
 		t.Error(`IsPalindrome("kayak") = false`)
 	}
+
 }
 func TestNonPalindrome(t *testing.T) {
 	if IsPalindrome("palindrome") {

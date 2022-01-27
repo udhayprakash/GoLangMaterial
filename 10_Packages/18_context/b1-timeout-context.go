@@ -26,3 +26,6 @@ func main() {
 	}
 
 }
+
+
+// assignment: implment number guessing game to work for 1 minute, only. return scores 

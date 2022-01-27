@@ -1,6 +1,8 @@
 package calc
 
 import (
+	"fmt"
+	"log"
 	"testing"
 )
 
@@ -29,5 +31,14 @@ func TestDivide(t *testing.T) {
 	result := Divide(2, 1)
 	if result != 2 {
 		t.Errorf("expected %d; got %d", 2, result)
+	}
+}
+
+func TestDozenValue(t *testing.T) {
+	log.Println("TestDozenValue - start")
+	fmt.Println("DOZEN VALUE:", DOZEN)
+	if DOZEN != 12 {
+		t.Log("Unexpected value for DOZEN:", DOZEN)
+		t.Fail()
 	}
 }
