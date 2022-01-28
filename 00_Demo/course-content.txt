@@ -99,10 +99,13 @@ Chapter 10: Modules
                 runtime
 				context
 				reflect
+				
+				Creating Custom Packages
 
 Chapter 11: File Operations
-                UnStructured,Structured, 
-                ZipFiles
+                UnStructured- text, pdf files
+				Structured - csv, xml, json, yaml 
+                ZipFiles - .zip, .tar files
                  
 Chapter 12: Logging
                 Built-in logger 

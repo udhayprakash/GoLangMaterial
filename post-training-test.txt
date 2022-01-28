@@ -1,0 +1,82 @@
+1) How to discover and run all test go scripts in all subdirectories
+    a)  go test 
+    b)  go test .
+    c)  go test ../..
+    d)  go test ./...
+
+2) Which among the below is the syntax for variadic function:
+    a) func Addition(num1 int, num2 int) int
+    b) func Addition(num1, num2 int) int
+    c) func Addition(num1 ...int) int
+    d) func Addition(num1 []int) int
+
+3) Golang supports:
+    a) Function Overloading 
+    b) Function Overwriting 
+    c) Method Overloading 
+    d) Method Overwriting 
+4) Which of the following is NOT a correct syntax for importing a package:
+    a) + "fmt"
+    b) f "fmt"
+    c) . "fmt"
+    d) _ "fmt"
+5) How to hold the main function from completing, till all goroutines were completed:
+    a) using time.Sleep 
+    b) using fmt.Scanf
+    c) using sync/waitgroup
+    d) All of Above
+
+6) What is the Output of the below code:
+
+        const (
+            north int = iota
+            east
+            south
+            west
+        )
+        fmt.Println(north, east, south, west)
+
+    a) 0 1 2 3
+    b) 0 0 0 0 
+    c) iota 1 2 3
+    d) iota iota iota iota 
+
+7) How to compare two slices: 
+        mys1 := []int{1, 2, 3}
+        mys2 := []int{1, 2, 3}
+
+    a) mys1 == mys2 
+    b) array(mys1) == array(mys2)
+    c) reflect.DeepEqual(mys1, mys2)
+    d) (mys1 == nil) == (mys2 == nil) 
+
+8) What is the syntax for tag label for type switch:
+    a) val.type 
+    b) val.(type)
+    c) type(val)
+    d) None of Above 
+
+9) How to communicate between two goroutines: 
+    a) using channels 
+    b) using variables 
+    c) using sockets 
+    d) using protobuf
+
+10) What are the quotes for creating multi-line string, in Go:
+    a) single quotes ('')
+    b) double quotes ("")
+    c) triple quotes (""" """)
+    d) back tick quotes (``)
+
+Answers
+--------
+1) d 
+2) c
+3) c
+4) a 
+5) d 
+6) a 
+7) c 
+8) b
+9) a 
+10) d

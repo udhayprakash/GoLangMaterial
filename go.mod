@@ -41,6 +41,7 @@ require (
 	golang.org/x/tools v0.0.0-20191112195655-aa38f8e97acc
 	gonum.org/v1/plot v0.9.0 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect
+	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 	rsc.io/quote v1.5.2 // indirect
 )
