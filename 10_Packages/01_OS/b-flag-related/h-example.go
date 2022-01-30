@@ -29,8 +29,8 @@ func main() {
 
 /*
 To get the usage
-go run h-example.go --help
-go run h-example.go -h
+	go run h-example.go --help
+	go run h-example.go -h
 
 Usage
 	go run h-example.go -word=opt -numb=7 -fork -svar=flag

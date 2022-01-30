@@ -22,15 +22,15 @@ func main() {
 	fmt.Println("ENV Names in your system:", envNames)
 
 	// Setting the environment variables
-	os.Setenv("language", "Golang")
+	os.Setenv("langauge", "Golang")
 	os.Setenv("version", "1.15")
 	os.Setenv("isBuild", "false")
 
 	// Get env values
-	fmt.Println(os.Getenv("language"))
+	fmt.Println(os.Getenv("langauge"))
 
 	// if the env variable is not set, it will result in empty string
-	language123 := os.Getenv("language123")
+	language123 := os.Getenv("langauge123")
 	fmt.Println("language123 =", language123)
 
 	// retrieving builtin environment variables
@@ -44,13 +44,11 @@ func main() {
 		user  : %s
 		gopath:%s`, home, user, gopath)
 
-	os.Setenv("TRAINER", "ravi")
-
 	fmt.Println(os.ExpandEnv(`
 	home  : $HOME
 	user  : $USER
 	gopath: $GOPATH
-	Trainer: $TRAINER`))
+	Trainer: $RAVI`))
 
 	path := os.Getenv("PATH")
 	gobin := filepath.Join(gopath, "bin")
@@ -64,5 +62,4 @@ func main() {
 
 	value, isPresent = os.LookupEnv("GOPATH")
 	fmt.Println(value, isPresent) // C:\Users\Amma\go true
-
 }
