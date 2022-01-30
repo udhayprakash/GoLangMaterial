@@ -268,3 +268,31 @@ What is Zero Value, Write down for all basic types?
 What is Atoi and Itoa ?
 
 What is gRPC?
+
+
+Q) What will be the output of this program?
+
+	ch := make(chan int)
+	close(ch)
+	val := <-ch 
+	fmt.Println(val)
+	
+	a) NaN	b) It will panic 	c) It will deadlock 	d) 0
+	
+Q) What is the common way to have several executables in your project?
+	a) Have a cmd directory and a directory per executable inside it 
+	b) Have apkg directory and a directory per executable inside it 
+	c) Use build tags 
+	d) Comment out main 
+	
+Q) What is the difference between the time package's Time.Sub() and Time.Add() methods?
+	a) Time.Add90 is for performing addition while Time.Sub() is for nesting timestamps. 
+	b) They are opposites. Time.Add(x) is the equivalent of Time.Sub(-x)
+	c) Time.Add() accepts a Duration parameter and returns a Time while Time.Sub() accepts a time parameter and returns a Duration. 
+	d) Time.Add() always returns a later time while time.Sub always returns an earlier time. 
+	
+Q) What does a sync.Mutex block while it is locked?
+	a) any other call to lock that Mutex 
+	b) any writes to the variable it is looking 
+	c) all goroutines 
+	d) any reads or writes of the variable it is locking
