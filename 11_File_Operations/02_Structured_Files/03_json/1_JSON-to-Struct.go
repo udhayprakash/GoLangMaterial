@@ -5,12 +5,13 @@ import (
 	"fmt"
 )
 
+// Online JSON-to-struct tool - https://mholt.github.io/json-to-go/
 type Bird struct {
-	Species string
+	Species     string
 	Description string
 }
 
-func main()  {
+func main() {
 	birdJson := `{"species": "pigeon","description": "likes to perch on rocks"}`
 	var bird Bird
 	json.Unmarshal([]byte(birdJson), &bird)
