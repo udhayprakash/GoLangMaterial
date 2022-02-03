@@ -15,4 +15,8 @@
     go mod why -m github.com/path/to/module # why is the module a dependency?
     go install github.com/path/to/bin@latest # build and install a binary
 
+# Go Module Reference
+
+    - https://go.dev/ref/mod
+
 ref: https://encore.dev/guide/go.mod

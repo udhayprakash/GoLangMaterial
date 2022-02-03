@@ -12,7 +12,7 @@ func main() {
 
 	flag.Parse()
 
-	words := flag.Args() // Even boolean flag value, also comes here
+	words := flag.Args()
 
 	if toUpper == true {
 		for _, word := range words {
@@ -34,11 +34,13 @@ OUTPUT:
     Usage of C:\Users\Amma\AppData\Local\Temp\go-build4183878898\b001\exe\e-flag-boolean.exe:  -u    Should the words be converted to upper case
     ~go run e-flag-boolean.go -u
 
+	~go run e-flag-boolean.go -u=true
+
     ~go run e-flag-boolean.go -u true
     TRUE
 
-    ~go run e-flag-boolean.go -u true apple mango goa banana
-    TRUEAPPLE
+    ~go run e-flag-boolean.go -u=true apple mango goa banana
+    APPLE
     MANGO
     GOA
     BANANA
