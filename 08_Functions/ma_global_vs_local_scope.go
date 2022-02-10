@@ -42,4 +42,3 @@ func main() {
 	fmt.Println("After incrPtr(xPtr), *xPtr=", *xPtr) // 1
 
 }
- 

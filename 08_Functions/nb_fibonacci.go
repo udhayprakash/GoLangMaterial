@@ -5,14 +5,13 @@ import "fmt"
 // fibonacci Series: 0 1 1 2 3 5 8 13 .....
 func fibonacci() func() int {
 	a, b := 0, 1
-	return func() int {   // anonymous functions
+	return func() int { // anonymous functions
 		a, b = b, a+b
 		return a
 	}
 }
 
-
-func main(){
+func main() {
 	f := fibonacci()
 
 	fmt.Println("f() =", f())
@@ -22,4 +21,4 @@ func main(){
 	for i := 0; i < 10; i++ {
 		fmt.Println("f():", f())
 	}
-} 
+}
