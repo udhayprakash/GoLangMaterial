@@ -35,7 +35,6 @@ func main() {
 				fmt.Println("DNSTextRecords:", DNSTextRecords)
 			}
 
-
 		} else {
 			log.Fatal("IP lookup failed. Error is: ", err)
 		}

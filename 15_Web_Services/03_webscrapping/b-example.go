@@ -27,7 +27,7 @@ func main() {
 		d, _ := cs.Attr("class")
 		fmt.Println(d)
 	})
-	
+
 }
 
 // Output:

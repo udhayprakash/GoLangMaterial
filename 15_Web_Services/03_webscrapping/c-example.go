@@ -16,7 +16,7 @@ func main() {
 
 	class := doc.Find("h2").Text()
 	fmt.Printf("class:%v\n", class)
-	
+
 	doc.Find(".topics .topic").Each(func(i int, contentSelection *goquery.Selection) {
 		title := contentSelection.Find(".title a").Text()
 		t := contentSelection.Find(".title a")

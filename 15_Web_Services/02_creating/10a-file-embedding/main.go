@@ -9,7 +9,7 @@ import (
 )
 
 // content holds the static content for the web server.
-//go:embed static/* 
+//go:embed static/*
 var content embed.FS
 
 func main() {

@@ -24,7 +24,6 @@ func middleware(originalHandler http.Handler) http.Handler {
 	})
 }
 
-
 func filterContentType(handler http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if r.Header.Get("Content-Type") != "application/json" {
@@ -54,7 +53,7 @@ func setTimeCookie(handler http.Handler) http.Handler {
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	// fmt.Fprintln(w, "<h1>Hello!</h1>")
 	fmt.Println("Executing the handler")
-    w.Write([]byte("OK"))
+	w.Write([]byte("OK"))
 }
 
 func main() {
@@ -71,7 +70,7 @@ func main() {
 // type Middleware func(http.Handler) http.Handler
 // type Chain []Middleware
 
-// // returns a Slice of middlewares 
+// // returns a Slice of middlewares
 // func CreateChain(middlewares ...Middleware) Chain {
 //     var slice Chain
 //     return append(slice, middlewares...)

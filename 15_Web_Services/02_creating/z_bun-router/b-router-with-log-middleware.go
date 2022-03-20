@@ -55,7 +55,6 @@ func deleteUserHandler(w http.ResponseWriter, req bunrouter.Request) error {
 	return nil
 }
 
-
 /*
 Compat Handler
 	router := bunrouter.New().Compat()

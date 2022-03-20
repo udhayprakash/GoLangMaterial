@@ -35,5 +35,4 @@ func main() {
 	}
 }
 
-
 // Assignment: try writing the outouts in files with the same domain name

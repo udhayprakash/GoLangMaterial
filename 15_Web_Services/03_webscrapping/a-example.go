@@ -36,7 +36,6 @@ func main() {
 //The sound of wind and rain at night,
 //How many flowers fall.
 
-
 func CheckError(er error) {
 	if er != nil {
 		log.Fatal(er)
