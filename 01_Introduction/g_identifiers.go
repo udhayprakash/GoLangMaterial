@@ -20,4 +20,3 @@ func main() {
 	fmt.Println("emptyString1 == emptyString3 :", emptyString1 == emptyString3) // true
 	fmt.Println("emptyString1 == emptyString4 :", emptyString1 == emptyString4) // true
 }
- 

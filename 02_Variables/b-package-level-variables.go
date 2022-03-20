@@ -21,4 +21,4 @@ func MyFunc() {
 }
 
 // NOTE: Function-level declarations will be prioritized,
-// compared to package-level declarations 
+// compared to package-level declarations

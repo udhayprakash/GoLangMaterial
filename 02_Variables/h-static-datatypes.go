@@ -32,4 +32,5 @@ func main() {
 	// var data int = 3453
 
 }
-    //NOTE: A variable cant be declared more than once
+
+//NOTE: A variable cant be declared more than once

@@ -18,10 +18,11 @@ func main() {
 	fmt.Println("inches:", inches)
 
 }
+
 /*
 NOTE: If inappropriate date type value is given,
 		it will return zero value only
-	  If you give overflowing value, it will retain the zero 
+	  If you give overflowing value, it will retain the zero
 	    value itself
 
 OUTPUT:
@@ -31,7 +32,7 @@ OUTPUT:
 	After, number1= 765
 	Enter no. of inches:inches: 0
 
-	~go run p-runtime-input.go        
+	~go run p-runtime-input.go
 	Before, number1= 0
 	Enter a number:65765.76
 	After, number1= 65765

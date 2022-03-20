@@ -338,7 +338,7 @@ func main() {
 
 	// func TrimSpace(s string) string
 	fmt.Println("\n ==== strings.TrimSpace  ====")
-	fmt.Println(strings.TrimSpace(" \t\n Hello, Gophers \n\t\r\n"))  // Hello, Gophers
+	fmt.Println(strings.TrimSpace(" \t\n Hello, Gophers \n\t\r\n")) // Hello, Gophers
 	fmt.Println()
 
 	// func TrimSuffix(s, suffix string) string

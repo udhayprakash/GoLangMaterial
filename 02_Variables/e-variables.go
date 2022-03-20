@@ -35,7 +35,6 @@ func main() {
 	fmt.Println("b=", b)
 	fmt.Println("c=", c)
 
-	
 	myRune := 'a'
 	fmt.Println(myRune) // 97
 

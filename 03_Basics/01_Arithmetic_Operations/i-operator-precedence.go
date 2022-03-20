@@ -7,14 +7,14 @@ import (
 /*
 Purpose: Operator precedence
 	 - BODMAS
-	 
+
 		B - Brackets
 		O - Order of powers or roots
 		D - Division
-		M - Multiplication 
+		M - Multiplication
 		A - Addition
 		S - Subtraction
-	 
+
 
 Unary operators
 	- have the highest precedence and bind the strongest.

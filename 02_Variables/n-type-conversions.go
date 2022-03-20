@@ -12,7 +12,7 @@ func main() {
 	// Explicit type conversion.
 	fmt.Println(int64(d), reflect.TypeOf(int64(d)))
 	fmt.Println()
-	
+
 	f := 5.1
 	i := int(f) // convert float to int
 

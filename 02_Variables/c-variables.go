@@ -10,7 +10,6 @@ var Num2 int = 2
 // num4 := 123
 // .\c-variables.go:10:1: syntax error: non-declaration statement outside function body
 
-
 func main() {
 	// Local Scope variable
 	num1 := "one"
@@ -24,6 +23,7 @@ func main() {
 	fmt.Println("version :", version)
 	fmt.Println("isLatest:", isLatest)
 }
+
 /*
 NOTE:
  1. unused global variables will be ignored.
