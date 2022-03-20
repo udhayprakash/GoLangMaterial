@@ -38,7 +38,7 @@ func main() {
 	fmt.Println("NoOfProcessesRunning=", NoOfProcessesRunning)
 }
 
-// NOTE:  go is a case-sensitive language 
+// NOTE:  go is a case-sensitive language
 
 // :=  walrus operator
 

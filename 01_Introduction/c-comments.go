@@ -14,14 +14,13 @@ func main() {
 	// fmt.Println("666")
 	// fmt.Println("777")
 
-	/*  multi-line comments 
+	/*  multi-line comments
 	fmt.Println("888")
 	fmt.Println("999")
 	fmt.Println("000")
 	*/
 	fmt.Println("final")
 }
-
 
 // short cut - crtl + /
 // NOTE: Go supports both single and multi-line comments

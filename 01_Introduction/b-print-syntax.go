@@ -12,7 +12,7 @@ func main() {
 	fmt.Println("Hello", "World")
 	fmt.Println("Hello", "World", 123, -3.1416, true, nil)
 
-	fmt.Println() // Empty line 
+	fmt.Println() // Empty line
 
 	// print
 	fmt.Print("Hello\n")
@@ -20,7 +20,7 @@ func main() {
 	fmt.Print("Hello", "World\n")
 	fmt.Print("Hello", "World", 123, -3.1416, true, nil, "\n")
 
-	fmt.Println() // Empty line 
+	fmt.Println() // Empty line
 
 	// printf: f - formatting
 	fmt.Printf("Hello\n")
