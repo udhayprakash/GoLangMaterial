@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 )
 
-func main(){
+func main() {
 	// Make a cross-platform file
 	//      unix='dir/example/folder1'
 	//      windows='dir\example\folder1'

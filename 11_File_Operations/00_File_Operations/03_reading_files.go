@@ -5,8 +5,8 @@ import (
 	"os"
 )
 
-func main(){
-	cwd, err:=os.Getwd()
+func main() {
+	cwd, err := os.Getwd()
 	fmt.Println("cwd:", cwd)
 
 	//file, err := os.Open("10_File_Operations\\01_File_Operations\\myFile.txt")

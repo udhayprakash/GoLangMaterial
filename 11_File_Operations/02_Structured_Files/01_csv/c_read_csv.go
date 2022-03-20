@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	cwd, err:= os.Getwd()
+	cwd, err := os.Getwd()
 	fmt.Println("cwd:", cwd)
 
 	//fileHandler, err := os.Open("fileNotPresent.csv")

@@ -36,4 +36,3 @@ func main() {
 	// function call
 	myFunc()
 }
-

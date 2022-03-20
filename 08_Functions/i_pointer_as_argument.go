@@ -18,7 +18,7 @@ func incrmentPointer(p *int) int {
 func main() {
 	v := 1
 	// Method 1 - updating the value
-	v = incrment(v) 
+	v = incrment(v)
 	fmt.Println("v =", v)
 
 	v = incrment(v)
@@ -31,7 +31,6 @@ func main() {
 	incrmentPointer(&v)
 	fmt.Println("v =", v)
 }
-
 
 /*
 Advantages:

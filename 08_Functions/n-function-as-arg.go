@@ -19,7 +19,7 @@ func isEven(integer int) bool {
 func getAllOddNumbers(nums []int) []int {
 	var resultNums []int
 	for _, num := range nums {
-		if isOdd(num) == true {                // function
+		if isOdd(num) == true { // function
 			resultNums = append(resultNums, num)
 		}
 	}
@@ -29,20 +29,20 @@ func getAllOddNumbers(nums []int) []int {
 func getAllEvenNumbers(nums []int) []int {
 	var resultNums []int
 	for _, num := range nums {
-		if isEven(num) == true {                // function
+		if isEven(num) == true { // function
 			resultNums = append(resultNums, num)
 		}
 	}
 	return resultNums
 }
 
-// Decorator design pattern - passing func as argument 
+// Decorator design pattern - passing func as argument
 type EvenOddFunc func(int) bool
 
 func Filter(nums []int, myfunc EvenOddFunc) []int {
 	var resultNums []int
 	for _, num := range nums {
-		if myfunc(num) == true {                // function
+		if myfunc(num) == true { // function
 			resultNums = append(resultNums, num)
 		}
 	}
@@ -56,7 +56,7 @@ func main() {
 	fmt.Println("isOdd(2) =", isOdd(2))
 	fmt.Println("isOdd(3) =", isOdd(3))
 	fmt.Println()
-	
+
 	fmt.Println("getAllOddNumbers(slice)  =", getAllOddNumbers(slice))
 	fmt.Println("getAllEvenNumbers(slice) =", getAllEvenNumbers(slice))
 	fmt.Println()
