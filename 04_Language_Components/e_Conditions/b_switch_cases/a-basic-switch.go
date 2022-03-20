@@ -2,7 +2,6 @@ package main
 
 import "fmt"
 
-
 // Switch cases evaluate cases from top to bottom,
 // stopping when a case succeeds.
 

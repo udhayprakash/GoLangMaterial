@@ -21,9 +21,9 @@ func main() {
 
 	// Logical Negation
 	fmt.Println("!true      =", !true)   // false
-	fmt.Println("!false     =", !false) // true
-	fmt.Println("!true      =", !true)    // false
-	fmt.Println("!!true     =", !!true)   // true
+	fmt.Println("!false     =", !false)  // true
+	fmt.Println("!true      =", !true)   // false
+	fmt.Println("!!true     =", !!true)  // true
 	fmt.Println("!!!true    =", !!!true) // false
 	fmt.Println()
 

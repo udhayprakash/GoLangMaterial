@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 )
+
 //  goto  is used to tranfer control to a labelled statement
 
 func main() {
@@ -23,4 +24,4 @@ India:
 }
 
 // NOTE: The goto labels need to be defined in order of
-// their usage. 
+// their usage.

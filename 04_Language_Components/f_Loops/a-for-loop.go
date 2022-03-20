@@ -3,6 +3,14 @@ package main
 import "fmt"
 
 /*
+Go language supports FOUR types of for loop -
+	- A complete, C-style for
+	- A condition-only for  (equivalent to while loop)
+	- An infinite for
+	- for-range
+
+C-style
+========
 for initialization; condition; incre/decr {
 	// zero or more statements
 	}
