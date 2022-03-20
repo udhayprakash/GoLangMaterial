@@ -30,13 +30,12 @@ func main() {
 	fmt.Println("Total time for execution:", elapsedTime.String())
 }
 
-
 /*
 windows command to check the number of cores and logical processors:
 
 	wmic cpu get NumberOfCores,NumberOfLogicalProcessors
 
-		NumberOfCores  NumberOfLogicalProcessors  
+		NumberOfCores  NumberOfLogicalProcessors
 		4              8
 
 */

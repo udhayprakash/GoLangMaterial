@@ -24,7 +24,7 @@ func main() {
 			for c := 0; c < 1000; c++ {
 				fmt.Println("within- ops:", ops)
 				atomic.AddUint64(&ops, 1)
-			}			
+			}
 			wg.Done()
 		}()
 	}

@@ -5,11 +5,11 @@ import (
 	"time"
 )
 
-func printNum(num int){
+func printNum(num int) {
 	fmt.Println("Giving number:", num)
 }
 
-func main(){
+func main() {
 	fmt.Println("main - start")
 	go printNum(1)
 	go printNum(2)

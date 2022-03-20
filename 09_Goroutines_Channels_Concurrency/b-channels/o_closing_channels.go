@@ -29,7 +29,7 @@ func main() {
 		jobs <- j
 		fmt.Println("sent job", j)
 	}
-	close(jobs)  // -- WE NEED TO ENSURE CLOSING CHANNEL AT THE END
+	close(jobs) // -- WE NEED TO ENSURE CLOSING CHANNEL AT THE END
 	//jobs <- 765765765 // panic: send on closed channel
 	fmt.Println("sent all jobs")
 

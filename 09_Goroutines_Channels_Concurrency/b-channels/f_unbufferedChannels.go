@@ -22,6 +22,5 @@ func main() {
 	fmt.Println("language:", language)
 }
 
-// <-myChannel -- This is blocking code. 
+// <-myChannel -- This is blocking code.
 // waiting till some values comes from channel
-

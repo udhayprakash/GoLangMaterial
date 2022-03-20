@@ -1,9 +1,10 @@
 package main
+
 /*
 Purpose:
-In the previous example, we saw how to manage simple counter state 
-using atomic operations. 
-For more complex state we can use a mutex to safely 
+In the previous example, we saw how to manage simple counter state
+using atomic operations.
+For more complex state we can use a mutex to safely
 access data across multiple goroutines.
 */
 import (

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main(){
+func main() {
 	queue := make(chan string, 3)
 	queue <- "one"
 	queue <- "two"

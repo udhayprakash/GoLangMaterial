@@ -23,7 +23,7 @@ func main() {
 
 	go f1("goroutine")
 
-	go func(msg string){      // anonymous function, or, function literal
+	go func(msg string) { // anonymous function, or, function literal
 		fmt.Println("msg=", msg)
 	}("going")
 
