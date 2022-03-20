@@ -25,8 +25,8 @@ func main() {
 		Name     : %s
 		Age      : %s
 		height   : %s
-	`, s3Bucket, secretKey, 
-		os.Getenv("NAME"), os.Getenv("AGE"), 
+	`, s3Bucket, secretKey,
+		os.Getenv("NAME"), os.Getenv("AGE"),
 		os.Getenv("HEIGHT"))
 	// All loaded content will be of string type
 

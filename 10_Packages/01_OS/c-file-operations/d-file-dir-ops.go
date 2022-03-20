@@ -26,7 +26,6 @@ func main() {
 	check(err)
 	fmt.Println("Current Directory:", currDir)
 
-
 	// To create a sub-directory
 	// Cleanup - remove all if exits
 	if FileExits("subdir") == true {

@@ -46,5 +46,4 @@ func randomPoints(n int) plotter.XYs {
 	return pts
 }
 
-
 // ref - https://github.com/gonum/plot/wiki/Example-plots

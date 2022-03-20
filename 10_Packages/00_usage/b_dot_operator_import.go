@@ -3,6 +3,7 @@ package main
 import (
 	. "fmt"
 )
+
 /*
 The dot operator means you can omit the package name
 when you call functions inside of that package.

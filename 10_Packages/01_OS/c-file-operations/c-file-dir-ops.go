@@ -36,6 +36,5 @@ func main() {
 	}
 }
 
-
 // ioutil.ReadDir("./") also gives same result.
 // But this module is getting deprecated

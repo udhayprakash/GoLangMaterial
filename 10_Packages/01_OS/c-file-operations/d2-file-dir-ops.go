@@ -11,7 +11,6 @@ func main() {
 	tempDir := os.TempDir()
 	fmt.Println("Temp Dir:", tempDir)
 
-	
 	f, err := os.CreateTemp("", "example")
 	if err != nil {
 		log.Fatal(err)

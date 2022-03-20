@@ -89,7 +89,7 @@ func main() {
 	// Run every 10 minutes, starting in a week =====================
 	ctx3 := context.Background()
 
-	startTime3, err := time.Now().AddDate(0, 0, 7) 
+	startTime3, err := time.Now().AddDate(0, 0, 7)
 	// see https://golang.org/pkg/time/#Time.AddDate
 	if err != nil {
 		panic(err)

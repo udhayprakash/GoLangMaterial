@@ -15,7 +15,7 @@ import (
 func main() {
 	// s := "Golang is crazy langauge"
 	s := "Golang"
-	
+
 	// The pattern for generating a hash is `sha1.New()`,
 	// `sha1.Write(bytes)`, then `sha1.Sum([]byte{})`.
 	// Here we start with a new hash.
@@ -34,4 +34,5 @@ func main() {
 	// in git commits. Use the `%x` format verb to convert
 	// a hash results to a hex string.
 	fmt.Println(s)
-	fmt.Printf("%x\n", bs)}
+	fmt.Printf("%x\n", bs)
+}

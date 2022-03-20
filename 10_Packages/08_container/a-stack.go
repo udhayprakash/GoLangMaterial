@@ -31,5 +31,4 @@ func main() {
 	fv := reflect.ValueOf(stack).Elem().FieldByName("len")
 	fmt.Println(fv.Int())
 
-
 }

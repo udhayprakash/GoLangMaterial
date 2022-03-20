@@ -29,15 +29,14 @@ func main() {
 			fmt.Println(v, "is Odd")
 		}
 	}
-	
-	
+
 	// Fields function also splits the string
-    // on the basis of white spaces and tabs
-    s := strings.Fields(" I \t love \n to \n code \n all \t day.")
-    fmt.Println(s)
-  
-    // Splits into 5 words which have
-    // newline character in between
-    s = strings.Fields("I\nam\nlearning\nGo\nlanguage")
-    fmt.Println(s)
+	// on the basis of white spaces and tabs
+	s := strings.Fields(" I \t love \n to \n code \n all \t day.")
+	fmt.Println(s)
+
+	// Splits into 5 words which have
+	// newline character in between
+	s = strings.Fields("I\nam\nlearning\nGo\nlanguage")
+	fmt.Println(s)
 }

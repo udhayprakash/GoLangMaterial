@@ -33,16 +33,15 @@ func main() {
 	p(then.After(now))  // false
 	p(then.Equal(now))  // false
 
-
 	diff := now.Sub(then)
-	p(diff)    // 648683h8m15.184136763s
+	p(diff) // 648683h8m15.184136763s
 
-	p(diff.Hours())  // 648683.1375511491
-	p(diff.Minutes())  // 3.892098825306895e+07
-	p(diff.Seconds())  // 2.335259295184137e+09
+	p(diff.Hours())       // 648683.1375511491
+	p(diff.Minutes())     // 3.892098825306895e+07
+	p(diff.Seconds())     // 2.335259295184137e+09
 	p(diff.Nanoseconds()) // 2335259295184136763
 
 	p(then.Add(diff))  // 2021-11-12 07:43:13.835524 +0000 UTC
-	p(then.Add(-diff))  // 1873-11-11 09:26:43.467250474 +0000 UTC
+	p(then.Add(-diff)) // 1873-11-11 09:26:43.467250474 +0000 UTC
 
 }

@@ -14,7 +14,6 @@ func init() {
 
 }
 
-
 func main() {
 	var username, password, servername string
 
