@@ -60,8 +60,8 @@ func main() {
 }
 
 /*
-NOTE: When iterating over a map with a range loop, 
-	the iteration order is not specified and is not 
+NOTE: When iterating over a map with a range loop,
+	the iteration order is not specified and is not
 	guaranteed to be the same from one iteration to the next.
 
 	when stable order is expected in iteration, sort keys

@@ -24,7 +24,7 @@ func main() {
 	fmt.Printf("mySlice3 - capacity:%d 	length:%d\n", cap(mySlice3), len(mySlice3))
 
 	mySlice4 := new([30]int)[0:10]
-	fmt.Println(reflect.TypeOf(mySlice4).Kind(), mySlice4) // slice [0 0 0 0 0 0 0 0 0 0]        
+	fmt.Println(reflect.TypeOf(mySlice4).Kind(), mySlice4) // slice [0 0 0 0 0 0 0 0 0 0]
 	fmt.Printf("mySlice4 - capacity:%d 	length:%d\n", cap(mySlice4), len(mySlice4))
 	fmt.Println()
 

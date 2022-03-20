@@ -43,8 +43,8 @@ func Foo() error {
 	err1 := errors.New("math: square root of negative number")
 	return err1
 
-	// with formatting 
+	// with formatting
 	err2 := fmt.Errorf("math: square root of negative number %g", -12)
 	return err2
-	
+
 }

@@ -28,13 +28,13 @@ func main() { // stack - LIFO (Last In First Out)
 	fmt.Println("stack = ", stack)
 	fmt.Println()
 
-	// pop all the elements 
-	for len(stack) > 0{
+	// pop all the elements
+	for len(stack) > 0 {
 		// Retrieving the last element
 		lastPos := len(stack) - 1
 		fmt.Println("popped element:", stack[lastPos])
 
-		// popping that last element 
+		// popping that last element
 		stack = stack[:lastPos]
 		// fmt.Println("stack = ", stack)
 

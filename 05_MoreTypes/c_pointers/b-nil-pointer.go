@@ -31,4 +31,4 @@ func main() {
 
 }
 
-// NOTE: You can refer values of same data types as defined in pointer 
+// NOTE: You can refer values of same data types as defined in pointer

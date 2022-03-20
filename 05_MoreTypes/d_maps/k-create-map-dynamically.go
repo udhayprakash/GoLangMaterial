@@ -25,5 +25,4 @@ func main() {
 	fmt.Printf("%T:  %v\n", mapValue.Interface(), mapValue.Interface())
 	fmt.Println("mapValue =", mapValue)
 
-
 }

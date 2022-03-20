@@ -15,4 +15,3 @@ func main() {
 }
 
 // panic: runtime error: invalid memory address or nil pointer dereference
-

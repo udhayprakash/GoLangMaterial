@@ -15,7 +15,7 @@ func main() {
 		ordId:      456,
 		customerId: 56,
 	}
-	
+
 	v := reflect.ValueOf(order1)
 	// NumField() method returns the number of fields in a struct
 	// Field(i int) method returns the reflect.Value of the ith field.

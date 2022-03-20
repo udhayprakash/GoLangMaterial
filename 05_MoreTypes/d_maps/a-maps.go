@@ -58,6 +58,6 @@ func main() {
 
 	// For maps, Printf sorts the output in lexicographically by key.
 	fmt.Printf("%v\n", timeZone)  // map[CST:-21600 EST:-18000 MST:-25200 PST:-28800 UTC:0]
-	fmt.Printf("%#v\n", timeZone)  // map[string]int{"CST":-21600, "EST":-18000, "MST":-25200, "PST":-28800, "UTC":0}
+	fmt.Printf("%#v\n", timeZone) // map[string]int{"CST":-21600, "EST":-18000, "MST":-25200, "PST":-28800, "UTC":0}
 
 }

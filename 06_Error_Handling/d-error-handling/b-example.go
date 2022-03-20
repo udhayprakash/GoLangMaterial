@@ -9,8 +9,7 @@ func cleanUp() error {
 	return fmt.Errorf("**ERROR: cleanUp() error%s", "Udhay")
 }
 
-
-func getMessageBug()(s string, err error) {
+func getMessageBug() (s string, err error) {
 	s = "Ok"
 
 	fmt.Println(&err, err)
@@ -25,7 +24,7 @@ func getMessageBug()(s string, err error) {
 
 func main() {
 
-	msg, err:= getMessageBug()
+	msg, err := getMessageBug()
 	if err != nil {
 		log.Println(err)
 	}

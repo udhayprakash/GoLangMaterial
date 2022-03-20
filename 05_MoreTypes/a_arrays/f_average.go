@@ -22,4 +22,4 @@ func main() {
 
 }
 
-// Assignment - extend this to compute max, min and median  and rank values 
+// Assignment - extend this to compute max, min and median  and rank values

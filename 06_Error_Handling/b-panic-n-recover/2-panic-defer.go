@@ -12,14 +12,14 @@ func main() {
 	fmt.Println("end")
 
 }
+
 /*
-NOTE: 
-	1. panic() is the last executing statement 
+NOTE:
+	1. panic() is the last executing statement
 	2. After panicking, it will execute all registered defers, till that line
 */
-
 
 // start
 // This is deferred2
 // This is deferred1
-// panic: something bad happened 
+// panic: something bad happened
