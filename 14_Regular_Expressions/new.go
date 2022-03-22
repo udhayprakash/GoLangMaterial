@@ -6,7 +6,6 @@ import (
 	"regexp"
 )
 
-
 func main() {
 
 	re := regexp.MustCompile(`(\d+)\sViews`)

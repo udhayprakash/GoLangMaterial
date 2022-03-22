@@ -5,6 +5,7 @@ import (
 	"log"
 	"regexp"
 )
+
 /*
 Purpose: To remove all non alphanumerical characters from a string
 */
