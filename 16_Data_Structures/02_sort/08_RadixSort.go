@@ -6,10 +6,10 @@ import (
 	"encoding/binary"
 	"fmt"
 )
+
 // Radix Sort is a clever and intuitive little sorting algorithm. Radix Sort puts the elements in order by comparing the digits of the numbers. Radix sort is an integer sorting algorithm that sorts data with integer keys by grouping the keys by individual digits that share the same significant position and value (place value). Radix sort uses counting sort as a subroutine to sort an array of numbers.
 const digit = 4
 const maxbit = -1 << 31
-
 
 func main() {
 
@@ -44,6 +44,6 @@ func radixsort(data []int32) {
 	for i, b := range ds {
 		buf.Write(b)
 		binary.Read(buf, binary.LittleEndian, &w)
-		data[i] = w^maxbit
+		data[i] = w ^ maxbit
 	}
 }

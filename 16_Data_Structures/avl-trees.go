@@ -5,19 +5,18 @@ import (
 	"encoding/json"
 	"fmt"
 )
+
 // AVL trees are height balancing binary search tree. AVL tree checks the height of the left and the right sub-trees and assures that the difference is not more than 1. This difference is called the Balance Factor.
 type Key interface {
 	Less(Key) bool
 	Eq(Key) bool
 }
 
-
 type Node struct {
 	Data    Key
 	Balance int
 	Link    [2]*Node
 }
-
 
 func opp(dir int) int {
 	return 1 - dir
@@ -162,15 +161,15 @@ func removeR(root *Node, data Key) (*Node, bool) {
 	return removeBalance(root, dir)
 }
 
-
 type intKey int
+
 func (k intKey) Less(k2 Key) bool { return k < k2.(intKey) }
 func (k intKey) Eq(k2 Key) bool   { return k == k2.(intKey) }
 
 func main() {
 	var tree *Node
 	fmt.Println("Empty Tree:")
-	avl,_ := json.MarshalIndent(tree, "", "   ")
+	avl, _ := json.MarshalIndent(tree, "", "   ")
 	fmt.Println(string(avl))
 
 	fmt.Println("\nInsert Tree:")
@@ -180,12 +179,12 @@ func main() {
 	Insert(&tree, intKey(6))
 	Insert(&tree, intKey(6))
 	Insert(&tree, intKey(9))
-	avl,_ = json.MarshalIndent(tree, "", "   ")
+	avl, _ = json.MarshalIndent(tree, "", "   ")
 	fmt.Println(string(avl))
 
 	fmt.Println("\nRemove Tree:")
 	Remove(&tree, intKey(4))
 	Remove(&tree, intKey(6))
-	avl,_ = json.MarshalIndent(tree, "", "   ")
+	avl, _ = json.MarshalIndent(tree, "", "   ")
 	fmt.Println(string(avl))
 }

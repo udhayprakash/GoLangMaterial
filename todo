@@ -24,3 +24,36 @@ https://chromium.googlesource.com/external/github.com/smartystreets/goconvey/+/r
 Garbage Collection
 https://golang.org/pkg/runtime
 https://talks.golang.org/2015/go-gc.pdf
+
+go masterclass
+https://github.com/shijuvar/shijuvar/blob/master/active_masterclass.md
+
+
+redis - go-redis 
+https://blog.logrocket.com/how-to-use-redis-as-a-database-with-go-redis/
+
+
+GoLang Course Outline
+---------------------
+	- Implementing Collection and Reduction
+	- Using the Pprof Tool
+	- Learning How to Reduce Garbage
+		- https://stackoverflow.com/questions/12277426/how-to-minimize-the-garbage-collection-in-go
+	- Mocking in Unit Tests
+	- Using Concurrency to Keep Data Consistent
+	- Optimizing Code for Speed
+	- Using Idiomatic Go
+	- Working with Time, Errors, Common Interfaces, and Comments
+	- Working with and Managing Packages
+	- Creating a Scalable Work System
+	- Working with Databases in Go
+	- Serving a JSON API
+	- Testing and Building in Go
+		go test -v -coverage=./.. -coverprofile=coverage.out - json ./.. >test-report.json
+	- Gaining a Solid Foundation in Web Development with Go
+	- Working with Templates for Web Development in Go
+	- Creating Your Own Server for Web Development in Go
+	- Understanding and Working with the net/http Package
+	- Understanding and Working with Routing and Serving Files
+	- Deploying Your Site
+	- Summary and Conclusion

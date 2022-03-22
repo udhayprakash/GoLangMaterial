@@ -1,4 +1,5 @@
-package main 
+package main
+
 /*
 Purpose: Sleeping Barber Problem
 

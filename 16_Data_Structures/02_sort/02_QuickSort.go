@@ -6,6 +6,7 @@ import (
 	"math/rand"
 	"time"
 )
+
 /*
 The quick sort algorithm falls under the divide and conquer class of algorithms, where we break (divide) a problem into smaller chunks that are much simpler to solve (conquer). In this case, an unsorted array is broken into sub-arrays that are partially sorted, until all elements in the list are in the right position, by which time our unsorted list will have become sorted.
 */

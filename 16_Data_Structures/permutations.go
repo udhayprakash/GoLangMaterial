@@ -5,6 +5,7 @@ import (
 	"os"
 	"strconv"
 )
+
 // This program will generate all possible permutation and combination of number entered by user for example if user entered 2 then 1,2 and 2,1.
 func rangeSlice(start, stop int) []int {
 	if start > stop {
@@ -47,7 +48,7 @@ func main() {
 	}
 
 	noOfPerms := permutation(rangeSlice(0, num))
-	fmt.Println("Number of Permutation:",len(noOfPerms))
+	fmt.Println("Number of Permutation:", len(noOfPerms))
 	for i := 0; i < len(noOfPerms); i++ {
 		fmt.Println(noOfPerms[i])
 	}

@@ -2,6 +2,7 @@
 package main
 
 import "fmt"
+
 // Pancake sorting is the colloquial term for the mathematical problem of sorting a disordered stack of pancakes in order of size when a spatula can be inserted at any point in the stack and used to flip all pancakes above it. A pancake number is the maximum number of flips required for a given number of pancakes. Here is source code of the Go Program to implement Pancake Sorting Algorithm.
 func main() {
 	list := data{28, 11, 59, -26, 503, 158, 997, 193, -23, 44}

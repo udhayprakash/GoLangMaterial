@@ -7,7 +7,7 @@ func main() {
 	integersToSort := make([]int, 0, 1)
 	// prompt user for 10 integers (use a loop)
 	for count := 0; count < 10; count++ {
-		fmt.Printf("Please enter integer %d: ", count + 1)
+		fmt.Printf("Please enter integer %d: ", count+1)
 		integersToSort = AddIntegerToSlice(integersToSort)
 	}
 
@@ -34,8 +34,8 @@ func BubbleSort(integersToSort *[]int) {
 
 	length := len(*integersToSort)
 
-	for i := 0; i < length - 1; i++ {
-		for j := 0; j < length - i - 1; j ++ {
+	for i := 0; i < length-1; i++ {
+		for j := 0; j < length-i-1; j++ {
 			if (*integersToSort)[j] > (*integersToSort)[j+1] {
 				Swap(integersToSort, j)
 			}

@@ -4,6 +4,7 @@ package main
 import (
 	"fmt"
 )
+
 // The Rabin-Karp algorithm is a string searching algorithm that uses hashing to find patterns in strings.
 const base = 16777619
 

@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"math"
 )
+
 // The Floyd–Warshall algorithm compares all possible paths through the graph between each pair of vertices. The problem is to find shortest distances between every pair of vertices in a given edge weighted directed Graph
 type graph struct {
 	to int
@@ -40,7 +41,7 @@ func floydWarshall(g [][]graph) [][]float64 {
 
 func main() {
 	gra := [][]graph{
-		1: {{2, 3}, {3, 8},{5, -4}},
+		1: {{2, 3}, {3, 8}, {5, -4}},
 		2: {{4, 1}, {5, 7}},
 		3: {{2, 4}},
 		4: {{1, 2}, {3, -5}},

@@ -6,6 +6,7 @@ import (
 	"math/rand"
 	"time"
 )
+
 /*
 Merge Sort is a Divide and Conquer algorithm. Meaning, the algorithm splits an input into various pieces, sorts them and then merges them back together. It divides input slice in two halves, calls itself for the two halves and then merges the two sorted halves. The merge() function is used for merging two halves.
 */
@@ -36,7 +37,7 @@ func mergeSort(items []int) []int {
 
 	middle := int(num / 2)
 	var (
-		left = make([]int, middle)
+		left  = make([]int, middle)
 		right = make([]int, num-middle)
 	)
 	for i := 0; i < num; i++ {
@@ -51,7 +52,7 @@ func mergeSort(items []int) []int {
 }
 
 func merge(left, right []int) (result []int) {
-	result = make([]int, len(left) + len(right))
+	result = make([]int, len(left)+len(right))
 
 	i := 0
 	for len(left) > 0 && len(right) > 0 {
