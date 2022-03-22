@@ -16,4 +16,5 @@ func main() {
 	}
 	defer db.Close()
 }
+
 // Ref: http://go-database-sql.org/accessing.html

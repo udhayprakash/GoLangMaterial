@@ -13,7 +13,7 @@ var csvData = [][]string{
 	{"Superman", "Strength", "Kryptonite"},
 }
 
-func main () {
+func main() {
 	csvWriter()
 	csvLineWriter()
 	// Above functions will create superheroes.csv and superheroes2.csv files
@@ -71,7 +71,7 @@ func csvLineWriter() {
 			return
 		}
 
-		writer.Flush() // Writes the buffered data to the writer
+		writer.Flush()       // Writes the buffered data to the writer
 		err = writer.Error() // Checks if any error occurred while writing
 		if err != nil {
 			fmt.Println("Error while writing to the file ::", err)

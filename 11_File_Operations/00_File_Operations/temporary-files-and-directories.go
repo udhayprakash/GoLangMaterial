@@ -1,4 +1,5 @@
 package main
+
 /*
 
 Throughout program execution, we often want to create data
@@ -26,7 +27,7 @@ func main() {
 
 	fmt.Println("Temp file name:", f.Name())
 
-   // Remember to clean up the file afterwards
+	// Remember to clean up the file afterwards
 	defer os.Remove(f.Name())
 
 	_, err = f.Write([]byte{1, 2, 3, 4})

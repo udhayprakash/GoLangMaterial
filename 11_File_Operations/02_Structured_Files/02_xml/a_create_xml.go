@@ -24,7 +24,7 @@ func main() {
 	out, _ := xml.MarshalIndent(coffee, " ", "  ")
 	fmt.Println(string(out))
 
-	fmt.Println("\n", xml.Header + string(out))
+	fmt.Println("\n", xml.Header+string(out))
 
 	// Deserialization: xml to Golang object
 	var p Plant
@@ -47,6 +47,5 @@ func main() {
 
 	out, _ = xml.MarshalIndent(nesting, " ", "  ")
 	fmt.Println("\n\n", string(out))
-
 
 }

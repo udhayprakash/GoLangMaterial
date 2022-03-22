@@ -60,7 +60,7 @@ func csvReaderRow() {
 	}
 	fmt.Printf("Headers : %v \n", header)
 
-	for i:= 0 ;; i = i + 1 {
+	for i := 0; ; i = i + 1 {
 		record, err := reader.Read()
 		if err == io.EOF {
 			break // reached end of the file
