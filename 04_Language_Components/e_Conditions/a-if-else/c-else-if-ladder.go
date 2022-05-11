@@ -5,8 +5,8 @@ import "fmt"
 // Display largest number, among two given numbers
 
 func main() {
-
 	var num1, num2 int
+
 	fmt.Println("Please enter two numbers, space separated:")
 	fmt.Scanf("%d", &num1)
 	fmt.Scanf("%d", &num2)
@@ -20,10 +20,9 @@ func main() {
 		fmt.Println("Both are equal")
 	} else if num1 > num2 {
 		fmt.Println("num1 is greater")
-	} else { // num1 < num2
+	} else { //  num1 < num2
 		fmt.Println("num2 is greater")
 	}
-
 }
 
 // Assignment - Display largest number, among three numbers

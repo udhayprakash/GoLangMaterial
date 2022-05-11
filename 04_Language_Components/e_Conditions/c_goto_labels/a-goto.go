@@ -9,19 +9,19 @@ import (
 func main() {
 	fmt.Println("One")
 	fmt.Println("Two")
-	goto India
+
+	goto Chennai
+	goto Hyderabad
 
 	fmt.Println("Last statement")
-	goto Mozambique
 
-Mozambique:
-	fmt.Println("I am in Mozambique block ")
+Hyderabad:
+	fmt.Println("Hyderabad")
 
-India:
-	fmt.Println("I am in India block ")
-	// goto Mozambique --- leads to infinite lop
+Chennai:
+	fmt.Println("Chennai")
+	// goto Hyderabad--- leads to infinite lop
 
 }
 
-// NOTE: The goto labels need to be defined in order of
-// their usage.
+// NOTE: The goto labels need to be defined in order of their usage.

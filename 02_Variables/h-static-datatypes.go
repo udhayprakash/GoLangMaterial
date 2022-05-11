@@ -4,7 +4,7 @@ import "fmt"
 
 var data float32 = 6.7
 
-// data = 3453 // here, we can only declare; not update values
+// data = 34.53 // here, we can only declare; not update values
 
 func main() {
 
@@ -30,7 +30,6 @@ func main() {
 	// cannot use 3453 (type untyped int) as type string in assignment
 
 	// var data int = 3453
-
 }
 
-//NOTE: A variable cant be declared more than once
+//NOTE: A  variable cant be declared more than once

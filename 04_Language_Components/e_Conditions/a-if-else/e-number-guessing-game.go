@@ -12,7 +12,7 @@ func main() {
 	fmt.Scanf("%d", &guessedNumber)
 	fmt.Println("guessedNumber=", guessedNumber)
 
-	if guessedNumber < 0 || guessedNumber > 100 {
+	if guessedNumber < 1 || guessedNumber > 100 {
 		fmt.Println("You entered an invalid number")
 	} else {
 
@@ -32,9 +32,9 @@ func main() {
 		if guessedNumber == LUCKYNUMBER {
 			fmt.Println("You guessed correctly!!!")
 		} else if guessedNumber > LUCKYNUMBER { // 89 > 67
-			fmt.Println("Please reduce your guessing number")
+			fmt.Println("HINT:Please reduce your guessing number")
 		} else { // 56 < 67
-			fmt.Println("Please increase your guessing number")
+			fmt.Println("HINT:Please increase your guessing number")
 		}
 	}
 

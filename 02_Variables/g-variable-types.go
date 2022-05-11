@@ -6,19 +6,20 @@ import (
 )
 
 func main() {
-	// changing value after declaration
 	var x string
-	x = "first"
+
+	// changing value after declaration
+	x = "first"          // updating
 	fmt.Println("x=", x) // first
 
-	x = "second"
-	fmt.Println("x =", x) // second
+	x = "second"         // updating
+	fmt.Println("x=", x) // second
 
-	x = x + "third"
-	fmt.Println("x =", x) // secondthird
+	x = x + "third"      // strng concatenation
+	fmt.Println("x=", x) // secondthird
 
-	x += "fourth"         // Compound Operation
-	fmt.Println("x =", x) // secondthirdfourth
+	x += "fourth"        // strng concatenation
+	fmt.Println("x=", x) // secondthirdfourth
 
 	fmt.Println()
 
@@ -40,6 +41,7 @@ func main() {
 	y += 1 // ; - statement separator
 	fmt.Println("y =", y)
 	fmt.Println("reflect.TypeOf(y)   	=", reflect.TypeOf(y))
+	fmt.Println()
 
 	fmt.Println("reflect.TypeOf(42)  	=", reflect.TypeOf(42))
 	fmt.Println("reflect.TypeOf(42.0)	=", reflect.TypeOf(42.0))
@@ -47,6 +49,7 @@ func main() {
 	fmt.Println("reflect.TypeOf('a') 	=", reflect.TypeOf('a'))  // int32
 	fmt.Println("reflect.TypeOf(\"a\")	=", reflect.TypeOf("a")) // string
 	fmt.Println("reflect.TypeOf(true)	=", reflect.TypeOf(true)) // bool
+	fmt.Println("reflect.TypeOf(nil)	=", reflect.TypeOf(nil))   //  <nil>
 	fmt.Println()
 
 	z := 'a'
@@ -54,15 +57,16 @@ func main() {
 	fmt.Println("reflect.TypeOf(z).Kind()  =", reflect.TypeOf(z).Kind())
 	fmt.Println()
 
+	fmt.Printf("%T\n", 0)
+	fmt.Printf("value is %v and type is %T\n", 0, 0)
+	fmt.Println()
+
 	fmt.Printf("%T\n", 0)      // "int"
 	fmt.Printf("%T\n", 0.0)    // "float64"
 	fmt.Printf("%T\n", 0i)     // "complex128"
 	fmt.Printf("%T\n", '\000') // "int32" (rune)
 
-	// Hexadecimal
-	//	fmt.Printf("%d - %b - %x \n", 42, 42, 42)
-	//	fmt.Printf("%d - %b - %#x \n", 42, 42, 42)
-	//	fmt.Printf("%d - %b - %#X \n", 42, 42, 42)
+	// decimal, binary & Hexadecimal representation
 	fmt.Printf("%d \t %b \t %#X \n", 42, 42, 42)
 
 }

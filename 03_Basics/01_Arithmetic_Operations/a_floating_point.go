@@ -33,7 +33,7 @@ func main() {
 	fmt.Println("math.Exp(float64(x)):", math.Exp(float64(x)))
 
 	for x := 0; x < 10; x++ {
-		fmt.Printf("x = %d eA = %10.2f\n", x, math.Exp(float64(x)))
+		fmt.Printf("e ^ %d = %10.2f\n", x, math.Exp(float64(x)))
 	}
 	/*
 		%f     default width, default precision

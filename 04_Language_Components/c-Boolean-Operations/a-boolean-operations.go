@@ -5,14 +5,18 @@ import (
 	"reflect"
 )
 
+// Boolean - true , false
+
 func main() {
 	var val bool // default bool value is false
 	fmt.Printf("val : %v\n", val)
-	fmt.Printf("type: %T\n\n", val)
+	fmt.Printf("type: %T\n", val)
+	fmt.Printf("bool: %t\n\n", val)
 
 	var val2 = true
 	fmt.Printf("val : %v\n", val2)
-	fmt.Printf("type: %T\n\n", val2)
+	fmt.Printf("type: %T\n", val2)
+	fmt.Printf("bool: %t\n\n", val2)
 
 	// Assigning an expression result
 	val3 := 0 == 0.0
@@ -23,4 +27,5 @@ func main() {
 	fmt.Printf("val : %v\n", val4)
 	fmt.Printf("type: %T\n", val4)
 	fmt.Println("reflect.TypeOf(val4):", reflect.TypeOf(val4))
+
 }

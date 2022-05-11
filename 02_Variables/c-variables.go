@@ -8,7 +8,7 @@ var num1, num3 int = 1, 3
 var Num2 int = 2
 
 // num4 := 123
-// .\c-variables.go:10:1: syntax error: non-declaration statement outside function body
+// syntax error: non-declaration statement outside function body
 
 func main() {
 	// Local Scope variable

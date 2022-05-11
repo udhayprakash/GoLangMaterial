@@ -11,8 +11,18 @@ func main() {
 	var value int8
 	fmt.Scanf("%d", &value)
 
+	if value == 1 {
+		fmt.Println("value is 1")
+	} else if value == 2 {
+		fmt.Println("value is 2")
+	} else if value == 3 {
+		fmt.Println("value is 3")
+	} else {
+		fmt.Println("else case")
+	}
+
 	switch value {
-	case 1: // same as checking if value == 1
+	case 1: // same as checking if value is 1
 		fmt.Println("value is 1")
 	case 2: // value == 2
 		fmt.Println("value is 2")

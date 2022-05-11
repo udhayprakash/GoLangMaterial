@@ -26,7 +26,7 @@ func main() {
 	studentName2 := "Udhay"
 	fmt.Println("Student's name is ", studentName2)
 
-	// 2ndName = "prakash" // can't start with number
+	// 2ndName := "prakash" // can't start with number
 	//$name = "prakash"     // $ can't be used in identifier name
 
 	_name := "prakash"

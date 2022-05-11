@@ -32,8 +32,14 @@ func main() {
 	fmt.Printf("Hello1 - %d\n", 1)
 	fmt.Printf("World1 - %f\n", 14.23)
 
+	fmt.Printf("World1 - %t\n", 14.23) // %!t(float64=14.23)
+	fmt.Printf("World1 - %t\n", true)  //World1 - true
+
 	fmt.Println("=====================================")
-	s := "Hello World"
+	// H	e	l	l	o	 	w	o	r	l	d
+	// 0   	1	2	3	4	5	6	7	8	9	10
+
+	s := "Hello World" // "नमस्ते"
 	fmt.Println("len(s) =", len(s))
 	fmt.Printf("len(s) =%d\n", len(s))
 
@@ -52,3 +58,13 @@ func main() {
 		fmt.Printf("\t Binary     : %b \n\n", s[i])
 	}
 }
+
+/*
+Assignment:
+	from a given string, create new string by filtering
+	only alphabets(lowrr & upper cases)
+
+	upper alphabets from 65 to 90
+	lower alphabets from 97 to 122
+
+*/

@@ -16,10 +16,20 @@ func main() {
 	fmt.Println(strings.Compare("aa", "ab"))         // -1
 	fmt.Println(strings.Compare("apple", "apple"))   // 0
 	fmt.Println(strings.Compare("apple", "apparao")) // 1
+	// app le
+	// app arao
 
 	fmt.Println(strings.Compare("Hacker", "Haler"))  // -1
 	fmt.Println(strings.Compare("HAcker", "Hacker")) // -1
 	fmt.Println(strings.Compare("Hacker", "Hacker")) //  0
+	fmt.Println()
+
+	// String EqualFold - case insensitive equivalence check
+	fmt.Println("\n ==== strings.EqualFold ====")
+	fmt.Println(strings.EqualFold("Go", "Go")) // true
+	fmt.Println(strings.EqualFold("Go", "go")) // true
+	fmt.Println(strings.EqualFold("Go", "GO")) // true
+	fmt.Println(strings.EqualFold("", ""))     // true
 	fmt.Println()
 
 	// String Contains reports whether substr is within s.
@@ -53,15 +63,8 @@ func main() {
 	// If substr is an empty string, Count returns 1 + the number of Unicode code points in s.
 	fmt.Println("\n ==== strings.Count ====")
 	fmt.Println(strings.Count("cheese", "e")) // 3
+	fmt.Println(strings.Count("cheese", "q")) // 0
 	fmt.Println(strings.Count("five", ""))    // before & after each rune. 1 + 4 = 5
-	fmt.Println()
-
-	// String EqualFold - case insensitive equivalence check
-	fmt.Println("\n ==== strings.EqualFold ====")
-	fmt.Println(strings.EqualFold("Go", "Go")) // true
-	fmt.Println(strings.EqualFold("Go", "go")) // true
-	fmt.Println(strings.EqualFold("Go", "GO")) // true
-	fmt.Println(strings.EqualFold("", ""))     // true
 	fmt.Println()
 
 	// String HasPrefix tests whether the string s begins with prefix.
@@ -91,6 +94,7 @@ func main() {
 	// String IndexAny returns index of any character in substring
 	fmt.Println("\n ==== strings.IndexAny ====")
 	fmt.Println(strings.IndexAny("chicken", "aeiouy")) // "i" is present  - 2
+	fmt.Println(strings.IndexAny("chicken", "aeouy"))  // "e" is present  - 5
 	fmt.Println(strings.IndexAny("crwth", "aeiouy"))   // -1
 	fmt.Println()
 
@@ -149,7 +153,7 @@ func main() {
 	fmt.Println("\n ==== strings.Fields ====")
 	fmt.Printf("Fields are: %q \n", strings.Fields("Ravi Teja Golang"))               // ["Ravi", "Teja", "Golang"]
 	fmt.Printf("Fields are: %q \n", strings.Fields("  foo bar &^%&^&$%$@$#@ baz   ")) // ["foo" "bar" "&^%&^&$%$@$#@" "baz"]
-	fmt.Printf("Fields are: %q \n", strings.Fields("foo bar baz %^%^%$^"))            // ["foo" "bar" "baz" "%^%^%$^"]
+	fmt.Printf("Fields are: %q \n", strings.Fields("foo bar        baz %^%^%$^"))     // ["foo" "bar" "baz" "%^%^%$^"]
 	fmt.Printf("Fields are: %q \n", strings.Fields("foobarbaz"))                      // ["foobarbaz"]
 	fmt.Println()
 
@@ -167,46 +171,6 @@ func main() {
 	fmt.Println(strings.Join(s, ","))  //  foo,bar,baz
 	fmt.Println(strings.Join(s, ", ")) // foo, bar, baz
 	fmt.Println(strings.Join(s, "_"))  // foo_bar_baz
-	fmt.Println()
-
-	// String Map
-	fmt.Println("\n ==== strings.Map  ====")
-	rot13 := func(r rune) rune {
-		switch {
-		case r >= 'A' && r <= 'Z':
-			return 'A' + (r-'A'+13)%26
-		case r >= 'a' && r <= 'z':
-			return 'a' + (r-'a'+13)%26
-		}
-		return r
-	}
-	fmt.Println(strings.Map(rot13, "'Twas brillig and the slithy gopher..."))
-	// 'Gjnf oevyyvt naq gur fyvgul tbcure...
-
-	// String Repeat returns a new string consisting of count copies of the string s.
-	//        It panics if count is negative or if the result of (len(s) * count) overflows.
-	fmt.Println("\n ==== strings.Repeat  ====")
-	// fmt.Println("Ravi" * 3)
-	fmt.Println(strings.Repeat("Ravi", 3)) // RaviRaviRavi
-	fmt.Println(strings.Repeat("Go ", 5))  // Go Go Go Go Go
-	fmt.Println()
-
-	// String func Replace(s, old, new string, n int) string
-	//  If n < 0, there is no limit on the number of replacements.
-	// cant replace from last to first
-	fmt.Println("\n ==== strings.Replace  ====")
-	fmt.Println(strings.Replace("10001000101", "6", "3", 2))       // 10001000101
-	fmt.Println(strings.Replace("10001000101", "1", "3", 2))       // 30003000101
-	fmt.Println(strings.Replace("10001000101", "1", "3", -1))      // 30003000303
-	fmt.Println(strings.Replace("10001000101", "1", "33", -1))     // 330003300033033
-	fmt.Println(strings.Replace("Golang is Good", "Go", "Po", -1)) // Polang is Pood
-	fmt.Println()
-
-	// String ReplaceAll(s, old, new string) string
-	fmt.Println("\n ==== strings.ReplaceAll  ====")
-	fmt.Println(strings.ReplaceAll("10001000101", "6", "33")) // 10001000101
-	fmt.Println(strings.ReplaceAll("10001000101", "1", "33")) // 3300033000101
-	fmt.Println(strings.ReplaceAll("10001000101", "", "P"))   // 3300033000101
 	fmt.Println()
 
 	// String func Split(s, sep string) []string
@@ -250,6 +214,50 @@ func main() {
 	fmt.Printf("%q\n", strings.SplitN("a,b,c", ",", 2)) // ["a" "b,c"]
 	z := strings.SplitN("a,b,c", ",", 0)
 	fmt.Printf("%q (nil = %v)\n", z, z == nil) // [] (nil = true)
+	fmt.Println()
+
+	// String Map
+	fmt.Println("\n ==== strings.Map  ====")
+	rot13 := func(r rune) rune {
+		switch {
+		case r >= 'A' && r <= 'Z':
+			return 'A' + (r-'A'+13)%26
+		case r >= 'a' && r <= 'z':
+			return 'a' + (r-'a'+13)%26
+		}
+		return r
+	}
+	fmt.Println(strings.Map(rot13, "'Twas brillig and the slithy gopher..."))
+	// 'Gjnf oevyyvt naq gur fyvgul tbcure...
+
+	// String Repeat returns a new string consisting of count copies of the string s.
+	//        It panics if count is negative or if the result of (len(s) * count) overflows.
+	fmt.Println("\n ==== strings.Repeat  ====")
+	// fmt.Println("Ravi" * 3)
+	fmt.Println(strings.Repeat("Ravi", 3)) // RaviRaviRavi
+	fmt.Println(strings.Repeat("Go ", 5))  // Go Go Go Go Go
+	fmt.Println(strings.Repeat("Go ", 0))  //
+	// fmt.Println(strings.Repeat("Go ", -2))  // panic: strings: negative Repeat count
+	fmt.Println()
+
+	// String func Replace(s, old, new string, n int) string
+	//  If n < 0, there is no limit on the number of replacements.
+	// cant replace from last to first
+	fmt.Println("\n ==== strings.Replace  ====")
+	fmt.Println(strings.Replace("10001000101", "6", "3", 2))       // 10001000101
+	fmt.Println(strings.Replace("10001000101", "1", "3", 2))       // 30003000101
+	fmt.Println(strings.Replace("10001000101", "1", "3", 4))       // 30003000303
+	fmt.Println(strings.Replace("10001000101", "1", "3", 8))       // 30003000303
+	fmt.Println(strings.Replace("10001000101", "1", "3", -1))      // 30003000303
+	fmt.Println(strings.Replace("10001000101", "1", "33", -1))     // 330003300033033
+	fmt.Println(strings.Replace("Golang is Good", "Go", "Po", -1)) // Polang is Pood
+	fmt.Println()
+
+	// String ReplaceAll(s, old, new string) string
+	fmt.Println("\n ==== strings.ReplaceAll  ====")
+	fmt.Println(strings.ReplaceAll("10001000101", "6", "33")) // 10001000101
+	fmt.Println(strings.ReplaceAll("10001000101", "1", "33")) // 3300033000101
+	fmt.Println(strings.ReplaceAll("10001000101", "", "P"))   // 3300033000101
 	fmt.Println()
 
 	// string  Title
@@ -320,13 +328,13 @@ func main() {
 	// func TrimPrefix(s, prefix string) string
 	fmt.Println("\n ==== strings.TrimPrefix  ====")
 	fmt.Println(strings.TrimPrefix("¡¡¡Hello, Gophers!!!", "¡¡¡Hello, ")) // Gophers!!!
+	fmt.Println(strings.TrimPrefix("¡¡¡Hello, Gophers!!!", "¡¡Hello, "))  // ¡¡¡Hello, Gophers!!!
 	fmt.Println(strings.TrimPrefix("¡¡¡Hello, Gophers!!!", "¡¡¡Howdy, ")) // ¡¡¡Hello, Gophers!!!
 	fmt.Println()
 
 	// func TrimRight(s string, cutset string) string
 	fmt.Println("\n ==== strings.TrimRight  ====")
-	fmt.Print(strings.TrimRight("¡¡¡Hello, Gophers!!!", "!¡"))
-	// ¡¡¡Hello, Gophers
+	fmt.Print(strings.TrimRight("¡¡¡Hello, Gophers!!!", "!¡")) // ¡¡¡Hello, Gophers
 	fmt.Println()
 
 	// func TrimRightFunc(s string, f func(rune) bool) string
@@ -336,18 +344,21 @@ func main() {
 	})) // ¡¡¡Hello, Gophers
 	fmt.Println()
 
-	// func TrimSpace(s string) string
-	fmt.Println("\n ==== strings.TrimSpace  ====")
-	fmt.Println(strings.TrimSpace(" \t\n Hello, Gophers \n\t\r\n")) // Hello, Gophers
-	fmt.Println()
-
 	// func TrimSuffix(s, suffix string) string
 	fmt.Println("\n ==== strings.TrimSuffix  ====")
 	var s2 = "¡¡¡Hello, Gophers!!!"
-	s2 = strings.TrimSuffix(s2, ", Gophers!!!")
+	fmt.Println(strings.TrimSuffix(s2, ", Gophers!!!"))
+	fmt.Println(strings.TrimSuffix(s2, ", Gophers!!!"))
+
 	s2 = strings.TrimSuffix(s2, ", Marmots!!!")
-	fmt.Print(s2)
+	fmt.Println(s2) // ¡¡¡Hello, Gophers!!!
 
+	fmt.Println(strings.TrimSuffix("Hello Go Go Go", "Go"))  // Hello Go Go
+	fmt.Println(strings.TrimSuffix("Hello Go Go Go", " Go")) // Hello Go Go
+	fmt.Println(strings.TrimRight("Hello Go Go Go", " Go"))  // Hell
+	fmt.Println()
+
+	// func TrimSpace(s string) string
+	fmt.Println("\n ==== strings.TrimSpace  ====")
+	fmt.Println(strings.TrimSpace(" \t\n Hello, Gophers \n\t\r\n")) // Hello, Gophers
 }
-
-// assignmengt - try find the second occourance of a substr , within a string

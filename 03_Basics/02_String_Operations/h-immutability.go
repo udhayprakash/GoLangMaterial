@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 /*
-mutable object -- one which supports chnges in values, in place
+mutable object -- one which supports changes in values, in place
 immutable object - one which doesnt support inplace changes
 	ex: strings
 
@@ -14,7 +14,6 @@ func main() {
 	fmt.Println("myStr = ", myStr, &myStr)
 	fmt.Printf("myStr = %#v\n", myStr)
 
-	// Indexing
 	fmt.Println("myStr[0]= ", myStr[0], string(myStr[0])) //  72  H
 
 	// myStr[0] = "F"
@@ -35,7 +34,6 @@ func main() {
 
 	myStr = myStr[:6] + "Bould"
 	fmt.Println("After OVERWRITE: myStr=", myStr, &myStr)
-	// NOTE: strings are immutable; runes are mutable
 	fmt.Println()
 
 	// rune value can be updated
@@ -45,3 +43,5 @@ func main() {
 	myrune = 'W'
 	fmt.Println("after   myrune =", myrune)
 }
+
+// NOTE: strings are immutable; runes are mutable

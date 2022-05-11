@@ -24,7 +24,7 @@ func main() {
 	fmt.Println("c1 =", c1)
 
 	// More than One variable can be declared at once
-	var d, e = 10, 20
+	var d, e = 10, 20.3
 	fmt.Println("d =", d, "e=", e)
 
 	var f, g int = 30, 40
@@ -36,6 +36,7 @@ func main() {
 
 	// Variables declared without initialization are _zero-valued_.
 	// zero value for int -> 0
+	// zero value for float -> 0.0
 	// zero value for str -> ""
 	var i int
 	fmt.Println("i=", i)
@@ -62,4 +63,19 @@ func main() {
 	fmt.Println("o:", o)
 	fmt.Println("p:", p)
 	fmt.Println("q:", q)
+	fmt.Println()
+
+	// updating values from variables
+	n = l
+	fmt.Println("l:", l)
+	fmt.Println("n:", n)
+	fmt.Println()
+
+	l = "mango"
+	fmt.Println("l:", l)
+	fmt.Println("n:", n)
+
+	var newVar1 = n
+	newVar2 := n
+	fmt.Println(newVar1, newVar2)
 }

@@ -14,6 +14,7 @@ func main() {
 	num1 = num2
 	num2 = num3
 	fmt.Printf("After Swap, num1 = %d, num2 = %d\n", num1, num2)
+	fmt.Println()
 
 	// Method2 - swapping without 3rd variable
 	fmt.Printf("Before Swap, num1 = %d, num2 = %d\n", num1, num2)
@@ -22,6 +23,7 @@ func main() {
 	num2 = num1 + num2
 	num1 = num2 - num1
 	fmt.Printf("After Swap, num1 = %d, num2 = %d\n", num1, num2)
+	fmt.Println()
 
 	// Method 3 - Direct swap
 	fmt.Printf("Before Swap, num1 = %d, num2 = %d\n", num1, num2)

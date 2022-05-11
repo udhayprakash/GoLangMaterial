@@ -2,11 +2,10 @@ package main
 
 import "fmt"
 
+// fallthrough will help to execute the consecutive case/default
 func main() {
-	// days := 4
-	// switch {
-	// 	case 1
-	// }
+	// days := 2
+	// switch days {
 
 	switch days := 2; days {
 	case 1:
@@ -27,8 +26,7 @@ func main() {
 }
 
 /*
-NOTE:
-	1) ;(semicolon) is statement separator
-	2) All statements after a match using
-     fallthrough statement will be executed.
+	when 2 is succces , we  want to rn both 2 & 3
+	when 3 is succesful , we want to run on 3
+
 */

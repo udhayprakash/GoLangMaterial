@@ -1,6 +1,6 @@
 you can install a tool called godoc 1 with this command:
 
-go install golang.org/x/tools/cmd/godoc
+go install golang.org/x/tools/cmd/godoc@latest
 Then:
 
 Change directory to your project

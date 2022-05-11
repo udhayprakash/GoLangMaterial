@@ -25,17 +25,18 @@ func main() {
 	fmt.Println(1.2 < 3.4)     // true
 	fmt.Println("1.2" < "3.4") // true
 	fmt.Println('1' < '3')     // true
+	fmt.Println('1' < 3)       // false
 
 	// string comparision
 	fmt.Println("apple" < "apparao") // false
 
+	fmt.Println(4 == 4.0) // true
 	// var (
 	// 	num3 int     = 4
 	// 	num4 float32 = 4.0
 	// )
 	// fmt.Println("num3 == num4:", num3 == num4)
 	// invalid operation: num3 == num4 (mismatched types int and float32)
-
 }
 
 // assignment - try for all other builtin data types

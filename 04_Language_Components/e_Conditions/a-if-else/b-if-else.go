@@ -3,6 +3,25 @@ package main
 import "fmt"
 
 func main() {
+	var result int
+	fmt.Print("result=")
+	fmt.Scanf("%d", &result)
+
+	// if result == 12 {
+	// 	fmt.Println("result is 12")
+	// }
+
+	// if result != 12 {
+	// 	fmt.Println("result is NOT 12")
+	// }
+
+	if result == 12 {
+		fmt.Println("result is 12")
+	} else { // result != 12
+		fmt.Println("result is NOT 12")
+	}
+
+	// ===
 	var choice bool // zero value is false
 
 	if choice == true {

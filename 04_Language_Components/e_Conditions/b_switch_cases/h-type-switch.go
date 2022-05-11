@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 // `Type switch`.
 // func main() {
@@ -30,15 +28,14 @@ func main() {
 	getDataType(123.21)
 }
 
-// It can be used to discover the type of an interface
-// value.
+// It can be used to discover the type of an interface value.
 func getDataType(value interface{}) {
 	fmt.Printf("\nvalue =%v \tdataType - %T\n", value, value)
 
 	// fmt.Println("value.(type)=", value.(type))
 	// use of .(type) outside type switch
 
-	switch t:= value.(type) {
+	switch t := value.(type) {
 	case bool:
 		fmt.Println("I'm a bool")
 	case int, int32, int64:
@@ -52,4 +49,3 @@ func getDataType(value interface{}) {
 
 	}
 }
- 

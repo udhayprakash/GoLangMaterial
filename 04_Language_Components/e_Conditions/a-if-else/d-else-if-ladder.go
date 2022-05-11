@@ -10,10 +10,9 @@ import "fmt"
 	-90 South Pole
 
 */
-
 func main() {
 	var latitude float32
-	fmt.Println("Please enter the latitude degrees:")
+	fmt.Print("Please enter the latitude degrees:")
 	fmt.Scanf("%f", &latitude)
 	fmt.Println("You entered:", latitude)
 

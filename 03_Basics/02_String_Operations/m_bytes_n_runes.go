@@ -41,5 +41,4 @@ func main() {
 	fmt.Printf("s6 = %s\n", s6) // [one two three]
 	fmt.Printf("%s\n", bytes.Join(s6, []byte(", ")))
 	// one, two, three
-
 }

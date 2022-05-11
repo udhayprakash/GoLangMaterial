@@ -21,13 +21,11 @@ Truth Table
     1   1         1       1           0
     1   0         0       1           1
     ----------------------------------------
-
-
 */
 func main() {
 	num1, num2 := 20, 12
 
-	fmt.Printf("num1      =%v\n", num1)   // 10 -- decimal
+	fmt.Printf("num1      =%v\n", num1)   // 20 -- decimal
 	fmt.Printf("num1      =%b\n\n", num1) // 10100 -- binary
 
 	fmt.Printf("num2      =%v\n", num2)   // 12
@@ -39,16 +37,18 @@ func main() {
 	fmt.Println("num1 | num2 =", num1|num2) // 28
 	// Bitwise XOR  - ^
 	fmt.Println("num1 ^ num2 =", num1^num2) // 24
+
 }
 
 /*
 		128 64 32 16 8 4 2 1
 	20    0  0  0  1 0 1 0 0
-	12    0  0  0  0 1 1 0 0
+	12	  0  0  0  0 1 1 0 0
 	-------------------------
 	&     0  0  0  0 0 1 0 0 => 4  bitwise AND
 	|     0  0  0  1 1 1 0 0 => 28 bitwise OR
 	^     0  0  0  1 1 0 0 0 => 24 bitwise XOR
+
 
 
             128    64    32    16    8   4   2   1
@@ -64,4 +64,5 @@ A left shift by n bits is equivalent to multiplication by pow(2, n) without over
 A right shift by n bits is equivalent to division by pow(2, n) without overflow check.
 
 */
+
 // Assignment - bitwise left shift(<<) and right shift(>>)

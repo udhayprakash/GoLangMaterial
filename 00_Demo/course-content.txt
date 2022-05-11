@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------------
                         GO Language Course Content
 ---------------------------------------------------------------------------------
-Duration        : 35+ days
+Duration        : 40 hours
 Target audience : beginner- and intermediate-level developers in the Go programming language.
 Prerequisite    : No knowledge of any language, nor design patterns is expected.
 Course Composure: 80% practical and 20% theory
@@ -30,7 +30,7 @@ Chapter 03: Basics
                 complex numbers
                 operator precedence 
             String Operations
-                importance of quotes 
+                importance of quotes - single, double and tild quotes
                 string operations 
                 Escape sequences
                 print type 
@@ -122,7 +122,7 @@ Chapter 14: Regular Expressions
 Chapter 15: Web Services
                 Consuming REST API 
                 Creating REST API
-				
+
 ----------------------------------------------------------------
 Daily assignments will be given, which includes interview questions
 asked in major company interviews

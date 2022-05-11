@@ -35,20 +35,23 @@ func main() {
 	// fmt.Printf("name[11]		= %q\n", name[11])
 	// panic: runtime error: index out of range
 
-	fmt.Printf("name[-0]		= %c\n", name[-0])
-	// fmt.Printf("name[-1]		= %c\n", name[-1])
-	// error: string index out of bounds - (index must be non-negative)
+	fmt.Printf("name[-0]		= %q\n", name[-0])
+	// fmt.Printf("name[-2]		= %q\n", name[-2])
+	//  index -2 (constant of type int) must not be negative
+
 	fmt.Println()
 
+	// ====== SLICING
 	// H	e	l	l	o	 	w	o	r	l	d
 	// 0   	1	2	3	4	5	6	7	8	9	10
 
 	// slicing - last position char is not included
 	fmt.Printf("name[2]			=%q\n", name[2])
 	fmt.Printf("name[7]			=%q\n", name[7])
-	fmt.Println("name[2:7]			=", name[2:7])
+
+	fmt.Println("name[2:7]			=", name[2:7])   //  llo w
 	fmt.Println("name[1:10]			=", name[1:10]) // ello	worl
-	fmt.Println("name[1:11]			=", name[1:11]) // ello world
+	fmt.Println("name[1:11]			=", name[1:11]) // ello	world
 
 	// fmt.Println("name[1:12]			=", name[1:12])
 	// panic: runtime error: slice bounds out of range [:12] with length 11
@@ -69,26 +72,28 @@ func main() {
 	// 0   	1	2	3	4	5	6	7	8	9	10
 
 	// To Get last N characters;  len(name)= 11
-	fmt.Println("name[len(name)- 3:]=", name[len(name)-3:]) // rld
+	// 11 - 3 = 8  => name[8:]
+	fmt.Println("name[8:]             =", name[8:])           // rld
+	fmt.Println("name[len(name) - 3:] =", name[len(name)-3:]) // rld
+
 	fmt.Println("name[len(name)- 5:]=", name[len(name)-5:]) // world
 
 	// To Get from start till last N characters;  len(name)= 11
-	fmt.Println("name[:len(name)- 3]=", name[:len(name)-3]) // Hello wo
-	fmt.Println("name[:len(name)- 5]=", name[:len(name)-5]) // Hello
+	fmt.Println("name[:8]             =", name[:8])           // Hello wo
+	fmt.Println("name[:len(name) - 3] =", name[:len(name)-3]) // Hello wo
 
-	// To print 'world'
-	fmt.Println(name[6:11], name[len(name)-5:])
+	fmt.Println("name[:len(name) - 5] =", name[:len(name)-5]) // Hello
 	fmt.Println()
 
 	// Capitalize first half of the string
-	sentence := " I love mozambique"
+	sentence := " I love eating mangos in summer"
 
-	half_len := len(sentence) / 2
+	halfLen := len(sentence) / 2
 	fmt.Printf("sentence            = %s\n", sentence)
-	fmt.Printf("sentence[:half_len] = %s\n", sentence[:half_len])
-	fmt.Printf("sentence[half_len:] = %s\n", sentence[half_len:])
+	fmt.Printf("sentence[:halfLen]  = %s\n", sentence[:halfLen])
+	fmt.Printf("sentence[halfLen:]  = %s\n", sentence[halfLen:])
 
-	result := strings.ToUpper(sentence[:half_len]) + strings.ToLower(sentence[half_len:])
-	fmt.Println("result = ", result)
+	res := strings.ToUpper(sentence[:halfLen]) + strings.ToLower(sentence[:halfLen])
+	fmt.Println("result = ", res)
 
 }

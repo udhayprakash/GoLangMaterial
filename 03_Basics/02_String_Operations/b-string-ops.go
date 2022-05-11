@@ -21,4 +21,5 @@ func main() {
 	// invalid operation: "Hello " * 3 (mismatched types untyped string and untyped int)
 
 	fmt.Println('H', 'H'*3) // 72, 216
+
 }
