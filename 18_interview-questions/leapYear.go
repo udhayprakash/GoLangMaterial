@@ -6,7 +6,7 @@ func main() {
 	// leapYear(1998)
 	// leapYear(2001)
 	// leapYear(2004)
-	for year:=2000; year<=2022;year++{
+	for year := 2000; year <= 2022; year++ {
 		leapYear(year)
 	}
 }

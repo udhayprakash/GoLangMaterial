@@ -4,20 +4,20 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/gorilla/mux"
-	log "github.com/sirupsen/logrus"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/gorilla/mux"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
+	log "github.com/sirupsen/logrus"
 )
 
 var db, _ = gorm.Open("mysql", "root:root@/todolist?charset=utf8&parseTime=True&loc=Local")
 
-type TodoItemModel struct{
-	      Id int `gorm:"primary_key"`
-	      Description string
-	      Completed bool
-	}
+type TodoItemModel struct {
+	Id          int `gorm:"primary_key"`
+	Description string
+	Completed   bool
+}
 
 func Healthz(w http.ResponseWriter, r *http.Request) {
 	log.Info("API Health is OK")
@@ -32,9 +32,9 @@ func init() {
 
 func main() {
 	defer db.Close()
-	
+
 	db.Debug().DropTableIfExists(&TodoItemModel{})
-    db.Debug().AutoMigrate(&TodoItemModel{})
+	db.Debug().AutoMigrate(&TodoItemModel{})
 
 	log.Info("Starting Todolist API server")
 	router := mux.NewRouter()

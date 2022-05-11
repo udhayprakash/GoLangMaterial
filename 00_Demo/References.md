@@ -65,6 +65,10 @@ https://blog.golang.org/go-fmt-your-code.
         - Usage
             golint ./...
 
+## go updating all packages
+
+    go get -u ./...
+
 ## go formatting
 
     go fmt main.go : Prints the formatted source code of main.go file on the console.

@@ -65,7 +65,7 @@ func main() {
 	fmt.Println("myStackOfInts.IsEmpty():", myStackOfInts.IsEmpty())
 	fmt.Println("myStackOfInts:", myStackOfInts)
 
-	// strings stack 
+	// strings stack
 	myStackOfStrings := new(StackOfStrings)
 	fmt.Println("myStackOfStrings.IsEmpty():", myStackOfStrings.IsEmpty())
 

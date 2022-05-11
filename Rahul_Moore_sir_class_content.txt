@@ -38,10 +38,6 @@ Chapter 07: File Operations
 					json
 						nested json
                 ZipFiles
-                 
-Chapter 08: Logging
-                Built-in logger 
-                Logrus
 
 Chapter 09: Code Quality
                 unit testing, 

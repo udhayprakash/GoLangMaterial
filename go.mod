@@ -25,6 +25,7 @@ require (
 	github.com/kbinani/screenshot v0.0.0-20210326165202-b96eb3309bb0
 	github.com/kennygrant/sanitize v1.2.4 // indirect
 	github.com/pkg/errors v0.9.1
+	github.com/robfig/cron v1.2.0 // indirect
 	github.com/rs/cors v1.7.0
 	github.com/saintfish/chardet v0.0.0-20120816061221-3af4cd4741ca // indirect
 	github.com/sirupsen/logrus v1.8.1 // indirect
