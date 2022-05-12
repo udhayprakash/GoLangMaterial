@@ -4,6 +4,7 @@ import "fmt"
 
 func main() {
 	// map of maps
+
 	myMap1 := map[string]map[string]int{
 		"a": map[string]int{
 			"a1": 1,
@@ -15,7 +16,7 @@ func main() {
 		},
 	}
 	fmt.Println("myMap1 = ", myMap1)
-	// map[a:map[a1:1 a2:2] b:map[b1:1 b2:2]
+	//  map[a:map[a1:1 a2:2] b:map[b1:1 b2:2]]
 
 	// map of arrays
 	myMap2 := map[string][2]int{
@@ -34,5 +35,5 @@ func main() {
 	}
 	fmt.Println("myMap3 = ", myMap3)
 	// map[one:[1.1 1.2 1.3] three:[3.1 3.2 3.3 3.4 3.5] two:[2]
+
 }
- 

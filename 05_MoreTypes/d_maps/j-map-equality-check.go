@@ -23,8 +23,8 @@ func main() {
 	// fmt.Println("map1 == map2     :", map1 == map2)
 	// invalid operation: map1 == map2 (map can only be compared to nil)
 
-	fmt.Println("map1 == nill     :", map1 == nil)
-	fmt.Println("map2 == nill     :", map2 == nil)
+	fmt.Println("map1 == nil     :", map1 == nil)
+	fmt.Println("map2 == nil     :", map2 == nil)
 
 	fmt.Println("reflect.DeepEqual(map1, map2):", reflect.DeepEqual(map1, map2))
 

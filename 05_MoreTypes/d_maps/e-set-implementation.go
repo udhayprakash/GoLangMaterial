@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"reflect"
-)
+import "fmt"
 
 // Go does not provide a set type, but since the keys of a map
 // are distinct, a map can serve this purpose
@@ -24,7 +21,7 @@ func main() {
 
 	// Method 1
 	for _, color := range colors {
-		fmt.Println(color)
+		// fmt.Println(color)
 
 		// Lookup
 		_, isKeyPresent := uniqueColors[color]
@@ -37,13 +34,11 @@ func main() {
 	fmt.Println("\nuniqueColors    =", uniqueColors)
 
 	// Method 2
-
 	uniqueColors = make(map[string]int)
 	for _, color := range colors {
 		// Lookup
 		val, _ := uniqueColors[color]
 		uniqueColors[color] = val + 1
-
 	}
 	fmt.Println("\nuniqueColors    =", uniqueColors)
 	fmt.Println("reflect.ValueOf(uniqueColors).MapKeys() =", reflect.ValueOf(uniqueColors).MapKeys())
@@ -52,8 +47,12 @@ func main() {
 	var nonDuplicateColors []string
 	for color, count := range uniqueColors {
 		if count == 1 {
+			// fmt.Println(color)
 			nonDuplicateColors = append(nonDuplicateColors, color)
 		}
 	}
 	fmt.Println("nonDuplicateColors=", nonDuplicateColors)
+
 }
+
+// Assignment : Try to get all colors, which are occurring more than 2 times

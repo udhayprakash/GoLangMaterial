@@ -28,8 +28,12 @@ func main() {
 	// Equality Check
 	// Two structs are equal if all their corresponding fields are equal.
 	p4 := AnotherPoint{1, 2}
-	// fmt.Println("p1 == p4 :", p1 == p4)
 	// mismatched types myPoint and AnotherPoint
 	fmt.Println(reflect.TypeOf(p1), reflect.TypeOf(p1).Kind()) // main.myPoint struct
 	fmt.Println(reflect.TypeOf(p4), reflect.TypeOf(p4).Kind()) // main.AnotherPoint struct
+
+	fmt.Println()
+	fmt.Println("reflect.DeepEqual(p1, p2) =", reflect.DeepEqual(p1, p2)) // false
+	fmt.Println("reflect.DeepEqual(p1, p3) =", reflect.DeepEqual(p1, p3)) // true
+	fmt.Println("reflect.DeepEqual(p1, p4) =", reflect.DeepEqual(p1, p4)) // false
 }

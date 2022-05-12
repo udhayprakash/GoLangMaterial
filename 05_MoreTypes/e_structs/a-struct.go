@@ -11,8 +11,11 @@ Purpose: Structs
 	- They're useful for grouping data together to form
       records.
 */
+
+type fruitCount int // Type Aliasing
+
 type Person struct {
-	FirstName string // each value is called field
+	FirstName string // each value is field. Dnt place comma at end
 	LastName  string
 	Age       int
 	Salary    float64
@@ -21,9 +24,11 @@ type Person struct {
 func main() {
 	// Method 1 : First declaration and then initialization
 	var num1 int
+	var num2 fruitCount
 	var p Person
 
 	fmt.Printf("num1= %7d - > type -%[1]T - detailed-%v\n", num1, reflect.TypeOf(num1).Kind())
+	fmt.Printf("num2= %7d - > type -%[1]T - detailed-%v\n", num2, reflect.TypeOf(num2).Kind())
 	fmt.Printf("p   = %v - > type -%[1]T - detailed-%v\n", p, reflect.TypeOf(p).Kind())
 
 	// dot operation
@@ -61,7 +66,8 @@ func main() {
 
 	// Method 3: Naming fields while initializing struct
 	var p2 = Person{FirstName: "Alien"} // LastName: "", Age: 0
-	p2 = Person{}                       // FirstName: "", LastName: "", Age: 0	fmt.Println()
+	p2 = Person{}                       // FirstName: "", LastName: "", Age: 0
+	fmt.Println()
 
 	p2 = Person{
 		FirstName: "Sachin",
