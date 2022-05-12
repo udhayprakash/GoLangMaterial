@@ -4,7 +4,6 @@ import "fmt"
 
 // range can be used to iterate(loop) over any iterable object
 // iterables - strings, bytes, array, slice, map
-
 func main() {
 	name := "Go Language"
 
@@ -13,18 +12,18 @@ func main() {
 
 	// Method 1 - traditional
 	for i := 0; i < len(name); i++ {
-		fmt.Printf(" index= %d  character= %q\n", i, name[i])
+		fmt.Printf(" index= %2d  character= %q\n", i, name[i])
 	}
 	fmt.Println()
 
 	// Method 2 - using range
-	for index := range name {
-		fmt.Printf(" index= %d  character= %q\n", index, name[index])
+	for i := range name {
+		fmt.Printf(" index= %2d  character= %q\n", i, name[i])
 	}
 	fmt.Println()
 
-	for index, eachChr := range name {
-		fmt.Printf(" index= %d  character= %q\n", index, eachChr)
+	for i, eachChr := range name {
+		fmt.Printf(" index= %2d  character= %q\n", i, eachChr) //name[i])
 	}
 	fmt.Println()
 
@@ -32,5 +31,17 @@ func main() {
 		fmt.Printf("character= %q\n", eachChr)
 	}
 	fmt.Println()
+
+	//----- Examples
+	for _, eachChr := range name[2:5] { // passing a string slice
+		fmt.Printf("character= %q\n", eachChr)
+	}
+	fmt.Println()
+
+	for i, eachChr := range name {
+		if i >= 2 && i < 5 {
+			fmt.Printf(" index= %2d  character= %q\n", i, eachChr) //name[i])
+		}
+	}
 
 }

@@ -18,7 +18,7 @@ func init() {
 	fmt.Println("Fourth init")
 }
 
-func Init() {
+func Init() { // Not an init function, but ordinary function
 	fmt.Println("Fifth init")
 }
 func main() {}

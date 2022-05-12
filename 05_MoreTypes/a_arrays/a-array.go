@@ -15,7 +15,6 @@ Declaration
 Short declaration
 	array_name:= [length]Type{item1, item2, item3,...itemN}
 */
-
 func main() {
 	// Method 1 - Declaration of Arrays
 	var emptyArray1 [3]int
@@ -30,17 +29,17 @@ func main() {
 
 	// Method2 - Declaration & initialization
 	var myArray1 [3]int = [3]int{11, 22, 33}
-	fmt.Println("myArray1    = ", myArray1)
+	fmt.Println("myArray1    = ", myArray1) // [11 22 33]
 
 	var myArray2 = [3]int{11, 22, 33}
-	fmt.Println("myArray2    = ", myArray2)
+	fmt.Println("myArray2    = ", myArray2) // [11 22 33]
 
+	// Method 3 - short declaration
 	myArray3 := [3]int{11, 22, 33}
 	fmt.Println("myArray3    = ", myArray3) // [11 22 33]
 
 	myArray4 := [3]int{11, 22}              // Partial assignment
 	fmt.Println("myArray4    = ", myArray4) // [11 22 0]
-	fmt.Println()
 
 	// Multi-line initialization
 	greetings1 := [4]string{"Good Morning", "Good Afternoon", "Good Evening", "Good Night"}
@@ -85,8 +84,8 @@ func main() {
 	a3 := [...]string{"a", "b", "c"}
 	a4 := [...]rune{'a', 'b', 'c'}
 
-	fmt.Println("a1=", a1, reflect.TypeOf(a1).Kind())
-	fmt.Println("a2=", a2, reflect.TypeOf(a2).Kind())
-	fmt.Println("a3=", a3, reflect.TypeOf(a3).Kind())
-	fmt.Println("a4=", a4, reflect.TypeOf(a4).Kind())
+	fmt.Println("a1=", a1, len(a1), reflect.TypeOf(a1), reflect.TypeOf(a1).Kind())
+	fmt.Println("a2=", a2, len(a2), reflect.TypeOf(a2).Kind())
+	fmt.Println("a3=", a3, len(a3), reflect.TypeOf(a3).Kind())
+	fmt.Println("a4=", a4, len(a4), reflect.TypeOf(a4).Kind())
 }

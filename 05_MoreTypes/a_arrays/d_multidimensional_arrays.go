@@ -30,6 +30,8 @@ func main() {
 	a2 := [...][2]int{
 		[2]int{1, 2},
 		[2]int{3, 4},
+		{5, 6},
+		{7, 8},
 	}
 	fmt.Println("a2:", a2)
 	fmt.Println()

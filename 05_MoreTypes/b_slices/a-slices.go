@@ -24,16 +24,21 @@ func main() {
 	fmt.Println()
 
 	// comparision
-	fmt.Println("a1 == a2 :", a1 == a2) // true
+	fmt.Println("a1 == a2  :", a1 == a2) // true
 	// a1 == s3 // Can't compare array & slice
 	// s1 == s2 // slice can only be compared to nil
+
+	fmt.Println("s1 == nil :", s1 == nil) // false
+	fmt.Println("len(s1)   :", len(s1))
+
+	fmt.Println("s2 == nil :", s2 == nil) // false
+	fmt.Println("len(s2)   :", len(s2))
 
 	s4 := make([]int, 0)
 	fmt.Printf("%v    - %[1]T  - %v\n", s4, reflect.TypeOf(s4).Kind())
 	fmt.Printf("len(s4)=%d \ts4 == nil =%t\n", len(s4), s4 == nil) // 0 false
 
-	var s5 []int
+	var s5 []int // nil slice
 	fmt.Printf("%v    - %[1]T  - %v\n", s5, reflect.TypeOf(s5).Kind())
 	fmt.Printf("len(s5)=%d \ts5 == nil =%t\n", len(s5), s5 == nil) // 0 true
-
 }

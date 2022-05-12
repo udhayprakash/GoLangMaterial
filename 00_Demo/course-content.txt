@@ -8,17 +8,17 @@ Course Composure: 80% practical and 20% theory
 
 Chapter 01: Introduction
             Necessity & importance of Golang
-            Installation setup 
-            comment operators 
+            Installation setup
+            comment operators
             Keywords & Identifiers
             Data Types in Golang
 
-Chapter 02: Variables 
+Chapter 02: Variables
             Variables & Declarations
             Constants
-            Overflow 
-            Enumerations 
-            Zero values 
+            Overflow
+            Enumerations
+            Zero values
             Type conversions
             Custom Type Creation
             Run-Time Input
@@ -28,31 +28,31 @@ Chapter 03: Basics
                 Arithmetic operators
                 type casting
                 complex numbers
-                operator precedence 
+                operator precedence
             String Operations
                 importance of quotes - single, double and tild quotes
-                string operations 
+                string operations
                 Escape sequences
-                print type 
+                print type
                 string formatting
                 String immutability
-                string attributes 
-                utf strings 
-                number parsing 
-                bytes and runes 
+                string attributes
+                utf strings
+                number parsing
+                bytes and runes
 
 Chapter 04: Language Components
-                Relational Operations 
+                Relational Operations
                 Logical Operations
-                Boolean Operations 
-                Bitwise Operations 
-                Conditions 
-                Loops 
-                Range 
+                Boolean Operations
+                Bitwise Operations
+                Conditions
+                Loops
+                Range
                 Init
 
 Chapter 05: MoreTypes
-                Arrays 
+                Arrays
                 Slices
                 Pointers
                 Maps
@@ -61,66 +61,66 @@ Chapter 05: MoreTypes
                 Interfaces
 
 Chapter 06: Error Handling
-                Defer 
-                panic 
+                Defer
+                panic
                 recover
-                create erros
+                create errors
 
 Chapter 07: Debugging
 				delve package & commands
 
 Chapter 08: Functions
                 Functions signature
-                Functions with args 
-                swapping 
-                naked returns 
+                Functions with args
+                swapping
+                naked returns
                 pointers as returns
-                variadic functions 
-                Global vs Local Scope 
-                Function Literals, 
-                Closure, Generator, 
-                Recursions 
-                Higher-Order Functions 
+                variadic functions
+                Global vs Local Scope
+                Function Literals,
+                Closure, Generator,
+                Recursions
+                Higher-Order Functions
 
 Chapter 09: Goroutines, Channels, Concurrency
 
 Chapter 10: Modules
-                OS 
+                OS
                 base64-encoding
-                time 
-                math 
-                rand 
-                Crypto 
-                bufio 
+                time
+                math
+                rand
+                Crypto
+                bufio
                 container
                 sort
-                hash & Cryptography 
+                hash & Cryptography
                 StrConv
                 runtime
 				context
 				reflect
-				
+
 				Creating Custom Packages
 
 Chapter 11: File Operations
                 UnStructured- text, pdf files
-				Structured - csv, xml, json, yaml 
+				Structured - csv, xml, json, yaml
                 ZipFiles - .zip, .tar files
-                 
+
 Chapter 12: Logging
-                Built-in logger 
+                Built-in logger
                 Logrus
 
 Chapter 13: Code Quality
-                unit testing, 
-					table driven tests, 
+                unit testing,
+					table driven tests,
 					asserts
 				coverage, profiling, benchmarking
 
 Chapter 14: Regular Expressions
- 
+
 Chapter 15: Web Services
-                Consuming REST API 
+                Consuming REST API
                 Creating REST API
 
 ----------------------------------------------------------------

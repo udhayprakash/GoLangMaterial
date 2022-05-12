@@ -16,4 +16,10 @@ func main() {
 		fmt.Println("IN Loop2")
 		ok = false
 	}
+
+	ok := true
+	for ok {
+		fmt.Println("IN Loop2")
+		ok = false
+	}
 }

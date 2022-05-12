@@ -49,6 +49,7 @@ func main() {
 	for index, val := range numsArray {
 		fmt.Println(index, val)
 	}
+	fmt.Println()
 
 	// Looping over an Slice
 	numsSlice := []int{11, 22, 33, 44, 55, 66, 77}
@@ -72,4 +73,5 @@ func main() {
 	for key, value := range kvs {
 		fmt.Printf("%s -> %s\n", key, value)
 	}
+
 }

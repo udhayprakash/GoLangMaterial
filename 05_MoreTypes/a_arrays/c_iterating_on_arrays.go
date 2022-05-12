@@ -28,9 +28,11 @@ func main() {
 	posCount := 0
 	for num := 1; num <= 100; num++ {
 		if num%2 == 0 {
+			// position is needed to update, or retrive from array
 			evenNumbers1[posCount] = num
 			posCount++
 		}
 	}
 	fmt.Println("evenNumbers1=", evenNumbers1)
+
 }

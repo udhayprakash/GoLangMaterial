@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"reflect"
 )
 
 func main() {
@@ -10,15 +9,13 @@ func main() {
 	// comparision on arrays
 	a1 := [3]int{1, 2, 3}
 	a2 := [3]int{2, 3, 1}
-	a3 := [3]int{3, 1, 2}
-	a4 := [...]int{1, 2, 3}
-
 	fmt.Println("a1 == a2 :", a1 == a2) // false
-	fmt.Println("a1 == a3 :", a1 == a3) // false
-	fmt.Println("a1 == a4 :", a1 == a4) // true
 
-	fmt.Printf("a1 is of type : %T\n", a1)             // [3]int
-	fmt.Println("a1 is of type :", reflect.TypeOf(a1)) // [3]int
+	// a3 := [4]int{1, 2, 3}
+	// fmt.Println("a1 == a3 :", a1 == a3) // mismatched types [3]int and [4]int
+
+	a4 := [...]int{1, 2, 3}
+	fmt.Println("a1 == a4 :", a1 == a4) // true
 	fmt.Println()
 
 	q := [3]int{1, 2, 3}
@@ -27,6 +24,12 @@ func main() {
 	q = [3]int{44, 55, 66}
 	fmt.Println("q =", q) // [44 55 66]
 
+	// q = [2]int{777, 888}
+	// cannot use [2]int{…} (value of type [2]int) as type [3]int in assignment
+
+	q = [3]int{777, 888}
+	fmt.Println("q =", q) // [777 888 0]
+
 	//q = [5]int{11, 22, 33, 44, 55}
 	// cannot use [5]int literal (type [5]int) as type [3]int in assignment
 
@@ -34,21 +37,27 @@ func main() {
 	// cannot use [3]float64 literal (type [3]float64) as type [3]int in assignment
 
 	// Indexing
-	fmt.Println("q =", q)
-	fmt.Println("q[0] =", q[0])
-	fmt.Println("q[1] =", q[1])
-	fmt.Println("len(q)=", len(q))
+	fmt.Println("q =", q)          //  [777 888 0]
+	fmt.Println("q[0] =", q[0])    // 777
+	fmt.Println("q[1] =", q[1])    // 888
+	fmt.Println("len(q)=", len(q)) // 3
 
 	// updating a value in array  -- arrays are MUTABLE
 	q[1] = 89
-	fmt.Println("q[1] =", q[1])
-	fmt.Println("q =", q) // 	[44 89 66]
+	fmt.Println("q[1] =", q[1]) // 89
+	fmt.Println("q =", q)       // 	[777 89 0]
 
 	// Slicing -- withh get till the last position, excluding last position
-	fmt.Println("q[0:2] =", q[0:2])
+	fmt.Println("q[0:2] =", q[0:2]) // [777 89]
 
 	// updating a slice of array
 	// q[0:2] = [2]int{11, 22}  //- CANT UPDATE SLICE in values in ARRAY
 	// cannot assign to q[0:2]
-
 }
+
+/*
+NOTE:
+1. arrays are mutable
+2. we can updat individual indexed elements, but not a slice of them
+3. Overwriting/updating is possibel with same dimension; values can be less than or equal to the dimension
+*/

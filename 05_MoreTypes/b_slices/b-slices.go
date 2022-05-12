@@ -14,9 +14,13 @@ Slice consists of three things:
 	3) Capacity- max. size up to which the segment can grow
 
 */
+
 func main() {
 	a1 := [...]string{"a", "b", "c", "d", "e", "f", "g"} // len-7; cap-7
 	//                 0    1    2    3    4    5    6
+
+	// capacity -- from startIndex of sice, tll end of array -- total length
+
 	// last index is not included, in slice
 	s1 := a1[2:4] // [c d] 				len-2; cap-5
 	s2 := a1[3:6] // [d e f] 			len-3; cap-4
@@ -58,8 +62,14 @@ func main() {
 	fmt.Println()
 
 	// make() will take type, length , capacity ; to create slice
-	var my_slice = make([]int, 5, 8)
-	fmt.Printf("my_slice = %v", my_slice)
-	fmt.Printf("\nLength   = %d", len(my_slice))
-	fmt.Printf("\nCapacity = %d", cap(my_slice))
+	var my_slice = make([]int, 5)
+	fmt.Printf("my_slice = %v", my_slice)        //  [0 0 0 0 0]
+	fmt.Printf("\nLength   = %d", len(my_slice)) // 5
+	fmt.Printf("\nCapacity = %d", cap(my_slice)) // 5
+	fmt.Println()
+
+	var my_slice2 = make([]int, 5, 8)
+	fmt.Printf("\nmy_slice2 = %v", my_slice2)     //  [0 0 0 0 0]
+	fmt.Printf("\nLength   = %d", len(my_slice2)) // 5
+	fmt.Printf("\nCapacity = %d", cap(my_slice2)) // 8
 }
