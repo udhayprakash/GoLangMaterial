@@ -18,17 +18,17 @@ func main() {
 	studentRank["Mahesh"] = 3
 	studentRank["Ganesh"] = 2
 
-	fmt.Println("\nstudentRank      = ", studentRank)
-	fmt.Println("len(studentRank) = ", len(studentRank))
+	fmt.Println("\nstudentRank      = ", studentRank)    // map[Ganesh:2 Mahesh:3 Suresh:1]
+	fmt.Println("len(studentRank) = ", len(studentRank)) // 3
 
 	// To overwrite all key-value pairs
 	studentRank = map[string]int{"Apparao": 3, "subbarao": 1, "ramarao": 2}
-	fmt.Println("\nstudentRank      = ", studentRank)
-	fmt.Println("len(studentRank) = ", len(studentRank))
+	fmt.Println("\nstudentRank      = ", studentRank)    // map[Apparao:3 ramarao:2 subbarao:1]
+	fmt.Println("len(studentRank) = ", len(studentRank)) // 3
 
 	// maps are indexed by keys, not position
-	fmt.Println("\nstudentRank[\"subbarao\"]=", studentRank["subbarao"])
-	fmt.Println("studentRank[\"Mahesh\"]=", studentRank["Mahesh"])
+	fmt.Println("\nstudentRank[\"subbarao\"]=", studentRank["subbarao"]) // 1
+	fmt.Println("studentRank[\"superman\"]=", studentRank["superman"])   // 0
 
 	// To check for present of a key
 	val, isKeyPresent := studentRank["ramarao"]

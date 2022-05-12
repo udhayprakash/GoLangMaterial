@@ -6,20 +6,20 @@ import (
 )
 
 func main() {
-	array1 := [3]int{2, 3, 5}
+	array1 := [3]int{2, 3, 5} // array
 	fmt.Println(reflect.TypeOf(array1).Kind(), array1)
 
-	array2 := [...]bool{false, true, true}
+	array2 := [...]bool{false, true, true} // array
 	fmt.Println(reflect.TypeOf(array2).Kind(), array2)
 
-	mySlice1 := []bool{false, true, true}
+	mySlice1 := []bool{false, true, true} //slice
 	fmt.Println(reflect.TypeOf(mySlice1).Kind(), mySlice1)
 
-	mySlice2 := make([]int, 3)
+	mySlice2 := make([]int, 3)                             //slice
 	fmt.Println(reflect.TypeOf(mySlice2).Kind(), mySlice2) // slice [0 0 0]
 	fmt.Printf("myslice2 - capacity:%d 	length:%d\n", cap(mySlice2), len(mySlice2))
 
-	mySlice3 := make([]string, 3, 10)
+	mySlice3 := make([]string, 3, 10)                      // slice
 	fmt.Println(reflect.TypeOf(mySlice3).Kind(), mySlice3) // slice [  ]
 	fmt.Printf("mySlice3 - capacity:%d 	length:%d\n", cap(mySlice3), len(mySlice3))
 

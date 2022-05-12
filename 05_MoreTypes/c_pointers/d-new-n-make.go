@@ -27,8 +27,8 @@ Purpose:
 func main() {
 	newVar := new([]int)
 	makeVar := make([]int, 5)
-	fmt.Println(newVar, reflect.TypeOf(newVar).Kind())   // ptr
-	fmt.Println(makeVar, reflect.TypeOf(makeVar).Kind()) // slice
+	fmt.Println(newVar, reflect.TypeOf(newVar).Kind())   // &[] ptr
+	fmt.Println(makeVar, reflect.TypeOf(makeVar).Kind()) // [0 0 0 0 0]  slice
 
 	fmt.Println(new([]int))     // &[]
 	fmt.Println(make([]int, 5)) // [0 0 0 0 0]
@@ -54,4 +54,3 @@ func main() {
 	fmt.Println("cf=", cf)
 
 }
- 

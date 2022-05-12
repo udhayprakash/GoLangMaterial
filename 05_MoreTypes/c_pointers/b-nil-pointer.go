@@ -5,12 +5,13 @@ import (
 )
 
 func main() {
-	var ptr *float64                              // nil pointer
-	fmt.Printf("The value of ptr is : %x\n", ptr) // 0
+	var ptr *float64                               // nil pointer
+	fmt.Printf("The value of ptr is : %x\n", ptr)  // 0
+	fmt.Printf("\ntype              : %T\n", ptr)  // *float64
+	fmt.Println("Before ptr != nil :", ptr != nil) // false
 
 	// var num2 float64 = 123.213
 	num2 := 123.213
-	fmt.Println("Before ptr != nil :", ptr != nil) // false
 
 	ptr = &num2
 	fmt.Println("After  ptr != nil :", ptr != nil) // true
@@ -28,7 +29,6 @@ func main() {
 	// cannot use &num4 (type *float32) as type *float64 in assignment
 
 	// var floatPtr *float  //  undefined: float
-
 }
 
 // NOTE: You can refer values of same data types as defined in pointer

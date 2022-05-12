@@ -15,6 +15,7 @@ func main() {
 	// sorting the slices
 	sort.Strings(strs)
 	fmt.Printf("\nAfter sorting -  strs = %v", strs)
+	fmt.Println()
 
 	ints := []int{213, 234, 213, 43, 2, 4}
 	fmt.Println("\nBefore sorting - ints = ", ints)
@@ -23,8 +24,8 @@ func main() {
 
 	s := sort.IntsAreSorted(ints)
 	fmt.Println("Sorted: ", s) // true
-
 }
+
 
 // Assignment: Explore the sort module,
 // and try to sorting in descending order for both strings and ints

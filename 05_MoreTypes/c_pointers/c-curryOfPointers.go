@@ -14,13 +14,14 @@ func main() {
 
 	intVar = 100
 	pointerVar = &intVar
+
 	// pointerToPointerVar = &intVar // cannot use &intVar (type *int) as type **int in assignment
 	pointerToPointerVar = &pointerVar
 
 	fmt.Println("\nAFTER ASSIGNMENT:")
-	fmt.Println("intVar             :", intVar)
-	fmt.Println("pointerVar         :", pointerVar)
-	fmt.Println("pointerToPointerVar:", pointerToPointerVar)
+	fmt.Println("intVar             :", intVar)              // 100
+	fmt.Println("pointerVar         :", pointerVar)          // 0xc0000100a8
+	fmt.Println("pointerToPointerVar:", pointerToPointerVar) // 0xc000006028
 
 	fmt.Println()
 	fmt.Println("&intVar             :", &intVar)
@@ -28,7 +29,16 @@ func main() {
 	fmt.Println("&pointerToPointerVar:", &pointerToPointerVar)
 
 	fmt.Println()
-	fmt.Println("*pointerVar          :", *pointerVar)
-	fmt.Println("*pointerToPointerVar :", *pointerToPointerVar)
-	fmt.Println("**pointerToPointerVar:", **pointerToPointerVar)
+	fmt.Println("*pointerVar          :", *pointerVar)           // 100
+	fmt.Println("*pointerToPointerVar :", *pointerToPointerVar)  // 0xc0000100a8
+	fmt.Println("**pointerToPointerVar:", **pointerToPointerVar) // 100
+
+	// Updating values
+	**pointerToPointerVar = 200
+
+	fmt.Println()
+	fmt.Println("intVar               :", intVar)                // 200
+	fmt.Println("*pointerVar          :", *pointerVar)           // 200
+	fmt.Println("**pointerToPointerVar:", **pointerToPointerVar) // 200
+
 }
