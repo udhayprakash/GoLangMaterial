@@ -18,8 +18,8 @@ func main() {
 	// copying struct
 	p2 := p1
 
-	fmt.Println("p1 = ", p1, &p1.X) // {10 20} 0xc0000120c0
-	fmt.Println("p2 = ", p2, &p2.X) //  {10 20} 0xc0000120d0
+	fmt.Println("p1 = ", p1, &p1.X) // {10 20} 0xc0000100c0
+	fmt.Println("p2 = ", p2, &p2.X) // {10 20} 0xc0000100d0
 
 	p2.X = 15
 	fmt.Println("\nAfter modifying p2:")
