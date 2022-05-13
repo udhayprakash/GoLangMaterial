@@ -19,3 +19,5 @@ func main() {
 	areaIntf := square
 	fmt.Printf("Square area: %f\n", areaIntf.Area())
 }
+
+// Assignment -- Refactor the code to use the generic function
