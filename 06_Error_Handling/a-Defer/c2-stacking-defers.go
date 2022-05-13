@@ -21,6 +21,7 @@ func myFunc() {
 
 	fmt.Println("\tmyFunc() - ending")
 }
+
 func AnotherFunc() {
 	fmt.Println("\tAnotherFunc() - starting")
 
@@ -28,6 +29,7 @@ func AnotherFunc() {
 
 	fmt.Println("\tAnotherFunc() - ending")
 }
+
 
 /*
 OUTPUT:

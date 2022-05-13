@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 )
 
 type Element interface{}
@@ -13,12 +12,8 @@ type Person struct {
 	age  int
 }
 
-func (p Person) String() string {
-	return "(name: " + p.name + " - age: " + strconv.Itoa(p.age) + " years)"
-}
-
 func main() {
-	list := make(List, 5)
+	list := make(List, 5) // [<nil> <nil> <nil> <nil> <nil>]
 	fmt.Println("Initially, list =", list)
 
 	list[0] = 1                    //an int
@@ -27,10 +22,12 @@ func main() {
 	list[3] = true                 // bool
 	list[4] = []int{11, 22, 33}    // slice
 	fmt.Println("after initial, list =", list)
+	// [1 Hello (name: Dennis - age: 70 years) true [11 22 33]]
 
 	for index, element := range list {
 		fmt.Println(index, element)
-		switch value := element.(type) { //  Type Switch
+
+		switch value := element.(type) { // Type switch
 		case int:
 			fmt.Printf("list[%d] is an int and its value is %d\n", index, value)
 		case string:
@@ -42,5 +39,7 @@ func main() {
 		default:
 			fmt.Printf("list[%d] is of a different type\n", index)
 		}
+
 	}
+
 }

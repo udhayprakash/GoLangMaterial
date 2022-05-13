@@ -5,11 +5,11 @@ import (
 )
 
 type MyError struct {
-	What string
+	message string
 }
 
 func (e MyError) Error() string {
-	return fmt.Sprintf("ERROR:%v", e.What)
+	return fmt.Sprintf("ERROR:%v", e.message)
 }
 
 func someError() error {
@@ -17,7 +17,11 @@ func someError() error {
 }
 
 func main() {
+	someError()
+
 	if err := someError(); err != nil {
-		fmt.Println(err)
+		fmt.Println("An error occurred:", err)
+		return
 	}
+	fmt.Println("All's Good")
 }

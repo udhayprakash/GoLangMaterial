@@ -6,10 +6,11 @@ import (
 )
 
 func boom() error {
-	return errors.New("OM BHEM BUSSHH!!!")
+	return errors.New("OM BHEM BHUSHHH!")
 }
 
 func main() {
+	boom()
 
 	// err := boom()
 	// if err != nil {

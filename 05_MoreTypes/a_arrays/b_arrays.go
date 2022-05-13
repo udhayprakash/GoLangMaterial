@@ -58,6 +58,6 @@ func main() {
 /*
 NOTE:
 1. arrays are mutable
-2. we can updat individual indexed elements, but not a slice of them
-3. Overwriting/updating is possibel with same dimension; values can be less than or equal to the dimension
+2. we can update individual indexed elements, but not a slice of them
+3. Overwriting/updating is possible with same dimension; values can be less than or equal to the dimension
 */

@@ -1,21 +1,19 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-type animal struct {
+type animal struct { // parent
 	age   int
 	color string
 	sound string
 }
 
-type cat struct {
+type cat struct { // child
 	animal
 	bossy bool
 }
 
-type dog struct {
+type dog struct { // child
 	animal
 	friendly bool
 }
@@ -35,11 +33,13 @@ func main() {
 
 	result(cassy)
 	result(rocky)
+	fmt.Println()
 
 	// Empty Interface as slice
 	friends := []interface{}{cassy, missy, kitty, rocky, lucy, tucker}
-	fmt.Println(friends)
-}
+	for _, obj := range friends {
+		// fmt.Println(obj)
+		result(obj)
+	}
 
-// {{3 white meow} true}
-// {{4 brown woof} true}
+}
