@@ -18,12 +18,12 @@ func main() {
 	var ops uint64
 	var wg sync.WaitGroup
 
-	for i := 0; i < 50; i++ {
+	for i := 0; i < 5; i++ {
 		wg.Add(1)
 		go func() {
-			for c := 0; c < 1000; c++ {
-				fmt.Println("within- ops:", ops)
+			for c := 0; c < 3; c++ {
 				atomic.AddUint64(&ops, 1)
+				fmt.Println("within- ops:", ops)
 			}
 			wg.Done()
 		}()

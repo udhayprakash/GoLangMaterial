@@ -6,7 +6,9 @@ import "fmt"
 func fibonacci() func() int {
 	a, b := 0, 1
 	return func() int { // anonymous functions
-		a, b = b, a+b
+		// a = b
+		// b = a + b
+		a, b = b, a+b // unpacking
 		return a
 	}
 }

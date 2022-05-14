@@ -14,23 +14,31 @@ func demoWithDefault() {
 	demo("hello")
 }
 
-// Method 2
-func demo(g ...string) {
+//  Method 2
+func demo2(g ...string) {
+	// fmt.Println(g, len(g))
 	switch len(g) {
 	case 0:
 		fmt.Println("Hello")
 	case 1:
 		fmt.Println(g[0])
+	case 2:
+		fmt.Println(g[0:2])
 	default:
 		panic("too many arguments")
 	}
+
 }
 
-// Method 3
-func demo(g *string) {
-	if g == nil {
-		g = "Hello"
-	}
+func main() {
+	demo("Good Morning")
+	// demo() // not enough arguments in call to demo
 
-	fmt.Println(g)
+	demoWithDefault()
+
+	demo2()
+	demo2("Hello")
+	demo2("Hello", "world")
+	// demo2("Hello", "world", "87") // panic: too many arguments
+
 }

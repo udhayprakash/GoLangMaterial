@@ -5,20 +5,23 @@ import (
 	"sync"
 )
 
-var x = 0
 
-func increment(wg *sync.WaitGroup, m *sync.Mutex) {
+func increment(wg *sync.WaitGroup, m *sync.Mutex, x1 *int) {
+	defer wg.Done()
+
 	m.Lock()
-	x = x + 1
+	*x1 = *x1 + 1
 	m.Unlock()
-	wg.Done()
+
 }
 func main() {
 	var w sync.WaitGroup
 	var m sync.Mutex
+	var x = 0
+
 	for i := 0; i < 1000; i++ {
 		w.Add(1)
-		go increment(&w, &m)
+		go increment(&w, &m, &x)
 	}
 	w.Wait()
 	fmt.Println("final value of x", x)

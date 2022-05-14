@@ -8,14 +8,14 @@ func getNum(num int) int {
 	return num
 }
 
-// func getAddressLocation(num int) int {
-// 	fmt.Println(reflect.TypeOf(&num))
-// 	return &num
-// }
-
 func getAddressLocation(num int) *int {
 	// fmt.Println(reflect.TypeOf(&num))
 	return &num
+}
+
+func getAddressLocationStr(st string) *string {
+	// fmt.Println(reflect.TypeOf(&st))
+	return &st
 }
 
 // Generic function
@@ -28,7 +28,8 @@ func main() {
 	fmt.Println(num1, getNum(num1), getAddressLocation(num1)) // 123 123 0xc0000120a8
 
 	name := "Deepa"
-	fmt.Println(name, getAddressLocationGeneric(name)) // 123 123 0xc0000120a8
+	fmt.Println(name, getAddressLocationStr(name))     // Deepa 0xc000054250
+	fmt.Println(name, getAddressLocationGeneric(name)) // Deepa 0xc000054270
 
 	result := true //  bool
 	fmt.Println(result, getAddressLocationGeneric(result))
@@ -39,5 +40,4 @@ func main() {
 	fmt.Println("myArray[0]=", myArray[0], &myArray[0])
 	fmt.Println("myArray[1]=", myArray[1], &myArray[1])
 	fmt.Println("myArray[2]=", myArray[2], &myArray[2])
-
 }

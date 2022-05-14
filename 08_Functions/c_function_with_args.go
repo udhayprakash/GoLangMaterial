@@ -30,7 +30,6 @@ func main() {
 	hello()
 
 	// 1) Function calls by positional arguments
-
 	// hello2() // not enough arguments in call to hello2
 	hello2("Girish")
 

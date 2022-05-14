@@ -37,8 +37,8 @@ func main() {
 	fmt.Println("End Script")
 
 	// Wait, giving time for the go routines to finish.
-	time.Sleep(1000000)
+	// time.Sleep(10000000)
+	time.Sleep(time.Second * 2)
 }
 
-// NOTE: Observe the go-routines may not execute in
-//       the order of initialization
+// NOTE: Go-routines may not execute in the order of initialization

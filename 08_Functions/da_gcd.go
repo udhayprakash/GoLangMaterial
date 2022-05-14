@@ -19,4 +19,5 @@ func main() {
 	fmt.Println("gcd(-20, 50):", gcd(-20, 50))
 }
 
-// Assignment: Enhance this solution by passing values from a []int{} and calling in for loop
+// Assignment: Enhance this solution by passing values from a []int{}
+//             and calling in for loop

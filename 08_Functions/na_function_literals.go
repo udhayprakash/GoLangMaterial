@@ -10,6 +10,7 @@ func counter(existingValue int) (newValue int) {
 func counter2(valPtr *int) {
 	*valPtr++
 }
+
 func main() {
 	// Method 1
 	var number int = 0
@@ -31,19 +32,24 @@ func main() {
 
 	// Method 3
 	counter := NewCounter()
+	counter() // n: 1
+	counter() // n: 2
+	counter() // n: 3
 
-	counter() // n:1
-	counter() // n:2
-	counter() // n:3
-
-	// fmt.Println(n) // undefined: n
+	// fmt.Println(n)  //  undefined: n
+	fmt.Println()
 
 	otherCounter := NewCounter()
 	otherCounter() // n : 1
 	otherCounter() // n : 2
+	fmt.Println()
 
-	counter()      // n:4
+	counter() // n: 4
+	counter() // n: 5
+	fmt.Println()
+
 	otherCounter() // n : 3
+	otherCounter() // n : 4
 }
 
 // function Literal

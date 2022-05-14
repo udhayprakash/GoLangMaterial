@@ -75,7 +75,6 @@ func SumAvg(nums ...int) {
 	}
 	fmt.Printf("Sum(%d) = %d\n", nums, summation)
 	fmt.Printf("Avg(%d) = %f\n", nums, float32(summation)/float32(len(nums)))
-
 }
 
 func getFullName(name_parts ...string) {
@@ -86,9 +85,9 @@ func getFullName(name_parts ...string) {
 	fmt.Printf("getFullName(%v)=%v\n", name_parts, fullName)
 }
 
-// Assignment: Try to compute mean, median and mode
-
 func createSentence(words ...string) string {
 	fmt.Println(reflect.TypeOf(words)) // []string
 	return strings.Join(words, " ")
 }
+
+// Assignment: Try to compute mean, median and mode

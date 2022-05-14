@@ -16,7 +16,6 @@ func f1(from string) {
 		fmt.Println(from, ":", i)
 	}
 }
-
 func main() {
 
 	f1("direct")
@@ -25,9 +24,8 @@ func main() {
 
 	go func(msg string) { // anonymous function, or, function literal
 		fmt.Println("msg=", msg)
-	}("going")
+	}("Hello")
 
 	time.Sleep(time.Second)
 	fmt.Println("done")
-
 }

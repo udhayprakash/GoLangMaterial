@@ -17,6 +17,7 @@ func main() {
 
 	messages <- "buffered"
 	messages <- "channel"
+	// messages <- "channe2l"  // fatal error: all goroutines are asleep - deadlock!
 
 	fmt.Println("\n<-messages :", <-messages)
 	fmt.Println("<-messages :", <-messages)
@@ -31,7 +32,9 @@ func main() {
 	fmt.Println("\n<-messages :", <-messages)
 }
 
-// NOTE: "fatal error: all goroutines are asleep - deadlock!"
-// This error occures
-// 1. when there is no value in the channel
-// 2. If you trying to add values , more than the channel buffer size
+/*
+NOTE: "fatal error: all goroutines are asleep - deadlock!"
+	This error occures
+	1. when there is no value in the channel
+	2. If you trying to add values, more than the channel buffer size
+*/

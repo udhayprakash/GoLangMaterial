@@ -18,6 +18,7 @@ func counter(outChannel chan<- int) {
 func squarer(outChannel chan<- int, inChannel <-chan int) {
 	// outChannel - send-only channel
 	// inChannel  - receive-only channel
+
 	for val := range inChannel {
 		outChannel <- val * val
 	}
@@ -29,6 +30,7 @@ func printer(inChannel <-chan int) {
 	for v := range inChannel {
 		fmt.Println(v)
 	}
+
 }
 
 func main() {

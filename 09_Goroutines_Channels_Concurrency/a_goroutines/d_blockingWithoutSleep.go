@@ -14,4 +14,6 @@ func main() {
 	// blocking infinitely - NOT recommended
 	var input string
 	fmt.Scanln(&input)
+
+	fmt.Println("Done")
 }

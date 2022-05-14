@@ -23,4 +23,27 @@ func main() {
 
 	instance2 := GetInstance()
 	fmt.Println("instance2=", instance2, &instance2)
+
+	for j := 10; j > 0; j-- {
+		instance2 = GetInstance()
+		fmt.Println("instance2=", instance2, &instance2)
+	}
+
 }
+
+/*
+~go run 02c_singleton.go
+instance1= &{} 0xc000006028
+instance2= &{} 0xc000006038
+instance2= &{} 0xc000006038
+instance2= &{} 0xc000006038
+instance2= &{} 0xc000006038
+instance2= &{} 0xc000006038
+instance2= &{} 0xc000006038
+instance2= &{} 0xc000006038
+instance2= &{} 0xc000006038
+instance2= &{} 0xc000006038
+instance2= &{} 0xc000006038
+instance2= &{} 0xc000006038
+
+*/

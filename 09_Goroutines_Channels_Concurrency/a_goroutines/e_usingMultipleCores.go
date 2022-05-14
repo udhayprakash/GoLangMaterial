@@ -14,13 +14,13 @@ func main() {
 	start := time.Now()
 
 	go func() {
-		for i := 0; i < 3; i++ {
+		for i := 0; i < 30; i++ {
 			fmt.Println("one", i)
 		}
 	}()
 
 	go func() {
-		for i := 0; i < 3; i++ {
+		for i := 0; i < 30; i++ {
 			fmt.Println("two", i)
 		}
 	}()

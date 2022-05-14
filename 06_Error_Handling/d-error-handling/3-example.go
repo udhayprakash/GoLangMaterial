@@ -15,6 +15,7 @@ func div(x, y int) (int, error) {
 
 func main() {
 	// fmt.Println("div(30, 2)=", div(30, 2))
+	// multiple-value div(30, 2) (value of type (int, error)) in single-value context
 
 	divResult, err := div(30, 2)
 	if err != nil {
@@ -29,4 +30,5 @@ func main() {
 	} else {
 		fmt.Println("divResult = ", divResult)
 	}
+
 }

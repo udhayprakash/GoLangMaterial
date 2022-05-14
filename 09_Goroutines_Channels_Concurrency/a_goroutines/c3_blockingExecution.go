@@ -6,15 +6,15 @@ import (
 )
 
 func sleep250() {
-	fmt.Println("sleep250 - start")
+	fmt.Println("\tsleep250 - start")
 	time.Sleep(250 * time.Millisecond)
-	fmt.Println("sleep250 - end")
+	fmt.Println("\tsleep250 - end")
 }
 
 func sleep500() {
-	fmt.Println("sleep500 - start")
+	fmt.Println("\tsleep500 - start")
 	time.Sleep(500 * time.Millisecond)
-	fmt.Println("sleep500 - end")
+	fmt.Println("\tsleep500 - end")
 }
 
 func main() {
@@ -26,12 +26,22 @@ func main() {
 	fmt.Println("main - end")
 }
 
-/*
-Non-Blocking Execution:
-	main -start
-	sleep250 - start
-	sleep500 - start
-	sleep250 - end
-	sleep500 - end
-	main - end
+/* OUTPUT - Non-Blocking Execution
+
+- go run c3_blockingExecution.go
+main -start
+		sleep500 - start
+		sleep250 - start
+		sleep250 - end
+		sleep500 - end
+main - end
+
+- go run c3_blockingExecution.go
+main -start
+		sleep250 - start
+		sleep500 - start
+		sleep250 - end
+		sleep500 - end
+main - end
+
 */

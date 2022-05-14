@@ -10,6 +10,7 @@ Purpose: Channels
 */
 
 /*  ------------------- CHANNELS ARE DESIGNED TO WORK WITH GOROUTINES
+
 func main() {
 	messages := make(chan string)
 
@@ -17,9 +18,9 @@ func main() {
 
 	msg := <-messages
 	fmt.Println("\nMessage in Channel:", msg)
-
 }
-fatal error: all goroutines are asleep - deadlock!*/
+// fatal error: all goroutines are asleep - deadlock!
+*/
 
 func main() {
 	messages := make(chan string)
@@ -28,6 +29,9 @@ func main() {
 			value: %v
 			type: %T
 	`, messages, messages)
+
+	// msg := <-messages
+	// fatal error: all goroutines are asleep - deadlock!
 
 	go func() {
 		// sending message to channel, within function
@@ -43,6 +47,9 @@ func main() {
 	// receiving message from channel
 	msg = <-messages
 	fmt.Println("Message in Channel:", msg)
+
+	// msg = <-messages
+	// fatal error: all goroutines are asleep - deadlock!
 
 }
 

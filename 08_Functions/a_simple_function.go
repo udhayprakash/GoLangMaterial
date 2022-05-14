@@ -20,19 +20,21 @@ SYNTAX:
 		body
 	}
 
-
 main()  and init() will be automatically called
 */
-// Functiopn defintion
+
+// Function defintion
 func myFunc() {
 	//Function with no arguments and no return value
 	fmt.Println("Function myFunc is called!!!")
 }
 
 func main() {
-	fmt.Println("myFunc                ", myFunc) // 0xe8c580
+	fmt.Println("myFunc                ", myFunc) // 0xc2b460
 	fmt.Println("reflect.TypeOf(myFunc)", reflect.TypeOf(myFunc), reflect.TypeOf(myFunc).Kind())
 
 	// function call
 	myFunc()
+
+	// fmt.Println("myFunc() = ", myFunc()) // Error as no return from function
 }

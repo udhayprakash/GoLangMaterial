@@ -9,27 +9,26 @@ func incrment(val int) int {
 }
 
 // Call by Reference -- local changes WILL reflect outside
-func incrmentPointer(p *int) int {
+func incrmentPointer(p *int) {
 	// fmt.Println("p = ", p, "*p =", *p)
 	*p++ // increments what p points to; does not change p
-	return *p
 }
 
 func main() {
 	v := 1
 	// Method 1 - updating the value
 	v = incrment(v)
-	fmt.Println("v =", v)
+	fmt.Println("v =", v) // 2
 
 	v = incrment(v)
-	fmt.Println("v =", v)
+	fmt.Println("v =", v) // 3
 
 	// Method 2 - Using Pointer reference
 	incrmentPointer(&v)
-	fmt.Println("v =", v)
+	fmt.Println("v =", v) // 4
 
 	incrmentPointer(&v)
-	fmt.Println("v =", v)
+	fmt.Println("v =", v) // 5
 }
 
 /*
