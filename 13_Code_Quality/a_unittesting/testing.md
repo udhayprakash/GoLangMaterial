@@ -34,3 +34,4 @@ TODO
 https://dev.to/quii/learn-go-by-writing-tests--m63
 
 
+-race is the flg need to be added in command line to find data race

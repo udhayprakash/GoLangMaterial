@@ -33,6 +33,15 @@ redis - go-redis
 https://blog.logrocket.com/how-to-use-redis-as-a-database-with-go-redis/
 
 
+https://github.com/golang/go/wiki#learning-more-about-go
+
+Garbage collection in go
+    - https://www.ardanlabs.com/blog/2018/12/garbage-collection-in-go-part1-semantics.html
+    
+Communicating between Go and Python
+	- https://blog.kchung.co/faster-python-with-go-shared-objects/
+
+
 GoLang Course Outline
 ---------------------
 	- Implementing Collection and Reduction
@@ -43,7 +52,6 @@ GoLang Course Outline
 	- Using Concurrency to Keep Data Consistent
 	- Optimizing Code for Speed
 	- Using Idiomatic Go
-	- Working with Time, Errors, Common Interfaces, and Comments
 	- Working with and Managing Packages
 	- Creating a Scalable Work System
 	- Working with Databases in Go
