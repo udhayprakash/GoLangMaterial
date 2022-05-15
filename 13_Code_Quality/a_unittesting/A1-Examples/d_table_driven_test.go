@@ -38,29 +38,15 @@ func TestMax5(t *testing.T) {
 	}
 }
 
-func Max2(numbers []int) int {
-	var max int
-
-	for _, number := range numbers {
-		if number > max {
-			max = number
-		}
-	}
-
-	return max
-}
-
 /*
 * Error()  = Fail()    + Log()
 * Errorf() = Fail()    + Logf()
 * Fatal()  = FailNow() + Log()
 * Fatalf() = FailNow() + Logf()
-
-
  */
 func TestMaxEmptySlice(t *testing.T) {
 	input := []int{}
-	actual := Max(input)
+	actual := Max2(input)
 	expected := -1
 
 	if actual != expected {
@@ -68,16 +54,27 @@ func TestMaxEmptySlice(t *testing.T) {
 	}
 }
 
+func Max2(numbers []int) int {
+	var max int
+	for _, number := range numbers {
+		if number > max {
+			max = number
+		}
+	}
+	return max
+}
+
 /*
 OUTPUT:
 -------
-	~go test -v d_table_driven_test.go
-	=== RUN   TestMax5
-		d_table_driven_test.go:31: Expected -1, got 0
-	--- FAIL: TestMax5 (0.00s)
-	FAIL
-	FAIL    command-line-arguments  0.044s
-	FAIL
-
-
+-go test -v d_table_driven_test.go
+=== RUN   TestMax5
+    d_table_driven_test.go:35: Expected -1, got 0
+--- FAIL: TestMax5 (0.00s)
+=== RUN   TestMaxEmptySlice
+    d_table_driven_test.go:53: Expected -1, got 0
+--- FAIL: TestMaxEmptySlice (0.00s)
+FAIL
+FAIL    command-line-arguments  0.098s
+FAIL
 */

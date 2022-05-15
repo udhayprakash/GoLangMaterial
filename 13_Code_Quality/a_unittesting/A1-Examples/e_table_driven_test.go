@@ -100,3 +100,19 @@ func TestOlder2(t *testing.T) {
 		}
 	}
 }
+
+/*
+-go test -v e_table_driven_test.go                                                   === RUN   TestOlder
+    e_table_driven_test.go:65: Running: older(&{80 Elliot})
+        Argument: &{80 Elliot}
+        Expected result: true
+        Actual result: false
+--- FAIL: TestOlder (0.00s)
+=== RUN   TestOlder2
+    e_table_driven_test.go:99: Argument: &{80 Elliot}Expected result: true
+        Actual result: false
+--- FAIL: TestOlder2 (0.00s)
+FAIL
+FAIL    command-line-arguments  0.120s
+FAIL
+*/

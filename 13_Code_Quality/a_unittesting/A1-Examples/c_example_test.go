@@ -14,7 +14,7 @@ func Max(numbers []int) int {
 	return max
 }
 
-func TestMax3(t *testing.T) {
+func TestMax(t *testing.T) {
 	input := []int{1, 2, 3, 4, 5}
 	actual := Max(input)
 	expected := 6
@@ -24,7 +24,7 @@ func TestMax3(t *testing.T) {
 	}
 }
 
-func TestMax4(t *testing.T) {
+func TestMax2(t *testing.T) {
 	input := []int{1, 2, 3, 4, 5}
 	actual := Max(input)
 	expected := 6
@@ -37,16 +37,14 @@ func TestMax4(t *testing.T) {
 
 /*
 OUTPUT:
-	~go test -v c_example_test.go
-	=== RUN   TestMax3
-		c_example_test.go:23: Expected 6, got 5
-	--- PASS: TestMax3 (0.00s)
-	=== RUN   TestMax4
-		c_example_test.go:34: Expected 6, got 5
-	--- FAIL: TestMax4 (0.00s)
-	FAIL
-	FAIL    command-line-arguments  0.040s
-	FAIL
-
-
+-go test -v c_example_test.go
+=== RUN   TestMax
+    c_example_test.go:23: Expected 6, got 5
+--- PASS: TestMax (0.00s)
+=== RUN   TestMax2
+    c_example_test.go:34: Expected 6, got 5
+--- FAIL: TestMax2 (0.00s)
+FAIL
+FAIL    command-line-arguments  0.023s
+FAIL
 */
