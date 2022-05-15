@@ -8,15 +8,15 @@ func main() {
 
 	// Enable line numbers in logging. By default, it is disabled
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
-
 	// Will print: "[date] [time] [filename]:[line]: [text]"
+
 	log.Println("main - started")
 
 	num1 := 100
 	num2 := 200
 	log.Println("num1 + num2:", num1+num2)
-
 	log.Println("addition(num1, num2)=", addition(num1, num2))
+
 	log.Println("main - end")
 }
 

@@ -21,7 +21,9 @@ OUTPUT:
 	Environment = dev
 
 	~go run c-string_flags.go -env=dev
-	Environment = dev~go run c-string_flags.go -env=prod
+	Environment = dev
+	
+	~go run c-string_flags.go -env=prod
 	Environment = prod
 
 	~go run c-string_flags.go -env=prod uat stage

@@ -33,7 +33,7 @@ chmod 777 FileForEveryone.txt
 
 
 --------------------------------------
-    Number	PermissionType	    Symbol
+Number	PermissionType	    	Symbol
 ---------------------------------------
 0	    No Permission	        ---         0
 1	    Execute	                --x         1

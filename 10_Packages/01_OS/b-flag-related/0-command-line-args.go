@@ -31,7 +31,6 @@ func main() {
 	// fmt.Scanln(&servername)
 
 	// Method 3 - command line arguments
-
 	fmt.Println("os.Args:", os.Args)
 
 	fmt.Println("No of args:", len(os.Args))
