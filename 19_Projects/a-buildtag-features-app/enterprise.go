@@ -1,5 +1,5 @@
-// +build pro
-// +build enterprise
+//go:build pro && enterprise
+// +build pro,enterprise
 
 package main
 

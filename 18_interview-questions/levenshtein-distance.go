@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/renstrom/fuzzysearch/fuzzy"
+	"github.com/lithammer/fuzzysearch/fuzzy"
 )
 
 func main() {
@@ -20,7 +20,6 @@ func main() {
 
 /*
 Ref:
-https://en.wikipedia.org/wiki/Levenshtein_distance
-
-https://github.com/renstrom/fuzzysearch
+	https://en.wikipedia.org/wiki/Levenshtein_distance
+	https://github.com/lithammer/fuzzysearch
 */

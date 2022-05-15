@@ -34,6 +34,7 @@ func TestMax4(t *testing.T) {
 		t.Logf("Expected %d, got %d", expected, actual)
 	}
 }
+
 /*
 OUTPUT:
 	~go test -v c_example_test.go
