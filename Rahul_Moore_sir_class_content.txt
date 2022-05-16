@@ -41,7 +41,6 @@ Chapter 07: File Operations
 
 Chapter 09: Code Quality
                 unit testing, 
-					table driven tests, 
 					asserts
 				coverage, profiling, benchmarking
 					sonarQube 
