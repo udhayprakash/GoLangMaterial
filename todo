@@ -55,7 +55,6 @@ GoLang Course Outline
 	- Working with and Managing Packages
 	- Creating a Scalable Work System
 	- Working with Databases in Go
-	- Serving a JSON API
 	- Testing and Building in Go
 		go test -v -coverage=./.. -coverprofile=coverage.out - json ./.. >test-report.json
 	- Gaining a Solid Foundation in Web Development with Go

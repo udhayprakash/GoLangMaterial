@@ -14,12 +14,14 @@
     a) Function Overloading 
     b) Function Overwriting 
     c) Method Overloading 
-    d) Method Overwriting 
+    d) Method Overwriting
+
 4) Which of the following is NOT a correct syntax for importing a package:
     a) + "fmt"
     b) f "fmt"
     c) . "fmt"
     d) _ "fmt"
+
 5) How to hold the main function from completing, till all goroutines were completed:
     a) using time.Sleep 
     b) using fmt.Scanf

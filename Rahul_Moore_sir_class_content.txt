@@ -11,7 +11,6 @@ Class 1: 29Th March 2021 - 11 AM IST - 01 PM IST
 30 days * 2 hours = 60 hours * 500 = 30,000/-
 
 21,000/-
-
 ---------------------------------------------------------------------------------
 Chapter 05: Goroutines, Channels, Concurrency
 				Sync package
@@ -54,11 +53,10 @@ Chapter 10: Web Services
 						built-in
 						JulianSmit Router (https://github.com/julienschmidt/httprouter)
 						Gorilla mux 
-						
+
 				RPC 
 					GRPC 
 					protobuf
-					
 					
 Chapter 11: Project 
 				Microservices
