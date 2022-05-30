@@ -29,15 +29,16 @@ require (
 	github.com/prprprus/scheduler v0.5.0
 	github.com/robfig/cron v1.2.0
 	github.com/rs/cors v1.7.0
+	github.com/rs/zerolog v1.26.1
 	github.com/sirupsen/logrus v1.8.1
 	github.com/twilio/twilio-go v0.26.0
 	github.com/uptrace/bunrouter v1.0.8
 	github.com/uptrace/bunrouter/extra/reqlog v1.0.8
 	github.com/xuri/excelize/v2 v2.4.1
 	go.mongodb.org/mongo-driver v1.8.2
-	golang.org/x/crypto v0.0.0-20210813211128-0a44fdfbc16e
+	golang.org/x/crypto v0.0.0-20211215165025-cf75a172585e
 	golang.org/x/text v0.3.7
-	golang.org/x/tools v0.1.1
+	golang.org/x/tools v0.1.7
 	gonum.org/v1/plot v0.9.0
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
 )
