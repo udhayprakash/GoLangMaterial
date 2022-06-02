@@ -42,6 +42,34 @@ Communicating between Go and Python
 	- https://blog.kchung.co/faster-python-with-go-shared-objects/
 
 
+/*
+go build
+	go build reverse.go reverseTwo.go
+ 	won't produce an output file.
+
+go install
+ 	will place the package inside the pkg directory of the workspace.
+*/
+
+
+Golang - db 
+	http://go-database-sql.org/overview.html
+	
+
+	
+Golang Packages to work with 
+	https://github.com/google/uuid
+	https://github.com/go-sql-driver/mysql
+	https://github.com/denisenkom/go-mssqldb
+	https://github.com/unidoc/unioffice
+	https://github.com/360EntSecGroup-Skylar/excelize
+	https://gitlab.com/toby3d/telegraph
+	https://github.com/go-co-op/gocron
+
+	
+go get sourcegraph.com/sqs/goreturns
+	Automatically adds returns
+	
 GoLang Course Outline
 ---------------------
 	- Implementing Collection and Reduction
@@ -55,6 +83,7 @@ GoLang Course Outline
 	- Working with and Managing Packages
 	- Creating a Scalable Work System
 	- Working with Databases in Go
+	- Serving a JSON API
 	- Testing and Building in Go
 		go test -v -coverage=./.. -coverprofile=coverage.out - json ./.. >test-report.json
 	- Gaining a Solid Foundation in Web Development with Go

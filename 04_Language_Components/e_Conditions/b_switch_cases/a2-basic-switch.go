@@ -19,3 +19,5 @@ func main() {
 }
 
 // NOTE: default case is optional
+// In switch case,   -- break isn't needed like in other languages
+//  -- if no expression provided, go checks for the first case that evals to true

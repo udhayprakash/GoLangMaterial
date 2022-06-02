@@ -22,3 +22,5 @@ func main() {
 	c := cases.Fold()
 	fmt.Printf("%s %v", c, c.String("grüßen"))
 }
+// UTF-8 works with 1 - 4 bytes.
+// fmt.Printf("%v - %v - %v \n", i, string(i), []byte(string(i)))
