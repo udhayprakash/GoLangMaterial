@@ -94,6 +94,48 @@ Go Language Material
                 - Polymorphism (possible through Interface satisfaction in Go)
                 - Inheritance (Not possble - overloading makes code harder to debug)
 
+
+
+	Why Golang 
+	----------
+	- Go is natively compiled
+		- No VM needed. 
+		- Directly compiled to machine code like c, c++.
+	- Static Typing 
+	- Scalable to large Systems 
+	- General Purpose Programming Language 
+		- Mainly targeted at System/ Server-side programming like C, C++, Rust, ..
+	- Clean Syntax 
+	- Excellent Support for concurrency and networking
+	- Automatic Garbage Collection
+	- Rich Standard library
+	- Go Compiler is available on Linux, OS X, Windows, various BSD & Unix versions
+	- Go is open Source
+		
+	Who Uses Go 
+	-----------
+	- Many Google web properties and systems including youtube, Kubernetes containers and download server dl.google.com
+	- Docker, a set of tools for deploying Linux containers
+	- Dropbox, migrated some of their critical components from Python to Go
+	- SoundCloud, for many of their systems 
+	- CloudFoundry, aplatform as a service(PaaS)
+	- Couchbase, Query and indexing services within the couchbase server 
+	- MongoDB, tools for administering MongoDB instances 
+	- ThoughtWorks, some tools and applications around continous delivery and instant messages
+	- SendGrid, a transactional email delivery and management service 
+	- BBC, in some games and internal projects
+	- Novartis, for an internal inventory system
+
+	What's not PRESENT in Go 
+	-----------------
+	- Class
+	- Class based Inheritance 
+	- Generics 
+	- Traits/ Mixins 
+	- Pointer Arithmetic
+	- Implicit type conversions 
+	- Method/Function Overloading
+
     Go Tools
         - To check the go version,
                 go version
