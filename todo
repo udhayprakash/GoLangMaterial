@@ -41,6 +41,8 @@ Garbage collection in go
 Communicating between Go and Python
 	- https://blog.kchung.co/faster-python-with-go-shared-objects/
 
+GOlang util package - https://github.com/duke-git/lancet
+
 
 GoLang Course Outline
 ---------------------
