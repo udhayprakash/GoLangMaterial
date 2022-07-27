@@ -46,3 +46,23 @@ func main() {
 	}
 	fmt.Println(string(output))
 }
+
+
+/*
+package main
+
+import (
+    "log"
+    "os/exec"
+)
+
+func main() {
+    output, err := exec.Command("chrome", "--allow-insecure-localhost").Output()
+    if err != nil {
+        log.Fatal(err)
+    }
+
+fmt.Println(string(out))
+}
+
+*/
