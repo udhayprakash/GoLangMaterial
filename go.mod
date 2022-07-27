@@ -13,6 +13,7 @@ require (
 	github.com/gofiber/fiber/v2 v2.23.0
 	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
 	github.com/gomodule/redigo v1.8.4
+	github.com/google/uuid v1.3.0
 	github.com/googollee/go-socket.io v1.6.1
 	github.com/gorilla/handlers v1.5.1
 	github.com/gorilla/mux v1.8.0

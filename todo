@@ -70,6 +70,21 @@ Golang Packages to work with
 go get sourcegraph.com/sqs/goreturns
 	Automatically adds returns
 	
+Web Scraping
+https://github.com/gocolly/colly
+Web Scrapping
+	https://www1.ncdc.noaa.gov/pub/data/uscrn/products/daily01/2020
+
+http://go-database-sql.org/accessing.html
+import package in another directory
+is map goroutine safe ?
+Can we pass int value to a goroutine?
+How to import package in different directory with same system?
+golang concurrency patterns 
+	- https://medium.com/@thejasbabu/concurrency-patterns-golang-5c5e1bcd0833
+	- https://www.golangprograms.com/go-language/concurrency.html
+
+
 GoLang Course Outline
 ---------------------
 	- Implementing Collection and Reduction
@@ -93,3 +108,14 @@ GoLang Course Outline
 	- Understanding and Working with Routing and Serving Files
 	- Deploying Your Site
 	- Summary and Conclusion
+
+---------------
+
+https://dontasktoask.com/
+https://github.com/swaggo/swag
+https://gist.github.com/rushilgupta/228dfdf379121cb9426d5e90d34c5b96
+https://telegram.me/realgroupforprogrammer
+https://github.com/tucnak/telebot
+https://levelup.gitconnected.com/best-practices-for-webassembly-using-golang-1-15-8dfa439827b8
+https://gist.github.com/zamicol/3c306b0734f819fb44b18fac1fc752d1
+https://github.com/swaggo/swag

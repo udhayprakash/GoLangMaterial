@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------------
                         GO Language Course Content
 ---------------------------------------------------------------------------------
-Duration        : 40 hours
+Duration        : 56 hours
 Target audience : beginner- and intermediate-level developers in the Go programming language.
 Prerequisite    : No knowledge of any language, nor design patterns is expected.
 Course Composure: 80% practical and 20% theory

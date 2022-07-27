@@ -248,3 +248,26 @@ This source code is tested in go 1.13.5
 
 1. GoReleaser, http://github.com/goreleaser
 2. Cobra( for creating CLIs), https://github.com/spf13/cobra
+3. github.com/dgrijalva/jwt-go 				- generate and sign json web tokens
+4. github.com/doug-martin/goqu 				- SQL query builder. Don't like ORMs in general, didn't like GORM. The API is a bit verbose but it does the job and supports tons of SQL features including database specific ones.
+5. github.com/gin-gonic/gin 					- My goto framework for writing microservices
+6. github.com/go-chi/chi 						- when net/http is not enough this is the router I use. gorilla/mux is slow, didn't bother trying anything else after chi.
+7. github.com/go-gorm/gorm 					- database "orm"
+8. github.com/golang-migrate/migrate/v4 		- database schema migration
+9. github.com/golang/mock 						- Auto generate mocks from interfaces for unit testing
+10. github.com/gonum/gonum 						- Contains almost everything one needs for numerical analysis. The guys over there are porting LAPACK to pure Go with explicit tests.
+11. github.com/hashicorp/go-hclog 				- structured logging
+12. github.com/jackc/pgx 						- excellent library for Postgre. Especially if you need PSQL specific features
+13. github.com/kyleconroy/sqlc 					- generate funcs, structs and interfaces by providing a sql schema and queries
+14. github.com/labstack/echo 					- web framework
+15. github.com/nhooyr/websocket 				- websocket implementation. Recently migrated to it from gorilla/websocket. Nicer API and faster but nothing really wrong with gorilla. Just wanted to try something new.
+16. github.com/pkg/errors 						- don't like how wrapping is done in standard library. This is better. Been using this library forever and it's even compatible with recent standard library changes.
+17. github.com/rs/zerolog 						- structural logging library, fluent interface
+18. github.com/satori/go.uuid  					- great for generating uuid's
+19. github.com/shopspring/decimal  				- super useful when dealing with currency
+20. github.com/sirupsen/logrus 					- go-to logger when i need something more than just pushing to stdout
+21. github.com/stretchr/testify 				- very useful for tests
+22. github.com/stretchr/testify#suite-package 	- I primarily use the suite package for a clear separation of setup and teardown during tests and the Require() to fail fast the test at the point of error
+23. github.com/stretchr/testify/require 		- abort a test if some requirement is not met in one line
+24. go.uber.org/automaxprocs 					- must-have for kubernetes deployments
+25. pkg.go.dev/golang.org/x/sync/errgroup 		- Managing goroutines which can return error in the idomatic go way
