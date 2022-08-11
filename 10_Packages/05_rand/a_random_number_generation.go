@@ -19,11 +19,11 @@ func main() {
 	fmt.Println("rand.Float64():", rand.Float64())
 	fmt.Println("rand.Float64():", rand.Float64())
 	fmt.Println("rand.Float64():", rand.Float64())
+	fmt.Println()
 
 	// This can be used to generate random floats in
 	// other ranges, for example `5.0 <= f' < 10.0`.
 	fmt.Print((rand.Float64()*5)+5, ",")
 	fmt.Print((rand.Float64() * 5) + 5)
-	fmt.Println()
 
 }

@@ -32,5 +32,12 @@ func main() {
 	fmt.Println("r1.Intn(100):", r1.Intn(100))   // 46
 	fmt.Println("r1.Intn(100):", r1.Intn(100))   // 49
 	fmt.Println("r1.Intn(100):", r1.Intn(100))   // 34
+	fmt.Println()
 
+	fmt.Println("r1.Float32():", r1.Float32())   // 0.93458873
+	fmt.Println("r1.Float32():", r1.Float32())   // 0.55352
+	fmt.Println()
+
+	fmt.Println("r1.Float64():", r1.Float64())   // 0.1776533225905847
+	fmt.Println("r1.Float64():", r1.Float64())   // 0.7141261020990882
 }

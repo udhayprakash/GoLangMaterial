@@ -6,6 +6,14 @@ import (
 	"time"
 )
 
+func genRandomUpperCaseString(strLen int) string {
+	var result string
+	for i := 0; i < strLen; i++ {
+		result += string('A' + rune(rand.Intn('Z'-'A'+1)))
+	}
+	return result
+}
+
 func genRandomString(strLength int) string {
 	chars := []rune("ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ" +
 		"abcdefghijklmnopqrstuvwxyzåäö" +
@@ -18,6 +26,9 @@ func genRandomString(strLength int) string {
 }
 
 func main() {
+	fmt.Println("genRandomUpperCaseString(10):", genRandomUpperCaseString(10)) // XVLBZGBAIC
+	fmt.Println()
+
 	// rand.Seed(time.Now().UnixNano()) -- adding it makes unpredictable
 	fmt.Println("genRandomString(10):", genRandomString(10)) // BsD9ufNhpt
 	fmt.Println("genRandomString(10):", genRandomString(10)) // fPnZUSLy7r
