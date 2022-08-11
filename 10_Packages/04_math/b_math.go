@@ -47,4 +47,7 @@ func main() {
 	*/
 	fmt.Printf("%.2f\n", math.Atan(0))
 
+	/*
+		Hypothenuse of a right triangle
+	*/
 }

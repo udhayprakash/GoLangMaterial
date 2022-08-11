@@ -52,5 +52,8 @@ func main() {
 	*/
 	fmt.Println("math.Sqrt(4) =", math.Sqrt(4))
 	fmt.Println("math.Sqrt(5) =", math.Sqrt(5))
+	fmt.Println()
 
+	fmt.Println("math.Cbrt(4) =", math.Cbrt(4))
+	fmt.Println("math.Cbrt(5) =", math.Cbrt(5))
 }
