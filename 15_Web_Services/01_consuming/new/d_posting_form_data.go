@@ -8,10 +8,6 @@ import (
 )
 
 func main() {
-	MakeRequest()
-}
-
-func MakeRequest() {
 	formData := url.Values{
 		"name": {"masnun"},
 	}

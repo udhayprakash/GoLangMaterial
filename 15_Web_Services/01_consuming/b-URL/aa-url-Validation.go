@@ -6,14 +6,9 @@ import (
 )
 
 func main() {
-	// = true
-	fmt.Println(isValidUrl("http://www.golangcode.com"))
-
-	// = false
-	fmt.Println(isValidUrl("golangcode.com"))
-
-	// = false
-	fmt.Println(isValidUrl(""))
+	fmt.Println(isValidUrl("http://www.golangcode.com")) // = true
+	fmt.Println(isValidUrl("golangcode.com"))            // = false
+	fmt.Println(isValidUrl(""))                          // = false
 }
 
 // isValidUrl tests a string to determine if it is a well-structured url or not.

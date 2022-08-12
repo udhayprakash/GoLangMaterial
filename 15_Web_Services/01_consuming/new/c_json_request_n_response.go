@@ -8,11 +8,6 @@ import (
 )
 
 func main() {
-	MakeRequest()
-}
-
-func MakeRequest() {
-
 	message := map[string]interface{}{
 		"hello": "world",
 		"life":  42,

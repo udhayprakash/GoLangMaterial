@@ -28,7 +28,6 @@ func main() {
 	body, err := ioutil.ReadAll(resp.Body)
 
 	if err != nil {
-
 		log.Fatal(err)
 	}
 
