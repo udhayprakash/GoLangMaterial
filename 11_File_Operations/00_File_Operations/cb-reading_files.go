@@ -14,5 +14,4 @@ func main() {
 	// Convert []byte to string and print to screen
 	text := string(fileContent)
 	fmt.Println(text)
-
 }

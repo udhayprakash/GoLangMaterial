@@ -5,36 +5,34 @@ import (
 	"os"
 )
 
+func handleErr(e error) {
+	if e != nil {
+		panic(e)
+	}
+}
+
 func main() {
 	cwd, err := os.Getwd()
 	fmt.Println("cwd:", cwd)
 
-	//file, err := os.Open("10_File_Operations\\01_File_Operations\\myFile.txt")
-	file, err := os.Open("myFile.txt")
-	if err != nil {
-		// handle the error here
-		fmt.Println("err:", err)
-		return
-	}
+	//file, err := os.Open("..\\00_File_Operations\\testfile.txt")
+	file, err := os.Open("testfile.txt")
+	handleErr(err)
 	defer file.Close()
 
 	// get the file size
 	stat, err := file.Stat()
-	if err != nil {
-		return
-	}
+	handleErr(err)
 	fmt.Println("stat:", stat)
 
-	// read the file
+	// creating buffer, of buffer size length, to store the read content
 	bs := make([]byte, stat.Size())
-	_, err = file.Read(bs)
-	if err != nil {
-		return
-	}
-	//fmt.Println("bs:", bs)
 
+	// Reading the ENTIRE content from file
+	_, err = file.Read(bs)
+	handleErr(err)
+	// fmt.Println("bs:", bs)
 	fileContent := string(bs)
 	fmt.Println("fileContent:", fileContent)
 
-	// filename, _ := filepath.Abs("./fruits.yml")
 }
