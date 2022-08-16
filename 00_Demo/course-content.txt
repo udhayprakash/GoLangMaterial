@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------------
                         GO Language Course Content
 ---------------------------------------------------------------------------------
-Duration        : 56 hours
+Duration        : 64 hours
 Target audience : beginner- and intermediate-level developers in the Go programming language.
 Prerequisite    : No knowledge of any language, nor design patterns is expected.
 Course Composure: 80% practical and 20% theory
@@ -111,17 +111,36 @@ Chapter 12: Logging
                 Built-in logger
                 Logrus
 
-Chapter 13: Code Quality
+Chapter 13: Databases
+				- sqlite
+				- PostgreSQL
+				- MongoDB
+			ORM
+				- GORM
+				- ent
+
+Chapter 14: Code Quality
                 unit testing,
 					table driven tests,
-					asserts
+					asserts, Testify
 				coverage, profiling, benchmarking
 
-Chapter 14: Regular Expressions
+Chapter 15: Regular Expressions
 
-Chapter 15: Web Services
+Chapter 16: Web Services
                 Consuming REST API
                 Creating REST API
+					echo
+					Fiber
+					Gin
+				GraphQL with gqlgen
+
+Chapter 17: Design Patterns in GO 
+				Command Pattern 
+				Observer Pattern 
+				Decorator Pattern
+				Factory Pattern
+				Object Pool Design Pattern
 
 ----------------------------------------------------------------
 Daily assignments will be given, which includes interview questions
