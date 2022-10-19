@@ -3,8 +3,7 @@ package palindrome
 import "testing"
 
 func TestPalindromeCheck(t *testing.T) {
-testTable:
-	[]struct {
+	testTable:= []struct {
 		inputStr       string
 		expectedOutput bool
 	}{

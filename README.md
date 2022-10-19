@@ -233,7 +233,7 @@ This source code is tested in go 1.13.5
     - https://exercism.io/tracks/go/learning
 
 ## Articles
-
+    [Go CodeReview Comments guidelines](https://github.com/golang/go/wiki/CodeReviewComments)
     https://medium.com/@kevalpatel2106/why-should-you-learn-go-f607681fad65
     [Farewell Node.js](https://medium.com/code-adventures/farewell-node-js-4ba9e7f3e52b?)
 

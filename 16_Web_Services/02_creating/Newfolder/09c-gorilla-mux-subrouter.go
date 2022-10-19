@@ -33,6 +33,7 @@ func route() {
 
 	server := &http.Server{
 		Addr:         ":8080",
+		IdleTimeout:  120 * time.Second,
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  5 * time.Second,
 		Handler:      handlers.CompressHandler(r),
