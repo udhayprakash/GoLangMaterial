@@ -155,3 +155,8 @@ https://pkg.go.dev/
 
     - Static linking results in larger binaries
     	- 2MB for "Hello world" compared to 54 KB in C
+
+
+# Developer Survey 2021 results
+    - https://go.dev/blog/survey2021-results
+    - 2022 results will be pubished around april 2023
