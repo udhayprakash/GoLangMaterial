@@ -9,11 +9,7 @@ require (
 	github.com/chrisport/go-lang-detector v0.0.0-20201227125515-a4270979d85f
 	github.com/dghubble/go-twitter v0.0.0-20220716041154-837915ec2f79
 	github.com/dghubble/oauth1 v0.7.1
-	github.com/dvyukov/go-fuzz v0.0.0-20220726122315-1d375ef9f9f6
-	github.com/gin-gonic/gin v1.7.4
-	github.com/go-playground/assert/v2 v2.0.1
-	github.com/go-playground/locales v0.14.0
-	github.com/go-playground/universal-translator v0.18.0
+	github.com/gin-gonic/gin v1.7.7
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/gocolly/colly v1.2.0
 	github.com/gofiber/fiber/v2 v2.23.0
@@ -61,7 +57,6 @@ require (
 	github.com/cdipaolo/goml v0.0.0-20210723214924-bf439dd662aa // indirect
 	github.com/cenkalti/backoff/v4 v4.1.3 // indirect
 	github.com/dghubble/sling v1.4.0 // indirect
-	github.com/elazarl/go-bindata-assetfs v1.0.1 // indirect
 	github.com/fatih/color v1.13.0 // indirect
 	github.com/felixge/httpsnoop v1.0.1 // indirect
 	github.com/fogleman/gg v1.3.0 // indirect
@@ -69,6 +64,8 @@ require (
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-fonts/liberation v0.1.1 // indirect
 	github.com/go-latex/latex v0.0.0-20210118124228-b3d85cf34e07 // indirect
+	github.com/go-playground/locales v0.14.0 // indirect
+	github.com/go-playground/universal-translator v0.18.0 // indirect
 	github.com/go-playground/validator/v10 v10.9.0 // indirect
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/gobwas/glob v0.2.3 // indirect
@@ -97,7 +94,6 @@ require (
 	github.com/richardlehane/msoleps v1.0.1 // indirect
 	github.com/saintfish/chardet v0.0.0-20120816061221-3af4cd4741ca // indirect
 	github.com/smartystreets/goconvey v1.6.4 // indirect
-	github.com/stephens2424/writerset v1.0.2 // indirect
 	github.com/temoto/robotstxt v1.1.2 // indirect
 	github.com/ugorji/go/codec v1.2.6 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
