@@ -1,3 +1,5 @@
+package TwoSum
+
 // Time:  O(n)
 // Space: O(n)
 
