@@ -271,3 +271,14 @@ This source code is tested in go 1.13.5
 23. github.com/stretchr/testify/require 		- abort a test if some requirement is not met in one line
 24. go.uber.org/automaxprocs 					- must-have for kubernetes deployments
 25. pkg.go.dev/golang.org/x/sync/errgroup 		- Managing goroutines which can return error in the idomatic go way
+
+
+# Upgrading dependencies
+    - To upgrade a specific package, 
+        go get -u <package-name>
+    
+    - To upgrade all (direct and indirect) packages in go.mod file,
+        go get -u ./...
+
+        For ony patch upgrade, (example  1.1.x)
+        go get -u=patch ./...
