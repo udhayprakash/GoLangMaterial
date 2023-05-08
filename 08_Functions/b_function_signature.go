@@ -2,8 +2,7 @@ package main
 
 import "fmt"
 
-// four ways to declare a function with
-//        two parameters and one result
+// four ways to declare a function with two parameters and one result
 
 func add(x int, y int) int {
 	z := x + y
@@ -12,7 +11,7 @@ func add(x int, y int) int {
 
 func sub(x, y int) (z int) {
 	z = x - y
-	return /// naked return
+	return // naked return
 }
 
 func first(x int, _ int) int { // _ when not using. ex: future enhancements

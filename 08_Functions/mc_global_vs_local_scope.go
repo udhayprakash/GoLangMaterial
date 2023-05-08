@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func modifyArray(arr [10]int) { // cala by value
+func modifyArray(arr [10]int) { // call by value
 	arr[2] = 222
 }
 

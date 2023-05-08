@@ -31,7 +31,7 @@ func main() {
 	fmt.Println("10 % 3 = ", 10%3) // Remainder
 
 	fmt.Println(10 / 3.0) // 3.3333333333333335
-	// NOTE: to get true division result, either nmerator or denominator should be float
+	// NOTE: to get true division result, either numerator or denominator should be float
 
 	fmt.Println(10 / float64(3)) // 3.3333333333333335
 
