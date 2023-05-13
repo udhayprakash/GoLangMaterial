@@ -19,7 +19,7 @@ func main() {
 	fmt.Println("fib(3) = ", fib(3))
 	fmt.Println("fib(6) = ", fib(6))
 
-	// Genrating firts 25 values
+	// Generating first 25 values
 	for i := 0; i < 25; i++ {
 		// fmt.Println(i, fib(i))
 		fmt.Printf("fib(%2d) = %6d\n", i, fib(i))
@@ -27,4 +27,4 @@ func main() {
 
 }
 
-// Assignment: store the computed values in map, and use them for subsequent resuslts
+// Assignment: store the computed values in map, and use them for subsequent results

@@ -64,7 +64,7 @@ func All(vs []string, f func(string) bool) bool {
 
 // Filter returns a new slice containing all strings in the
 // slice that satisfy the predicate `f`.
-func Filter(vs []string, f func(string) bool) []string {
+func Filter2(vs []string, f func(string) bool) []string {
 	vsf := make([]string, 0)
 	for _, v := range vs {
 		if f(v) {
@@ -101,7 +101,7 @@ func main() {
 		return strings.HasPrefix(v, "p")
 	}))
 
-	fmt.Println(Filter(strs, func(v string) bool {
+	fmt.Println(Filter2(strs, func(v string) bool {
 		return strings.Contains(v, "e")
 	}))
 

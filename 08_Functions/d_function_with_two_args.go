@@ -23,4 +23,3 @@ func main() {
 	// personDetails("Ken Thompson", 61, 123)
 	// too many arguments in call to personDetails
 }
- 
