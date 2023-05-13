@@ -12,7 +12,7 @@ func main() {
 		log.Println("in handlfunc default")
 		fmt.Fprintf(res, "default endpoint")
 	})
-
+	
 	http.HandleFunc("/hello", func(res http.ResponseWriter, req *http.Request) {
 		fmt.Fprintf(res, "Hello World")
 	})

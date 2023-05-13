@@ -89,6 +89,23 @@ func ReverseUsingUTF8Decode(s string) (rs string) {
 	}
 	return
 }
+
+// function to reverse given arr without generating new one
+// with the help of left and right pointers
+func reverse(start, end int, arr []int) {
+	for start < end {
+
+		// swapping both indexes
+		// using left and right pointers
+		arr[start], arr[end] = arr[end], arr[start]
+
+		// moving forward
+		start++
+		// moving backwards
+		end--
+	}
+}
+
 func main() {
 	s := "Hello, world"
 	s = "Hello, 世界"
@@ -103,6 +120,22 @@ func main() {
 	fmt.Println(ReverseUsingRecursion(s))
 	fmt.Println(ReverseUsingRuneAppend(s))
 	fmt.Println(ReverseUsingUTF8Decode(s))
+
+	// non-reversed array
+	arr := []int{1, 2, 3, 4, 5, 6}
+
+	// left pointer
+	start := 0
+
+	// right pointer
+	end := len(arr) - 1
+
+	fmt.Printf("non reversed array: %d\n", arr)
+
+	// calling reverse function
+	reverse(start, end, arr)
+
+	fmt.Printf("reversed array: %d\n", arr)
 }
 
 /*

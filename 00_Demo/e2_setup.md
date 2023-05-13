@@ -4,6 +4,7 @@ https://play.golang.org/
 https://www.onlinegdb.com/online_go_compiler
 https://onecompiler.com/go
 https://goplay.space/
+https://goplay.tools/
 
 # IDEs
 

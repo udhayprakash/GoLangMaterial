@@ -41,3 +41,19 @@ func selectionsort(items []int) {
 		items[i], items[minIdx] = items[minIdx], items[i]
 	}
 }
+
+func selectionSort(arr []int) {
+    var i, j, min_index int
+    for i = 0; i < len(arr)-1; i++ {
+        min_index = i
+        for j = i + 1; j < len(arr); j++ {
+            if arr[j] < arr[min_index] {
+                min_index = j
+            }
+        }
+        // if min_index is not equals to i then swap the indexes
+        if min_index != i {
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+        }
+    }
+}
