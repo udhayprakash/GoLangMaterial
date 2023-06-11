@@ -42,5 +42,8 @@ Go commands
 		set GOARCH=amd64
 		go build -o hello_windows_amd64.exe a-hello-world.go
 
+	To create light-weight/slimmed binary,
+		go build -o hello_windows_amd64_slim.exe -ldflags="-s -w" a-hello-world.go
 
+		ls -lSr | grep "hello"
 */
