@@ -7,9 +7,14 @@ import (
 	"strconv"
 )
 
-var helloExp = regexp.MustCompile(`/hello/(?P<name>[a-zA-Z]+)/(?P<age>\d+)`)
+func main() {
+	http.HandleFunc("/hello/", hello)
+	http.ListenAndServe("localhost:8090", nil)
+}
 
 func hello(w http.ResponseWriter, req *http.Request) {
+	var helloExp = regexp.MustCompile(`/hello/(?P<name>[a-zA-Z]+)/(?P<age>\d+)`)
+
 	match := helloExp.FindStringSubmatch(req.URL.Path)
 	if len(match) > 0 {
 		result := make(map[string]string)
@@ -28,9 +33,5 @@ func hello(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
-func main() {
-
-	http.HandleFunc("/hello/", hello)
-
-	http.ListenAndServe("localhost:8090", nil)
-}
+// http://localhost:8090/hello/John/25
+// Hello, 25 year old named John!
