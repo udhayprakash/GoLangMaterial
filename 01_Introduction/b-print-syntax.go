@@ -34,12 +34,18 @@ func main() {
 
 	fmt.Fprint(os.Stdout, "Hello ", 99, "\n")
 
+
 	fmt.Println("Hello", 23)
 	fmt.Println(fmt.Sprint("Hello ", 23))
 	fmt.Println(fmt.Sprintf("Hello %d", 23))
 
+	res := fmt.Sprint("Hello ", 23)
+	fmt.Println(res)
+
+	// builtin functions
 	print("Hello world\n")
 	println("Hello world")
 }
+
 
 // Ref: https://cheatography.com/fenistil/cheat-sheets/go-fmt-formattings/

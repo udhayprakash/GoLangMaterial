@@ -134,6 +134,7 @@ Chapter 16: Web Services
 					Fiber
 					Gin
 				GraphQL with gqlgen
+                GRPC
 
 Chapter 17: Design Patterns in GO 
 				Command Pattern 
