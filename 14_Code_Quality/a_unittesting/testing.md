@@ -1,7 +1,16 @@
 # Testing in Go
 
-    Rules
-    -----
+### Benifits
+1) Prevent bugs: 
+    - Unit tests can help to prevent bugs by verifying the correctness of code before it is deployed.
+2) Improve quality:
+    - Unit tests can help to improve the quality of code by ensuring that it meets the requirements.
+3) Save time:
+    - Unit tests can save time by catching bugs early in the development process.
+4) Increase confidence:
+    - Unit tests can increase confidence in code by providing a way to verify its correctness.
+    
+### Rules
     1) It needs to be in a file with a name like xxx_test.go
     2) The test function must start with the word Test
     3) The test function takes one argument only t *testing.T
@@ -17,17 +26,26 @@
             go test -v -coverage=./.. -coverprofile=coverage.out - json ./.. >test-report.json
 
 ## BenchMarking
+    - Benchmarking is a way to measure the performance of the unit tests.
+    - It is useful for identifying potential performance bottlenecks in the code.
 
     1) benchmarking function definition as
             func BenchmarkXxx(*testing.B)
     2) go test -bench
-    go test -cpu
+        go test -cpu
 
 ## Mocking Frameworks
 
-	1) Gomock 		- https://pkg.go.dev/github.com/golang/mock/gomock
-	2) Go sqlmock 	- https://pkg.go.dev/github.com/data-dog/go-sqlmock
-	3) Testify 		- https://pkg.go.dev/github.com/stretchr/testify
+	1) Gomock 		
+    	- It is the most common and popular mocking framework to mock interfaces.
+        - https://pkg.go.dev/github.com/golang/mock/gomock
+	2) Go sqlmock
+        - DATA-DOG sqlmock is one of the common frameworks to mock Golang’s SQL.
+        - https://pkg.go.dev/github.com/data-dog/go-sqlmock
+	3) Testify
+        - This library is also a great alternative to mock objects and HTTP activities.
+		- I use this library for its great assertion tool. 
+        - https://pkg.go.dev/github.com/stretchr/testify
 
 
 TODO
