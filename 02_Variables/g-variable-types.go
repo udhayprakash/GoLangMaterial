@@ -15,17 +15,19 @@ func main() {
 	x = "second"         // updating
 	fmt.Println("x=", x) // second
 
-	x = x + "third"      // strng concatenation
+	// x = 2         // cannot use 2 (untyped int constant) as string value in assignment
+
+	x = x + "third"      // string concatenation
 	fmt.Println("x=", x) // secondthird
 
-	x += "fourth"        // strng concatenation
+	x += "fourth"        // string concatenation
 	fmt.Println("x=", x) // secondthirdfourth
 
 	fmt.Println()
 
 	fmt.Println("x                   	   =", x)
-	fmt.Println("reflect.ValueOf(x)  	   =", reflect.ValueOf(x))
-	fmt.Println("reflect.TypeOf(x)   	   =", reflect.TypeOf(x))
+	fmt.Println("reflect.ValueOf(x)  	   =", reflect.ValueOf(x)) // secondthirdfourth
+	fmt.Println("reflect.TypeOf(x)   	   =", reflect.TypeOf(x))  // string
 
 	fmt.Println("reflect.TypeOf(x).String()=", reflect.TypeOf(x).String())
 	fmt.Println("reflect.TypeOf(x).Kind()  =", reflect.TypeOf(x).Kind())
@@ -34,12 +36,24 @@ func main() {
 
 	fmt.Println()
 
-	// y := 5
-	// y += 1
-
 	y := 5
-	y += 1 // ; - statement separator
 	fmt.Println("y =", y)
+
+	y = 6
+	fmt.Println("y =", y)
+
+	y += 1
+	fmt.Println("y =", y)
+
+	y -= 1
+	fmt.Println("y =", y)
+
+	y *= 4
+	fmt.Println("y =", y)
+
+	y /= 10
+	fmt.Println("y =", y)
+
 	fmt.Println("reflect.TypeOf(y)   	=", reflect.TypeOf(y))
 	fmt.Println()
 

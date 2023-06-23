@@ -8,7 +8,6 @@ A var declaration can include initializers, one per variable.
 If an initializer is present, the type can be omitted;
 the variable will take the type of the initializer.
 */
-
 func main() {
 	// `var` declares 1 or more variables
 	var a = "initial"
@@ -33,6 +32,7 @@ func main() {
 	// Go will infer the type of initialized variables.
 	var h = true
 	fmt.Println("h=", h)
+	fmt.Println()
 
 	// Variables declared without initialization are _zero-valued_.
 	// zero value for int -> 0
@@ -47,6 +47,8 @@ func main() {
 	)
 	fmt.Println("j:", j)
 	fmt.Println("k:", k)
+
+	// j := 88 - create variable and assign value
 
 	j = 88 //  updating value, for already created variable
 	fmt.Println("j:", j)
@@ -75,7 +77,4 @@ func main() {
 	fmt.Println("l:", l)
 	fmt.Println("n:", n)
 
-	var newVar1 = n
-	newVar2 := n
-	fmt.Println(newVar1, newVar2)
 }

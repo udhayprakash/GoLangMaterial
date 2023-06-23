@@ -5,22 +5,31 @@ import (
 	"reflect"
 )
 
-// Constants may be typed or untyped
+const num = 10
+
 func main() {
+	fmt.Println("num	=", num)
+
 	var x int = 10
 	fmt.Println("x 		=", x)
 
 	x = 20
 	fmt.Println("x 		=", x)
 
+	y := 30
+	fmt.Println("y 		=", y)
+
+	y = 40
+	fmt.Println("y 		=", y)
+	fmt.Println()
+
 	// `const` declares a constant value.
 	// Constants can be character, string, boolean, or numeric values.
 	// Constants cannot be declared using the := syntax.
-	const y int = 10
-	fmt.Println("y		=", y)
+	const z int = 10
+	fmt.Println("z		=", z)
 
-	// y = 20
-	// cannot assign to y (declared const)
+	// z = 20  // cannot assign to z (constant 10 of type int)
 
 	// Constant expressions perform arithmetic with arbitrary precision.
 	const n = 500000000
@@ -43,5 +52,8 @@ func main() {
 	fmt.Println("i 		=", i, reflect.TypeOf(i))
 
 	// var j int16 = big
-	// compile error: constant 10000000000 overflows int16
+	// cannot use big (untyped int constant 10000000000) as int16 value in variable declaration (overflows)
+
+	var j int = big
+	fmt.Println("j =", j)
 }

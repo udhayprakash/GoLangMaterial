@@ -10,6 +10,9 @@ func main() {
 
 	fmt.Printf("data = %v type = %T\n", data, data) // package-level value
 
+	data = 34.53
+	fmt.Printf("data = %v type = %T\n", data, data) // package-level value
+
 	var data string
 	fmt.Printf("data = %v type = %T\n", data, data)
 
@@ -24,12 +27,13 @@ func main() {
 	fmt.Printf("data = %v type = %T\n", data, data)
 
 	// data = 'a'
-	// cannot use 'a' (type untyped rune) as type string in assignment
+	//  cannot use 'a' (untyped rune constant 97) as string value in assignment
 
-	// data = 3453
-	// cannot use 3453 (type untyped int) as type string in assignment
+	// data = 3453.234
+	// cannot use 3453.234 (untyped float constant 3453.23) as string value in assignment
 
 	// var data int = 3453
+	// data redeclared in this block
 }
 
-//NOTE: A  variable cant be declared more than once
+//NOTE: A  variable cant be declared more than once, within a SCOPE

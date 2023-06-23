@@ -13,9 +13,10 @@ func main() {
 	fmt.Println("In main()  : name   =", name) // function-level
 
 	MyFunc()
+
 }
 
-func MyFunc() {
+func MyFunc(){
 	fmt.Println("In myFunc(): name   =", name) // package-level
 }
 
