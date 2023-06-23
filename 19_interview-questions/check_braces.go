@@ -19,7 +19,7 @@ func checkBalanceBraces(expression string) bool {
 			if len(bracesFound) == 0 || bracesFound[len(bracesFound)-1] != braces[eachChr] {
 				return false
 			}
-			bracesound = bracesFound[:len(bracesFound)-1]
+			bracesFound = bracesFound[:len(bracesFound)-1]
 		}
 	}
 	if len(bracesFound) == 0 {
