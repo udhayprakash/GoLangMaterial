@@ -1,3 +1,4 @@
+package main
 /*
 Variables declared without an explicit initial value
 are given their zero value.
@@ -9,15 +10,14 @@ false for the boolean type, and
 "" (the empty string) for strings.
 
 */
-package main
 
 import "fmt"
 
 func main() {
-	var i int
-	var f float64
-	var b bool
-	var s string
+	var i int        // 0
+	var f float64    // 0
+	var b bool       // false
+	var s string     // ""
 	fmt.Printf("%v %v %v %q\n", i, f, b, s)
 }
 
@@ -38,6 +38,7 @@ ZERO VALUES:
 		a bool
 		b [2]int
 	}{}            // defaults to {false [0 0]}
+	
 	var si []int // defaults to nil | []
 	var ch chan string // defaults to nil
 	var m map[string]int  // defaults to nil | map[]

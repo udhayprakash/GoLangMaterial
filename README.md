@@ -1,5 +1,7 @@
 # Go Lang Material
 
+[![Udhay's GitHub activity graph](https://img.shields.io/github/commit-activity/m/udhayprakash/GoLangMaterial?label=Commit%20Activity&logo=github&style=flat-square)](https://github.com/udhayprakash/GoLangMaterial)
+
 - General Purpose Compiled Programing language
 - created by Ken Thompson (B, C, Unix, UTF-8), Rob Pike(Unix, UTF-8),
     Robert Griesemer(Hotspot, JVM) and few google engineers.

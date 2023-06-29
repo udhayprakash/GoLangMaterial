@@ -12,6 +12,8 @@ Purpose: Enum
 */
 
 func main() {
+	const a = 10
+
 	const (
 		a1 = 10
 		a2 = 11
@@ -100,12 +102,14 @@ func main() {
 		s1, s2, s3
 	)
 
-	fmt.Printf("q1: %d, q: %d, q3: %d r1: %d, r2: %d, r3: %d s1: %d, s2: %d, s3: %d", q1, q2, q3, r1, r2, r3, s1, s2, s3)
+	fmt.Printf(" q1: %d, q2: %d, q3: %d\n r1: %d, r2: %d, r3: %d\n s1: %d, s2: %d, s3: %d\n", q1, q2, q3, r1, r2, r3, s1, s2, s3)
 
 	// multi-line strings - `` quotes
+
 	fmt.Printf(`
 	q1: %d, q: %d, q3: %d 
 	r1: %d, r2: %d, r3: %d 
-	s1: %d, s2: %d, s3: %d`, q1, q2, q3, r1, r2, r3, s1, s2, s3)
+	s1: %d, s2: %d, s3: %d
+	`, q1, q2, q3, r1, r2, r3, s1, s2, s3)
 
 }
