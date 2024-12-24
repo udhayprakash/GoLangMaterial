@@ -22,6 +22,7 @@ verb        Description
 Other formatting functions like log.Printf, fmt.Errorf, ... use same rules
 
 */
+
 func main() {
 	fmt.Println("Hello")
 	fmt.Println("world") // automatically, cursor moves to newline after displaying
@@ -59,10 +60,11 @@ func main() {
 	}
 }
 
+
 /*
 Assignment:
 	from a given string, create new string by filtering
-	only alphabets(lowrr & upper cases)
+	only alphabets(lower & upper cases)
 
 	upper alphabets from 65 to 90
 	lower alphabets from 97 to 122
