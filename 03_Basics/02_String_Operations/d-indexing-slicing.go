@@ -39,12 +39,11 @@ func main() {
 	// fmt.Printf("name[-2]		= %q\n", name[-2])
 	//  index -2 (constant of type int) must not be negative
 
-	fmt.Println()
-
 	// ====== SLICING
 	// H	e	l	l	o	 	w	o	r	l	d
 	// 0   	1	2	3	4	5	6	7	8	9	10
 
+	// string[start_index: end_index]
 	// slicing - last position char is not included
 	fmt.Printf("name[2]			=%q\n", name[2])
 	fmt.Printf("name[7]			=%q\n", name[7])
@@ -93,7 +92,7 @@ func main() {
 	fmt.Printf("sentence[:halfLen]  = %s\n", sentence[:halfLen])
 	fmt.Printf("sentence[halfLen:]  = %s\n", sentence[halfLen:])
 
-	res := strings.ToUpper(sentence[:halfLen]) + strings.ToLower(sentence[:halfLen])
+	res := strings.ToUpper(sentence[:halfLen]) + strings.ToLower(sentence[halfLen:])
 	fmt.Println("result = ", res)
 
 }
