@@ -17,8 +17,12 @@ https://goplay.tools/
 ## Ubuntu/Debian/Kali Linux:
 
     1) To Install Go
-        wget https://dl.google.com/go/go1.12.4.linux-amd64.tar.gz
-        sudo tar -C /usr/local -xvf go1.12.4.linux-amd64.tar.gz
+
+        Download Go:
+            wget https://dl.google.com/go/go1.23.4.linux-amd64.tar.gz
+        
+        Extract the Go tarball:
+            sudo tar -C /usr/local -xvf go1.23.4.linux-amd64.tar.gz
 
         Open the profile
             vim ~/.profile
@@ -34,24 +38,27 @@ https://goplay.tools/
             go version
 
         Finally, clean the downloaded binary
-            rm go1.12.4.linux-amd64.tar.gz
+            rm go1.23.4.linux-amd64.tar.gz
 
 
     2) To update Go
-        go version
-        # go version go1.8.1 linux/amd64
+        Check existing go version:
+            $ go version
+        
+        Remove existing go installation:
+            $ sudo rm -r /usr/local/go/
 
-        sudo rm -r /usr/local/go/
+        Download latest version:
+            $ wget https://dl.google.com/go/go1.23.4.linux-amd64.tar.gz
 
-        wget https://dl.google.com/go/go1.11.linux-amd64.tar.gz
-        # ... Saving to: ‘go1.11.linux-amd64.tar.gz’
+        Extract the downloaded Archive:
+            sudo tar -C /usr/local -xzf go1.23.4.linux-amd64.tar.gz
 
-        sudo tar -C /usr/local -xzf go1.11.linux-amd64.tar.gz
-
-        go version
-        # go version go1.11 linux/amd64
-
-        rm go1.11.linux-amd64.tar.gz
+        Verify the Golang version
+            $ go version
+        
+        Remove the Go tarball:
+            $ rm go1.11.linux-amd64.tar.gz
 
 ## Windows/MAC Installation Procedure
 

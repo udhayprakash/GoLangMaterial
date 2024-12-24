@@ -28,8 +28,6 @@
 
     hello.go ==> compiler ==> Executable file ==> Executes on system
 
-Stackoverflow Survey results
-https://insights.stackoverflow.com/survey/2019#technology
 
 ## go commands
 

@@ -1,9 +1,23 @@
-you can install a tool called godoc 1 with this command:
+# GoDoc
 
-go install golang.org/x/tools/cmd/godoc@latest
-Then:
+    Golang documentation tool
 
-Change directory to your project
-Run godoc -http :8080. Leave it running.
-Open a browser and go to http://localhost:8080
-From there, you can navigate the packages on your computer similarly to https://pkg.go.dev. More importantly, when you click on a function, method, or type name, It will take you to the line where that function, method, variable, type, whatever, is defined.
+## Installation
+
+    go install golang.org/x/tools/cmd/godoc@latest
+
+## Usage
+
+    Go to the Project directory
+        
+        cd /path/to/your/project
+
+    start godoc server 
+
+        godoc -http :8080
+        
+    Open a browser and go to http://localhost:8080
+
+    From there, project documentation can be navigates, similarly to https://pkg.go.dev 
+
+    More importantly, when you click on a function, method, or type name, It will take you to the line where that function, method, variable, type, whatever, is defined.

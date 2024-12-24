@@ -18,12 +18,17 @@ In addition, three dozen predeclared names.
         float32 float64 complex128  complex64
         bool    byte    rune        string      error
 
+    (from 1.18)
+    any     comparable
 
 ## Built-in Functions (15)
 
     append  cap     close   complex copy    delete
     imag    len     make    new     panic   real
     recover print   println
+
+    (from 1.21)
+    clear   max min
 
 ## Operators
 
