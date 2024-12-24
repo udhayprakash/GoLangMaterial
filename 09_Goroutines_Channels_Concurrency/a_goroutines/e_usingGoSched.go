@@ -16,6 +16,12 @@ func say(s string) {
 }
 
 func main() {
+	// Set the number of CPU cores that Go will use for concurrency
+	// runtime.GOMAXPROCS(2) // This tells Go to use 2 CPU cores
+
+	// Check the number of CPU cores Go will use
+	fmt.Println("Go is using", runtime.NumCPU(), "CPU cores")
+	
 	go say("\tworld") // create a new goroutine
 	say("hello")      // current goroutine
 }

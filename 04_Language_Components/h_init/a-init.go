@@ -26,4 +26,3 @@ It is recommended to use only one init() per package
 Go programs will call main() and init() automatically
 Both main() and init() will not take any arguments and wornt return any
 */
- 

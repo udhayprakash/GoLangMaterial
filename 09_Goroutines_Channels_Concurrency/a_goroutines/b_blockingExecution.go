@@ -32,7 +32,7 @@ func main() {
 	fmt.Println("Start Script")
 
 	for j := 0; j < 10; j++ {
-		go printItem(j)
+		printItem(j)
 	}
 	fmt.Println("End Script")
 

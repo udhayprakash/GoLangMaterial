@@ -1,3 +1,6 @@
+// Stateful Goroutine: A single goroutine manages the shared state (state map) 
+// and serializes access to it, ensuring that only one read or write operation
+// happens at a time.
 package main
 
 import (
@@ -25,6 +28,7 @@ func main() {
 	reads := make(chan readOp)
 	writes := make(chan writeOp)
 
+	//  State Handler Goroutine
 	go func() {
 		var state = make(map[int]int)
 		for {
@@ -38,6 +42,7 @@ func main() {
 		}
 	}()
 
+	// Goroutines for Read Operations
 	for r := 0; r < 100; r++ {
 		go func() {
 			for {
@@ -52,6 +57,7 @@ func main() {
 		}()
 	}
 
+	// Goroutines for Write Operations
 	for w := 0; w < 10; w++ {
 		go func() {
 			for {
