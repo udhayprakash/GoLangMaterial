@@ -77,4 +77,25 @@ func main() {
 	fmt.Println("l:", l)
 	fmt.Println("n:", n)
 
+	r := 42           // int
+	s := 3.142        // float64 - an IEEE-754 64-bit floating point number.
+	t := 0.867 + 0.5i // complex128 - represented internally with two float64's.
+	fmt.Println(r, s, t)
+
+	// Bulk variable declaration cum initialization
+	var (
+		x = 5
+		y = 10
+		z = 15
+	)
+	fmt.Println("x=", x)
+	fmt.Println("y=", y)
+	fmt.Println("z=", z)
+
+	myRune := 'a'
+	fmt.Println(myRune) // 97
+
+	myRune = 'A'
+	fmt.Println(myRune) // 65
+
 }
