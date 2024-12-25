@@ -67,6 +67,26 @@ will run on Ubuntu Linux?
 **Ans)** A built-in function that stops teh function where it is called and any
 deferred functions in the function are executed. Then, it returns back to the caller and continues until all functions are returned. At that point, the program terminates and prints the error message and stack trace.
 
+**14)** Given below is a hash function. Which of the following pairs will have the same hash value? choose all that apply.
+
+	hashFunction(string s){
+		int hash = 0;
+		for (int i=0;i<s.length;i++){
+			hash += (i+1) * (s[i] - 'a' + 1);
+		}
+		return hash;
+	}
+
+	Example:
+ 
+		s = 'abeaa'
+		hash = 1*1 + 2*2 + 3*5 + 4*1 + 5 *1 = 29
+
+	Pick ONE or MORE options
+		a) "xwxx" and "vztz"
+		b) "uwvy" and "gvzz"
+		c) "tttt" and "zszt"
+		d) "bvvv" and "xxxw"
 ---
 
     In mac, below command will create mac specific binary
@@ -75,6 +95,7 @@ deferred functions in the function are executed. Then, it returns back to the ca
     How to create such cross-platform builds in windows, command line
 
 ===
+
 anonymous functions - it has access to data both inside
 and outside of its code block - both local scope & the same scope
 of outer function in which the closure is defined
