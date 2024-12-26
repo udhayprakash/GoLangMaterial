@@ -9,15 +9,19 @@ import (
 func main() {
 	// Int to String conversion
 	x := 97
+
+	// Method 1
 	z := string(x)
 	fmt.Println(x, reflect.TypeOf(x)) // 97 int
 	fmt.Println(z, reflect.TypeOf(z)) // a string
 
+	// Method 2  - digit as it is in string
 	y := fmt.Sprintf("%d", x)
 	fmt.Println(y, reflect.TypeOf(y)) // 97 string
 
+	// Method 3  - digit as it is in string
 	p := strconv.Itoa(x)
-	fmt.Println(p, reflect.TypeOf(p)) // 123 string
+	fmt.Println(p, reflect.TypeOf(p)) // 97 string
 	fmt.Println()
 
 	// To format number in different base
@@ -45,7 +49,7 @@ func main() {
 	fmt.Println(x1, err)            // 0 strconv.Atoi: parsing "12.3": invalid syntax
 
 	x, err = strconv.Atoi("123Helo") // x is an int
-	fmt.Println(x, err)              // 0 strconv.Atoi: parsing "123Helo": invalid syntax
+	fmt.Println(x, err)              // 0 strconv.Atoi: parsing "123
 
 	// `Atoi` is a convenience function for basic base-10
 	// `int` parsing.
@@ -82,5 +86,4 @@ func main() {
 	// A `ParseUint` is also available.
 	u, _ := strconv.ParseUint("789", 0, 64)
 	fmt.Println(u)
-
 }
