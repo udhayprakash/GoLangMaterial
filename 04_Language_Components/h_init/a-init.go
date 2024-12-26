@@ -5,17 +5,16 @@ import "fmt"
 func main() {
 	fmt.Println("In main() loop - start")
 
-	// myFunc()
+	myFunc()
 }
 
 func myFunc() {
-	fmt.Println("in myFunc - start")
+	fmt.Println("In myFunc() function - start ")
 }
 
 func init() {
 	fmt.Println("In init() function - start ")
 }
-
 
 /*
 The main purpose of the init() function is to initialize the global variables
