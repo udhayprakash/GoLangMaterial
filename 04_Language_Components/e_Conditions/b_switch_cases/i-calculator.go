@@ -42,6 +42,7 @@ func getOperation() string {
 	op, _ := reader.ReadString('\n')
 	return strings.TrimSpace(op)
 }
+
 func addValues(v1, v2 float64) float64 {
 	return v1 + v2
 }
@@ -49,3 +50,10 @@ func addValues(v1, v2 float64) float64 {
 func subtractValues(s1, s2 float64) float64 {
 	return s1 - s2
 }
+
+
+// Assignment 1 - complete the code, by adding functionality for  *, /
+// 						condition for denominator as 0, when division operation
+
+// Assignment 2 - deisgn a cacluclator which will take the entire expression in one line
+//			100 + 200
