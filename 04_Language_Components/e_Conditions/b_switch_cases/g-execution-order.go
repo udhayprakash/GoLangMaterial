@@ -25,7 +25,7 @@ func main() {
 	// Foo(4)
 
 	switch Foo(2) { // 2
-	case Foo(1), Foo(2), Foo(3): // 1, 2, 3
+	case Foo(1), Foo(2), Foo(3): // 1, 2,
 		fmt.Println("First case")
 	case Foo(4): // 4
 		fmt.Println("Second case")
@@ -35,3 +35,5 @@ func main() {
 
 	// OBSERVE that Foo(3) & Foo(4) are not executed
 }
+
+// NOTE: shortcircuiting -- Foo(3) is NOT EXEcuted , as it is OR operation
