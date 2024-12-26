@@ -30,9 +30,14 @@ func main() {
 	for _, eachChr := range name {
 		fmt.Printf("character= %q\n", eachChr)
 	}
-	fmt.Println()
+	fmt.Println("----")
 
 	//----- Examples
+	for i := 2; i < 5; i++ {
+		fmt.Printf("character= %q\n", name[i])
+	}
+	fmt.Println()
+
 	for _, eachChr := range name[2:5] { // passing a string slice
 		fmt.Printf("character= %q\n", eachChr)
 	}
@@ -44,4 +49,11 @@ func main() {
 		}
 	}
 
+	for i, eachChr := range name {
+		if !(i >= 2 && i < 5) {
+			continue
+		}
+		fmt.Printf(" index= %2d  character= %q\n", i, eachChr) //name[i])
+
+	}
 }
