@@ -17,16 +17,16 @@ func main() {
 	fmt.Println("myStr[0]= ", myStr[0], string(myStr[0])) //  72  H
 
 	// myStr[0] = "F"
-	// cannot assign to myStr[0] (strings are immutable)
+	// cannot assign to myStr[0] (neither addressable nor a map index expression)
 
 	// myStr[0] = 'F'
-	// cannot assign to myStr[0] (strings are immutable)
+	// cannot assign to myStr[0] (neither addressable nor a map index expression)
 
 	// Slicing
 	fmt.Println("myStr[6:11] = ", myStr[6:11]) //  world
 
 	// myStr[6:11] = "Bould"
-	// annot assign to myStr[6:11] (strings are immutable)
+	// cannot assign to myStr[6:11] (neither addressable nor a map index expression)
 
 	// Overwriting
 	myStr = "Fello world"
