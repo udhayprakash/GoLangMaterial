@@ -5,41 +5,26 @@ import "fmt"
 // short-circuit logic
 func main() {
 
-	expr3 := 0 && 1 // 0
-	fmt.Println("expr3:=", expr3)
+	// expr3 := 0 && 1 // 0
+	// fmt.Println("expr3:=", expr3)
 
-	// expr4 := 3 && 9 // 9
-	// fmt.Println("expr4:=", expr4)
+	// num1 := 0
+	// num2 := 1
+	// expr3 := num1 && num2 // 0
+	// fmt.Println("expr3:=", expr3)
 
-	// expr4 := 3 && 9 && 13 // 13
-	// fmt.Println("expr4:=", expr4)
+	num1 := 23113
 
-	// expr4 := 3 && 13 && 9         // 9
-	// fmt.Println("expr4:=", expr4) // && is resulting last element
+	cond1 := (num1 > 0)
+	cond2 := (num1%2 == 0) // even number
+	cond3 := (num1 < 10)
 
-	// expr5 := 0 || 1 // 1
-	// fmt.Println("expr5:=", expr5)
+	// shortcircuiting - OR opertaion - checks for first true part
+	fmt.Println("OR  op - ", cond1 || cond2 || cond3)
+	//                        true
 
-	// expr6 := 3 || 9 // 3
-	// fmt.Println("expr6:=", expr6)
-
-	// expr6 := 3 || 9 || 13 // 3
-	// fmt.Println("expr6:=", expr6)
-
-	// expr6 := 13 || 9 || 3         // 13
-	// fmt.Println("expr6:=", expr6) // || is resulting first element
-	// fmt.Println()
-
-	// // && - returns 0, if anyone is 0; else the last value
-	// fmt.Println("{0 && 1 && 2 && 3 = }")  // 0
-	// fmt.Println("{1 && 2 && 3 && 4 = }")  // 4
-	// fmt.Println("{1 && 2 && 0 && 4 = }")  // 0
-	// fmt.Println("{1 && 2 && 3      = }") // 3
-	// fmt.Println()
-
-	// // || - will take first boolean True value
-	// fmt.Println("{0 || 1 || 2 || 3    = }") // 1
-	// fmt.Println("{1 || 2 || 3 || 4    = }") // 1
-	// fmt.Println("{4.4 || 2 || 3 || 4  = }") // 4.4
-
+	// shortcircuiting - AND opertaion - checks for first false part
+	fmt.Println("AND op - ", cond1 && cond2 && cond3)
+	// 
+	// NOTE: works only if there were same operation in entire expression
 }
