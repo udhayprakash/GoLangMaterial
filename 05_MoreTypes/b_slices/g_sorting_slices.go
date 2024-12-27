@@ -24,6 +24,8 @@ func main() {
 	sort.Sort(sort.Reverse(sort.StringSlice(strs)))
 	fmt.Printf("\nAfter rev sorting-strs = %v\n", strs) // [c b a]
 	fmt.Println(sort.StringsAreSorted(strs))            // false
+	// By default, in ascending order, it will check
+	// Assignment: how to check sorted in descending order
 
 	fmt.Println()
 
