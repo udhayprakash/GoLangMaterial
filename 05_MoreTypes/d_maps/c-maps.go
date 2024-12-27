@@ -13,7 +13,7 @@ func main() {
 	fmt.Println("\nstudentRank      = ", studentRank)    // map[]
 	fmt.Println("len(studentRank) = ", len(studentRank)) // 0
 
-	// To add key-value pairs
+	// To add/update key-value pairs
 	studentRank["Suresh"] = 1
 	studentRank["Mahesh"] = 3
 	studentRank["Ganesh"] = 2
