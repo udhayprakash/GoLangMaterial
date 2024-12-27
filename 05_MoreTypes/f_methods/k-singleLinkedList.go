@@ -30,3 +30,9 @@ func main() {
 	TraverseLinkedList(head)
 
 }
+
+/*
+
+(0, addrss ) -> (10, address)  -> (20, address)  -> (30, address)
+
+*/
