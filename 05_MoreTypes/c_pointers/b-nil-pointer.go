@@ -13,9 +13,15 @@ func main() {
 	// var num2 float64 = 123.213
 	num2 := 123.213
 
+	// referencing
 	ptr = &num2
 	fmt.Println("After  ptr != nil :", ptr != nil) // true
 
+	// dereferencing
+	ptr = nil
+	fmt.Println("After  ptr != nil :", ptr != nil) // false
+
+	
 	// myStr := "Golang"
 	// ptr = &myStr
 	// cannot use &myStr (type *string) as type *float64 in assignment
