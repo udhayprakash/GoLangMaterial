@@ -28,10 +28,13 @@ func main() {
 	fmt.Println(len(months))                   // 46
 	fmt.Println(reflect.TypeOf(months).Kind()) // array
 
+	// indexing an array
+
 	fmt.Println("months[3]=", months[3]) // March
 	fmt.Println("months[12]=", months[12])
 	fmt.Println("months[45]=", months[45]) // December
 
+	//slice on array
 	Q2 := months[4:7]
 	fmt.Println("Q2    :", Q2) // ["April" "May" "June"]
 	for _, q := range Q2 {
@@ -45,9 +48,18 @@ func main() {
 	for _, s := range summer {
 		fmt.Println("s =", s)
 	}
+	fmt.Println("------------------------------")
 
-	fmt.Println()
+	// changing value in slice, 
+	fmt.Println(Q2[2], summer[0])
+	Q2[2]= "JUNE"
 
+	fmt.Println("array - months = ", months)
+	fmt.Println("slice - Q2 	= ", Q2)
+	fmt.Println("slice - summer = ", summer)
+	// Changes in slice element is reflecting in the other slice and array too
+
+	fmt.Println("----------common in two slices--------------------")
 	for _, s := range summer {
 		for _, q := range Q2 {
 			if s == q {
@@ -55,4 +67,5 @@ func main() {
 			}
 		}
 	}
+
 }
