@@ -30,3 +30,5 @@ func main() {
 }
 
 // assignment: Round off the result to two digits, after decimal
+// function round -- round(angle1.toRadians())
+// method round   -- angle1.toRadians().round()
