@@ -7,6 +7,7 @@ func main() {
 
 	// Single-dimension slices
 	slice1 := []int{11, 22, 33, 44}
+	//              0    1   2   3
 	slice2 := make([]int, 4)
 
 	// Assignment will lead to leakage
@@ -39,5 +40,7 @@ func main() {
 	sourceSlice[0][0] = 99
 	fmt.Println("sourceSlice     :", sourceSlice)
 	fmt.Println("DestinationSlice:", DestinationSlice)
-
+	// In multi-diemensional slices, leakge problem is present
 }
+
+// Assignment - reseacrh to address this leakage in multi-dimeenisonal
