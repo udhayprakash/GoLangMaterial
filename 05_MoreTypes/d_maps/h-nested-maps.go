@@ -2,8 +2,21 @@ package main
 
 import "fmt"
 
+/*
+// Map of Maps
+
+	{
+		"a": {
+			"a1": 1,
+			"a2": 2,
+		},
+		"b": {
+			"b1": 1,
+			"b2": 2,
+		}
+	}
+*/
 func main() {
-	// map of maps
 
 	myMap1 := map[string]map[string]int{
 		"a": map[string]int{
@@ -35,5 +48,4 @@ func main() {
 	}
 	fmt.Println("myMap3 = ", myMap3)
 	// map[one:[1.1 1.2 1.3] three:[3.1 3.2 3.3 3.4 3.5] two:[2]
-
 }
