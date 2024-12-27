@@ -6,13 +6,15 @@ import (
 
 // Maps are of reference type
 func main() {
+	// example 1
 	num1 := 123
 	num2 := num1
 	fmt.Println("\nbefore copy - num1=", num1, "\t num2=", num2)
 
 	num1 = 777
-	fmt.Println("after copy - num1=", num1, "\t num2=", num2)
+	fmt.Println("after copy   - num1=", num1, "\t num2=", num2)
 
+	// example 2
 	name1 := "udhay"
 	var name2 string = name1
 	fmt.Printf("\nbefore copy - name1 = %s \t name2 = %s\n", name1, name2)
@@ -20,6 +22,7 @@ func main() {
 	name2 = "Prakash"
 	fmt.Printf("after copy - name1 = %s \t name2 = %s\n", name1, name2)
 
+	// example 3
 	// maps are reference types
 	var myMap1 = map[string]int{
 		"one":   1,
@@ -33,8 +36,10 @@ func main() {
 	myMap2["three"] = 333
 
 	fmt.Printf("After copy - myMap1=%v \n\t\t myMap2=%v", myMap1, myMap2)
+	// that is copy leakage problem
+	fmt.Println()
 
-	// Better way to copy map
+	// safe copy creation -- for single dimension
 	myMap3 := make(map[string]int)
 	for key, value := range myMap1 {
 		myMap3[key] = value
@@ -46,6 +51,7 @@ func main() {
 
 }
 
+// multi-dimenional map safe copy
 func CopyMap(m map[string]interface{}) map[string]interface{} {
 	cp := make(map[string]interface{})
 	for k, v := range m {
@@ -59,3 +65,5 @@ func CopyMap(m map[string]interface{}) map[string]interface{} {
 
 	return cp
 }
+
+// Assigment: using this CopyMap, demonstrate the safe copy for multi-dimensional maps
