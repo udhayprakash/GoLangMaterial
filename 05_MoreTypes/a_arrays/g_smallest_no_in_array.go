@@ -16,5 +16,6 @@ func main() {
 			minValue = value
 		}
 	}
-	fmt.Printf("Smallest value in %v is %v", numbers, minValue)
+	fmt.Printf("Smallest value in %v is %v\n", numbers, minValue)
+
 }
