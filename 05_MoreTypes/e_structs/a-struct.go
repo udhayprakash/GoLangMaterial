@@ -64,6 +64,7 @@ func main() {
 		p1.Salary = %f`, p1.FirstName, p1.LastName, p1.Age, p1.Salary)
 	fmt.Println()
 
+	// =================================================
 	// Method 3: Naming fields while initializing struct
 	var p2 = Person{FirstName: "Alien"} // LastName: "", Age: 0
 	p2 = Person{}                       // FirstName: "", LastName: "", Age: 0
@@ -79,5 +80,7 @@ func main() {
 		p2.FirstName = %s
 		p2.LastName = %s
 		p2.Age = %d
-		p2.Salary = %f`, p2.FirstName, p2.LastName, p2.Age, p2.Salary)
+		p2.Salary = %f
+	`, p2.FirstName, p2.LastName, p2.Age, p2.Salary)
+
 }
