@@ -12,27 +12,31 @@ func main() {
 
 	// Method 1 - using for loop
 	for index := 0; index < len(oddNumbers); index++ {
+		// fmt.Println(index, oddNumbers[index])
 		fmt.Printf("At position %d -> %2d\n", index, oddNumbers[index])
 	}
 	fmt.Println()
 
 	// Method 2 - using range
+	for range oddNumbers {
+		fmt.Println("I am looping")
+	}
+
 	for index, value := range oddNumbers {
 		fmt.Printf("At position %d -> %2d\n", index, value)
 	}
 
 	// ------- Generate even numbers between 1 & 100
-	var evenNumbers1 [50]int // array
-	fmt.Println("evenNumbers1=", evenNumbers1, reflect.TypeOf(evenNumbers1).Kind())
+	var evenNumbers [50]int // array
+	fmt.Println("evenNumbers = ", evenNumbers, "type is ", reflect.TypeOf(evenNumbers).Kind())
 
-	posCount := 0
+	posCounter := 0
 	for num := 1; num <= 100; num++ {
 		if num%2 == 0 {
-			// position is needed to update, or retrive from array
-			evenNumbers1[posCount] = num
-			posCount++
+			evenNumbers[posCounter] = num
+			posCounter++
 		}
 	}
-	fmt.Println("evenNumbers1=", evenNumbers1)
+	fmt.Println("evenNumbers=", evenNumbers)
 
 }
