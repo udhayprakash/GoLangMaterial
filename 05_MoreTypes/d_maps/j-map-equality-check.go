@@ -18,6 +18,7 @@ func main() {
 	name1, name2 := "Ravi", "ravi"
 	fmt.Println("name1 == name2     :", name1 == name2)
 
+	// maps are not comparable objects
 	map1 := map[string]int{}
 	map2 := map1
 	// fmt.Println("map1 == map2     :", map1 == map2)
@@ -31,3 +32,6 @@ func main() {
 	map3 := make(map[string]int)
 	fmt.Println("reflect.DeepEqual(map1, map3):", reflect.DeepEqual(map1, map3))
 }
+
+
+// Assignment - compare the map objecs, of multidimensionals
