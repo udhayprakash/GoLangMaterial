@@ -18,11 +18,13 @@ func main() { // stack - LIFO (Last In First Out)
 
 	// stack -- [one two three ]
 	// index  -   0   1    2
-	// lngth  -- 3
+	// length  -- 3
 	fmt.Println(stack[len(stack)-1]) // three
+
 	stack = stack[:len(stack)-1]
 	fmt.Println("stack = ", stack) //  [one two]
 
+	// insert operation
 	for _, value := range []string{"four", "five", "six"} {
 		stack = append(stack, value)
 	}
@@ -44,8 +46,8 @@ func main() { // stack - LIFO (Last In First Out)
 
 		// popping that last element
 		stack = stack[:lastPos]
-		// fmt.Println("stack = ", stack)
-
+		fmt.Println("\tstack = ", stack)
 	}
 	fmt.Println("stack = ", stack)
+
 }
