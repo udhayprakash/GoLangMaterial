@@ -5,9 +5,7 @@ import "fmt"
 /*
 When array elements of an array are arrays,
 then it’s called a multi-dimensional array.
-
 */
-
 func main() {
 	oneDArray := [3]int{11, 22, 33}
 	twoDArray := [3][2]int{
@@ -15,17 +13,17 @@ func main() {
 		[2]int{3, 4},
 		[2]int{4, 5},
 	}
-	threeDArray := [3][3]string{
+	twoDArray2 := [3][3]string{
 		{"Hyderbad", "Amaravathi", "Chennai"},
 		{"Kochi", "Banglore", "Panagi"},
 		{"Mumbai", "Ahmedabad", "Jaipur"},
 	}
 
 	fmt.Printf(`
-		oneDArray = %#v 
+		oneDArray = %#v
 		twoDArray = %#v
-		threeDArray = %#v
-	`, oneDArray, twoDArray, threeDArray)
+		twoDArray2 = %#v
+	`, oneDArray, twoDArray, twoDArray2)
 
 	a2 := [...][2]int{
 		[2]int{1, 2},
