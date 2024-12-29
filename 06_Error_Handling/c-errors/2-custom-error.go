@@ -4,21 +4,21 @@ import (
 	"fmt"
 )
 
-type MyError struct {
+type UploadError struct {
 	message string
-	code    int
+	file    string
 }
 
-func (e MyError) Error() string {
-	return fmt.Sprintf("ERROR:%v (Code: %d)", e.message, e.code)
+func (e UploadError) Error() string {
+	return fmt.Sprintf("Upload failed for file '%s': %v", e.file, e.message)
 }
 
-func someError() error {
-	return MyError{"Some Error Occurred!!!", 1001}
+func uploadFile(fileName string) error {
+	return UploadError{"file too large", fileName}
 }
 
 func main() {
-	if err := someError(); err != nil {
+	if err := uploadFile("sample.png"); err != nil {
 		fmt.Println("An error occurred:", err)
 	}
 }

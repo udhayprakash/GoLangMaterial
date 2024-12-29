@@ -2,24 +2,23 @@ package main
 
 import (
 	"errors"
-	"log"
+	"fmt"
 )
 
-var exampleError = errors.New("Example Error, DoSomething has gone wrong!")
+var errOne = errors.New("first error")
+var errTwo = errors.New("second error")
 
-func DoSomeThing() error {
-	return exampleError
+func DoSomething() error {
+	return errors.Join(errOne, errTwo)
 }
 
 func main() {
-
-	err := DoSomeThing()
-
-	if errors.Is(err, exampleError) {
-		log.Println("The error was our example error")
-	} else if err != nil {
-		log.Println("The error was something else")
-	} else {
-		log.Println("There was no error")
+	err := DoSomething()
+	if errors.Is(err, errOne) {
+		fmt.Println("The error includes the first error.")
 	}
+	if errors.Is(err, errTwo) {
+		fmt.Println("The error includes the second error.")
+	}
+	fmt.Println("Joined Error:", err)
 }
