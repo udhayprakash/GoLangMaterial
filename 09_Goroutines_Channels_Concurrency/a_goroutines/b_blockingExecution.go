@@ -32,7 +32,7 @@ func main() {
 	fmt.Println("Start Script")
 
 	for j := 0; j < 10; j++ {
-		printItem(j)
+		go printItem(j)
 	}
 	fmt.Println("End Script")
 
@@ -42,3 +42,35 @@ func main() {
 }
 
 // NOTE: Go-routines may not execute in the order of initialization
+
+/*
+$ go run b_blockingExecution.go 
+Start Script
+        Print Item:  1
+        Print Item:  2
+        Print Item:  3
+        Print Item:  4
+        Print Item:  5
+        Print Item:  6
+        Print Item:  7
+        Print Item:  8
+        Print Item:  9
+        Print Item: 10
+End Script
+
+$ go run b_blockingExecution.go 
+Start Script
+End Script
+        Print Item: 10
+        Print Item:  1
+        Print Item:  2
+        Print Item:  3
+        Print Item:  4
+        Print Item:  5
+        Print Item:  6
+        Print Item:  7
+        Print Item:  8
+        Print Item:  9
+
+
+*/
