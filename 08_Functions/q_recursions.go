@@ -25,19 +25,19 @@ func main() {
 	result := factorial(9)
 	fmt.Println("factorial(9) = ", result)
 
-	fmt.Println("factorial(6):", factorial(6))
+	result = factorial(7)
+	fmt.Println("factorial(7) = ", result)
 
-	for i := 0; i < 12; i++ {
-		fmt.Printf("factorial(%2d)=%8d\n", i, factorial(i))
-	}
 }
+
+// assignment - what is the max recursion depth in golang
 
 /*
 
 factorial(9) = 9 * factorial(8)
 			 = 9 * 8 * factorial(7)
 
-assignment: implement memoization design pattern
+assignment: implement memoization design pattern, using inline functions
 
 	{8: 98789}
 */
