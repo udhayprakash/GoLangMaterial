@@ -9,7 +9,12 @@ http://en.wikipedia.org/wiki/Recursion_(computer_science)
 Tail call Optimization (TCO)
 	- Avoids creating a new stack when the last call in a recursion
       is the function itself.
-	- TCO is not implemented in Golang
+	- TCO is not implemented in Golang: 
+		So, every recursive call creates a new stack frame
+		reason:
+			TCO complicates debugging
+			Go's dynamic stack management and lightweight Goroutines reduce the need for TCO in many use cases.
+	- Go encourages iteration over recursion for stack-intensive tasks
 */
 
 // factorial(9) = 9 * 8 * 7 * 6 * .... * 1
