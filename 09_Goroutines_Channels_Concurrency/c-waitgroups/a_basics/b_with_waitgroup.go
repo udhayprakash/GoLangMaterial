@@ -19,22 +19,20 @@ sync.WaitGroup is struct type with three methods:
 */
 
 func worker(id int, wg *sync.WaitGroup) {
-	fmt.Printf("Worder:%d - Started\n", id)
-
+	defer wg.Done() // Notify the WaitGroup that this goroutine is done
+	fmt.Printf("Worker %d starting\n", id)
 	time.Sleep(time.Second)
-	fmt.Printf("\tWorder:%d - Finished\n", id)
-
-	wg.Done()
+	fmt.Printf("Worker %d done\n", id)
 }
 
 func main() {
 	var wg sync.WaitGroup
 
-	for i := 1; i <= 5; i++ {
-		wg.Add(1)
+	for i := 1; i <= 3; i++ {
+		wg.Add(1) // Increment the WaitGroup counter
 		go worker(i, &wg)
 	}
-
-	wg.Wait()
-
+	
+	wg.Wait() // Wait for all goroutines to finish
+	fmt.Println("All workers done")
 }
