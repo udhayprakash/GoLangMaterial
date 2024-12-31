@@ -50,3 +50,6 @@ func main() {
 	// print the counter
 	fmt.Println("Counter:", c)
 }
+
+
+// Assignment - try all data types as shared variables, and check for race condition changes
