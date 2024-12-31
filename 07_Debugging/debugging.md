@@ -8,7 +8,7 @@
 
     A) Installation:
     ----------------
-        go get -u github.com/go-delve/delve/cmd/dlv
+        go install github.com/go-delve/delve/cmd/dlv@latest
 
         If you are using Go 1.5 you must set GO15VENDOREXPERIMENT=1 before continuing.
 
@@ -54,3 +54,41 @@
         up - - - - - - - - - - - - - Move the current frame up.
         vars - - - - - - - - - - - - Print package variables.
         whatis - - - - - - - - - - - Prints type of an expression.
+
+
+### Remote Debuggig with Delve
+
+    start the delve server
+
+        // The server runs in headless mode on port 2345.
+        dlv debug --headless --listen=:2345 --api-version=2
+
+
+### Troubleshooting
+
+    Error: dlv: command not found: Ensure $GOPATH/bin is in your PATH.
+
+    // Permission issues in macOS. grant permissions
+    sudo spctl --master-disable
+
+
+
+### Debugging in vscode 
+
+    create `launch.json`
+
+            {
+            "version": "0.2.0",
+            "configurations": [
+                {
+                    "name": "Launch",
+                    "type": "go",
+                    "request": "launch",
+                    "mode": "debug",
+                    "program": "${workspaceFolder}"
+                }
+            ]
+        }
+
+    use F5 for debugging
+        needs go.mod file for this to execute

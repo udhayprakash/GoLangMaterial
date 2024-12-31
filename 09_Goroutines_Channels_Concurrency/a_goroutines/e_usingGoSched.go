@@ -34,4 +34,9 @@ it changes nothing.
 By default,
 	before 1.5 version, GOMAXPROCS = 1 &
 	from 1.5 release, GOMAXPROCS = number of cores
+
+Scheduling:
+
+The Go runtime schedules goroutines on available OS threads using a mechanism called the M:N scheduler (many goroutines mapped to many threads). Some runtime goroutines manage this scheduling.
+
 */
