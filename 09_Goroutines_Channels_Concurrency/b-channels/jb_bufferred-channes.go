@@ -5,20 +5,21 @@ import "fmt"
 func main() {
 	vals := make(chan float64, 4)
 
-	vals <- 85.4
-	vals <- 0.6
-	vals <- -54.9
-	vals <- 32.14
+	vals <- 11.1
+	vals <- 11.1 //22.2
+	vals <- 33.3
+	vals <- 44.4
 
 	if vals == vals { // Channel Comparison - channel compared to itself
-		fmt.Println(3)
+		fmt.Println("condition 1 passed", vals)
 		if vals == vals { // Channel Comparison - channel compared to itself
-			fmt.Println(0)
+			fmt.Println("condition 2 passed", vals)
 			if <-vals == <-vals { // compares first value with second, from channel
-				fmt.Println(5)
+				fmt.Println("First two values are equal")
+
 			} else {
-				if <-vals == <-vals { // compares third, with fourth
-					fmt.Println(8)
+				if <-vals == <-vals {
+					fmt.Println("third and fourth values are equal")
 				}
 			}
 		}
