@@ -43,9 +43,17 @@ func main() {
 	c3 <- 222
 	c3 <- 333
 	fmt.Printf("c3 - dataType:%T	 Value:%v\n", c3, c3)
+	
+	// c3 <- 444
+	// fatal error: all goroutines are asleep - deadlock!
 
 	// work-around to pause the main function till execution
 	var input string
 	fmt.Scanln(&input)
 
 }
+
+/*
+NOTE: go routines need to be used for passing values to channels
+	buffered channels, can take max of their capcity only
+*/

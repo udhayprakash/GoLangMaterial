@@ -34,7 +34,7 @@ func findFirstOccurrence(searchNum int, nums []int) {
 }
 
 func findAllOccurrences(searchNum int, nums []int) {
-	foundIndices := []int{}
+	foundIndices := []int{} // slice
 	for index, value := range nums {
 		if searchNum == value {
 			foundIndices = append(foundIndices, index)
@@ -77,3 +77,6 @@ func main() {
 	findAllOccurrences(87, []int{})
 
 }
+
+
+// assignment - enhance this function findAllOccurrences to return the indices

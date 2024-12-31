@@ -1,16 +1,4 @@
----------------------------------------------------------------------------------
-                        GO Language Course Content
-						--------------------------
-Course Duration: 30 days(Each Day 2 hours)
 
-Weekend : morning after 9 AM IST to 8 PM IST 
-WeekDays: morning before 11 AM IST - and after 7 PM IST 
-
-Class 1: 29Th March 2021 - 11 AM IST - 01 PM IST
-
-30 days * 2 hours = 60 hours * 500 = 30,000/-
-
-21,000/-
 ---------------------------------------------------------------------------------
 Chapter 05: Goroutines, Channels, Concurrency
 				Sync package
@@ -35,8 +23,8 @@ Chapter 07: File Operations
 					xml
 					csv 
 					json
-						nested json
-                ZipFiles
+					nested json
+                			ZipFiles
 
 Chapter 09: Code Quality
                 unit testing, 

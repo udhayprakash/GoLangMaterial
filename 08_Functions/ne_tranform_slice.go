@@ -1,10 +1,11 @@
+// Higher Order function - map
 package main
 
 import "fmt"
 
-func tranform(mySlice []int, f func(int) int) {
+func tranform(mySlice []int, myfunc func(int) int) {
 	for i := range mySlice {
-		mySlice[i] = f(mySlice[i])
+		mySlice[i] = myfunc(mySlice[i])
 	}
 }
 
