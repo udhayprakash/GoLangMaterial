@@ -15,12 +15,12 @@ Solution :
 Use the sync.Once object. Below is an example that demonstrates how sync.Once object can be used to wrap some part of the code inside a function to only execute once.
 */
 
-const configurationFile = "configuration_data = x"
+const configurationFile = "servername = 123.google.com"
 
 var onlyOnce sync.Once
 var config strings.Reader
 
-func getData() {
+func loadConfigurations() {
 
 	// we only want to load the configuration once
 	onlyOnce.Do(func() {
@@ -32,10 +32,11 @@ func getData() {
 }
 
 func main() {
-	getData()
-	go getData()
-	go getData()
-	getData()
+	loadConfigurations()
+	go loadConfigurations()
+	go loadConfigurations()
+	go loadConfigurations()
+	loadConfigurations()
 
 	// keep running until user press Control-C
 	for {
