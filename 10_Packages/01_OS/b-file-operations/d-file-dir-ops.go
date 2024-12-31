@@ -20,7 +20,9 @@ func FileExits(filename string) bool {
 	}
 	return true
 }
+
 func main() {
+
 	// To get current working directory
 	currDir, err := os.Getwd()
 	check(err)
@@ -31,6 +33,8 @@ func main() {
 	if FileExits("subdir") == true {
 		os.RemoveAll("subdir") // rm -rf
 	}
+
+	// To create a single directory
 	err = os.Mkdir("subdir", 0755)
 	check(err)
 
@@ -48,19 +52,19 @@ func main() {
 	// Method 2- To create a flat file
 	fh, err := os.Create("newfile.txt")
 	check(err)
+
 	fh.WriteString("This is first line")
 	fh.Write([]byte{115, 111, 109, 101, 10})
 
 	// creating a writer object
 	wr := bufio.NewWriter(fh)
-
 	wr.WriteString("Hello world\n")
 	wr.WriteString("Second Line\n")
 	wr.WriteString("I am a developer\n")
 	wr.Write([]byte{115, 111, 109, 101, 10})
-
 	wr.Flush()
 
+	// To create one or more directories in chain
 	err = os.MkdirAll("otherDir", 0700)
 	check(err)
 
@@ -73,5 +77,4 @@ func main() {
 	for _, file := range files {
 		fmt.Println(file.IsDir(), file.Name())
 	}
-
 }
