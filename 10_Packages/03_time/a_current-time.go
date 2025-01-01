@@ -18,15 +18,14 @@ func main() {
 	// No milliseconds API. So, we can compute manually
 	msecs := nsecs / 1000000
 
-	fmt.Println("now  :", now)   // 2022-05-14 12:49:59.7929117 +0530 IST m=+0.005778101
-	fmt.Println("secs :", secs)  // 1652512799
-	fmt.Println("msecs:", msecs) // 1652512799792
-	fmt.Println("nsecs:", nsecs) // 1652512799792911700
+	fmt.Println("now  :", now)   // 2025-01-01 06:31:41.661112861 +0000 UTC m=+0.000028534
+	fmt.Println("secs :", secs)  // 1735713343
+	fmt.Println("msecs:", msecs) // 1735713343484
+	fmt.Println("nsecs:", nsecs) // 1735713343484236401
 
 	var timestamp int64 = 0
-	fmt.Println(time.Unix(timestamp, 0))  // 1970-01-01 05:30:00 +0530 IST
-	fmt.Println(time.Unix(secs, 0))       // 2022-05-14 12:49:59 +0530 IST
-	fmt.Println(time.Unix(423332232, 0))  // 1983-06-01 21:47:12 +0530 IST
-	fmt.Println(time.Unix(2342334249, 0)) // 2044-03-23 13:54:09 +0530 IST
-
+	fmt.Println(time.Unix(timestamp, 0))  // 1970-01-01 00:00:00 +0000 UTC
+	fmt.Println(time.Unix(secs, 0))       // 2025-01-01 06:37:08 +0000 UTC
+	fmt.Println(time.Unix(31212, 0))      // 1970-01-01 08:40:12 +0000 UTC
+	fmt.Println(time.Unix(2342334249, 0)) // 2044-03-23 08:24:09 +0000 UTC
 }
