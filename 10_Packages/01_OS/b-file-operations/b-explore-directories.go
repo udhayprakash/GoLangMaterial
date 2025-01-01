@@ -40,7 +40,6 @@ func main() {
 	}
 	fmt.Println()
 
-	
 	// List files in Parent directory
 	files, err = os.ReadDir("../")
 	checkError(err)
@@ -57,8 +56,6 @@ func main() {
 // \workspaces\GolangBatchDec2024\10_Packages\01_OS\b-file-operations\a_file_paths.go
 
 // my\newFolder
-
-
 
 // ioutil.ReadDir("./") also gives same result.
 // But this module is getting deprecated
