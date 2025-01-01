@@ -1,4 +1,6 @@
-/* Purpose: Golang program to fix the race
+/*
+	Purpose: Golang program to fix the race
+
 condition using atomic package
 */
 package main
@@ -50,3 +52,5 @@ func main() {
 	// print the counter
 	fmt.Println("Counter:", c)
 }
+
+// Assignment - try all data types as shared variables, and check for race condition changes

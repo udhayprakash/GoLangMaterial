@@ -32,7 +32,7 @@ func main() {
 }
 
 /*
-~go run 02c_singleton.go
+~go run f_singleton.go
 instance1= &{} 0xc000006028
 instance2= &{} 0xc000006038
 instance2= &{} 0xc000006038

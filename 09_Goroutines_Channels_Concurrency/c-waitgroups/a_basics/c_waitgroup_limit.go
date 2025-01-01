@@ -17,7 +17,7 @@ func main() {
 	var wg sync.WaitGroup
 
 	total := 5
-	wg.Add(total)
+	// wg.Add(total)
 	// wg.Add(total+2)  // fatal error: all goroutines are asleep - deadlock!
 
 	for i := 1; i <= total; i++ {

@@ -7,15 +7,16 @@ import (
 )
 
 /*
-Problem :
-You have a function that will load a resource such as reading configuration data from an external file as part of the initialization process. However, each time when the main program calls the function, it will read the configuration data again and again.
-How to ensure that certain part of the function only execute once only? Load once instead of reading the configuration data again and again?
+Sync.One  will run the registered inline function only one, for entire program execution
 
-Solution :
-Use the sync.Once object. Below is an example that demonstrates how sync.Once object can be used to wrap some part of the code inside a function to only execute once.
+Mostly used in one time execution scenarios like loading config data, etc
 */
 
-const configurationFile = "configuration_data = x"
+const configurationFile = `
+	servername=https://photos.google.com
+	verify=True
+	LanguageDefault:Golang
+`
 
 var onlyOnce sync.Once
 var config strings.Reader
@@ -28,7 +29,7 @@ func getData() {
 		config = *strings.NewReader(configurationFile)
 	})
 
-	fmt.Println(config)
+	fmt.Println("\nDisplaying Loaded config data:", config)
 }
 
 func main() {

@@ -32,7 +32,7 @@ func main() {
 		wg.Add(1) // Increment the WaitGroup counter
 		go worker(i, &wg)
 	}
-	
+
 	wg.Wait() // Wait for all goroutines to finish
 	fmt.Println("All workers done")
 }

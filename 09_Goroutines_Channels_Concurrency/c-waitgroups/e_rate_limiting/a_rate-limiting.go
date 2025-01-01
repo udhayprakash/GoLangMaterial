@@ -20,7 +20,7 @@ func main() {
 	}
 	close(requests)
 
-	// TRy to receve only in that time period
+	// Try to receve only in that time period
 	limiter := time.Tick(200 * time.Millisecond)
 	for req := range requests { // receiveing from channel
 		<-limiter

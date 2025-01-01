@@ -5,3 +5,11 @@
 
     - It should be noted that race conditions arise only if we have provided the writing permissions for a particular variable.
     - If only read permissions were available, then there wouldn't have been any problem as reading doesn't cause any issues, even if multiple goroutines are trying to read a single value.
+
+
+### Check for race
+
+    go run -race script.go
+
+    If there were races, it will break and let us know. 
+    
