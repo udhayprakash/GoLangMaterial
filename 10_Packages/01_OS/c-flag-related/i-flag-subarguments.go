@@ -48,9 +48,55 @@ func main() {
 }
 
 /*
-go run i-flag-subarguments.go foo -enable -name=joe a1 a2
-go run i-flag-subarguments.go bar -level 8 a1
-
-But bar won’t accept foo’s flags.
-	go run i-flag-subarguments.go foo bar -enable a1
+$ go run i-flag-subarguments.go 
+expected 'foo' or 'bar' subcommands
+exit status 1
+$ go run i-flag-subarguments.go -h
+expected 'foo' or 'bar' subcommands
+exit status 1
+$ go run i-flag-subarguments.go foo
+subcommand 'foo'
+  enable: false
+  name: 
+  tail: []
+$ go run i-flag-subarguments.go -foo
+expected 'foo' or 'bar' subcommands
+exit status 1
+$ go run i-flag-subarguments.go foo -enable 
+subcommand 'foo'
+  enable: true
+  name: 
+  tail: []
+$ go run i-flag-subarguments.go foo -enable true
+subcommand 'foo'
+  enable: true
+  name: 
+  tail: [true]
+$ go run i-flag-subarguments.go foo -enable false
+subcommand 'foo'
+  enable: true
+  name: 
+  tail: [false]
+$ go run i-flag-subarguments.go foo -enable false name=ravi
+subcommand 'foo'
+  enable: true
+  name: 
+  tail: [false name=ravi]
+$ go run i-flag-subarguments.go bar
+subcommand 'bar'
+  level: 0
+  tail: []
+$ go run i-flag-subarguments.go bar level
+subcommand 'bar'
+  level: 0
+  tail: [level]
+$ go run i-flag-subarguments.go bar level 0
+subcommand 'bar'
+  level: 0
+  tail: [level 0]
+$ go run i-flag-subarguments.go bar level 12312
+subcommand 'bar'
+  level: 0
+  tail: [level 12312]
+$ 
 */
