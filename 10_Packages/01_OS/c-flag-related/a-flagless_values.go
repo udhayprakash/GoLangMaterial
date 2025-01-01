@@ -14,47 +14,67 @@ func main() {
 	fmt.Println()
 
 	// This statement will parse the flag values
-	// flag.Parse()
-
+	flag.Parse()
 	fmt.Println("flag.Args():", flag.Args())
-
 	for _, val := range flag.Args() {
 		fmt.Printf("\t%T - %#[1]v\n", val)
 	}
+
 }
 
 /*
-OUTPUT:
---------
-	~go run a-flag.go
-	os.Args[1:]: []
 
-	flag.Args(): []
+ $ go run a-flagless_values.go 
+os.Args[1:]: []
 
-	~go run a-flag.go 10
-	os.Args[1:]: [10]
-			string - "10"
+$ go run a-flagless_values.go 213 123.123 True nil 
+os.Args[1:]: [213 123.123 True nil]
+        string - "213"
+        string - "123.123"
+        string - "True"
+        string - "nil"
 
-	flag.Args(): [10]
-			string - "10"
-	~go run a-flag.go 10 20.2 true nil golang
-	os.Args[1:]: [10 20.2 true nil golang]
-			string - "10"        string - "20.2"
-			string - "true"
-			string - "nil"
-			string - "golang"
+$ go run a-flagless_values.go 
+os.Args[1:]: []
 
-	flag.Args(): [10 20.2 true nil golang]
-			string - "10"
-			string - "20.2"
-			string - "true"
-			string - "nil"
-			string - "golang"
+flag.Args(): []
+$ go run a-flagless_values.go 213 123.123 True nil 
+os.Args[1:]: [213 123.123 True nil]
+        string - "213"
+        string - "123.123"
+        string - "True"
+        string - "nil"
+
+flag.Args(): []
+$ go run a-flagless_values.go 213 123.123 True nil 
+os.Args[1:]: [213 123.123 True nil]
+        string - "213"
+        string - "123.123"
+        string - "True"
+        string - "nil"
+
+flag.Args(): [213 123.123 True nil]
+$ go run a-flagless_values.go 213 123.123 True nil 
+os.Args[1:]: [213 123.123 True nil]
+        string - "213"
+        string - "123.123"
+        string - "True"
+        string - "nil"
+
+flag.Args(): [213 123.123 True nil]
+        string - "213"
+        string - "123.123"
+        string - "True"
+        string - "nil"
+$ go run a-flagless_values.go 
+os.Args[1:]: []
+
+flag.Args(): []
+$ go run a-flagless_values.go -h
+os.Args[1:]: [-h]
+        string - "-h"
+
+Usage of /tmp/go-build3489782134/b001/exe/a-flagless_values:
 
 
-	~go run a-flag.go -h
-		os.Args[1:]: [-h]
-				string - "-h"
-
-		flag.Args(): []
 */
