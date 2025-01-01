@@ -16,21 +16,23 @@ func main() {
 
 /*
 OUTPUT:
--------
-	~go run c-string_flags.go
-	Environment = dev
+------
 
-	~go run c-string_flags.go -env=dev
-	Environment = dev
-	
-	~go run c-string_flags.go -env=prod
-	Environment = prod
+$ go run b-string_flags.go
+Environment = dev
 
-	~go run c-string_flags.go -env=prod uat stage
-	Environment = prod
+$ go run b-string_flags.go -h
+Usage of /tmp/go-build3701618246/b001/exe/b-string_flags:
+  -env string
+        Project Environment (default "dev")
 
-	~go run c-string_flags.go -h
-	Usage of C:...\c-string_flags.exe:
-	-env string
-			Project Environment (default "dev")
+$ go run b-string_flags.go -env=dev
+Environment = dev
+
+$ go run b-string_flags.go -env=prod
+Environment = prod
+
+$ go run b-string_flags.go -env=prod uat stage
+Environment = prod
+
 */
