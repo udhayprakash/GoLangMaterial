@@ -7,12 +7,11 @@ import (
 
 func main() {
 	sites := [...]string{
-		"facebook.com:80",
-		"facebook.com:443",
+		"facebook.com:80",  // http
+		"facebook.com:443", // https
+		"facebook.com",     // default (https)
 		"google.com:80",
 		"google.com:443",
-		"freecodecamp.org:80",
-		"freecodecamp.org:443",
 	}
 	for _, site := range sites {
 		conn, err := tls.Dial("tcp", site, nil)
