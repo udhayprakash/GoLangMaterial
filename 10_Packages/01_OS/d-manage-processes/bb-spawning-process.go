@@ -30,3 +30,6 @@ func main() {
 	fmt.Println("> ls -a -l -h")
 	fmt.Println(string(lsOut))
 }
+
+
+// Assignments - run ifconfig command , and extract the ipv4 and ipv6 addresses
