@@ -17,6 +17,14 @@ func main() {
 
 	reader, writer := io.Pipe()
 
+	/*
+						-------------------
+				writer	->	pipeline    ->  reader
+						-------------------
+	first.Stdout									second.Stdin		
+
+	*/
+
 	// push first command output to writer
 	first.Stdout = writer
 
@@ -30,10 +38,11 @@ func main() {
 
 	first.Start()
 	second.Start()
+
 	first.Wait()
 	writer.Close()
+	
 	second.Wait()
-
 	total := buff.String() // convert output to string
 
 	fmt.Printf("Total processes running : %s", total)
