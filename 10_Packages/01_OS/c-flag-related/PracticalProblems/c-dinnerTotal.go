@@ -11,8 +11,8 @@ func main() {
 
 	if len(args) == 1 && args[0] == "/help" {
 		fmt.Println(`
-			USAGE  : 1-dinnertotal.go <Total Meal Amount> <Tip Percentage>
-			EXAMPLE: 1-dinnertotal.go 2000 10
+			USAGE  : b-dinnertotal.go <Total Meal Amount> <Tip Percentage>
+			EXAMPLE: b-dinnertotal.go 2000 10
 			`)
 	}
 	if len(args) != 2 {
@@ -28,3 +28,5 @@ func calculateTotal(mealTotal, tipAmount float32) float32 {
 	totalPrice := mealTotal + (mealTotal * (tipAmount / 100))
 	return totalPrice
 }
+
+// assignment = can you do it with flags
