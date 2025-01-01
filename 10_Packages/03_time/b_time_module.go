@@ -12,6 +12,9 @@ func main() {
 
 	// To convert an integer number of units to a Duration, multiply:
 	seconds := 10
+	// fmt.Println(seconds * time.Second)
+	// invalid operation: seconds * time.Second (mismatched types int and time.Duration)
+
 	fmt.Println(time.Duration(seconds) * time.Second)      // prints 10s
 	fmt.Println(time.Duration(seconds) * time.Millisecond) // prints 10ms
 
@@ -30,6 +33,7 @@ func main() {
 	m, _ := time.ParseDuration("1m30s")
 	fmt.Printf("Take off in t-%.0f seconds.\n", m.Seconds())
 
+	// subtraction on time
 	t1 := time.Date(2019, time.December, 15, 0, 9, 0, 0, time.UTC)
 	t2 := time.Date(2021, time.October, 16, 0, 32, 4, 0, time.UTC)
 	fmt.Println(t2.Sub(t1).String()) // 16104h23m4s
@@ -43,5 +47,4 @@ func main() {
 
 	fmt.Printf(`year = %v month = %v day = %v`,
 		year, month, day)
-
 }
