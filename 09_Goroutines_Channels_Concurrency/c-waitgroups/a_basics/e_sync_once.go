@@ -21,7 +21,7 @@ const configurationFile = `
 var onlyOnce sync.Once
 var config strings.Reader
 
-func getData() {
+func loadConfigurations() {
 
 	// we only want to load the configuration once
 	onlyOnce.Do(func() {
@@ -33,10 +33,11 @@ func getData() {
 }
 
 func main() {
-	getData()
-	go getData()
-	go getData()
-	getData()
+	loadConfigurations()
+	go loadConfigurations()
+	go loadConfigurations()
+	go loadConfigurations()
+	loadConfigurations()
 
 	// keep running until user press Control-C
 	for {

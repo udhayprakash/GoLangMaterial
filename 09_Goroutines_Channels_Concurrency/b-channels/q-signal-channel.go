@@ -17,5 +17,7 @@ func main() {
 	case <-sigChannel:
 		fmt.Println("The interrupt got handled")
 		os.Exit(0)
+	// default:      // Absence of default leads to infinite loop
+	// 	fmt.Println("default")
 	}
 }
