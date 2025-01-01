@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	cmd := exec.Command("calc")
+	cmd := exec.Command("ls")
 	err := cmd.Run()
 
 	if err != nil {
