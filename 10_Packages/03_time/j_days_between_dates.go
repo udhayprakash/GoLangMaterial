@@ -17,3 +17,9 @@ func main() {
 func Date(year, month, day int) time.Time {
 	return time.Date(year, time.Month(month), day, 0, 0, 0, 0, time.UTC)
 }
+
+
+// Assignment - Patch calendar design for linux and windows systems
+//        linux patch life is 1 per Quarter on first saturday
+// 		  window patch life is 1 per month on first saturday
+// for a given year
