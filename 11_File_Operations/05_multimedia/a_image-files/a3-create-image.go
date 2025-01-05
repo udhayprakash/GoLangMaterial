@@ -35,6 +35,6 @@ func main() {
 	}
 
 	// Encode as PNG.
-	f, _ := os.Create("image.png")
+	f, _ := os.Create("a3-image.png")
 	png.Encode(f, img)
 }

@@ -120,3 +120,7 @@ __debug_bin
 *.tar
 *.gz
 *.zlib
+
+
+# sound files
+*.wav
