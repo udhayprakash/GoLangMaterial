@@ -6,6 +6,14 @@ Across the goroutines, it Manages
     - cancellation signals
     - timeouts
 
+Values can be passed to functions 
+    (traditional functions)
+        1)  by arguments (call by value), or with pointer args (call by reference)
+    (go routines)
+        2) by channels (only to one specific function, single or bidirectional)
+        3) using context (multiple functions, read or write)
+
+
 ## Basic context functionality
 `context.Background()` is root context in Go, which is 
 
