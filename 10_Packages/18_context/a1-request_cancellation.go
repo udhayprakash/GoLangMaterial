@@ -21,8 +21,12 @@ func longRunningOperation(stopChan chan struct{}) {
 
 func main() {
 	stopChan := make(chan struct{})
+
 	go longRunningOperation(stopChan)
+
 	time.Sleep(2 * time.Second)
 	close(stopChan) // Cancel the operation
 	time.Sleep(1 * time.Second)
+	fmt.Println("Main function exiting.")
+
 }
