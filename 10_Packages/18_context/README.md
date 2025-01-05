@@ -1,12 +1,37 @@
 # go-context
 
-    Across the goroutines, it Manages
-        - request-scoped values
-        - cancellation signals
-        - timeouts
+Across the goroutines, it Manages
+    
+    - request-scoped values
+    - cancellation signals
+    - timeouts
+
+## Basic context functionality
+`context.Background()` is root context in Go, which is 
+
+    - empty context that is never cancelled, has no deadline, and carries no value
+
+`context.TODO()` is placeholder context, used when we plan to replace in later stage of code, with proper context
+    - same like context.Background
+    - But signals to developers that context is not yet finalized
+
+`context.WithCancel(parent Context)`
+    Creates a new context that can be cancelled using the returned cancel function.
+
+`context.WithTimeout(parent Context, timeout time.Duration)`:
+    Creates a new context that automatically cancels after the specified timeout.
+
+`context.WithDeadline(parent Context, deadline time.Time)`:
+    Creates a new context that automatically cancels at the specified deadline.
 
 
-## Request Cancellation:
+`context.WithValue(parent Context, key, val interface{}):`
+    Creates a new context that carries a key-value pair.
+
+
+## Types of contexts
+
+### Request Cancellation:
 
 Propagate cancellation signals across goroutines and functions.
 
@@ -18,7 +43,7 @@ Propagate cancellation signals across goroutines and functions.
 
     With context: Students stop immediately when the teacher signals them.
 
-## Timeout Management:
+### Timeout Management:
 
 Set deadlines for operations to ensure they don’t run indefinitely.
 
@@ -30,7 +55,7 @@ Set deadlines for operations to ensure they don’t run indefinitely.
 
     With context: The chef stops baking when the timer goes off.
 
-## Deadline Propagation:
+### Deadline Propagation:
 
 Pass deadlines through function calls and goroutines.
 
@@ -42,7 +67,7 @@ Pass deadlines through function calls and goroutines.
 
     With context: Team members stop working when the deadline is reached.
 
-## Value Propagation:
+### Value Propagation:
 
 Pass request-scoped values (e.g., user IDs, request IDs) across functions and goroutines.
 
@@ -54,7 +79,7 @@ Pass request-scoped values (e.g., user IDs, request IDs) across functions and go
 
     With context: The student returns the book with their notes, and the librarian knows who used it
 
-## Graceful Shutdown:
+### Graceful Shutdown:
 
 Signal goroutines to stop work during application shutdown.
 
@@ -66,7 +91,7 @@ Signal goroutines to stop work during application shutdown.
 
     With context: Musicians stop playing when the conductor signals them.
 
-## Concurrency Control:
+### Concurrency Control:
 
 Manage goroutines and ensure they respect cancellation or timeouts.
 
