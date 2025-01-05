@@ -2,15 +2,16 @@ package main
 
 import (
 	"archive/tar"
+	"fmt"
 	"io"
-	"log"
 	"os"
 )
 
 func main() {
 	tarFile, err := os.Open("example.tar")
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println("Error opening TAR file:", err)
+		return
 	}
 	defer tarFile.Close()
 
@@ -23,22 +24,25 @@ func main() {
 			if err.Error() == "EOF" {
 				break // End of archive
 			}
-			log.Fatal(err)
+			fmt.Println("Error reading TAR header:", err)
+			return
 		}
 
 		extractedFile, err := os.Create(header.Name)
 		if err != nil {
-			log.Fatal(err)
+			fmt.Println("Error creating extracted file:", err)
+			return
 		}
 		defer extractedFile.Close()
 
 		// Copy the contents of the file from the TAR archive to the extracted file
 		if _, err := io.Copy(extractedFile, tarReader); err != nil {
-			log.Fatal(err)
+			fmt.Println("Error copying file contents:", err)
+			return
 		}
 
-		log.Printf("Extracted: %s\n", header.Name)
+		fmt.Printf("Extracted: %s\n", header.Name)
 	}
 
-	log.Println("Files extracted successfully!")
+	fmt.Println("Files extracted successfully!")
 }

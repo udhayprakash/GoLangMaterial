@@ -2,7 +2,7 @@ package main
 
 import (
 	"compress/gzip"
-	"log"
+	"fmt"
 	"os"
 )
 
@@ -10,7 +10,8 @@ func main() {
 	// Create a new GZIP file
 	gzipFile, err := os.Create("example.gz")
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println("Error creating GZIP file:", err)
+		return
 	}
 	defer gzipFile.Close()
 
@@ -21,8 +22,9 @@ func main() {
 	// Write content to the GZIP file
 	content := []byte("Hello, GZIP!")
 	if _, err := gzipWriter.Write(content); err != nil {
-		log.Fatal(err)
+		fmt.Println("Error writing to GZIP file:", err)
+		return
 	}
 
-	log.Println("GZIP file created successfully!")
+	fmt.Println("GZIP file created successfully!")
 }

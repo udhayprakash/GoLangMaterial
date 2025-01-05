@@ -2,14 +2,15 @@ package main
 
 import (
 	"archive/tar"
-	"log"
+	"fmt"
 	"os"
 )
 
 func main() {
 	tarFile, err := os.Create("example.tar")
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println("Error creating TAR file:", err)
+		return
 	}
 	defer tarFile.Close()
 
@@ -20,7 +21,8 @@ func main() {
 	for _, file := range files {
 		fileContent, err := os.ReadFile(file)
 		if err != nil {
-			log.Fatal(err)
+			fmt.Println("Error reading file:", err)
+			return
 		}
 
 		// Create a new TAR header
@@ -32,14 +34,16 @@ func main() {
 
 		// Write the header to the TAR archive
 		if err := tarWriter.WriteHeader(header); err != nil {
-			log.Fatal(err)
+			fmt.Println("Error writing TAR header:", err)
+			return
 		}
 
 		// Write the file content to the TAR archive
 		if _, err := tarWriter.Write(fileContent); err != nil {
-			log.Fatal(err)
+			fmt.Println("Error writing file content to TAR:", err)
+			return
 		}
 	}
 
-	log.Println("TAR file created successfully!")
+	fmt.Println("TAR file created successfully!")
 }

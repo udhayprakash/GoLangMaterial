@@ -113,3 +113,10 @@ ENV/
 
 # golang-delve debug file 
 __debug_bin
+
+
+# compressed files
+*.zip
+*.tar
+*.gz
+*.zlib
