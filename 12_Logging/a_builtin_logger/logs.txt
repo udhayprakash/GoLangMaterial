@@ -2,3 +2,7 @@ INFO: 2021/08/12 06:46:21 k_custom-logger.go:26: Starting the application...
 INFO: 2021/08/12 06:46:21 k_custom-logger.go:27: Something noteworthy happened
 WARNING: 2021/08/12 06:46:21 k_custom-logger.go:28: There is something you should know about
 ERROR: 2021/08/12 06:46:21 k_custom-logger.go:29: Something went wrong
+INFO: 2025/01/06 00:11:39 k_custom-logger.go:26: Starting the application...
+INFO: 2025/01/06 00:11:39 k_custom-logger.go:27: Something noteworthy happened
+WARNING: 2025/01/06 00:11:39 k_custom-logger.go:28: There is something you should know about
+ERROR: 2025/01/06 00:11:39 k_custom-logger.go:29: Something went wrong

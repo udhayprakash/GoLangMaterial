@@ -17,8 +17,17 @@ func main() {
 	// // Fatalln is Println() followed by a call to os.Exit(1)
 	// log.Fatalln("fatal message")
 
+	// Defer a function to handle panic and recover
+	defer func() {
+		if err := recover(); err != nil {
+			log.Println("Recovered from panic:", err)
+		}
+	}()
 	// Panicln is Println() followed by a call to panic()
 	log.Panicln("panic message")
+
+	log.Println("main ended")
+
 }
 
 /*

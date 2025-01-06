@@ -1,28 +1,31 @@
 package main
 
 import (
-	log "github.com/sirupsen/logrus"
+	"fmt"
 	"os"
+
+	log "github.com/sirupsen/logrus"
 )
 
 func main() {
-	file, err := os.OpenFile("d_setLogFormat_as_json.log", os.O_CREATE|os.O_APPEND, 0644)
+	file, err := os.OpenFile("d_setLogFormat_as_json.log", os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
 	if err != nil {
+		fmt.Println(err)
 		log.Fatal(err)
 	}
-
 	defer file.Close()
 
-	// redirecting the logs the file
+	// Redirect logs to the file
 	log.SetOutput(file)
 
-	// default log level is INFO. To set the level
-	log.SetLevel(log.WarnLevel)
+	// Set log level to DebugLevel to see all logs
+	log.SetLevel(log.DebugLevel)
 
-	// formatting the log
+	// Format logs as JSON
 	log.SetFormatter(&log.JSONFormatter{})
 
-	log.Debug("This is an debug log")
+	// Log messages
+	log.Debug("This is a debug log")
 	log.Info("This is an info log")
 	log.Warning("This is a warning log")
 	log.Error("This is an error log")
@@ -41,5 +44,7 @@ func main() {
 		"omg":    true,
 		"number": 100,
 	}).Fatal("The ice breaks!")
+	
+	fmt.Println("end of file, wont run, as Fatal will be last line to execute")
 
 }
