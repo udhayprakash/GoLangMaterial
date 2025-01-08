@@ -1,0 +1,4 @@
+Div(10, 2) = 5
+Skipping test with denominator 0
+Div(7, 3) = 2
+Div(-10, 2) = -5

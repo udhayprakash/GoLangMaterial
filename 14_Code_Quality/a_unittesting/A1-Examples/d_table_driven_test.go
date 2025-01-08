@@ -65,16 +65,20 @@ func Max2(numbers []int) int {
 }
 
 /*
-OUTPUT:
--------
--go test -v d_table_driven_test.go
+NOTE: Max function(from previous script) can be used, when running all test cases togther only
+
+
+ $ go test -v d_table_driven_test.go
 === RUN   TestMax5
-    d_table_driven_test.go:35: Expected -1, got 0
+    d_table_driven_test.go:29: Expected 6, got 5
+--- PASS: TestMax5 (0.00s)
+PASS
+ok      command-line-arguments  0.002s
+@udhayprakash ➜ .../GolangBatchDec2024/14_Code_Quality/a-unittesting/A1-Examples (Day10) $ go test -v d_table_driven_test.go
+=== RUN   TestMax5
+    d_table_driven_test.go:29: Expected 6, got 5
 --- FAIL: TestMax5 (0.00s)
-=== RUN   TestMaxEmptySlice
-    d_table_driven_test.go:53: Expected -1, got 0
---- FAIL: TestMaxEmptySlice (0.00s)
 FAIL
-FAIL    command-line-arguments  0.098s
+FAIL    command-line-arguments  0.001s
 FAIL
 */

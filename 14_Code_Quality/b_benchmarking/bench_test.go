@@ -23,5 +23,5 @@ func BenchmarkParseRFC3339(b *testing.B) {
 
 // Usage: go test -bench=.
 
-// > go test -run ^$ -bench BenchmarkParseRFC3339 -cpuprofile cpu.prof 
+// > go test -run ^$ -bench BenchmarkParseRFC3339 -cpuprofile cpu.prof
 // > go tool pprof cpu.prof
