@@ -3,7 +3,6 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"strconv"
 	"strings"
 )
 
@@ -11,9 +10,12 @@ const singleLine string = "I'd love to have some coffee right about now"
 const multiLine string = "Reading is my...\r\n favourite"
 
 func main() {
+	// fmt.Println("Lenght of singleLine input is ", len(singleLine))
+	// fmt.Println("Lenght of singleLine input is " + strconv.Itoa(len(singleLine)))
+	fmt.Printf("Lenght of singleLine input is %d\n", len(singleLine))
 
-	fmt.Println("Lenght of singleLine input is " + strconv.Itoa(len(singleLine)))
 	str := strings.NewReader(singleLine)
+
 	br := bufio.NewReaderSize(str, 25)
 
 	fmt.Println("\n---Peek---")
@@ -25,7 +27,7 @@ func main() {
 	fmt.Printf("%q\n", b) // output: "I'd"
 
 	// Peek - Case 2: Peek larger than buffer size
-	b, err = br.Peek(30)
+	b, err = br.Peek(30) // 3 to 33
 	if err != nil {
 		fmt.Println(err) // output: "bufio: buffer full"
 	}
@@ -33,6 +35,13 @@ func main() {
 	// Peek - Case 3: Buffer size larger than string
 	br_large := bufio.NewReaderSize(str, 50)
 	b, err = br_large.Peek(50)
+	if err != nil {
+		fmt.Println(err) // output: EOF
+	}
+
+	// Peek - Case 4: Buffer size exact as  string
+	br_exact := bufio.NewReaderSize(str, len(singleLine))
+	b, err = br_exact.Peek(len(singleLine))
 	if err != nil {
 		fmt.Println(err) // output: EOF
 	}
