@@ -146,4 +146,6 @@ require (
 	golang.org/x/term v0.27.0 // indirect
 	google.golang.org/appengine v1.6.8 // indirect
 	google.golang.org/protobuf v1.36.1 // indirect
+	gorm.io/driver/sqlite v1.5.7 // indirect
+	gorm.io/gorm v1.25.12 // indirect
 )
