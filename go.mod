@@ -134,6 +134,7 @@ require (
 	github.com/youmark/pkcs8 v0.0.0-20240726163527-a2c0da244d78 // indirect
 	go.opentelemetry.io/otel v1.33.0 // indirect
 	go.opentelemetry.io/otel/trace v1.33.0 // indirect
+	go.uber.org/mock v0.5.0 // indirect
 	golang.org/x/arch v0.12.0 // indirect
 	golang.org/x/exp/shiny v0.0.0-20241217172543-b2144cdd0a67 // indirect
 	golang.org/x/image v0.23.0 // indirect
