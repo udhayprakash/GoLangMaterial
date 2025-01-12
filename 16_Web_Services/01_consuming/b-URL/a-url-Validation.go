@@ -5,12 +5,6 @@ import (
 	"net/url"
 )
 
-func main() {
-	fmt.Println(isValidUrl("http://www.golangcode.com")) // = true
-	fmt.Println(isValidUrl("golangcode.com"))            // = false
-	fmt.Println(isValidUrl(""))                          // = false
-}
-
 // isValidUrl tests a string to determine if it is a well-structured url or not.
 func isValidUrl(toTest string) bool {
 	_, err := url.ParseRequestURI(toTest)
@@ -19,4 +13,10 @@ func isValidUrl(toTest string) bool {
 	} else {
 		return true
 	}
+}
+
+func main() {
+	fmt.Println(isValidUrl("http://www.google.com")) // = true
+	fmt.Println(isValidUrl("google.com"))            // = false
+	fmt.Println(isValidUrl(""))                      // = false
 }

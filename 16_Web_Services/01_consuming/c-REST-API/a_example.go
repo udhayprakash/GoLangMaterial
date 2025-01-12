@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	resp, err := http.Get("https://api.github.com/users/tensorflow")
+	resp, err := http.Get("https://api.github.com/users/go")
 	if err != nil {
 		print(err)
 	}

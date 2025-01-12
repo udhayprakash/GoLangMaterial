@@ -1,35 +1,4 @@
-
----------------------------------------------------------------------------------
-Chapter 05: Goroutines, Channels, Concurrency
-				Sync package
-					waitgroups 
-					mutex
-
-Chapter 06: Modules
-                bufio 
-				ioutil
-                container
-                runtime
-				context
-				reflect
-				encoding
-				
-				creating custom package 
-
-				
-Chapter 07: File Operations
-                UnStructured,
-				Structured
-					xml
-					csv 
-					json
-					nested json
-                			ZipFiles
-
 Chapter 09: Code Quality
-                unit testing, 
-					asserts
-				coverage, profiling, benchmarking
 					sonarQube 
 					CodeClimate 
 					

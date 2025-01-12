@@ -7,6 +7,15 @@ import (
 )
 
 func main() {
+
+	ip := net.ParseIP("192.0.2.1")
+	if ip != nil {
+		fmt.Println("Parsed IP:", ip)
+	} else {
+		fmt.Println("Invalid IP address")
+	}
+
+	
 	for _, ipAddr := range []string{
 		"192.0.2.2",
 		"292.0.2.2",
@@ -14,6 +23,7 @@ func main() {
 		"192.0.2.245",
 		"142.250.195.238",
 	} {
+		// String to ip address parsing
 		ip := net.ParseIP(ipAddr)
 		if ip != nil {
 			fmt.Println("Ip address: ", ip)
