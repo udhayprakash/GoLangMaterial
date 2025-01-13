@@ -124,3 +124,7 @@ __debug_bin
 
 # sound files
 *.wav
+
+
+# database files
+*.db
