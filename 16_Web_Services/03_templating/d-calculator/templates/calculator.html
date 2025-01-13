@@ -1,0 +1,19 @@
+{{define "content"}}
+<form method="POST">
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1" name="num1" required>
+    <br>
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2" name="num2" required>
+    <br>
+    <label for="operator">Operator:</label>
+    <select name="operator" id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <br>
+    <button type="submit">Calculate</button>
+</form>
+{{end}}

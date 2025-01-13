@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Ram Mohan",
+        "age": 34,
+        "occupation": "Software Engineer",
+        "quote": "The best way to predict the future is to invent it."
+    },
+    {
+        "name": "Madhu Reddy",
+        "age": 45,
+        "occupation": "Data Scientist",
+        "quote": "Data is the new oil."
+    },
+    {
+        "name": "Sachin Tendulkar",
+        "age": 28,
+        "occupation": "Product Manager",
+        "quote": "The most difficult thing is the decision to act, the rest is merely tenacity."
+    },
+    {
+        "name": "Rohith Sharma",
+        "age": 52,
+        "occupation": "UX Designer",
+        "quote": "Design is not just what it looks like and feels like. Design is how it works."
+    },
+    {
+        "name": "Sushma Swaraj",
+        "age": 31,
+        "occupation": "Full Stack Developer",
+        "quote": "If you want to lift yourself up, lift up someone else."
+    }
+]
