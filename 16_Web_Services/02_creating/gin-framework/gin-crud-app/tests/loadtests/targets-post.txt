@@ -1,0 +1,9 @@
+POST http://localhost:8080/groceries
+Content-Type: application/json
+Authorization: Bearer <your-admin-token>
+
+{
+    "id": 6,
+    "name": "Grapes",
+    "price": 3.99
+}
