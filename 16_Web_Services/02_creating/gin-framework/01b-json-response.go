@@ -5,8 +5,9 @@ import "github.com/gin-gonic/gin"
 func main() {
 	server := gin.Default()
 	server.GET("/test", func(ctx *gin.Context) {
+		// ctx.String(200, "Welcome to the Grocery Store!")
 		ctx.JSON(200, gin.H{
-			"message": "OK!",
+			"message": "Welcome to the Grocery Store!",
 		})
 	})
 	server.Run("localhost:8000")
@@ -15,7 +16,7 @@ func main() {
 }
 
 /*
-~curl http://localhost:8000/test
+~ curl http://localhost:8000/test
 {"message":"OK!"}
 
 
