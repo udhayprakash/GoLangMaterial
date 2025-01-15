@@ -79,9 +79,4 @@ Assignment:
 	~ curl http://localhost:8080/groceries/?maxprice=0.5
 	[{"id":1,"name":"Apples","price":1.99},{"id":2,"name":"Bananas","price":0.99},{"id":3,"name":"Oranges","price":2.49},{"id":4,"name":"Carrots","price":0.49},{"id":5,"name":"Potatoes","price":0.99}]
 
-
-Assignment: 
-	
-	Add one more query param minPrice. when both given filter in accordance
-
 */
