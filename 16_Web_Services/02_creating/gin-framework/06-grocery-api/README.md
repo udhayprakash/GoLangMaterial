@@ -1,6 +1,11 @@
 # Grocery API
 
 
+## Project Setup
+
+    $ go mod init grocery-api
+    $ go mod tidy
+
 Assignment
 ===========
 

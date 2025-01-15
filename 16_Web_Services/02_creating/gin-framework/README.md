@@ -1,8 +1,12 @@
 # Gin Framework
 
-Gin is a high-performance web framework. 
-It simplifies the process of building web applications and microservices.
-Reduce a lot of boilerplate code
+	- high-performance HTTP web framework
+    - Reduce a lot of boilerplate code
+	- allows you to build web applications and microservices
+	- contains a set of commonly used functionalities (e.g.,
+		routing, middleware support, rendering, etc.) that
+		reduce boilerplate code and make it simpler to build
+		web applications.
 
 
 ## Advantages

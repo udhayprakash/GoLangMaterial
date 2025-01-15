@@ -9,6 +9,7 @@ func main() {
 		ctx.JSON(200, gin.H{
 			"message": "Welcome to the Grocery Store!",
 		})
+		// gin.H is a shortcut for map[string]interface{}
 	})
 	server.Run("localhost:8000")
 
