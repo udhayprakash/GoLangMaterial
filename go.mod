@@ -1,11 +1,11 @@
 module github.com/udhayprakash/GoLangMaterial
 
-go 1.23
+go 1.23.0
 
 toolchain go1.23.4
 
 require (
-	github.com/PuerkitoBio/goquery v1.10.0
+	github.com/PuerkitoBio/goquery v1.10.2
 	github.com/bradfitz/gomemcache v0.0.0-20230905024940-24af94b03874
 	github.com/cdipaolo/sentiment v0.0.0-20200617002423-c697f64e7f10
 	github.com/chrisport/go-lang-detector v0.0.0-20230303073638-b02db75993ac
@@ -21,8 +21,9 @@ require (
 	github.com/go-playground/universal-translator v0.18.1
 	github.com/go-sql-driver/mysql v1.8.1
 	github.com/gocolly/colly v1.2.0
-	github.com/gofiber/fiber/v2 v2.52.5
-	github.com/golang/glog v1.2.3
+	github.com/gofiber/fiber/v2 v2.52.6
+	github.com/golang/glog v1.2.4
+	github.com/golang/mock v1.6.0
 	github.com/gomodule/redigo v1.9.2
 	github.com/google/uuid v1.6.0
 	github.com/googollee/go-socket.io v1.7.0
@@ -35,8 +36,8 @@ require (
 	github.com/jinzhu/now v1.1.5
 	github.com/joho/godotenv v1.5.1
 	github.com/jung-kurt/gofpdf v1.16.2
-	github.com/kbinani/screenshot v0.0.0-20240820160931-a8a2c5d0e191
-	github.com/linkedin/goavro/v2 v2.13.0
+	github.com/kbinani/screenshot v0.0.0-20250118074034-a3924b7bbc8c
+	github.com/linkedin/goavro/v2 v2.13.1
 	github.com/lithammer/fuzzysearch v1.1.8
 	github.com/mattn/go-sqlite3 v1.14.24
 	github.com/pkg/errors v0.9.1
@@ -46,16 +47,19 @@ require (
 	github.com/rs/cors/wrapper/gin v0.0.0-20240830163046-1084d89a1692
 	github.com/rs/zerolog v1.33.0
 	github.com/sirupsen/logrus v1.9.3
-	github.com/twilio/twilio-go v1.23.8
+	github.com/twilio/twilio-go v1.23.12
 	github.com/uptrace/bunrouter v1.0.22
 	github.com/uptrace/bunrouter/extra/reqlog v1.0.22
 	github.com/xuri/excelize/v2 v2.9.0
-	go.mongodb.org/mongo-driver v1.17.1
-	golang.org/x/crypto v0.31.0
-	golang.org/x/text v0.21.0
-	golang.org/x/tools v0.28.0
+	go.mongodb.org/mongo-driver v1.17.2
+	go.uber.org/mock v0.5.0
+	golang.org/x/crypto v0.33.0
+	golang.org/x/text v0.22.0
+	golang.org/x/tools v0.30.0
 	gonum.org/v1/plot v0.15.0
 	gopkg.in/yaml.v3 v3.0.1
+	gorm.io/driver/sqlite v1.5.7
+	gorm.io/gorm v1.25.12
 )
 
 require (
@@ -65,35 +69,33 @@ require (
 	github.com/andybalholm/brotli v1.1.1 // indirect
 	github.com/andybalholm/cascadia v1.3.3 // indirect
 	github.com/antchfx/htmlquery v1.3.4 // indirect
-	github.com/antchfx/xmlquery v1.4.3 // indirect
+	github.com/antchfx/xmlquery v1.4.4 // indirect
 	github.com/antchfx/xpath v1.3.3 // indirect
-	github.com/bytedance/sonic v1.12.6 // indirect
-	github.com/bytedance/sonic/loader v0.2.1 // indirect
+	github.com/bytedance/sonic v1.12.8 // indirect
+	github.com/bytedance/sonic/loader v0.2.3 // indirect
 	github.com/campoy/embedmd v1.0.0 // indirect
 	github.com/cdipaolo/goml v0.0.0-20220715001353-00e0c845ae1c // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
-	github.com/cloudwego/base64x v0.1.4 // indirect
+	github.com/cloudwego/base64x v0.1.5 // indirect
 	github.com/cloudwego/iasm v0.2.0 // indirect
 	github.com/dghubble/sling v1.4.2 // indirect
 	github.com/elazarl/go-bindata-assetfs v1.0.1 // indirect
 	github.com/fatih/color v1.18.0 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
-	github.com/gabriel-vasile/mimetype v1.4.7 // indirect
+	github.com/gabriel-vasile/mimetype v1.4.8 // indirect
 	github.com/gen2brain/shm v0.1.1 // indirect
-	github.com/gin-contrib/sse v0.1.0 // indirect
+	github.com/gin-contrib/sse v1.0.0 // indirect
 	github.com/go-audio/riff v1.0.0 // indirect
 	github.com/go-fonts/liberation v0.3.3 // indirect
 	github.com/go-latex/latex v0.0.0-20240709081214-31cef3c7570e // indirect
 	github.com/go-pdf/fpdf v0.9.0 // indirect
-	github.com/go-playground/validator/v10 v10.23.0 // indirect
+	github.com/go-playground/validator/v10 v10.25.0 // indirect
 	github.com/gobwas/glob v0.2.3 // indirect
-	github.com/goccy/go-json v0.10.4 // indirect
+	github.com/goccy/go-json v0.10.5 // indirect
 	github.com/godbus/dbus/v5 v5.1.0 // indirect
 	github.com/gofrs/uuid v4.4.0+incompatible // indirect
-	github.com/golang-jwt/jwt/v5 v5.2.1 // indirect
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
 	github.com/golang/groupcache v0.0.0-20241129210726-2c02b8208cf8 // indirect
-	github.com/golang/mock v1.6.0 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
@@ -106,7 +108,7 @@ require (
 	github.com/klauspost/cpuid/v2 v2.2.9 // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect
 	github.com/lxn/win v0.0.0-20210218163916-a377121e959e // indirect
-	github.com/mattn/go-colorable v0.1.13 // indirect
+	github.com/mattn/go-colorable v0.1.14 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/mattn/go-runewidth v0.0.16 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
@@ -131,22 +133,19 @@ require (
 	github.com/xdg-go/scram v1.1.2 // indirect
 	github.com/xdg-go/stringprep v1.0.4 // indirect
 	github.com/xuri/efp v0.0.0-20241211021726-c4e992084aa6 // indirect
-	github.com/xuri/nfp v0.0.0-20240318013403-ab9948c2c4a7 // indirect
+	github.com/xuri/nfp v0.0.0-20250111060730-82a408b9aa71 // indirect
 	github.com/youmark/pkcs8 v0.0.0-20240726163527-a2c0da244d78 // indirect
-	go.opentelemetry.io/otel v1.33.0 // indirect
-	go.opentelemetry.io/otel/trace v1.33.0 // indirect
-	go.uber.org/mock v0.5.0 // indirect
-	golang.org/x/arch v0.12.0 // indirect
-	golang.org/x/exp/shiny v0.0.0-20241217172543-b2144cdd0a67 // indirect
-	golang.org/x/image v0.23.0 // indirect
-	golang.org/x/mobile v0.0.0-20241213221354-a87c1cf6cf46 // indirect
-	golang.org/x/mod v0.22.0 // indirect
-	golang.org/x/net v0.33.0 // indirect
-	golang.org/x/sync v0.10.0 // indirect
-	golang.org/x/sys v0.28.0 // indirect
-	golang.org/x/term v0.27.0 // indirect
+	go.opentelemetry.io/otel v1.34.0 // indirect
+	go.opentelemetry.io/otel/trace v1.34.0 // indirect
+	golang.org/x/arch v0.14.0 // indirect
+	golang.org/x/exp/shiny v0.0.0-20250215185904-eff6e970281f // indirect
+	golang.org/x/image v0.24.0 // indirect
+	golang.org/x/mobile v0.0.0-20250210185054-b38b8813d607 // indirect
+	golang.org/x/mod v0.23.0 // indirect
+	golang.org/x/net v0.35.0 // indirect
+	golang.org/x/sync v0.11.0 // indirect
+	golang.org/x/sys v0.30.0 // indirect
+	golang.org/x/term v0.29.0 // indirect
 	google.golang.org/appengine v1.6.8 // indirect
-	google.golang.org/protobuf v1.36.1 // indirect
-	gorm.io/driver/sqlite v1.5.7 // indirect
-	gorm.io/gorm v1.25.12 // indirect
+	google.golang.org/protobuf v1.36.5 // indirect
 )
