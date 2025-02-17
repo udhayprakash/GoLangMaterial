@@ -70,3 +70,30 @@ https://goplay.tools/
     - Developers do not have to care about GOPATH anymore.
     - It has a default value (depending on OS)
     - GOPATH is still used by the Go toolchain internally, for caching downloaded modules and compilation artifacts.
+
+##  using goplay - to run in go playground
+
+    go install github.com/haya14busa/goplay/cmd/goplay@latest
+    goplay -version
+    
+    (if doesnt work, need environment variable setup)
+    export PATH=$PATH:$(go env GOPATH)/bin
+
+    (configure proxy settings, if needed)
+    export HTTP_PROXY=http://your-proxy-url:port
+    export HTTPS_PROXY=http://your-proxy-url:port
+
+
+    (To increase timeout)
+    export GOPLAY_TIMEOUT=30
+
+
+    To export, using command line 
+
+        goplay upload yourfile.go
+
+
+    curl -s -X POST --data-binary @test.go https://play.golang.org/share | awk -F/ '{print "https://play.golang.org/p/"$NF}'
+
+    (To debug upload issue)
+    strace goplay upload yourfile.go
