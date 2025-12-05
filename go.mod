@@ -88,9 +88,6 @@ require (
 	github.com/gen2brain/shm v0.1.1 // indirect
 	github.com/gin-contrib/sse v1.1.0 // indirect
 	github.com/go-audio/riff v1.0.0 // indirect
-	github.com/go-fonts/liberation v0.3.3 // indirect
-	github.com/go-latex/latex v0.0.0-20250304174226-2790903426af // indirect
-	github.com/go-pdf/fpdf v0.9.0 // indirect
 	github.com/go-playground/validator/v10 v10.26.0 // indirect
 	github.com/gobwas/glob v0.2.3 // indirect
 	github.com/goccy/go-json v0.10.5 // indirect
@@ -116,7 +113,6 @@ require (
 	github.com/mattn/go-runewidth v0.0.16 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
-	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826 // indirect
 	github.com/montanaflynn/stats v0.7.1 // indirect
 	github.com/pelletier/go-toml/v2 v2.2.4 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
@@ -132,7 +128,6 @@ require (
 	github.com/ugorji/go/codec v1.3.0 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.63.0 // indirect
-	github.com/valyala/tcplisten v1.0.0 // indirect
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
 	github.com/xdg-go/scram v1.1.2 // indirect
 	github.com/xdg-go/stringprep v1.0.4 // indirect
