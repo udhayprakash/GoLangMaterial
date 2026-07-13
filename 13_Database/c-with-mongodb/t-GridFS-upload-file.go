@@ -12,16 +12,13 @@ import (
 
 func main() {
 	clientOptions := options.Client().ApplyURI("mongodb://localhost:27017")
-	client, err := mongo.Connect(context.TODO(), clientOptions)
+	client, err := mongo.Connect(clientOptions)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	db := client.Database("testdb")
-	bucket, err := mongo.NewBucket(db)
-	if err != nil {
-		log.Fatal(err)
-	}
+	bucket := db.GridFSBucket()
 
 	file, err := os.Open("example.txt")
 	if err != nil {
@@ -29,7 +26,7 @@ func main() {
 	}
 	defer file.Close()
 
-	uploadStream, err := bucket.OpenUploadStream("example.txt")
+	uploadStream, err := bucket.OpenUploadStream(context.TODO(), "example.txt")
 	if err != nil {
 		log.Fatal(err)
 	}

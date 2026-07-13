@@ -12,22 +12,13 @@ import (
 
 func main() {
 	clientOptions := options.Client().ApplyURI("mongodb://localhost:27017")
-	client, err := mongo.Connect(context.TODO(), clientOptions)
+	client, err := mongo.Connect(clientOptions)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	db := client.Database("testdb")
-	bucket, err := mongo.NewBucket(db)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	downloadStream, err := bucket.OpenDownloadStreamByName("example.txt")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer downloadStream.Close()
+	bucket := db.GridFSBucket()
 
 	file, err := os.Create("downloaded_example.txt")
 	if err != nil {
@@ -35,11 +26,12 @@ func main() {
 	}
 	defer file.Close()
 
-	if _, err := downloadStream.WriteTo(file); err != nil {
+	n, err := bucket.DownloadToStreamByName(context.TODO(), "example.txt", file)
+	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println("File downloaded successfully")
+	fmt.Printf("Downloaded %d bytes successfully\n", n)
 }
 
 // mongofiles -d testdb get example.txt
