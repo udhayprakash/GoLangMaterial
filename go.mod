@@ -28,7 +28,7 @@ require (
 	github.com/gorilla/handlers v1.5.2
 	github.com/gorilla/mux v1.8.1
 	github.com/hajimehoshi/go-mp3 v0.3.4
-	github.com/hajimehoshi/oto v1.0.2
+	github.com/hajimehoshi/oto/v2 v2.3.1
 	github.com/jarcoal/httpmock v1.0.8
 	github.com/jinzhu/gorm v1.9.16
 	github.com/jinzhu/now v1.1.5
@@ -49,7 +49,7 @@ require (
 	github.com/uptrace/bunrouter v1.0.23
 	github.com/uptrace/bunrouter/extra/reqlog v1.0.23
 	github.com/xuri/excelize/v2 v2.11.0
-	go.mongodb.org/mongo-driver v1.17.9
+	go.mongodb.org/mongo-driver/v2 v2.8.0
 	go.uber.org/mock v0.6.0
 	golang.org/x/crypto v0.54.0
 	golang.org/x/text v0.40.0
@@ -114,7 +114,6 @@ require (
 	github.com/mattn/go-runewidth v0.0.24 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
-	github.com/montanaflynn/stats v0.10.0 // indirect
 	github.com/pelletier/go-toml/v2 v2.4.3 // indirect
 	github.com/quic-go/qpack v0.6.0 // indirect
 	github.com/quic-go/quic-go v0.60.0 // indirect
@@ -135,13 +134,10 @@ require (
 	github.com/xuri/efp v0.0.1 // indirect
 	github.com/xuri/nfp v0.0.2-0.20250530014748-2ddeb826f9a9 // indirect
 	github.com/youmark/pkcs8 v0.0.0-20240726163527-a2c0da244d78 // indirect
-	go.mongodb.org/mongo-driver/v2 v2.8.0 // indirect
 	go.opentelemetry.io/otel v1.44.0 // indirect
 	go.opentelemetry.io/otel/trace v1.44.0 // indirect
 	golang.org/x/arch v0.29.0 // indirect
-	golang.org/x/exp/shiny v0.0.0-20260709172345-9ea1abe57597 // indirect
 	golang.org/x/image v0.44.0 // indirect
-	golang.org/x/mobile v0.0.0-20260709172247-6129f5bee9d5 // indirect
 	golang.org/x/mod v0.38.0 // indirect
 	golang.org/x/net v0.57.0 // indirect
 	golang.org/x/sync v0.22.0 // indirect

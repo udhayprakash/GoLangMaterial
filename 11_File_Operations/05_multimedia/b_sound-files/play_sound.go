@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/hajimehoshi/oto"
+	"github.com/hajimehoshi/oto/v2"
 
 	"github.com/hajimehoshi/go-mp3"
 )
